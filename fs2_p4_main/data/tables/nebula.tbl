@@ -1,0 +1,23 @@
+;; bitmap list for (full) nebula missions
+
+;; background bitmap options
++Nebula:			nbackblue1
++Nebula:			nbackblue2
++Nebula:			nbackcyan
++Nebula:			nbackgreen
++Nebula:			nbackpurp1
++Nebula:			nbackpurp2
++Nebula:			nbackred
++Nebula:			nbackblack
+
+#end
+
+;; poofy cloud bitmaps (up to 6)
++Poof:				PoofGreen01
++Poof:				PoofGreen02
++Poof:				PoofRed01
++Poof:				PoofRed02
++Poof:				PoofPurp01
++Poof:				PoofPurp02
+
+#end

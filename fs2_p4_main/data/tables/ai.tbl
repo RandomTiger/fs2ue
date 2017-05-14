@@ -1,0 +1,61 @@
+;	ai.tbl
+
+; This file specifies AI class behavior for each skill level.
+; We have five skill levels: Trainee, Rookie, Hotshot, Ace, Insane.
+; (We should come up with better names.)
+; We have a virtually unlimited number of AI classes.  If you add a new AI class and
+; you get an execution error about too many classes, increase MAX_AI_CLASSES, defined
+; in ai.h.  On Jan. 30, 1997, MAX_AI_CLASSES = 50.
+
+#AI Classes
+
+;$accuracy:		0..100	how accurately this ship fires its lasers
+;$evasion:		0..100	how effective this ship is at evading
+;$courage:		0..100	how likely to chance danger to accomplish goal
+;$patience:		0..100	how willing to wait for advantage before pursuing goal
+
+;				trainee	rookie	hotshot	ace		insane
+
+$Name:			Coward
+$accuracy:		0.8		0.85		0.9		0.95		1.0
+$evasion:		40,		50,		60,		80,		100
+$courage:		50,		50,		50,		50,		50
+$patience:		40,		50,		60,		80,		100
+
+$Name:			None
+$accuracy:		0,		0,		0,		0,		0
+$evasion:		0,		0,		0,		0,		0
+$courage:		0,		0,		0,		0,		0
+$patience:		0,		0,		0,		0,		0
+
+$Name:			Lieutenant
+$accuracy:		0.4		0.45		0.5		0.55		0.6
+$evasion:		0,		10,		20,		30,		40
+$courage:		0,		10,		20,		30,		40
+$patience:		0,		10,		20,		30,		40
+
+$Name:			Captain
+$accuracy:		0.5		0.55		0.6		0.65		0.7
+$evasion:		10,		20,		30,		40,		50
+$courage:		10,		20,		30,		40,		50
+$patience:		10,		20,		30,		40,		50
+
+$Name:			Major
+$accuracy:		0.6		0.65		0.7		0.75		0.8
+$evasion:		20,		30,		40,		50,		60
+$courage:		20,		30,		40,		50,		60
+$patience:		20,		30,		40,		50,		60
+
+$Name:			Colonel
+$accuracy:		0.7		0.75		0.8		0.85		0.9
+$evasion:		30,		40,		50,		70,		90
+$courage:		30,		40,		50,		70,		90
+$patience:		30,		40,		50,		70,		90
+
+$Name:			General
+$accuracy:		0.8		0.85		0.9		0.95		1.0
+$evasion:		40,		50,		60,		80,		100
+$courage:		40,		50,		60,		80,		100
+$patience:		40,		50,		60,		80,		100
+
+#End

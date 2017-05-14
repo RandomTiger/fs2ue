@@ -1,0 +1,1363 @@
+;;
+;; This file is messages.tbl.  It specifies all generic messages that can be sent to the player
+;; during the mission (at least for single player).  Format is as follows:
+;;
+;; #Personas
+;; $Persona: <name>				;; persona name
+;;
+;; repeat the above '$Persona:' field for as many personas as needed
+;;
+;; $Name: <name>					;; name is an identifier used in Freespace to play the message
+;; $Message: <message>			;; message is what actualy gets displayed to the player
+;; +Persona: <persona name>	;; name of persona for this message.  Must match one of the above personas
+;; +Wave Name: <wave file>		;; optional name of a wave file to play with this message
+;; +Avi Name: <avi file>		;; optional name of a flick to play with this message
+;;
+;;
+;;
+
+
+#Personas
+
+$Persona: Wingman 1	  
+$Type: wingman
+
+$Persona: Wingman 2
+$Type: wingman
+
+$Persona: Wingman 3
+$Type: wingman
+
+$Persona: Wingman 4
+$Type: wingman
+
+$Persona: Wingman 5
+$Type: wingman
+
+$Persona: Wingman 6
+$Type: wingman
++Vasudan
+
+$Persona: Wingman 7
+$Type: wingman
++Vasudan
+
+$Persona: Support Ship
+$Type: support
+
+$Persona: Support Ship Vasudan
+$Type: support
++Vasudan
+
+$Persona: Large Ship
+$Type: large
+
+$Persona: Large Ship Vasudan
+$Type: large
++Vasudan
+
+$Persona: Terran Command
+$Type: Command
+
+#Messages
+
+
+;; ALL CLEAR ..................................................................................
+
+$Name: All Clear
+$Message: XSTR("Command, we have secured the area.", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_allclear.wav
+
+$Name: All Clear
+$Message: XSTR("All hostiles are down. Area secure.", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_allclear.wav
+
+$Name: All Clear
+$Message: XSTR("All clear, Command.", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_allclear.wav
+
+$Name: All Clear
+$Message: XSTR("Area is secure.", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_allclear.wav
+
+$Name: All Clear
+$Message: XSTR("Bandits neutralized. All clear.", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_allclear.wav
+
+$Name: All Clear
+$Message: XSTR("All enemy forces negated.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_allclear.wav
+
+$Name: All Clear
+$Message: XSTR("All hostile targets neutralized.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_allclear.wav
+
+;; ARRIVAL (Enemy) ...................................................................
+
+$Name: Arrive Enemy
+$Message: XSTR("Bandits incoming!", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_arrival.wav
+
+$Name: Arrive Enemy
+$Message: XSTR("Heads up! Enemy wing closing in!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_arrival.wav
+
+$Name: Arrive Enemy
+$Message: XSTR("IFF confirmed! Hostiles inbound!", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_arrival.wav
+
+$Name: Arrive Enemy
+$Message: XSTR("Hostiles approaching fast!", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_arrival.wav
+
+$Name: Arrive Enemy
+$Message: XSTR("We've got company!", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_arrival.wav
+
+$Name: Arrive Enemy
+$Message: XSTR("Reading hostile indicators.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_arrival.wav
+
+$Name: Arrive Enemy 
+$Message: XSTR("Enemy wing inbound.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_arrival.wav
+
+$Name:Arrive Enemy
+$Message: XSTR("Incoming jump signature! Hostile configuration!", -1)
++Persona: Terran Command
++Avi Name: Head-CM2
++Wave Name: TC_arrival.wav
+
+;; ATTACK MY TARGET ...........................................................................
+
+$Name: Attack Target
+$Message: XSTR("Roger that, sir. Engaging your target.", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_attack.wav
+
+$Name: Attack Target
+$Message: XSTR("Yes, sir! We'll take em down!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_attack.wav
+
+$Name: Attack Target
+$Message: XSTR("Breaking to attack.", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_attack.wav
+
+$Name: Attack Target
+$Message: XSTR("I've got em in my sights!", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_attack.wav
+
+$Name: Attack Target
+$Message: XSTR("Target acquired.", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_attack.wav
+
+$Name: Attack Target
+$Message: XSTR("Affirmative. We will destroy your target.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_attack.wav
+
+$Name: Attack Target
+$Message: XSTR("Commencing attack on your target.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_attack.wav
+
+;; BACKUP ARRIVAL (previously named "REINFORCEMENTS") .........................................
+
+$Name: Backup
+$Message: XSTR("Reinforcements on station. Request status brief.", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_backup.wav
+
+$Name: Backup
+$Message: XSTR("Reinforcements here. Standing by for orders.", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_backup.wav
+
+$Name: Backup
+$Message: XSTR("Sir, reinforcements are now in position!", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_backup.wav
+
+$Name: Backup
+$Message: XSTR("The cavalry has arrived, sir.", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_backup.wav
+
+$Name: Backup
+$Message: XSTR("Reinforcements have arrived. Awaiting orders.", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_backup.wav
+
+$Name: Backup
+$Message: XSTR("We are here to assist. What is your status?", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_backup.wav
+
+$Name: Backup
+$Message: XSTR("We will reinforce your wing. Please transmit orders.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_backup.wav
+
+;; BETA WING ARRIVAL ..........................................................................
+
+$Name: Beta Arrived
+$Message: XSTR("Beta wing here. Standing by.", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_beta.wav
+
+$Name: Beta Arrived
+$Message: XSTR("This is Beta wing. What's your status?", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_beta.wav
+
+$Name: Beta Arrived
+$Message: XSTR("Beta wing now in position.", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_beta.wav
+
+$Name: Beta Arrived
+$Message: XSTR("Beta wing has arrived. Awaiting orders.", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_beta.wav
+
+$Name: Beta Arrived
+$Message: XSTR("Beta wing here. We're now in system, Command!", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_beta.wav
+
+$Name: Beta Arrived
+$Message: XSTR("Beta wing is on station.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_beta.wav
+
+$Name: Beta Arrived
+$Message: XSTR("This is Beta wing. Standing by for orders.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_beta.wav
+
+;; CHECK YOUR SIX .............................................................................
+
+$Name: Check 6
+$Message: XSTR("Check your six!", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_Check6.wav
+
+$Name: Check 6
+$Message: XSTR("Bandit on your tail!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_Check6.wav
+
+$Name: Check 6
+$Message: XSTR("Watch your back, pilot!", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_Check6.wav
+
+$Name: Check 6
+$Message: XSTR("Behind you, pilot!", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_Check6.wav
+
+$Name: Check 6
+$Message: XSTR("On your six! On your six!", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_Check6.wav
+
+$Name: Check 6
+$Message: XSTR("Take evasive action, pilot!", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_Check6.wav
+
+$Name: Check 6
+$Message: XSTR("Bandit at six o'clock!", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_Check6.wav
+
+;; DEATH (previously wingman scream)...................................................
+
+$Name: Death
+$Message: XSTR("Noooooooo!!!", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_Death.wav
+
+$Name: Death
+$Message: XSTR("Aaaaaaaah!!!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_Death.wav
+
+$Name: Death
+$Message: XSTR("Help me!!!", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_Death.wav
+
+$Name: Death
+$Message: XSTR("Mayday! Mayday!", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_Death.wav
+
+$Name: Death
+$Message: XSTR("I'm going down! I'm going down!", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_Death.wav
+
+$Name: Death
+$Message: XSTR("Avenge me!", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_Death.wav
+
+$Name: Death
+$Message: XSTR("Long live the Emperor!", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_Death.wav
+
+;; DELTA WING ARRIVAL .........................................................................
+
+$Name: Delta Arrived
+$Message: XSTR("This is Delta wing. What's your status?", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_Delta.wav
+
+$Name: Delta Arrived
+$Message: XSTR("Delta wing now in position.", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_Delta.wav
+
+$Name: Delta Arrived
+$Message: XSTR("Delta wing now on station. Awaiting orders.", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_Delta.wav
+
+$Name: Delta Arrived
+$Message: XSTR("This is Delta wing. Give us a target, sir!", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_Delta.wav
+
+$Name: Delta Arrived
+$Message: XSTR("Delta wing here. Standing by.", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_Delta.wav
+
+$Name: Delta Arrived
+$Message: XSTR("Delta wing is ready to assist, pilot.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_Delta.wav
+
+$Name: Delta Arrived
+$Message: XSTR("This is Delta wing. What is your command?", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_Delta.wav
+
+;; DEPART (previously named "WARPOUT") ........................................................
+
+$Name: Depart
+$Message: XSTR("Yes, sir! I'm outta here!", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_depart.wav
+
+$Name: Depart
+$Message: XSTR("You don't have to tell me twice!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_depart.wav
+
+$Name: Depart
+$Message: XSTR("Roger that, sir. See you back home.", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_depart.wav
+
+$Name: Depart
+$Message: XSTR("Right away, sir. Jump drive engaged.", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_depart.wav
+
+$Name: Depart
+$Message: XSTR("Acknowledged. Returning to base now.", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_depart.wav
+
+$Name: Depart
+$Message: XSTR("We are departing as ordered.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_depart.wav
+
+$Name: Depart
+$Message: XSTR("Returning to base.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_depart.wav
+
+$Name: Depart
+$Message: XSTR("I copy. Engaging jump drive now.", -1)
++Persona: Support Ship
++Avi Name: Head-TP3
++Wave Name: S_depart.wav
+
+$Name: Depart
+$Message: XSTR("Departing field of engagement.", -1)
++Persona: Support Ship Vasudan
++Avi Name: Head-VP2
++Wave Name: VS_depart.wav
+
+$Name: Depart
+$Message: XSTR("We are departing as ordered.", -1)
++Persona: Large Ship Vasudan
++Avi Name: Head-VP1
++Wave Name: 6_depart.wav
+
+;; DISABLE TARGET .............................................................................
+
+$Name: Disable Target
+$Message: XSTR("Roger that, sir. Disabling your target.", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_Disable.wav 
+
+$Name: Disable Target
+$Message: XSTR("Yes, sir! Targeting engines now!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_Disable.wav 
+
+$Name: Disable Target
+$Message: XSTR("Acquiring lock on engines.", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_Disable.wav 
+
+$Name: Disable Target
+$Message: XSTR("I copy that. Disabling your target now.", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_Disable.wav
+
+$Name: Disable Target
+$Message: XSTR("Roger that. We'll knock out those engines for you, sir!", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_Disable.wav
+
+$Name: Disable Target
+$Message: XSTR("Affirmative. Disabling your target.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_Disable.wav
+
+$Name: Disable Target
+$Message: XSTR("Acknowledged. Engine subsystem targeted.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_Disable.wav
+
+;; DISARM TARGET ..............................................................................
+
+$Name: Disarm Target
+$Message: XSTR("Yes, sir! Targeting weapons now!", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_Disarm.wav 
+
+$Name: Disarm Target
+$Message: XSTR("Target data received. Acquiring lock.", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_Disarm.wav 
+
+$Name: Disarm Target
+$Message: XSTR("I copy, sir. Disarming your target.", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_Disarm.wav 
+
+$Name: Disarm Target
+$Message: XSTR("I'm on it.", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_Disarm.wav 
+
+$Name: Disarm Target
+$Message: XSTR("Roger that, sir. Disarming target now.", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_Disarm.wav 
+
+$Name: Disarm Target
+$Message: XSTR("Acknowledged. Weapon subsystem targeted. ", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_Disarm.wav 
+
+$Name: Disarm Target
+$Message: XSTR("I copy. Neutralizing weapons.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_Disarm.wav
+
+;; ENGAGE ENEMY ...............................................................................
+
+$Name: Engage
+$Message: XSTR("Roger that.", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_engage.wav
+
+$Name: Engage
+$Message: XSTR("Yes, sir! Breaking to attack!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_engage.wav
+
+$Name: Engage
+$Message: XSTR("Engaging enemy now, sir.", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_engage.wav
+
+$Name: Engage
+$Message: XSTR("With pleasure, sir.", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_engage.wav
+
+$Name: Engage
+$Message: XSTR("I'm on it, sir.", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_engage.wav
+
+$Name: Engage
+$Message: XSTR("By your command. Engaging enemy.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_engage.wav
+
+$Name: Engage
+$Message: XSTR("Breaking to attack.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_engage.wav
+
+;; EPSILON ARRIVAL ............................................................................
+
+$Name: Epsilon Arrived
+$Message: XSTR("Epsilon wing now on station.", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_epsilon.wav
+
+$Name: Epsilon Arrived
+$Message: XSTR("Epsilon has arrived in system. Awaiting orders.", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_epsilon.wav
+
+$Name: Epsilon Arrived
+$Message: XSTR("Epsilon here. Ready to engage!", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_epsilon.wav
+
+$Name: Epsilon Arrived
+$Message: XSTR("Epsilon here. Standing by.", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_epsilon.wav
+
+$Name: Epsilon Arrived
+$Message: XSTR("This is Epsilon wing. What's your status?", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_epsilon.wav
+
+$Name: Epsilon Arrived
+$Message: XSTR("Epsilon wing standing by. Transmit orders.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_epsilon.wav
+
+$Name: Epsilon Arrived
+$Message: XSTR("This is Epsilon. We are in position. Requesting orders.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_epsilon.wav
+
+;; GAMMA ARRIVAL ..............................................................................
+
+$Name: Gamma Arrived
+$Message: XSTR("Gamma wing has arrived. Awaiting orders.", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_gamma.wav
+
+$Name: Gamma Arrived
+$Message: XSTR("Gamma here. Ready to assist.", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_gamma.wav
+
+$Name: Gamma Arrived
+$Message: XSTR("Gamma wing is standing by.", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_gamma.wav
+
+$Name: Gamma Arrived
+$Message: XSTR("This is Gamma wing. What's your status?", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_gamma.wav
+
+$Name: Gamma Arrived
+$Message: XSTR("Gamma is now in system.", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_gamma.wav
+
+$Name: Gamma Arrived
+$Message: XSTR("This is Gamma wing. Please transmit orders.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_gamma.wav
+
+$Name: Gamma Arrived
+$Message: XSTR("Gamma wing on station.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_gamma.wav
+
+;; HELP (REDUDANT TO ASSIST??) ................................................................
+
+$Name: Help
+$Message: XSTR("Hull integrity failing! Get me out outta here, Command!", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_help.wav
+
+$Name: Help
+$Message: XSTR("I can't hold them off much longer!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_help.wav
+
+$Name: Help
+$Message: XSTR("Get this bandit off me!", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_help.wav
+
+$Name: Help
+$Message: XSTR("Cover me! Cover me!", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_help.wav
+
+$Name: Help
+$Message: XSTR("This crate's gonna blow!", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_help.wav
+
+$Name: Help
+$Message: XSTR("Sustained critical damage. Hull failure imminent.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_help.wav
+
+$Name: Help
+$Message: XSTR("Systems are failing. Please assist.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_help.wav
+
+;; IGNORE TARGET ..............................................................................
+
+$Name: Ignore Target
+$Message: XSTR("Yes, sir!", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_ignore.wav
+
+$Name: Ignore Target
+$Message: XSTR("All yours, sir. Good luck!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_ignore.wav
+
+$Name: Ignore Target
+$Message: XSTR("Hope you know what you're doing, sir.", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_ignore.wav
+
+$Name: Ignore Target
+$Message: XSTR("Ignoring your target.", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_ignore.wav
+
+$Name: Ignore Target
+$Message: XSTR("Knock yourself out, sir.", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_ignore.wav
+
+$Name: Ignore Target
+$Message: XSTR("Disregarding your target.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_ignore.wav
+
+$Name: Ignore Target
+$Message: XSTR("By your command. The kill is yours.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_ignore.wav
+
+;; NEGATIVE REPLIES ...........................................................................
+
+$Name: No
+$Message: XSTR("No can do, sir.", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_no.wav
+
+$Name: No
+$Message: XSTR("Sorry, sir. Unable to comply.", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_no.wav
+
+$Name: No
+$Message: XSTR("Not a chance, pilot.", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_no.wav
+
+$Name: No
+$Message: XSTR("With all due respect, sir, you're out of line.", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_no.wav
+
+$Name: No
+$Message: XSTR("That's an invalid order, pilot.", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_no.wav
+
+$Name: No
+$Message: XSTR("Negative. I cannot execute your command.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_no.wav
+
+$Name: No
+$Message: XSTR("I will not perform that action.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_no.wav
+
+;; NO TARGET ..................................................................................
+
+$Name: No Target
+$Message: XSTR("Sorry, sir. I am unable to acquire your target.", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_notarget.wav
+
+$Name: No Target
+$Message: XSTR("Confirm your target, pilot. I can't get a reading.", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_notarget.wav
+
+$Name: No Target
+$Message: XSTR("Say again, sir?", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_notarget.wav
+
+$Name: No Target
+$Message: XSTR("Target? What target?", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_notarget.wav
+
+$Name: No Target
+$Message: XSTR("And what target would that be, sir?", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_notarget.wav
+
+$Name: No Target
+$Message: XSTR("Your target data is invalid.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_notarget.wav
+
+$Name: No Target
+$Message: XSTR("You must specify a target.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_notarget.wav
+
+;; Oops 1 (Player "accidentally" fires upon friendly ..........................................
+
+$Name: Oops 1
+$Message: XSTR("Whose side are you on, pilot?", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_oops1.wav
+
+$Name: Oops 1
+$Message: XSTR("Don't make me hurt you, pilot!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_oops1.wav
+
+$Name: Oops 1
+$Message: XSTR("You got a problem with your IFF, sir?", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_oops1.wav
+
+$Name: Oops 1
+$Message: XSTR("Back off, pilot! You're out of line!", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_oops1.wav
+
+$Name: Oops 1
+$Message: XSTR("You think that's funny?", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_oops1.wav
+
+$Name: Oops 1
+$Message: XSTR("Disengage, pilot!", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_oops1.wav
+
+$Name: Oops 1
+$Message: XSTR("Constrain your actions, pilot.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_oops1.wav
+
+$Name: Oops 1
+$Message: XSTR("Invalid target! Hold your fire!", -1)
++Persona: Terran Command
++Avi Name: Head-CM2
++Wave Name: TC_oops1.wav
+
+;; PLAYER KILLED (previously "player died")...........................................
+
+$Name: Player Dead
+$Message: XSTR("Pilot down! Pilot down!", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_p_dead.wav
+
+$Name: Player Dead
+$Message: XSTR("Squad lost a pilot!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_p_dead.wav
+
+$Name: Player Dead
+$Message: XSTR("Squadmate down!", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_p_dead.wav
+
+$Name: Player Dead
+$Message: XSTR("We've lost a pilot!", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_p_dead.wav
+
+$Name: Player Dead
+$Message: XSTR("Friendly down!", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_p_dead.wav
+
+$Name: Player Dead
+$Message: XSTR("Friendly neutralized!", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_p_dead.wav
+
+$Name: Player Dead
+$Message: XSTR("No sorrow but vengeance.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_p_dead.wav
+
+;; PRAISE .....................................................................................
+
+$Name: Praise
+$Message: XSTR("Objective neutralized!", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_praise.wav
+
+$Name: Praise
+$Message: XSTR("That's a confirmed kill!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_praise.wav
+
+$Name: Praise
+$Message: XSTR("Show us how it's done, sir!", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_praise.wav
+
+$Name: Praise
+$Message: XSTR("You got em!", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_praise.wav
+
+$Name: Praise
+$Message: XSTR("Bandit down!", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_praise.wav
+
+$Name: Praise
+$Message: XSTR("Formidable!", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_praise.wav
+
+$Name: Praise
+$Message: XSTR("You fight like a Vasudan!", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_praise.wav
+
+;; REARM ......................................................................................
+
+$Name: Rearm
+$Message: XSTR("Missile banks depleted! Calling in support!", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_rearm.wav
+
+$Name: Rearm
+$Message: XSTR("I need to rearm!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_rearm.wav
+
+$Name: Rearm
+$Message: XSTR("Support, need more ordnance here!", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_rearm.wav
+
+$Name: Rearm
+$Message: XSTR("Secondary banks empty! Calling in support!", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_rearm.wav
+
+$Name: Rearm
+$Message: XSTR("Ordnance depleted!", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_rearm.wav
+
+$Name: Rearm
+$Message: XSTR("I must rearm. Requesting support.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_rearm.wav
+
+$Name: Rearm
+$Message: XSTR("Secondaries depleted. Require support.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_rearm.wav
+
+;; REPAIR .....................................................................................
+
+$Name: Repair
+$Message: XSTR("Systems failing! Get support here pronto!", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_repair.wav
+
+$Name: Repair
+$Message: XSTR("Command, systems are blown! I need a repair!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_repair.wav
+
+$Name: Repair
+$Message: XSTR("Subsystems are down! I need support here!", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_repair.wav
+
+$Name: Repair
+$Message: XSTR("Disengaging now for repair!", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_repair.wav
+
+$Name: Repair
+$Message: XSTR("My systems are going berserk! Calling in support!", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_repair.wav
+
+$Name: Repair
+$Message: XSTR("Requesting subsystem repair.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_repair.wav
+
+$Name: Repair
+$Message: XSTR("Subsystems incapacitated!", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_repair.wav
+
+;; STRAY ............................................................................
+
+$Name: Stray
+$Message: XSTR("You know where you're going, sir?", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_Stray.wav
+
+$Name: Stray
+$Message: XSTR("With all due respect, sir, we seem to be off course.", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_Stray.wav
+
+$Name: Stray
+$Message: XSTR("Let's focus on our objectives, sir.", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_Stray.wav
+
+$Name: Stray
+$Message: XSTR("What about our mission, sir?", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_Stray.wav
+
+$Name: Stray
+$Message: XSTR("We have orders to follow, sir.", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_Stray.wav
+
+$Name: Stray
+$Message: XSTR("You are deserting the field of engagement, Terran.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_Stray.wav
+
+$Name: Stray
+$Message: XSTR("You are violating our mission directives, Terran.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_Stray.wav
+
+;; TRAITOR ...........................................................................
+
+$Name: Traitor
+$Message: XSTR("Sorry it had to end like this, sir!", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_Traitor.wav
+
+$Name: Traitor
+$Message: XSTR("No mercy for traitors in this unit!", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_Traitor.wav
+
+$Name: Traitor
+$Message: XSTR("See you in hell, pilot!", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_Traitor.wav
+
+$Name: Traitor
+$Message: XSTR("You just had to keep firing, didn't you?", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_Traitor.wav
+
+$Name: Traitor
+$Message: XSTR("That's what you get when you don't play nice.", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_Traitor.wav
+
+$Name: Traitor
+$Message: XSTR("No refuge for traitors!", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_Traitor.wav
+
+$Name: Traitor
+$Message: XSTR("You disgrace your species, Terran.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_Traitor.wav
+
+$Name: Traitor
+$Message: XSTR("All units, terminate the traitor!", -1)
++Persona: Terran Command
++Avi Name: Head-CM2
++Wave Name: TC_Traitor.wav 
+
+;; YES ...............................................................................
+
+$Name: yes
+$Message: XSTR("Affirmative.", -1)
++Persona: Wingman 1
++Avi Name: Head-TP1
++Wave Name: 1_yes.wav
+
+$Name: yes
+$Message: XSTR("Roger that.", -1)
++Persona: Wingman 2
++Avi Name: Head-TP5
++Wave Name: 2_yes.wav
+
+$Name: yes
+$Message: XSTR("I'm on it.", -1)
++Persona: Wingman 3
++Avi Name: Head-TP6
++Wave Name: 3_yes.wav
+
+$Name: yes
+$Message: XSTR("Yes, sir!", -1)
++Persona: Wingman 4
++Avi Name: Head-TP7
++Wave Name: 4_yes.wav
+
+$Name: yes
+$Message: XSTR("I copy.", -1)
++Persona: Wingman 5
++Avi Name: Head-TP8
++Wave Name: 5_yes.wav
+
+$Name: yes
+$Message: XSTR("Acknowledged.", -1)
++Persona: Wingman 6
++Avi Name: Head-VP1
++Wave Name: 6_yes.wav
+
+$Name: yes
+$Message: XSTR("By your command.", -1)
++Persona: Wingman 7
++Avi Name: Head-VP2
++Wave Name: 7_yes.wav
+
+;; SUPPORT SHIP SECTION ..............................................................
+
+$Name: On Way
+$Message: XSTR("I copy, pilot. Support ship in transit.", -1)
++Persona: Support Ship
++Avi Name: Head-TP3
++Wave Name: S_onway.wav
+
+$Name: On Way
+$Message: XSTR("Acknowledged. Standby to rearm.", -1)
++Persona: Support Ship Vasudan
++Avi Name: Head-VP2
++Wave Name: VS_onway.wav
+
+$Name: Rearm On Way
+$Message: XSTR("Stand by, pilot. We're on our way.", -1)
++Persona: Support Ship
++Avi Name: Head-TP3
++Wave Name: S_onway2.wav
+
+$Name: Rearm On Way
+$Message: XSTR("Support request confirmed. Please stand by.", -1)
++Persona: Support Ship Vasudan
++Avi Name: Head-VP2
++Wave Name: VS_onway2.wav
+
+$Name: 	Rearm warping in
+$Message: XSTR("Deploying support ship now. Please stand by.", -1)
++Persona: Terran Command
++Avi Name: Head-CM2
++Wave Name: TC_help.wav
+
+$Name: Repair Done
+$Message: XSTR("Rearming complete, sir. You're good to go.", -1)
++Persona: Support Ship
++Avi Name: Head-TP3
++Wave Name: S_rearm.wav
+
+$Name: Repair Done
+$Message: XSTR("Rearming procedure complete.", -1)
++Persona: Support Ship Vasudan
++Avi Name: Head-VP2
++Wave Name: VS_rearm.wav
+
+$Name: Repair Aborted
+$Message: XSTR("Rearming sequence aborted.", -1)
++Persona: Support Ship
++Avi Name: Head-TP3
++Wave Name: S_abort.wav
+
+$Name: Repair Aborted
+$Message: XSTR("Rearming procedure terminated.", -1)
++Persona: Support Ship Vasudan
++Avi Name: Head-VP2
++Wave Name: VS_abort.wav
+
+$Name: Support Killed
+$Message: XSTR("Support ship is down!", -1)
++Persona: Terran Command
++Avi Name: Head-CM2
++Wave Name: TC_S_Dead.wav 
+
+; MISC TERRAN COMMAND
+
+$Name: All Alone
+$Message: XSTR("No reinforcements are available, pilot. You're on your own.", -1)
++Persona: Terran Command
++Avi Name: Head-CM2
++Wave Name: TC_Loner.wav
+
+$Name: Instructor Hit
+$Message: XSTR("Invalid target! Hold your fire! ", -1)
++Persona: Terran Command
++Avi Name: Head-CM2
++Wave Name: TC_oops1.wav
+
+$Name: Instructor Attack
+$Message: XSTR("Your instructor is not a valid target, pilot.", -1)
++Persona: Terran Command
++Avi Name: Head-CM2
++Wave Name: TC_oops2.wav
+
+$Name: Stray Warning
+$Message: XSTR("Desertion is grounds for a court martial, pilot. Return to the battle.", -1)
++Persona: Terran Command
++Avi Name: Head-CM2
++Wave Name: TC_stray.wav
+
+$Name: Stray Warning Final
+$Message: XSTR("Pilot, this is your final warning. Complete your mission objectives.", -1)
++Persona: Terran Command
++Avi Name: Head-CM2
++Wave Name: TC_strayfinal.wav
+
+$Name: Awacs at 75
+$Message: XSTR("AWACS has sustained moderate damage! Please assist!", -1)
++Persona: Large Ship
++Avi Name: Head-CM1
++Wave Name: Awacs75.wav
+
+$Name: Awacs at 25
+$Message: XSTR("AWACS hull integrity has fallen below critical! Request immediate fighter cover!", -1)
++Persona: Large Ship
++Avi Name: Head-CM1
++Wave Name: Vawacs25.wav
+
+$Name: Awacs at 75
+$Message: XSTR("Command, AWACS is under attack! Request fighter cover!", -1)
++Persona: Large Ship Vasudan
++Avi Name: Head-VC
++Wave Name: Awacs75.wav
+
+$Name: Awacs at 25
+$Message: XSTR("Mayday! AWACS hull failure imminent! Please assist!", -1)
++Persona: Large Ship Vasudan
++Avi Name: Head-VC
++Wave Name: Vawacs25.wav
+
+#End

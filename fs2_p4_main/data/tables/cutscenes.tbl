@@ -1,0 +1,121 @@
+; Cutscene.tbl 
+; Will contain data for :
+; 1.) cutscene names
+; 2.) cutscene descriptions
+; 3.) cutscene location on CD
+;
+; Do not change the ordering of the sections in this table. Also do not add items to the list
+
+#Cutscenes
+
+;;
+;; INTRO
+;;
+$Filename: intro.mve
+$Name: Introduction
+$Description:
+XSTR(
+"Thirty-two years have passed since the Great War, and a new generation has come of age.", -1)
+$end_multi_text
+$cd: 2
+
+;;
+;; COLOSSUS
+;;
+$Filename: Colossus.mve
+$Name: GTVA Colossus
+$Description:
+XSTR(
+"Introducing the GTVA Colossus, the largest space-faring warship ever constructed.", -1)
+$end_multi_text
+$cd: 2
+
+;;
+;; MONOLOGUE 1
+;;
+$Filename: mono1.mve
+$Name: Bosch Monologue 1
+$Description:
+XSTR(
+"Admiral Bosch, the NTF Supreme Commander, reflects upon the legacy of the Ancients.", -1)
+$end_multi_text
+$cd: 2
+
+;;
+;; MONOLOGUE 2
+;;
+$Filename: mono2.mve
+$Name: Bosch Monologue 2
+$Description:
+XSTR(
+"Following NTF defeats in Epsilon Pegasi and Sirius, Bosch reconsiders his strategy.", -1)
+$end_multi_text
+$cd: 3
+
+;;
+;; MONOLOGUE 3
+;;
+$Filename: mono3.mve
+$Name: Bosch Monologue 3
+$Description:
+XSTR(
+"Lost in the nebula beyond the Knossos portal, Bosch questions the wisdom of his actions.", -1)
+$end_multi_text
+$cd: 3
+
+;;
+;; MONOLOGUE 4
+;;
+$Filename: mono4.mve
+$Name: Bosch Monologue 4
+$Description:
+XSTR(
+"His crusade vindicated, Bosch prepares for his second rendezvous with the Shivans.", -1)
+$end_multi_text
+$cd: 3
+
+;;
+;; BASTION
+;;
+$Filename: bastion.mve
+$Name: Bastion dies
+$Description:
+XSTR(
+"Packed with meson warheads, the GTD Bastion self-destructs and seals off the Epsilon Pegasi jump node.", -1)
+$end_multi_text
+$cd: 3
+
+;;
+;; END GAME
+;;
+$Filename: endpart1.mve
+$Name: End Game
+$Description:
+XSTR(
+"Generating a powerful subspace disturbance, the Shivan juggernauts trigger a supernova.", -1)
+$end_multi_text
+$cd: 3
+
+;;
+;; END GAME A
+;;
+$Filename: endprt2a.mve
+$Name: End Game Part 2A
+$Description:
+XSTR(
+"Admiral Petrarch addresses the crew of the Aquitaine, relating news of the GTVA's success.", -1)
+$end_multi_text
+$cd: 3
+
+;;
+;; END GAME B
+;;
+$Filename: endprt2b.mve
+$Name: End Game Part 2B
+$Description:
+XSTR(
+"Admiral Petrarch addresses the 70th Blue Lions, relating news of Alpha 1's demise.", -1)
+$end_multi_text
+$cd: 3
+
+#End

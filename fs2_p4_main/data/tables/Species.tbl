@@ -1,0 +1,159 @@
+; new format:
+; $Entry:				// begins entry
+; $Anim:				// anim filename, no extension
+; $AlwaysInTechRoom:			// 1 for yes, 0 for no.  if 0, must use a SEXP to make it show up in the TR
+; $Description:				// obvious
+; $end_multi_text			// end of description (and entry)
+
+
+$Entry:
+$Name: XSTR("The Great War",-1)
+$Anim: Intel_Great_War
+$AlwaysInTechRoom: 1
+$Description:
+XSTR(
+"In 2335, the Terran-Vasudan War entered its fourteenth year. The Galactic Terran Alliance (GTA) and the Parliamentary Vasudan Navy (PVN) were both exhausted, demoralized, and on the verge of internal collapse. 
+
+The invasion of a mysterious species, designated the Shivans, compelled Terran and Vasudan leaders to sign an armistice and form a new alliance. Using advanced weaponry and shields, the Shivans attacked without provocation and without warning. 
+
+The allies acquired and developed new technologies to confront the menace. At the vanguard of the Shivan armada was the SD Lucifer, a massive superdestroyer. The Lucifer exterminated all life on Vasuda Prime and set course for Earth. No weapon in the allied arsenal could penetrate the Lucifer's shields.
+
+In the Altair system, Vasudan scientists uncovered the ruins of an extinct civilization destroyed by the Shivans eight thousand years ago. The artifacts explained how to track the Lucifer into subspace where its shields would not function. In subspace, the Lucifer could be destroyed. 
+
+From the Delta Serpentis system, a squadron launched from the GTD Bastion pursued the Lucifer into the Sol jump node. These fighters and bombers had to destroy the Lucifer's reactors before the superdestroyer extinguished all life on Earth. 
+
+According to declassified transmissions, the mission succeeded. However, the explosion of the Lucifer created a subspace cataclysm that collapsed the Sol jump node, severing all contact between Earth and the other systems of Terran-Vasudan space.", -1)
+$end_multi_text
+
+$Entry:
+$Name: XSTR("Reconstruction",-1)
+$Anim: Intel_Reconstruction
+$AlwaysInTechRoom: 1
+$Description:
+XSTR(
+"By the end of 2335, the Great War was over. The victory over the Lucifer had dealt the decisive blow. Incapable of coordinated strikes or strategic planning, the Shivans were outmaneuvered, isolated, and gradually destroyed. However, both species faced the challenge of rebuilding their interstellar societies from the ground up.
+
+An ill-fated coup d'etat, orchestrated by the rogue intelligence branch of the GTA, marked the beginning of post-war factional politics. With its economy in ruins and political structures in turmoil, the Galactic Terran Alliance disintegrated into semi-autonomous regional blocs, each with its own agenda. The major entities included the Adhara Coalition, the Antares Federation, the Regulus Syndicate, and the Luyten New Alliance. As these groups consolidated and stabilized, the reconstruction gained momentum, and the resumption of open commerce rekindled the notion of a pan-Terran community.
+
+Despite the annihilation of all life in their home system, the success of the Vasudan reconstruction surpassed that of their Terran allies. The Vasudans were governed by a Parliament until 2339, when the Vasudan Emperor, Khonsu II, dissolved this body and formed a new government, bringing an end to an institution notorious for its Byzantine treachery, corruption, and arrogance. The heir of a 10,000 year dynasty, Khonsu distinguished himself as a leader of unusual acumen and wisdom. Economists credit the Khonsu regime for the miraculous rehabilitation of Vasudan industry and society.", -1)
+$end_multi_text
+
+$Entry:
+$Name: XSTR("GTVA",-1)
+$Anim: Intel_GTVA
+$AlwaysInTechRoom: 1
+$Description:
+XSTR(
+"The Galactic Terran-Vasudan Alliance (GTVA) was formed in 2345, ten years after the Great War. This treaty organization recognized the autonomy of its constituents as it provided a framework for trade and mutual defense. The Great War had transformed the enmity between Terrans and Vasudans into a lasting fellowship.
+
+As the industry and economy of the Terran-Vasudan systems recovered, support for a more powerful GTVA gained momentum. In 2358, delegates signed into existence the Beta Aquilae Convention (BETAC), named after the system where the constitution was drafted and ratified. BETAC dismantled the governments of the Terran blocs and recognized the General Assembly, the Security Council, and the Vasudan Imperium as the supreme authorities of Terran-Vasudan space.
+
+Under BETAC, the Vasudans and the Terrans maintain separate fleets under a single command structure. A warship is designated GT or GV, indicating whether it is Galactic Terran or Galactic Vasudan. The two species openly exchange information and technology, and the most recent fighters and bombers can be modified to accommodate pilots of either species.
+
+Technically, BETAC is but one of a series of conventions and treaties that define how the GTVA functions as a political, military, and economic entity. However, the significance of BETAC as the cornerstone of the Terran-Vasudan alliance has made it the favored target of NTF propagandists.", -1)
+$end_multi_text
+
+$Entry:
+$Name: XSTR("Earth",-1)
+$Anim: Intel_Earth
+$AlwaysInTechRoom: 1
+$Description:
+XSTR(
+"In 2335, the destruction of the Lucifer superdestroyer collapsed the Sol jump node in Delta Serpentis, severing all contact with Earth.
+
+The fate of the Terran home planet remains open to speculation, though a number of scenarios are possible. As the center of an interstellar community, Earth could not survive in isolation without a radical transformation of its political and economic structures. On this point, there is no disagreement. However, the question remains whether this transition occurred peacefully or whether Terran society collapsed into anarchy. Strong arguments have been advanced for both sides.
+
+For generations, Earth had been the political, economic, and cultural center of Terran civilization. Humans still measured time in hours, days, months, and years. They named their ships after the mythological figures of ancient Terran civilizations, and systems were still identified according to the constellations observed from Earth. The planet served as capital of the GTA, and the bulk of the Terran industrial base was located in the Sol system. Offworlders identified their nationality according to the old Earth boundaries, though nation-states dissolved after the discovery of subspace and the emergence of an interstellar Terran society.
+
+Though necessity has diminished Earth's practical importance in the post-war era, discovering the means to return home remains a high priority.", -1)
+$end_multi_text
+
+$Entry:
+$Name: XSTR("Neo-Terran Front",-1)
+$Anim: Intel_NTF
+$AlwaysInTechRoom: 1
+$Description:
+XSTR(
+"Eighteen months ago, Admiral Aken Bosch, commander of the GTVA 6th Fleet, launched a violent military coup in the Polaris system. Within weeks, a regional domino effect also toppled the governments of Regulus and Sirius, all swearing allegiance to Bosch and his Neo-Terran Front.
+
+Bosch's vision of Neo-Terra informs the ideology of his movement. Though Terrans have lived in exile from Earth since the end of the Great War, Bosch imagined a utopia that would restore the grandeur of the lost world. As the people of Earth once relied on Polaris to help them navigate the seas, the North Star would become the spiritual and political compass for Terrans of the new era. Bosch's message had a profound impact on the so-called Lost Generation, born during the post-war Reconstruction. The Neo-Terran Front provided the youth of Polaris, Regulus, and Sirius with a cause to fight and die for.
+
+Bosch succeeded because his pro-Terran ideology was explicitly anti-Vasudan. The NTF opposed any Terran-Vasudan alliance and called for the dissolution of the GTVA. The NTF core systems had suffered political and economic chaos throughout the post-war Reconstruction. The Vasudans' miraculous recovery under Khonsu II's leadership embittered those Terrans still struggling to rebuild their own systems. Bosch exploited this anti-Vasudan sentiment to achieve his own political ends.", -1)
+$end_multi_text
+
+$Entry:
+$Name: XSTR("Vasudans",-1)
+$Anim: Intel_Vasudan
+$AlwaysInTechRoom: 1
+$Description:
+XSTR(
+"The Vasudans are a civilization of philosophers, artists, and scholars. They immerse themselves in the teachings of those who came before them, perceiving history not as a linear chronology of events but as a space inhabited by both the living and the dead.
+
+To the Terran outsider, Vasudan society appears convoluted and ritualistic. The Vasudans themselves may seem arrogant, treacherous, and superstitious. On the other hand, Vasudans tend to view Terrans as aggressive, paranoid, and stupid. Thirty years of peaceful interaction between Terrans and Vasudans has helped to deconstruct these stereotypes.
+
+The crowning achievement of the Vasudan civilization is its language. For the average Terran, the formalities governing its usage are beyond comprehension. Syntax and vocabulary are dictated by such factors as the speaker's age, rank, and caste, the time of day and the phase of the Vasudan calendar, and the relative spatial position of the speaker to the Emperor. This is further compounded by the existence of several alphabets, dozens of verb tenses, and thousands of dialects. A translation device is standard on all GTVA communications systems, enabling Terrans and Vasudans to understand each other.
+
+Because the Vasudan homeworld was primarily desert, the Terrans used Egyptian names to designate Vasudan warships during the Terran-Vasudan War and the Great War. After the defeat of the Shivans, the Vasudans insisted on maintaining this convention. The Emperor strongly identified with the history of Ancient Egypt, particularly the longevity of its civilization. Following their Emperor's example, Vasudans will take on what they call a Terran name from the myths and history of Ancient Egypt.", -1)
+$end_multi_text
+
+$Entry:
+$Name: XSTR("Hammer of Light",-1)
+$Anim: Intel_HOL
+$AlwaysInTechRoom: 1
+$Description:
+XSTR(
+"The dark side of the Vasudan obsession with history was the emergence during the Great War of Hammer of Light (HoL), a cult that gained a strong following among the PVN, resulting in defections to the HoL cause. The HoL believed the Shivans were the cosmic redeemers and destroyers predicted in obscure prophecies written thousands of years ago. Following the destruction of the Lucifer, the ideology and activities of Hammer of Light shifted.
+
+While some followers committed ritual suicide, the military branch of the movement continued their armed opposition to the Vasudan government and its alliance with the Terrans. Though they continued to espouse HoL's religious dogma, their activities turned more toward acts of terrorism and guerilla warfare. This branch of the HoL was later crushed in Operation Templar, following the HoL's kidnapping of the Vasudan admiralty. Other HoL leaders vanished into obscurity, returning to the study of arcane texts. A number of these religious leaders were apprehended and imprisoned for their role in the insurgency, though a few are still in hiding.", -1)
+$end_multi_text
+
+$Entry:
+$Name: XSTR("Shivans",-1)
+$Anim: Intel_Shivans
+$AlwaysInTechRoom: 1
+$Description:
+XSTR(
+"32 years after the Great War, we still know almost nothing about the Shivans. 
+
+Physically, the Shivans have multiple, compound eyes and five legs with claw-like manipulators. Their insect-like carapace does not appear original to the creature's physiognomy, suggesting the Shivans are a cybernetic fusion of biology and technology. The integrated plasma weapon also exhibits properties of an organic-artificial fusion. The weapon may be a kind of focusing device powered by the energy of the being itself, though this point is the subject of heated controversy.
+
+These details are cited as evidence that the Shivans could not have evolved as the Terran or Vasudan species had, but that they were likely constructed by another entity. Only a handful of Shivans have ever been captured, and all research on live specimens ended with the GTI's Hades rebellion in 2335. The results of these studies remain highly classified.
+
+Though the Shivans are obviously xenocidal, their motives and origins have yet to be determined. According to Ancient artifacts, the Shivans seem to possess some kind of sensitivity to subspace disturbances. We do not know if the Shivans returned to this corner of the galaxy by chance, by cycle or pattern, or by their detection of Terran-Vasudan subspace travel.  
+
+Xenobiologists know very little about Shivan society. A leading hypothesis is the hive mind theory, arguing that Shivan society is broken down in specialized functions driven by a collective intelligence. The most convincing evidence supporting this theory is the behavior of Shivan forces following the destruction of the Lucifer, the turning point of the Great War. Other experts caution against attributing insectoid properties to the Shivans, regardless of their appearance and behavior. Shivan communication seems to occur in the electromagnetic spectrum, though efforts to decode their transmissions have yielded no meaningful results to date.", -1)
+$end_multi_text
+
+$Entry:
+$Name: XSTR("The Ancients",-1)
+$Anim: Intel_ancients
+$AlwaysInTechRoom: 1
+$Description:
+XSTR(
+"During the Great War, as the annihilation of Earth seemed imminent, Vasudan scientists discovered the ruins of an extinct civilization we now call the Ancients. Data excavated at the site enabled the allies to track and destroy the SD Lucifer in subspace.
+
+After the Great War, scientists uncovered more sites throughout Terran-Vasudan space. Though only fragments remain, this interstellar society thrived thousands of years ago. Their empire was more expansive than the current boundaries of known space, and archeologists believe they might eventually uncover a map of the Ancient nodes, enabling the Alliance to travel to systems previously uncharted. 
+
+There is virtually no visual record of this civilization, except hieroglyphic forms discovered at the archeological sites and a handful of technological schematics. Major excavations are underway in Altair, Aldebaran, and Deneb, but the data gathered there remains classified at the highest level. 
+
+Terran archeologists use a Minoan naming convention to identify sites and major artifacts. Current evidence suggests the Shivans exterminated this civilization over eight thousand years ago. The Ancients believed the Shivans were a race of cosmic destroyers, and that the extinction of their species was an act of retribution for striving beyond their ordained place in the cosmic order.", -1)
+$end_multi_text
+
+$Entry:
+$Name: XSTR("Subspace",-1)
+$Anim: Intel_Subspace
+$AlwaysInTechRoom: 1
+$Description:
+XSTR(
+"In simple terms, subspace is an n-dimensional tunnel between one point in the universe and another. A vessel can travel through this tunnel in a matter of minutes, making a journey that might otherwise take decades or even centuries at light speed.
+
+A jump drive causes a ship to vibrate in multiple dimensions until its modulations are in perfect synchronization with the subspace continuum. A vortex opens, creating an aperture from an infinitesimally small point in the cosmos, enabling the vessel to cross the subspace threshold. 
+
+Two types of jumps are possible. 
+
+First, an intrasystem jump can occur between two points in a star system. Most small, space-faring vessels are equipped with motivators capable of these short jumps. The presence of an intense gravitational field is required, prohibiting travel beyond the boundaries of a star system.
+
+Second, ships can jump from system to system via nodes. Until the Great War, only larger ships could generate sufficient power to use jump nodes. The development of jump drives for fighters and bombers in 2335 enabled the Alliance to destroy the SD Lucifer in subspace. Producing these small jump drives is prohibitively expensive, so they are restricted to missions that require pilots to travel between systems. The Head-Up Display indicates the location of jump nodes with a green sphere.
+
+The vast majority of subspace nodes are extremely unstable, forming and dissipating in nanoseconds. Other nodes have a longer lifespan, existing for centuries or millennia before collapsing. The jump nodes sanctioned by the GTVA for interstellar travel are expected to remain stable for many years.", -1)
+$end_multi_text

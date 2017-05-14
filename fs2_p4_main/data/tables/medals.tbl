@@ -1,0 +1,99 @@
+;; text file to contain medal information.  Does not include "rank" medals (see rank.tbl for those).
+;; medal names and which bitmap(s) are used to display them.
+
+#Medals
+
+$Name:		Epsilon Pegasi Liberation
+$Bitmap:		Medal00.pcx
+$Num mods:	4
+
+$Name:		Imperial Order of Vasuda
+$Bitmap:		Medal01.pcx
+$Num mods:	4
+
+$Name:		Distinguished Flying Cross
+$Bitmap:		Medal02.pcx
+$Num mods:	4
+
+$Name:		SOC Service Medallion
+$Bitmap:		Medal03.pcx
+$Num mods:	4
+
+$Name:		Intelligence Cross
+$Bitmap:		Medal04.pcx
+$Num mods:	4
+
+$Name:		Order of Galatea
+$Bitmap:		Medal05.pcx
+$Num mods:	4
+
+$Name:		Meritorious Unit Commendation
+$Bitmap:		Medal06.pcx
+$Num mods:	4
+
+$Name:		Medal of Valor
+$Bitmap:		Medal07.pcx
+$Num mods:	4
+
+$Name:		GTVA Legion of Honor
+$Bitmap:		Medal08.pcx
+$Num mods:	4
+
+$Name:		Allied Defense Citation
+$Bitmap:		Medal09.pcx
+$Num mods:	4
+
+$Name:		Nebula Campaign Victory Star
+$Bitmap:		Medal10.pcx
+$Num mods:	4
+
+$Name:		NTF Campaign Victory Star
+$Bitmap:		Medal11.pcx
+$Num mods:	4
+
+$Name:		Rank
+$Bitmap:		Medal12.pcx
+$Num mods:	10
+
+$Name:		Wings
+$Bitmap:		Medal13.pcx
+$Num mods:	2
+
+$Name:		Ace
+$Bitmap:		Medal14.pcx
+$Num mods:	1
++Num Kills:	60
+$Wavefile Base: badge_a.wav
+$Promotion Text:
+
+XSTR("For your excellent record of confirmed kills, you have achieved the status of Ace.", -1)
+
+$end_multi_text
+
+$Name:		Double Ace
+$Bitmap:		Medal15.pcx
+$Num mods:	1
++Num Kills:	150
+$Wavefile Base: badge_b.wav
+$Promotion Text:
+
+XSTR("For your outstanding record of confirmed kills, you have achieved the status of Double Ace.", -1)
+
+$end_multi_text
+
+$Name:		Triple Ace
+$Bitmap:		Medal16.pcx
+$Num mods:	1
++Num Kills:	350
+$Wavefile Base: badge_c.wav
+$Promotion Text:
+
+XSTR("For your extraordinary record of confirmed kills, you have achieved the status of Triple Ace.", -1)
+
+$end_multi_text
+
+$Name:		SOC Unit Crest
+$Bitmap:		Medal17.pcx
+$Num mods:	1
+
+#End

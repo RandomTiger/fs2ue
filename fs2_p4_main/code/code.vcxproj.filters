@@ -1,0 +1,1595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Anim">
+      <UniqueIdentifier>{05dc3b61-f94b-4f13-82df-dd3fd10d2f02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Asteroid">
+      <UniqueIdentifier>{255c90cc-ab19-45bd-878d-5245ac6721dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bmpman">
+      <UniqueIdentifier>{b69f20dd-4c6a-4cb5-b1be-de185781645b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CFile">
+      <UniqueIdentifier>{36a29c5a-a1d9-40c4-b6f9-477e25a16feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cmdline">
+      <UniqueIdentifier>{c02e3f6e-f2ba-4d88-b551-1ab78ffbd5b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMeasure">
+      <UniqueIdentifier>{aad1453f-6787-434b-9116-a384f56be850}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ControlConfig">
+      <UniqueIdentifier>{e37febde-9686-4a1c-971c-9a71722bd880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cutscene">
+      <UniqueIdentifier>{74be7435-e2bf-4d5d-ad4b-921c4995908b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debris">
+      <UniqueIdentifier>{9eccf30f-62fe-4c43-8c92-a2f709bf89fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DebugConsole">
+      <UniqueIdentifier>{85345b79-f1ce-4362-b3d4-661b72241da6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectX">
+      <UniqueIdentifier>{785a0609-93ad-43e1-bf16-096d0f1ca143}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fireball">
+      <UniqueIdentifier>{a6c1b00d-9bd8-41b1-b86b-274228eb025a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameHelp">
+      <UniqueIdentifier>{4421ff69-f14f-4364-b75a-5d98b9bd992a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameSequence">
+      <UniqueIdentifier>{07256bcc-b73e-4964-b0b4-0fec1ef5c917}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameSnd">
+      <UniqueIdentifier>{16b6be7a-f3c3-488e-ae9a-572b68c94df8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GlobalIncs">
+      <UniqueIdentifier>{71327eb1-ca96-4554-be70-b0e85938311f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{4539d644-b028-49ed-9faa-e97bab537d34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hud">
+      <UniqueIdentifier>{693623e4-e8a3-4669-91e8-a2a3cfe33ff9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Io">
+      <UniqueIdentifier>{b8e7f4d6-6dd8-4055-ab46-b8bb3ebc591f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lighting">
+      <UniqueIdentifier>{4177b48f-6dc7-4a80-b5b0-f99f93d8f2d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{5e7dc31b-d2ea-40db-b112-2a731e881239}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MenuUI">
+      <UniqueIdentifier>{346bbb81-6e99-4948-899b-0df1cba1ce25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mission">
+      <UniqueIdentifier>{614f7d2c-d8b3-4309-92fb-7b842751538d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{d3311b81-40e3-4cbc-b6b9-f9ee8c740734}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{ce928f4f-f0df-409a-b0c3-52938808a471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Observer">
+      <UniqueIdentifier>{0a72042e-0698-4217-b98b-1557d6c3d831}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OsApi">
+      <UniqueIdentifier>{4444229d-d24e-40b9-b457-dc9194976bac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Palman">
+      <UniqueIdentifier>{6a7ae534-3c82-4fff-9bc3-3fce6bc73bd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parse">
+      <UniqueIdentifier>{62c95615-414e-4f31-b47e-159f5e5156d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particle">
+      <UniqueIdentifier>{d30aac2d-6f57-4b57-bb8d-8bab3ff62c38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PcxUtils">
+      <UniqueIdentifier>{f04127df-46e3-47f5-be86-ab8b95805aaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{37e4e48d-c266-4a14-94e4-6030041a2131}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Playerman">
+      <UniqueIdentifier>{6df46e64-fac0-417d-bd42-0140cdc703cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Popup">
+      <UniqueIdentifier>{9d71f626-360e-45e6-818b-1b67d7e5a39e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Radar">
+      <UniqueIdentifier>{62eac5fa-79ab-45c8-8a00-03c42223f2cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{0f73868a-9f39-4086-b77e-5ce9e6456c85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ship">
+      <UniqueIdentifier>{ebab4315-0712-4c31-9ab8-e941d1b5fd80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{a3722f74-1d4f-4051-a7b5-1cf393aa134c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Starfield">
+      <UniqueIdentifier>{7849ebbd-b8cb-47aa-8929-488d6f3c5306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stats">
+      <UniqueIdentifier>{04473f0b-25d9-4b74-9ce4-de518b2fed87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ui">
+      <UniqueIdentifier>{a9bdc44b-8627-4a6b-a172-eb4c6f9952e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VCodec">
+      <UniqueIdentifier>{314e5533-48ec-432e-9020-7c33f26f57c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Weapon">
+      <UniqueIdentifier>{2db55be9-090c-4149-884a-2bc869378c6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Nebula">
+      <UniqueIdentifier>{1942a995-a9b3-4440-8a39-a6038841c2de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Localization">
+      <UniqueIdentifier>{7463a5e7-844f-4ac8-be30-6faf9c6bd5d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TgaUtils">
+      <UniqueIdentifier>{e21f51d0-c831-42ec-987d-dbe4759ff2c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo">
+      <UniqueIdentifier>{b46fb0ec-07d2-439b-a630-f0e874113d4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InetFile">
+      <UniqueIdentifier>{2e55da01-5499-44ad-a641-b7b7ce9229e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExceptionHandler">
+      <UniqueIdentifier>{78b154d0-e1b5-4b2a-90de-a1b8150121d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{32ba05e0-54de-43c2-a0b6-960e672fc299}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MissionUI">
+      <UniqueIdentifier>{e36a9b0f-010b-47b5-86f4-1c35aacf889f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threading">
+      <UniqueIdentifier>{142fe532-4960-4666-a6a8-3ba72fc333df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JumpNode">
+      <UniqueIdentifier>{3ea1d729-9eec-4f7e-83a8-0d4e331d0eb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DebugSys">
+      <UniqueIdentifier>{370478c1-0d40-41b4-b7dc-0609f3379ce6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty">
+      <UniqueIdentifier>{db78ee25-2474-48fd-b536-50c0fd537121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\VisualLeakDetector">
+      <UniqueIdentifier>{e5ba1ceb-a6e9-4344-93f7-95faa002b018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{af2513be-0635-46d8-8b97-190a7c0d519a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Behaviours">
+      <UniqueIdentifier>{7ac76b00-2389-4990-a30f-e7b4921a964c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Anim\AnimPlay.cpp">
+      <Filter>Anim</Filter>
+    </ClCompile>
+    <ClCompile Include="Anim\PackUnpack.cpp">
+      <Filter>Anim</Filter>
+    </ClCompile>
+    <ClCompile Include="Asteroid\Asteroid.cpp">
+      <Filter>Asteroid</Filter>
+    </ClCompile>
+    <ClCompile Include="Bmpman\BmpMan.cpp">
+      <Filter>Bmpman</Filter>
+    </ClCompile>
+    <ClCompile Include="CFile\cfile.cpp">
+      <Filter>CFile</Filter>
+    </ClCompile>
+    <ClCompile Include="CFile\CfileArchive.cpp">
+      <Filter>CFile</Filter>
+    </ClCompile>
+    <ClCompile Include="CFile\CfileList.cpp">
+      <Filter>CFile</Filter>
+    </ClCompile>
+    <ClCompile Include="CFile\CfileSystem.cpp">
+      <Filter>CFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Cmdline\cmdline.cpp">
+      <Filter>Cmdline</Filter>
+    </ClCompile>
+    <ClCompile Include="CMeasure\CMeasure.cpp">
+      <Filter>CMeasure</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlConfig\ControlsConfig.cpp">
+      <Filter>ControlConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlConfig\ControlsConfigCommon.cpp">
+      <Filter>ControlConfig</Filter>
+    </ClCompile>
+    <ClCompile Include="Cutscene\Cutscenes.cpp">
+      <Filter>Cutscene</Filter>
+    </ClCompile>
+    <ClCompile Include="Debris\Debris.cpp">
+      <Filter>Debris</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugConsole\Console.cpp">
+      <Filter>DebugConsole</Filter>
+    </ClCompile>
+    <ClCompile Include="Fireball\FireBalls.cpp">
+      <Filter>Fireball</Filter>
+    </ClCompile>
+    <ClCompile Include="Fireball\WarpInEffect.cpp">
+      <Filter>Fireball</Filter>
+    </ClCompile>
+    <ClCompile Include="GameHelp\ContextHelp.cpp">
+      <Filter>GameHelp</Filter>
+    </ClCompile>
+    <ClCompile Include="GameHelp\GameplayHelp.cpp">
+      <Filter>GameHelp</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSequence\GameSequence.cpp">
+      <Filter>GameSequence</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamesnd\EventMusic.cpp">
+      <Filter>GameSnd</Filter>
+    </ClCompile>
+    <ClCompile Include="Gamesnd\GameSnd.cpp">
+      <Filter>GameSnd</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalIncs\AlphaColors.cpp">
+      <Filter>GlobalIncs</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalIncs\crypt.cpp">
+      <Filter>GlobalIncs</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalIncs\SystemVars.cpp">
+      <Filter>GlobalIncs</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalIncs\version.cpp">
+      <Filter>GlobalIncs</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalIncs\WinDebug.cpp">
+      <Filter>GlobalIncs</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\2d.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\aaline.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Colors.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Font.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\GrD3D.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\GrD3D9.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\GrD3D9Line.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\GrD3D9Render.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\GrD3D9Shader.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\GrD3D9Texture.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\GrD3DRender.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\GrD3DTexture.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\GrDummy.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUD.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HudArtillery.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUDbrackets.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUDconfig.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUDescort.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUDets.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUDlock.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUDmessage.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUDObserver.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUDreticle.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUDshield.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUDsquadmsg.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUDtarget.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUDtargetbox.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud\HUDWingmanStatus.cpp">
+      <Filter>Hud</Filter>
+    </ClCompile>
+    <ClCompile Include="Io\ForceFeedback.cpp">
+      <Filter>Io</Filter>
+    </ClCompile>
+    <ClCompile Include="Io\Joy.cpp">
+      <Filter>Io</Filter>
+    </ClCompile>
+    <ClCompile Include="Io\Joy_ff.cpp">
+      <Filter>Io</Filter>
+    </ClCompile>
+    <ClCompile Include="Io\Key.cpp">
+      <Filter>Io</Filter>
+    </ClCompile>
+    <ClCompile Include="Io\KeyControl.cpp">
+      <Filter>Io</Filter>
+    </ClCompile>
+    <ClCompile Include="Io\Mouse.cpp">
+      <Filter>Io</Filter>
+    </ClCompile>
+    <ClCompile Include="Io\MouseController.cpp">
+      <Filter>Io</Filter>
+    </ClCompile>
+    <ClCompile Include="Io\PadController.cpp">
+      <Filter>Io</Filter>
+    </ClCompile>
+    <ClCompile Include="Io\swff_lib.cpp">
+      <Filter>Io</Filter>
+    </ClCompile>
+    <ClCompile Include="Io\TextToSpeech.cpp">
+      <Filter>Io</Filter>
+    </ClCompile>
+    <ClCompile Include="Io\Timer.cpp">
+      <Filter>Io</Filter>
+    </ClCompile>
+    <ClCompile Include="Io\VoiceRecognition.cpp">
+      <Filter>Io</Filter>
+    </ClCompile>
+    <ClCompile Include="Lighting\Lighting.cpp">
+      <Filter>Lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Fix.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Floating.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Fvi.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\spline.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\StaticRand.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\VecMat.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\vector.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI\Barracks.cpp">
+      <Filter>MenuUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI\Credits.cpp">
+      <Filter>MenuUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI\fishtank.cpp">
+      <Filter>MenuUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI\MainHallMenu.cpp">
+      <Filter>MenuUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI\MainHallTemp.cpp">
+      <Filter>MenuUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI\OptionsMenu.cpp">
+      <Filter>MenuUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI\OptionsMenuMulti.cpp">
+      <Filter>MenuUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI\PlayerMenu.cpp">
+      <Filter>MenuUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI\ReadyRoom.cpp">
+      <Filter>MenuUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI\SnazzyUI.cpp">
+      <Filter>MenuUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI\TechMenu.cpp">
+      <Filter>MenuUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuUI\TrainingMenu.cpp">
+      <Filter>MenuUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Mission\MissionBriefCommon.cpp">
+      <Filter>Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="Mission\MissionCampaign.cpp">
+      <Filter>Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="Mission\MissionGoals.cpp">
+      <Filter>Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="Mission\MissionGrid.cpp">
+      <Filter>Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="Mission\MissionHotKey.cpp">
+      <Filter>Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="Mission\MissionLoad.cpp">
+      <Filter>Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="Mission\MissionLog.cpp">
+      <Filter>Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="Mission\MissionMessage.cpp">
+      <Filter>Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="Mission\MissionParse.cpp">
+      <Filter>Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="Mission\MissionTraining.cpp">
+      <Filter>Mission</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelCollide.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelInterp.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelOctant.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\ModelRead.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\CollideDebrisShip.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\CollideDebrisWeapon.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\CollideShipShip.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\CollideShipWeapon.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\CollideWeaponWeapon.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\ObjCollide.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Object.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\ObjectSnd.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\ObjectSort.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Observer\Observer.cpp">
+      <Filter>Observer</Filter>
+    </ClCompile>
+    <ClCompile Include="OsApi\OsApi.cpp">
+      <Filter>OsApi</Filter>
+    </ClCompile>
+    <ClCompile Include="OsApi\OsRegistry.cpp">
+      <Filter>OsApi</Filter>
+    </ClCompile>
+    <ClCompile Include="OsApi\OutWnd.cpp">
+      <Filter>OsApi</Filter>
+    </ClCompile>
+    <ClCompile Include="Palman\PalMan.cpp">
+      <Filter>Palman</Filter>
+    </ClCompile>
+    <ClCompile Include="Parse\Encrypt.cpp">
+      <Filter>Parse</Filter>
+    </ClCompile>
+    <ClCompile Include="Parse\PARSELO.CPP">
+      <Filter>Parse</Filter>
+    </ClCompile>
+    <ClCompile Include="Parse\SEXP.CPP">
+      <Filter>Parse</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle\Particle.cpp">
+      <Filter>Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="PcxUtils\pcxutils.cpp">
+      <Filter>PcxUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\Physics.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Playerman\ManagePilot.cpp">
+      <Filter>Playerman</Filter>
+    </ClCompile>
+    <ClCompile Include="Playerman\player.cpp">
+      <Filter>Playerman</Filter>
+    </ClCompile>
+    <ClCompile Include="Playerman\PlayerControl.cpp">
+      <Filter>Playerman</Filter>
+    </ClCompile>
+    <ClCompile Include="Popup\Popup.cpp">
+      <Filter>Popup</Filter>
+    </ClCompile>
+    <ClCompile Include="Popup\PopupDead.cpp">
+      <Filter>Popup</Filter>
+    </ClCompile>
+    <ClCompile Include="Radar\Radar.cpp">
+      <Filter>Radar</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\3dClipper.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\3ddraw.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\3dLaser.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\3dMath.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\3dSetup.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship\Afterburner.cpp">
+      <Filter>Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship\ai.cpp">
+      <Filter>Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship\AiBig.cpp">
+      <Filter>Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship\AiCode.cpp">
+      <Filter>Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship\AiGoals.cpp">
+      <Filter>Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship\AWACS.cpp">
+      <Filter>Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship\Shield.cpp">
+      <Filter>Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship\Ship.cpp">
+      <Filter>Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship\ShipContrails.cpp">
+      <Filter>Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship\ShipFX.cpp">
+      <Filter>Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship\ShipHit.cpp">
+      <Filter>Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\acm.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\AudioStr.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\ds.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\ds3d.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\dscap.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\rtvoice.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\Sound.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Starfield\Nebula.cpp">
+      <Filter>Starfield</Filter>
+    </ClCompile>
+    <ClCompile Include="Starfield\StarField.cpp">
+      <Filter>Starfield</Filter>
+    </ClCompile>
+    <ClCompile Include="Starfield\Supernova.cpp">
+      <Filter>Starfield</Filter>
+    </ClCompile>
+    <ClCompile Include="Stats\Medals.cpp">
+      <Filter>Stats</Filter>
+    </ClCompile>
+    <ClCompile Include="Stats\Scoring.cpp">
+      <Filter>Stats</Filter>
+    </ClCompile>
+    <ClCompile Include="Stats\Stats.cpp">
+      <Filter>Stats</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\BUTTON.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\CHECKBOX.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\GADGET.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\icon.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\INPUTBOX.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\KEYTRAP.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\LISTBOX.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\RADIO.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\SCROLL.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\slider.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\SLIDER2.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UIDRAW.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UIMOUSE.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\WINDOW.cpp">
+      <Filter>Ui</Filter>
+    </ClCompile>
+    <ClCompile Include="VCodec\CODEC1.CPP">
+      <Filter>VCodec</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon\Beam.cpp">
+      <Filter>Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon\Corkscrew.cpp">
+      <Filter>Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon\Emp.cpp">
+      <Filter>Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon\Flak.cpp">
+      <Filter>Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon\MuzzleFlash.cpp">
+      <Filter>Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon\Shockwave.cpp">
+      <Filter>Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon\Swarm.cpp">
+      <Filter>Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon\Trails.cpp">
+      <Filter>Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon\Weapons.cpp">
+      <Filter>Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Nebula\Neb.cpp">
+      <Filter>Nebula</Filter>
+    </ClCompile>
+    <ClCompile Include="Nebula\NebLightning.cpp">
+      <Filter>Nebula</Filter>
+    </ClCompile>
+    <ClCompile Include="Localization\fhash.cpp">
+      <Filter>Localization</Filter>
+    </ClCompile>
+    <ClCompile Include="Localization\localize.cpp">
+      <Filter>Localization</Filter>
+    </ClCompile>
+    <ClCompile Include="TgaUtils\TgaUtils.cpp">
+      <Filter>TgaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\Demo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Inetfile\CFtp.cpp">
+      <Filter>InetFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Inetfile\Chttpget.cpp">
+      <Filter>InetFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Inetfile\inetgetfile.cpp">
+      <Filter>InetFile</Filter>
+    </ClCompile>
+    <ClCompile Include="ExceptionHandler\ExceptionHandler.cpp">
+      <Filter>ExceptionHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Multi.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_campaign.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_data.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_dogfight.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_endgame.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_ingame.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_kick.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_log.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_obj.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_observer.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_options.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_pause.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_pinfo.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_ping.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_pmsg.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_rate.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_respawn.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_team.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_update.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_voice.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multi_xfer.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\multilag.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\MultiMsgs.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\MultiTeamSelect.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\MultiUI.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\MultiUtil.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Psnet2.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\stand_gui.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionUI\Chatbox.cpp">
+      <Filter>MissionUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionUI\MissionBrief.cpp">
+      <Filter>MissionUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionUI\MissionCmdBrief.cpp">
+      <Filter>MissionUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionUI\MissionDebrief.cpp">
+      <Filter>MissionUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionUI\MissionLoopBrief.cpp">
+      <Filter>MissionUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionUI\MissionPause.cpp">
+      <Filter>MissionUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionUI\MissionScreenCommon.cpp">
+      <Filter>MissionUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionUI\MissionShipChoice.cpp">
+      <Filter>MissionUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionUI\MissionWeaponChoice.cpp">
+      <Filter>MissionUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MissionUI\RedAlert.cpp">
+      <Filter>MissionUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Threading\thread.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpNode\JumpNode.cpp">
+      <Filter>JumpNode</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugSys\DebugSys.cpp">
+      <Filter>DebugSys</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Behaviours\ScreenEffects.cpp">
+      <Filter>Behaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="UnityBuild.cpp" />
+    <ClCompile Include="UnityBuildD3D.cpp" />
+    <ClCompile Include="UnityBuildD3D9.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3rdParty\VisualLeakDetector\include\vld.h">
+      <Filter>3rdParty\VisualLeakDetector</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\VisualLeakDetector\include\vld_def.h">
+      <Filter>3rdParty\VisualLeakDetector</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Anim\AnimPlay.h">
+      <Filter>Anim</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Anim\PackUnpack.h">
+      <Filter>Anim</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Asteroid\Asteroid.h">
+      <Filter>Asteroid</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Bmpman\BmpMan.h">
+      <Filter>Bmpman</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CFile\cfile.h">
+      <Filter>CFile</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CFile\CfileArchive.h">
+      <Filter>CFile</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CFile\CfileSystem.h">
+      <Filter>CFile</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Cmdline\cmdline.h">
+      <Filter>Cmdline</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CMeasure\CMeasure.h">
+      <Filter>CMeasure</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ControlConfig\ControlsConfig.h">
+      <Filter>ControlConfig</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Cutscene\Cutscenes.h">
+      <Filter>Cutscene</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Debris\Debris.h">
+      <Filter>Debris</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vasync.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vD3d.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vD3dcaps.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vd3di.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vd3drm.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vd3drmdef.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vd3drmobj.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vd3drmwin.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vD3dtypes.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vd3dvec.inl">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vDdraw.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vDdraw.lib">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vDinput.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vDinput.lib">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vdplay.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vdplobby.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vdsetup.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vDsound.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vDsound.lib">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vdvp.h">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DirectX\vDxguid.lib">
+      <Filter>DirectX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Fireball\FireBalls.h">
+      <Filter>Fireball</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GameHelp\ContextHelp.h">
+      <Filter>GameHelp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GameHelp\GameplayHelp.h">
+      <Filter>GameHelp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GameSequence\GameSequence.h">
+      <Filter>GameSequence</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Gamesnd\EventMusic.h">
+      <Filter>GameSnd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Gamesnd\GameSnd.h">
+      <Filter>GameSnd</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GlobalIncs\AlphaColors.h">
+      <Filter>GlobalIncs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GlobalIncs\crypt.h">
+      <Filter>GlobalIncs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GlobalIncs\LinkList.h">
+      <Filter>GlobalIncs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GlobalIncs\PsTypes.h">
+      <Filter>GlobalIncs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GlobalIncs\SafeArray.h">
+      <Filter>GlobalIncs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GlobalIncs\SystemVars.h">
+      <Filter>GlobalIncs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GlobalIncs\version.h">
+      <Filter>GlobalIncs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Graphics\2d.h">
+      <Filter>Graphics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Graphics\Colors.h">
+      <Filter>Graphics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Graphics\Font.h">
+      <Filter>Graphics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Graphics\GrD3D.h">
+      <Filter>Graphics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Graphics\GrD3D9Line.h">
+      <Filter>Graphics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Graphics\GrD3D9Shader.h">
+      <Filter>Graphics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Graphics\GrD3D9Texture.h">
+      <Filter>Graphics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Graphics\GrD3DInternal.h">
+      <Filter>Graphics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Graphics\GrInternal.h">
+      <Filter>Graphics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUD.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HudArtillery.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDbrackets.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDconfig.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDescort.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDets.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDgauges.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDlock.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDmessage.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDObserver.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDreticle.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDshield.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDsquadmsg.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDtarget.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDtargetbox.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Hud\HUDWingmanStatus.h">
+      <Filter>Hud</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\ForceFeedback.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\grammar.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\InputController.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\Joy.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\Joy_ff.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\Key.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\KeyControl.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\Mouse.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\MouseController.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\PadController.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\sw_error.hpp">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\sw_force.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\sw_guid.hpp">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\TextToSpeech.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\Timer.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Io\VoiceRecognition.h">
+      <Filter>Io</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Lighting\Lighting.h">
+      <Filter>Lighting</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Math\fix.h">
+      <Filter>Math</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Math\Floating.h">
+      <Filter>Math</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Math\Fvi.h">
+      <Filter>Math</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Math\matrix.h">
+      <Filter>Math</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Math\spline.h">
+      <Filter>Math</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Math\StaticRand.h">
+      <Filter>Math</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Math\VecMat.h">
+      <Filter>Math</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Math\vector.h">
+      <Filter>Math</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MenuUI\Barracks.h">
+      <Filter>MenuUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MenuUI\Credits.h">
+      <Filter>MenuUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MenuUI\fishtank.h">
+      <Filter>MenuUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MenuUI\MainHallMenu.h">
+      <Filter>MenuUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MenuUI\MainHallTemp.h">
+      <Filter>MenuUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MenuUI\OptionsMenu.h">
+      <Filter>MenuUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MenuUI\OptionsMenuMulti.h">
+      <Filter>MenuUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MenuUI\PlayerMenu.h">
+      <Filter>MenuUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MenuUI\ReadyRoom.h">
+      <Filter>MenuUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MenuUI\SnazzyUI.h">
+      <Filter>MenuUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MenuUI\TechMenu.h">
+      <Filter>MenuUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MenuUI\TrainingMenu.h">
+      <Filter>MenuUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Mission\MissionBriefCommon.h">
+      <Filter>Mission</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Mission\MissionCampaign.h">
+      <Filter>Mission</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Mission\MissionGoals.h">
+      <Filter>Mission</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Mission\MissionGrid.h">
+      <Filter>Mission</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Mission\MissionHotKey.h">
+      <Filter>Mission</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Mission\MissionLoad.h">
+      <Filter>Mission</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Mission\MissionLog.h">
+      <Filter>Mission</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Mission\MissionMessage.h">
+      <Filter>Mission</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Mission\MissionParse.h">
+      <Filter>Mission</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Mission\MissionTraining.h">
+      <Filter>Mission</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Model\MODEL.H">
+      <Filter>Model</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Model\ModelsInc.h">
+      <Filter>Model</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Object\ObjCollide.h">
+      <Filter>Object</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Object\Object.h">
+      <Filter>Object</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Object\ObjectSnd.h">
+      <Filter>Object</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Observer\Observer.h">
+      <Filter>Observer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OsApi\MONOPUB.H">
+      <Filter>OsApi</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OsApi\OsApi.h">
+      <Filter>OsApi</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OsApi\OsRegistry.h">
+      <Filter>OsApi</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OsApi\OutWnd.h">
+      <Filter>OsApi</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Palman\PalMan.h">
+      <Filter>Palman</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Parse\Encrypt.h">
+      <Filter>Parse</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Parse\parselo.h">
+      <Filter>Parse</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Parse\SEXP.H">
+      <Filter>Parse</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Particle\Particle.h">
+      <Filter>Particle</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PcxUtils\pcxutils.h">
+      <Filter>PcxUtils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Physics\Physics.h">
+      <Filter>Physics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Playerman\ManagePilot.h">
+      <Filter>Playerman</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Playerman\Player.h">
+      <Filter>Playerman</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Popup\Popup.h">
+      <Filter>Popup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Popup\PopupDead.h">
+      <Filter>Popup</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Radar\Radar.h">
+      <Filter>Radar</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Render\3D.H">
+      <Filter>Render</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Render\3dInternal.h">
+      <Filter>Render</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Ship\Afterburner.h">
+      <Filter>Ship</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Ship\ai.h">
+      <Filter>Ship</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Ship\AiBig.h">
+      <Filter>Ship</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Ship\AiGoals.h">
+      <Filter>Ship</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Ship\AiLocal.h">
+      <Filter>Ship</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Ship\AWACS.h">
+      <Filter>Ship</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Ship\Ship.h">
+      <Filter>Ship</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Ship\ShipContrails.h">
+      <Filter>Ship</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Ship\ShipFX.h">
+      <Filter>Ship</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Ship\ShipHit.h">
+      <Filter>Ship</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Ship\SubsysDamage.h">
+      <Filter>Ship</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Sound\acm.h">
+      <Filter>Sound</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Sound\AudioStr.h">
+      <Filter>Sound</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Sound\channel.h">
+      <Filter>Sound</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Sound\ds.h">
+      <Filter>Sound</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Sound\ds3d.h">
+      <Filter>Sound</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Sound\dscap.h">
+      <Filter>Sound</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Sound\midiseq.h">
+      <Filter>Sound</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Sound\rtvoice.h">
+      <Filter>Sound</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Sound\Sound.h">
+      <Filter>Sound</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Starfield\Nebula.h">
+      <Filter>Starfield</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Starfield\StarField.h">
+      <Filter>Starfield</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Starfield\Supernova.h">
+      <Filter>Starfield</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Stats\Medals.h">
+      <Filter>Stats</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Stats\Scoring.h">
+      <Filter>Stats</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Stats\Stats.h">
+      <Filter>Stats</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI\UI.H">
+      <Filter>Ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UI\UiDefs.h">
+      <Filter>Ui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="VCodec\CODEC1.H">
+      <Filter>VCodec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Weapon\Beam.h">
+      <Filter>Weapon</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Weapon\Corkscrew.h">
+      <Filter>Weapon</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Weapon\Emp.h">
+      <Filter>Weapon</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Weapon\Flak.h">
+      <Filter>Weapon</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Weapon\MuzzleFlash.h">
+      <Filter>Weapon</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Weapon\Shockwave.h">
+      <Filter>Weapon</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Weapon\Swarm.h">
+      <Filter>Weapon</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Weapon\Trails.h">
+      <Filter>Weapon</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Weapon\Weapon.h">
+      <Filter>Weapon</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Nebula\Neb.h">
+      <Filter>Nebula</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Nebula\NebLightning.h">
+      <Filter>Nebula</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Localization\fhash.h">
+      <Filter>Localization</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Localization\localize.h">
+      <Filter>Localization</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TgaUtils\TgaUtils.h">
+      <Filter>TgaUtils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Demo\Demo.h">
+      <Filter>Demo</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Inetfile\CFtp.h">
+      <Filter>InetFile</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Inetfile\Chttpget.h">
+      <Filter>InetFile</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Inetfile\inetgetfile.h">
+      <Filter>InetFile</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ExceptionHandler\ExceptionHandler.h">
+      <Filter>ExceptionHandler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\Multi.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_campaign.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_data.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_dogfight.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_endgame.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_ingame.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_kick.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_log.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_obj.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_observer.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_options.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_pause.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_pinfo.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_ping.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_pmsg.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_rate.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_respawn.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_team.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_update.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_voice.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multi_xfer.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multilag.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\multimsgs.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\MultiTeamSelect.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\MultiUI.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\MultiUtil.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\Psnet2.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Network\stand_gui.h">
+      <Filter>Network</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MissionUI\Chatbox.h">
+      <Filter>MissionUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MissionUI\MissionBrief.h">
+      <Filter>MissionUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MissionUI\MissionCmdBrief.h">
+      <Filter>MissionUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MissionUI\MissionDebrief.h">
+      <Filter>MissionUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MissionUI\MissionLoopBrief.h">
+      <Filter>MissionUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MissionUI\MissionPause.h">
+      <Filter>MissionUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MissionUI\MissionScreenCommon.h">
+      <Filter>MissionUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MissionUI\MissionShipChoice.h">
+      <Filter>MissionUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MissionUI\MissionWeaponChoice.h">
+      <Filter>MissionUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MissionUI\RedAlert.h">
+      <Filter>MissionUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Threading\thread.h">
+      <Filter>Threading</Filter>
+    </CustomBuild>
+    <CustomBuild Include="JumpNode\JumpNode.h">
+      <Filter>JumpNode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DebugSys\DebugSys.h">
+      <Filter>DebugSys</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Game\Game.h">
+      <Filter>Game</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Behaviours\ScreenEffects.h">
+      <Filter>Behaviours</Filter>
+    </CustomBuild>
+    <CustomBuild Include="UnityBuild.h" />
+    <CustomBuild Include="UnityBuildD3D.h" />
+    <CustomBuild Include="UnityBuildD3D9.h" />
+  </ItemGroup>
+</Project>

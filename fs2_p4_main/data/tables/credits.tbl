@@ -1,0 +1,452 @@
+XSTR("Design:", -1)
+
+Dave Baranec
+Jason Scott
+Adam Pletcher
+&
+The FreeSpace 2 Team
+
+
+XSTR("Based on an Original Design by:", -1)
+
+Adam Pletcher
+
+
+XSTR("Lead Programmer:", -1)
+
+Dave Baranec
+
+
+XSTR("Programming:", -1)
+
+Dave Andsager
+Jeff Farris
+Neil Kumar
+
+
+XSTR("Lead Artist:", -1)
+
+Jasen Whiteside
+
+
+XSTR("Real-Time Artists:", -1)
+
+John Enricco
+David Gulisano
+Matt Kresge
+
+
+XSTR("Cutscene Artists:", -1)
+
+Kelly Snapka
+Matt Flegel
+
+
+XSTR("Mission Design:", -1)
+
+Brad Johnson
+James Agay
+Jim Boone
+Chad Nicolas
+Jordan Roc
+
+
+XSTR("Writers:", -1)
+
+Jason Scott
+Mike Breault
+
+
+XSTR("Music and Sound Design:", -1)
+
+Dan Wentz
+
+
+XSTR("Executive Producer:", -1)
+
+Mike Kulas
+
+
+XSTR("Director of Product Development:", -1)
+
+Philip Holt
+
+
+XSTR("Quality Assurance Test Lead:", -1)
+
+Anoop Shekar
+
+
+XSTR("Quality Assurance Testers:", -1)
+
+James Tsai
+Alvan Monje 
+Andrew McIntosh
+Nicolaus Malnick
+Allan Bautista
+Eric Keyser
+
+
+XSTR("Web Design and Development", -1)
+&
+squadwar.com:
+
+Nathan Camarillo
+
+
+XSTR("Manual:", -1)
+
+Mike Breault
+
+
+XSTR("ParallaxOnline:", -1)
+
+Dave Baranec
+Mark Allender
+Kevin Bentley
+
+
+XSTR("Network Administration:", -1)
+
+Mark Muller
+
+
+XSTR("Office Management and Administration:", -1)
+
+Ginny Gee 
+Misty Goodman
+
+
+XSTR("German Localization:", -1)
+
+Heiko Herrmann
+
+
+XSTR("FRED2 Documentation:", -1)
+
+Peter Drake
+
+
+XSTR("Voice:", -1)
+
+XSTR("In Los Angeles:", -1)
+
+XSTR("Voice Producer:", -1)
+
+Fred Hatch
+
+
+XSTR("Voice Direction:", -1)
+
+Jamie Thomason
+     
+
+XSTR("Voice Editor:", -1)
+
+Frank Szick
+     
+
+XSTR("Voice Recording Engineers:", -1)
+
+Paul Andris 
+Ernie Sheesley
+     
+
+XSTR("Assistant Recording Engineers:", -1)
+
+Eric Lewis
+Lisa Carlon
+     
+
+XSTR("Cast:", -1)
+
+Robert Loggia 
+Ronny Cox      
+Kurtwood Smith
+Stephen Baldwin
+
+
+XSTR("In Chicago:", -1)
+
+XSTR("Voice Producer:", -1)
+
+Ron Steele, Sr. 
+
+
+XSTR("Voice Recording Engineers:", -1)
+
+David Steele
+John Steele
+
+
+XSTR("Recorded at:", -1)
+
+EKO Media Design Company
+
+
+XSTR("Cast:", -1)
+
+Charles Gerace
+Dale Inghram
+Kurt Naebig
+Si Osborne
+Joe Sikora
+Tony Russell
+Rick Weiss
+
+
+XSTR("In Champaign:", -1)
+
+XSTR("Voice Recording Engineers:", -1)
+
+Scott Warren
+Dan Wentz
+
+
+XSTR("Recorded at:", -1)
+
+Prairie Production Group
+Volition, Inc.
+
+
+XSTR("Cast:", -1)
+
+Dave Butler
+Roger Cooper
+Peter Davis
+Roger Francisco
+Bruce Heck
+Kay Holley
+Robin Kaler
+Jim Manley
+Tamara McDaniel
+John McKeighan
+Doug Quick
+Jason Scott
+Dan Simeone
+Eric Sizemore
+Mike Trippiedi
+
+
+XSTR("Original Freespace Team:", -1)
+
+Adam Pletcher
+Mike Kulas
+John Slagel
+Mark Allender
+Alan Lawrance
+Jasen Whiteside
+Frank Capezzuto III
+Peter Han
+Mike Comet
+Sandeep Shekar
+Dave Baranec
+Dave Andsager
+Jason Hoffoss
+Dan Wentz
+Mitri Van
+Brad Johnson
+Jim Boone
+Duncan McPherson
+
+
+XSTR("Special Thanks:", -1)
+
+Harold Kim
+Erik Hernandez
+John Palmero
+Mike Motoda
+Scott Lee
+Dawn Dvorak
+Amy Dalton
+
+
+XSTR("FS2 Beta Testers:", -1)
+
+Barbara Evans
+Darren Wheeling
+BJ Mace
+Dan Kulhman
+Verena Buttler
+Alexander Streule
+Michael & Alexander Schmalz
+Chris Borders
+Denise Diehl
+Neat Deal Productions
+Vernyle Steele
+Sharon Wottrich
+Voices Unlimited
+XSTR("Vocal samples courtesy of Spectrasonics' 'Symphony of Voices'", -1)
+
+
+XSTR("For Interplay:", -1)
+
+XSTR("Producer:", -1)
+
+Jim Boone
+
+
+XSTR("Line Producer:", -1)
+
+Primo Pulanco
+
+
+XSTR("V.P. of Product Development:", -1)
+
+Trish Wright
+
+
+XSTR("Division Director:", -1)
+
+Feargus Urquhart
+
+
+XSTR("Director of Quality Assurance:", -1)
+
+Jeremy Barnes
+
+
+XSTR("QA Manager:", -1)
+
+Michael Motoda
+Greg Baumeister
+
+
+XSTR("Quality Assurance Project Supervisor and Compatibility Manager:", -1)
+
+Darrell Jones
+
+
+XSTR("Testers:", -1)
+
+Erik Hernandez
+John Palmero
+Harold Kim
+Tony Piccoli
+David Fleischmann
+Matt Golembiewski
+Galacio Ramirez
+Tim Anderson
+Henry Lee
+
+
+XSTR("Compatibility Technicians:", -1)
+
+John Parker
+Derek Gibbs
+Josh Walters
+David Parkyn
+
+
+XSTR("Product Marketing Manager:", -1)
+
+Alison Quirion
+
+
+XSTR("Communications Manager:", -1)
+
+Lisa Bucek
+
+
+XSTR("Traffic Manager:", -1)
+
+Paul Naftalis
+
+
+XSTR("Terminology Consultant:", -1)
+
+GySgt. John R. Boone (USMC, ret.)
+
+
+XSTR("Special Thanks:", -1)
+
+XSTR("Noelle for putting up with the long absence.", -1)
+XSTR("Chad Nicholas for delaying his move so he could make missions.", -1)
+XSTR("Erik Hernandez, John Palmero, Harold Kim and Mike Motoda for putting their lives on hold.", -1)
+XSTR("Feargus Urquhart for all the great advice.", -1)
+
+
+XSTR("Special Thanks to the FreeSpace community:", -1)
+
+The FDL 
+Descent Chronicles
+The Descent Network
+FreeSpace2.Net
+FreeSpace2.Org
+FreeSpace SwapMeet
+FSURP
+FUDL
+Ground FreeSpace
+Planet FreeSpace 
+Ross 128
+Science Station Andromeda
+Shattered Star Confederation
+A Talent For War
+Xanadu's Mission Archives
+
+
+XSTR("The team dedicates FreeSpace 2 to:", -1)
+
+XSTR("Andy for being a die-hard Freespace fan and a great little brother.  Mom and Dad for always being supportive, making sure I don't kill myself from working too much, and letting Andy play Freespace way too much.  Kevin, Jason and John for having the patience in dealing with my boundless lack of knowledge.  Net buddies: Jumpy, Bee, Khan, Shet, Tron, Synthetik. Thanks for all the frags!", -1)
+XSTR("Special thanks to MikeK for giving me this chance. :)", -1)
+- Dave Baranec
+
+XSTR("My wife Maria and my sister Michelle.", -1)
+- Jason Scott
+
+XSTR("Robin, for her limitless support, and to the amazing FS2 team for showing everyone what the game could be.", -1)
+- Adam Pletcher
+
+XSTR("Rebecca (and baby) for understanding all the late nights and early mornings of work.", -1)
+- Jasen Whiteside
+
+XSTR("Karen for her understanding the late nights, and to Irene and Nathan for their sunshine every day.", -1)
+- Dave Andsager
+
+XSTR("John M., Judy, Andrew, Ray, and Gram and to one of my best friends in the world, Nancy A.  Without all of your support, I wouldn't have gotten this far to follow my dreams. I made it!", -1)
+XSTR("Thanks.", -1)
+- John Enricco
+
+XSTR("Goff Smith, Meredith Turner, Becky Minsley and my Mom and Dad for their support, guidance, and love.", -1)
+- David Gulisano
+
+XSTR("Rob, Julie, and Amanda Kresge (my parents and sister, who have helped me through the years to achieve my dreams and helped make it possible that I'm here at Volition. :) Whole lotta love to Regal, Rob and Jeff for all the good times together. Gil Broydes, for helping me get through college intact and being a great friend.", -1)
+- Matt Kresge
+
+XSTR("My wife, for moving away from home into the cornfields of IL so that I could blow stuff up. :)", -1)
+- Kelly Snapka
+
+XSTR("All my friends and family who supported me - specifically Jolie, Olivia, Mike, Ryan, Harris, the Volition crew, and the friends in my head. ", -1)
+- Matt Flegel
+
+XSTR("Alia for her love and patience, and to my parents for just about everything.", -1)
+- Jeff Farris
+
+XSTR("My parents, roommates, friends, family, and co-workers for all the help they have given me during this project.", -1)
+- Brad Johnson
+
+XSTR("I'd like to thanks my parents for being so nice about my sudden departure and the gang from Toronto: Peter and the rest of Ariel, Ian and the crew at Apollo, Deanna who is always up all night, all those of you who no longer know me online, and Joanne who unwittingly helped me help the project.", -1)
+- James Agay
+
+XSTR("Thanks to all my family and friends for their prayers and support. I'm back!!!", -1)
+- Dan Wentz
+
+XSTR("My wife Mary and children Chris and Amelia, for being good sports while I was gone all week.", -1)
+- With love, Mike Breault
+
+XSTR("Karen, Joshua and Katie, again, and the FS2 team for working so hard that I finally stopped worrying.", -1)
+- Mike Kulas
+
+XSTR("Jillian for having enough trust and faith in me to move to Champaign, and to Hank, for just being a punk.", -1)
+- Philip Holt
+
+XSTR("My parents, who stuck by me despite everything, and to my brother who believed in me even when I didn't.", -1)
+- Anoop Shekar
+
+XSTR("Mom, Dad, Brandy, my family and friends, and to all my friends and co-workers at Volition.", -1)
+- Nathan Camarillo
+ 
+XSTR("My big brother Van, for helping me avoid the calamities of our inheritance and just being there in general.  Much love.", -1)
+- Jordan Roc
+
+#end

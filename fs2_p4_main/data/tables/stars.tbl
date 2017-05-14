@@ -1,0 +1,99 @@
+; background bitmaps - random stuff
+; $Bitmap is for a bitmap which should use the intensity == alpha blending mode
+; $BitmapX is for a bitmap which should use 0, 255, 0 == transparent, and no blending otherwise
+
+$Bitmap:  dneb01
+$Bitmap:  dneb02
+$Bitmap:  dneb03
+$Bitmap:  dneb04
+$Bitmap:  dneb05
+$Bitmap:  dneb06
+$Bitmap:  dneb07
+$Bitmap:  dneb08
+$Bitmap:  dneb09
+$Bitmap:  dneb10
+$Bitmap:  dneb11
+$Bitmap:  dneb12
+$Bitmap:  dneb13
+$Bitmap:  dneb14
+$Bitmap:  dneb15
+$Bitmap:  dneb16
+$Bitmap:  dneb17
+$Bitmap:  dneb18
+$Bitmap:  neb01
+$Bitmap:  neb02
+$Bitmap:  neb03
+$Bitmap:  neb04
+$Bitmap:  neb05
+$Bitmap:  neb06
+$Bitmap:  neb07
+$Bitmap:  neb08
+$Bitmap:  neb09
+$Bitmap:  neb10
+$Bitmap:  neb11
+$Bitmap:  neb12
+$Bitmap:  neb13
+$Bitmap:  neb14
+$Bitmap:  neb15
+$Bitmap:  neb16
+$Bitmap:  neb17
+$Bitmap:  neb18
+$BitmapX: planeta1
+$BitmapX: planetb
+$BitmapX: planetc
+$BitmapX: planetd
+$BitmapX: planete
+$BitmapX: planetf
+$BitmapX: planetg
+$BitmapX: planeth
+$BitmapX: SunSathanas01
+$BitmapX: SunSathanas02
+$BitmapX: SunSathanas03
+
+#end
+
+; sun bitmaps and lights - NOTE all $Suns must have a $Sunglow and a $SunRGBI!
+
+$Sun:		SunWhite
+$Sunglow:	Sunglow01
+$SunRGBI:	1.0 1.0 1.0 1.0
+
+$Sun:		SunRed
+$Sunglow:	SunglowRed
+$SunRGBI:	1.0 0.1 0.1 1.0
+
+$Sun:		SunGreen
+$Sunglow:	SunglowGreen
+$SunRGBI:	0.5 1.0 0.5 1.0
+
+$Sun:		SunBlue
+$Sunglow:	SunglowBlue
+$SunRGBI:	0.2 0.2 1.0 1.0
+
+$Sun:		SunGold
+$Sunglow:	SunglowGold
+$SunRGBI:	0.74 0.76 0.44 1.0
+
+$Sun:		SunViolet
+$Sunglow:	SunglowViolet
+$SunRGBI:	0.66 0.44 0.54 1.0
+
+#end
+
+; debris .ani's for NON-nebula mode. NOTE : there must always be 4 of these
+$Debris:	debris01
+$Debris:	debris02
+$Debris:	debris03
+$Debris:	debris04
+
+#end
+
+; debris .ani's for nebula mode. NOTE : there must always be 4 of these
+$DebrisNeb:	gas
+$DebrisNeb:	gas
+$DebrisNeb:	gas
+$DebrisNeb:	gas
+
+#end
+
+#end

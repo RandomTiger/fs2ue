@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugRelease|Win32">
+      <Configuration>DebugRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnityDebug|Win32">
+      <Configuration>UnityDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UnityRelease|Win32">
+      <Configuration>UnityRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Freespace2</ProjectName>
+    <ProjectGuid>{DBB61498-051D-4510-8E09-D95739072297}</ProjectGuid>
+    <RootNamespace>Freespace2</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(FS2_GAME_DIR)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(FS2_GAME_DIR)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">$(FS2_GAME_DIR)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">$(FS2_GAME_DIR)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</LinkIncremental>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">$(DIRECTX11_HOME)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">$(DIRECTX11_HOME)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$($(DIRECTX11_HOME))\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">$(DIRECTX11_HOME)\Lib\x86\;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">$(DIRECTX11_HOME)\Lib\x86\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(DIRECTX11_HOME)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">FS2_main_UD</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">FS2_main_UR</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">FS2_main_D</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">FS2_main_R</TargetName>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(DIRECTX11_HOME)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$($(DIRECTX11_HOME))\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(DIRECTX11_HOME)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(DIRECTX11_HOME))\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(DIRECTX11_HOME)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(DIRECTX11_HOME)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(DIRECTX11_HOME)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)\include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(DIRECTX11_HOME)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(DIRECTX11_HOME)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)\include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(DIRECTX11_HOME)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(DIRECTX11_HOME)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)\include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">$(DIRECTX11_HOME)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)\lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Include;D:\SDK\Microsoft Speech SDK 5.1\Include;$(VCInstallDir)PlatformSDK\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">D:\SDK\Microsoft DirectX SDK (June 2010)\Lib\x86;D:\SDK\Microsoft Speech SDK 5.1\Lib\i386;$(VCInstallDir)PlatformSDK\lib;$(FrameworkSDKDir)\lib;$(WindowsSdkDir)lib;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;D:\DEV\P4\Freespace\Game\main\code\DirectX</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>./Freespace2.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\code\3rdParty\VisualLeakDetector\include;..\..\code\3rdParty\AntTweakBar/include;..\..\code\TomLib\src;..\..\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;NO_CD_CHECK;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;DISABLE_ASSEMBLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <PrecompiledHeaderOutputFile>.\Debug/Freespace2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <BrowseInformationFile>.\Debug/</BrowseInformationFile>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <UndefinePreprocessorDefinitions>NDEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>..\..\code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(FS2_GAME_DIR)\FS2_main_D.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>./FS2.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(ProjectDir)\..\..\code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>./Freespace2.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>..\..\code\3rdParty\VisualLeakDetector\include;..\..\code\3rdParty\AntTweakBar/include;..\..\code\TomLib\src;..\..\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NO_CD_CHECK;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeaderOutputFile>.\Release/Freespace2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <UndefinePreprocessorDefinitions>_DEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>..\..\code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(FS2_GAME_DIR)\FS2_main_R.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>./FS2.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>.\Release/FS2.map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>./Freespace2.bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>xcopy $(ProjectDir)\..\..\code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>./Freespace2.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Ze %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>..\..\code\3rdParty\VisualLeakDetector\include;..\..\code\3rdParty\AntTweakBar/include;..\..\code\TomLib\src;..\..\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;NO_CD_CHECK;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <PrecompiledHeaderOutputFile>.\Debug/Freespace2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>
+      </BrowseInformation>
+      <BrowseInformationFile>.\Debug/</BrowseInformationFile>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <UndefinePreprocessorDefinitions>NDEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>..\..\code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;code.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(FS2_GAME_DIR)\FS2_main_DR.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>./FS2.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(ProjectDir)\..\..\code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>./Freespace2.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\..\code\3rdParty\VisualLeakDetector\include;..\..\code\3rdParty\AntTweakBar/include;..\..\code\TomLib\src;..\..\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UNITY_BUILD;WIN32;NDEBUG;_WINDOWS;NO_CD_CHECK;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeaderOutputFile>.\Release/Freespace2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <UndefinePreprocessorDefinitions>_DEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>..\..\code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(FS2_GAME_DIR)\FS2_main_UR.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>./FS2.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>.\Release/FS2.map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>./Freespace2.bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>xcopy $(ProjectDir)\..\..\code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>./Freespace2.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\code\3rdParty\VisualLeakDetector\include;..\..\code\3rdParty\AntTweakBar/include;..\..\code\TomLib\src;..\..\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>UNITY_BUILD;WIN32;_WINDOWS;_DEBUG;NO_CD_CHECK;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;DISABLE_ASSEMBLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <PrecompiledHeaderOutputFile>.\UnityDebug/Freespace2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\UnityDebug/</AssemblerListingLocation>
+      <ObjectFileName>.\UnityDebug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\UnityDebug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <BrowseInformationFile>.\UnityDebug/</BrowseInformationFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <UndefinePreprocessorDefinitions>NDEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>..\..\code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(FS2_GAME_DIR)\FS2_main_UD.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries) </IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>./FS2.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(ProjectDir)\..\..\code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\code\FREESPACE2\FreeSpace.cpp" />
+    <ClCompile Include="..\..\code\FREESPACE2\Horde.cpp" />
+    <ClCompile Include="..\..\code\FREESPACE2\LevelPaging.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\code\FREESPACE2\FreeSpace.h" />
+    <ClInclude Include="..\..\code\FREESPACE2\FreespaceResource.h" />
+    <ClInclude Include="..\..\code\FREESPACE2\Horde.h" />
+    <ClInclude Include="..\..\code\FREESPACE2\LevelPaging.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\code\FREESPACE2\app_icon.ico" />
+    <None Include="..\..\code\freespace2\goal_com.bmp" />
+    <None Include="..\..\code\freespace2\goal_fail.bmp" />
+    <None Include="..\..\code\freespace2\goal_inc.bmp" />
+    <None Include="..\..\code\freespace2\goal_none.bmp" />
+    <None Include="..\..\code\freespace2\goal_ord.bmp" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\code\FREESPACE2\FreeSpace.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\code\3rdParty\VisualLeakDetector\lib\Win32\vld.lib" />
+    <Library Include="..\..\code\DirectX\vDdraw.lib" />
+    <Library Include="..\..\code\DirectX\vDinput.lib" />
+    <Library Include="..\..\code\DirectX\vDsound.lib" />
+    <Library Include="..\..\code\DirectX\vDxguid.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\code\code_2010.vcxproj">
+      <Project>{024830ef-ee38-4046-8e10-5c0133e843a8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\code\TomLib\TomLib_2010.vcxproj">
+      <Project>{58b5a5db-254d-4788-a37f-ebf58c31a23b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

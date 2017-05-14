@@ -1,0 +1,14 @@
+; weapon_expl.tbl
+;
+; Table file for specifying which filenames are to be used for which explosions
+;
+;
+#Start
+
+$Name:	exp20				; flak explosion
+$LOD:		4
+
+$Name:	ExpMissileHit1		; missile hits, etc.
+$LOD:		3
+
+#End

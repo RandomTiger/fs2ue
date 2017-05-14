@@ -1,0 +1,93 @@
+;
+; The format for a menu will be:
+;
+; [MENU NAME]
+; foreground_filename mask_filename
+; music_wave_filename	; use none.wav if you don't want music 
+; text mask_num hot_key anim_start anim_selected anim_static anim_leave
+; text mask_num ... 
+; ...
+;
+;
+;
+; An example menu that has 2 regions would be:
+;
+; [TEST MENU]
+; test.pcx test-m.pcx
+; "start game" 1  S cool.abm still.pcx vibrate.abm final.abm
+; "quit game" 2  Q cool.abm still.pcx vibrate.abm final.abm
+;
+
+[MAIN HALL]
+mainhall1 mainhall1-m
+;i:\projects\freespace\music\waves\main.wav
+
+; exit region
+"" 0  NULL NULL NULL NULL
+
+; barracks
+"" 1 B NULL NULL NULL NULL
+
+; ready room
+"" 2 R NULL NULL NULL NULL
+
+; tech room
+"" 3 T NULL NULL NULL NULL
+
+; options
+"" 4 NULL NULL NULL NULL
+
+; campaign room
+"" 5 C NULL NULL NULL NULL
+
+; multiplayer
+"" 10 NULL NULL NULL NULL NULL
+
+; load mission
+"" 11 L NULL NULL NULL NULL NULL
+
+; quick start
+"" 12 G NULL NULL NULL NULL NULL
+
+; skill level
+"" 13 NULL NULL NULL NULL NULL
+
+
+[BARRACKS MENU]
+barracks barracks-m
+;none.wav
+
+"Change Pilot" 1 P NULL NULL NULL NULL 
+"View Combat Statistics" 2 C NULL NULL NULL NULL
+"View Medals" 3 M NULL NULL NULL NULL
+"Return" 4 Q NULL NULL NULL NULL
+
+[TRAINING MENU]
+training training-m
+;none.wav
+
+"Training Missions" 1 T NULL NULL NULL NULL
+"Replay Missions" 2 R NULL NULL NULL NULL
+"Return" 3 Q NULL NULL NULL NULL
+
+
+[TECH MENU]
+tech tech-m
+;none.wav
+
+"Ship Specs" 1 S NULL NULL NULL NULL 
+"View Cut Scenes" 2 V NULL NULL NULL NULL 
+"View Recorded Demo" 3 D NULL NULL NULL NULL
+"Credits" 4 C NULL NULL NULL NULL 
+"Return" 5 Q NULL NULL NULL NULL 
+"Simulator Room" 7 M NULL NULL NULL NULL 
+
+[OPTIONS MENU]
+options options-m
+;none.wav
+
+"Sound/Music" 1 S NULL NULL NULL NULL
+"Controls Configuration" 2 C NULL NULL NULL NULL
+"HUD Configuration" 3 H NULL NULL NULL NULL
+"Save/Restore" 4 F NULL NULL NULL NULL
+"Return" 5 Q NULL NULL NULL NULL

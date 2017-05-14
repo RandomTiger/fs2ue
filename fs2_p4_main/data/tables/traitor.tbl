@@ -1,0 +1,19 @@
+#Debriefing_info
+
+$Num stages: 1
+
+$Formula: ( true ) 
+$Multi text
+   XSTR("For the crime of high treason, you are hereby stripped of your wings and all privileges bestowed upon you as officer of the Galactic Terran-Vasudan Alliance. 
+   
+   You will be held in custody pending your preliminary hearing, and, if indicted, you will face a military tribunal. 
+   
+   Firing upon allied vessels is a capital offense, punishable by death. You will be transferred to the Vega Penal Colony at 1900 hours.", -1)
+
+$end_multi_text
+$Voice: traitor_debrief.wav
+
+$Recommendation text:
+   XSTR("Friendly ships are not valid targets.", -1)
+
+$end_multi_text

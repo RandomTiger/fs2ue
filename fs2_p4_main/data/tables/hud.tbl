@@ -1,0 +1,42 @@
+
+; MAX of 40 currently. Get Dave if you need more.
+#Shield Icons Begin
+
+$Shield:	shield-f01
+$Shield:	shield-f03
+$Shield:	shield-f06
+$Shield:	shield-f07
+$Shield:	shield-f08
+$Shield:	shield-f09
+$Shield:	shield-f10
+$Shield:	shield-f11
+$Shield:	shield-f13
+
+$Shield:	shieldft-01
+$Shield:	shieldft-02
+$Shield:	shieldft-03
+$Shield:	shieldfs-01
+$Shield:	shieldfs-02
+$Shield:	shieldfv-01
+$Shield:	shieldfv-02
+$Shield:	shieldft-04
+$Shield:	shieldft-05
+
+$Shield:	shieldbt-03
+$Shield:	shieldbv-01
+$Shield:	shieldbv-02
+$Shield:	shieldfv-04
+
+$Shield:	shield-b04
+$Shield:	shield-b05
+$Shield:	shield-b06
+$Shield:	shield-b08
+$Shield:	shield-b09
+$Shield:	shield-b10
+$Shield:	shieldbs-01
+$Shield:	shieldbs-02
+$Shield:	shieldbt-01
+
+$Shield:	shieldfs-03
+$Shield:	shieldft-02x
+#End

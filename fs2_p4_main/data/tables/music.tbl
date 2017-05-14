@@ -1,0 +1,160 @@
+;
+; music.tbl
+;
+; Specifies which .wav files to use for the different sections of event-driven sound-tracks
+;
+; format:  $Name:  filename.wav  num_measures (samples_per_measure)
+;
+#SoundTrack Start	         				; SoundTrack 0
+$Soundtrack Name: 1: Genesis
+$Name:	FS2_Amb_A01.wav				25.0	105840	; * Ambience 
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Normal
+$Name:	FS2_Arv_B01.wav				3.8	81415	; * Enemy Arrival during Normal
+$Name:	FS2_Btl_A01.wav				25.8	66150	; * Battle 1
+$Name:	FS2_Btl_A02.wav				27.8	81415	; * Battle 2
+$Name:	FS2_Btl_A03.wav				39.8	81415	; * Battle 3
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Battle
+$Name:	FS2_Arv_B02.wav				3.8	81415	; * Enemy Arrival during Battle
+$Name:	FS2_Vict_A01.wav			2.8	52920	; * Victory 1 ( goal completed )
+$Name:	FS2_Vict_A02.wav			30.8	52920	; * Victory 2	( all enemies dead, goals completed )
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Goal Failed
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Player dies
+#SoundTrack End							; End Soundtrack 0
+;
+#SoundTrack Start	     					; SoundTrack 1
+$Soundtrack Name: 2: Exodus
+$Name:	FS2_Amb_B01.wav				17.0	132300	; * Ambience 
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Normal
+$Name:	FS2_Arv_B01.wav				4.8	81415	; * Enemy Arrival during Normal
+$Name:	FS2_Btl_B01.wav				39.8	132300	; * Battle 1
+$Name:	FS2_Btl_B02.wav				23.8	75600	; * Battle 2
+$Name:	FS2_Btl_B03.wav				31.8	75600	; * Battle 3
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Battle
+$Name:	FS2_Arv_B04.wav				4.8	75600	; * Enemy Arrival during Battle
+$Name:	FS2_Vict_A01.wav			2.8	52920	; * Victory 1 ( goal completed )
+$Name:	FS2_Vict_B02.wav			40.8	88200	; * Victory 2	( all enemies dead, goals completed )
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Goal Failed
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Player dies
+#SoundTrack End							; End Soundtrack 1
+;
+#SoundTrack Start	         				; SoundTrack 2
+$Soundtrack Name: 3: Leviticus
+$Name:	FS2_Amb_C01.wav				16.0	98916	; * Ambience 
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Normal
+$Name:	FS2_Arv_C01.wav				3.8	99225	; * Enemy Arrival during Normal
+$Name:	FS2_Btl_C01.wav				11.8	216491	; * Battle 1
+$Name:	FS2_Btl_C02.wav				7.8	192437	; * Battle 2
+$Name:	FS2_Btl_C03.wav				28.8	99225	; * Battle 3
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Battle
+$Name:	FS2_Arv_C01.wav				3.8	99225	; * Enemy Arrival during Battle
+$Name:	FS2_Vict_A01.wav			2.8	52920	; * Victory 1 ( goal completed )
+$Name:	FS2_Vict_A02.wav			30.8	52920	; * Victory 2	( all enemies dead, goals completed )
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Goal Failed
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Player dies
+#SoundTrack End							; End Soundtrack 2
+;
+#SoundTrack Start	         				; SoundTrack 3
+$Soundtrack Name: 4: Numbers
+$Name:	FS2_Amb_A01.wav				25.0	105840	; * Ambience 
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Normal
+$Name:	FS2_Arv_D01.wav				3.8	99362	; * Enemy Arrival during Normal
+$Name:	FS2_Btl_D01.wav				15.8	115764	; * Battle 1
+$Name:	FS2_Btl_D02.wav				23.8	115764	; * Battle 2
+$Name:	FS2_Btl_D03.wav				23.8	115764	; * Battle 3
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Battle
+$Name:	FS2_Arv_D01.wav				3.8	99362	; * Enemy Arrival during Battle
+$Name:	FS2_Vict_A01.wav			2.8	52920	; * Victory 1 ( goal completed )
+$Name:	FS2_Vict_B02.wav			40.8	88200	; * Victory 2	( all enemies dead, goals completed )
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Goal Failed
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Player dies
+#SoundTrack End							; End Soundtrack 3
+;
+#SoundTrack Start	         				; SoundTrack 4
+$Soundtrack Name: 5: Deuteronomy
+$Name:	FS2_Amb_B01.wav				16.0	132300	; * Ambience 
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Normal
+$Name:	FS2_Arv_D01.wav				3.8	99362	; * Enemy Arrival during Normal
+$Name:	FS2_Btl_F01.wav				23.8	117600	; * Battle 1
+$Name:	FS2_Btl_F02.wav				15.8	117600	; * Battle 2
+$Name:	FS2_Btl_F03.wav				20.0	117600	; * Battle 3
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Battle
+$Name:	FS2_Arv_D01.wav				3.8	99362	; * Enemy Arrival during Battle
+$Name:	FS2_Vict_A01.wav			2.8	52920	; * Victory 1 ( goal completed )
+$Name:	FS2_Vict_B02.wav			40.8	88200	; * Victory 2	( all enemies dead, goals completed )
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Goal Failed
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Player dies
+#SoundTrack End							; End Soundtrack 4
+;
+#SoundTrack Start         					; SoundTrack 5
+$Soundtrack Name: 6: Joshua
+$Name:	FS2_Amb_C01.wav				16.0	98916	; * Ambience 
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Normal
+$Name:	FS2_Arv_E02.wav				1.8	147000	; * Enemy Arrival during Normal
+$Name:	FS2_Btl_G01.wav				25.8	88200	; * Battle 1
+$Name:	FS2_Btl_G02.wav				19.8	88200	; * Battle 2
+$Name:	FS2_Btl_G03.wav				31.8	88200	; * Battle 3
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Battle
+$Name:	FS2_Arv_G02.wav				3.8	88200	; * Enemy Arrival during Battle
+$Name:	FS2_Vict_A01.wav			2.8	52920	; * Victory 1 ( goal completed )
+$Name:	FS2_Vict_A02.wav			30.8	52920	; * Victory 2	( all enemies dead, goals completed )
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Goal Failed
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Player dies
+#SoundTrack End							; End SoundTrack 5
+;
+#SoundTrack Start         					; SoundTrack 6
+$Soundtrack Name: 7: Revelation
+$Name:	FS2_Amb_E01.wav				14.0	73500	; * Ambience 
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Normal
+$Name:	FS2_Arv_E02.wav				1.8	147000	; * Enemy Arrival during Normal
+$Name:	FS2_Btl_E01.wav				27.8	147000	; * Battle 1
+$Name:	FS2_Btl_E02.wav				23.8	88200	; * Battle 2
+$Name:	FS2_Btl_E03.wav				22.8	88200	; * Battle 3
+$Name:	FS2_AArv_A01.wav			1.8	105840	; * Allied Arrival during Battle
+$Name:	FS2_Arv_E02.wav				1.8	147000	; * Enemy Arrival during Battle
+$Name:	FS2_Vict_A01.wav			2.8	52920	; * Victory 1 ( goal completed )
+$Name:	FS2_Vict_A02.wav			30.8	52920	; * Victory 2	( all enemies dead, goals completed )
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Goal Failed
+$Name:	FS2_Dth_A01.wav				23.8	132300	; * Player dies
+#SoundTrack End							; End SoundTrack 6
+;
+#Menu Music Start
+$Name:		Brief1				
+$Filename:	FS2_Brief_01.wav			; briefing music 1
+
+$Name:		Brief2
+$Filename:	FS2_Brief_02.wav			; briefing music 2
+
+$Name:		Brief3
+$Filename:	FS2_Brief_03.wav			; briefing music 3
+
+$Name:		Brief4
+$Filename:	FS2_Brief_04.wav			; briefing music 4
+
+$Name:		Brief5
+$Filename:	FS2_Brief_05.wav			; briefing music 5
+
+$Name:		Brief6
+$Filename:	FS2_Btl_A01.wav				; briefing music 6
+
+$Name:		Brief7
+$Filename:	FS2_Cinema2.wav				; briefing music 7
+
+$Name:		Success
+$Filename:	FS2_DB_01.wav				; debriefing success music
+
+$Name:		Average
+$Filename:	FS2_DB_02.wav				; debriefing average music
+
+$Name:		Failure
+$Filename:	FS2_DB_03.wav				; debriefing failure music
+
+$Name:		Aquitaine
+$Filename:	Aquitaine.wav				; Main menu music
+
+$Name:		Psampik
+$Filename:	Psampik.wav				; Vasudan menu music
+
+$Name:		Cinema
+$Filename:	FS2_Cinema2.wav				; credits music
+#Menu Music End
+

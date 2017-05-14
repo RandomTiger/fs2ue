@@ -1,0 +1,4092 @@
+#default
+0, "For Volition, Inc."
+
+1, "Original Design"
+
+2, "Programming"
+
+3, "Real-time Art"
+
+4, "Cutscene Art & Animation"
+
+5, "Mission Design"
+
+6, "Silent Threat Mission Design"
+
+7, "Third Party Missions"
+
+8, "Music & Sound Effects"
+
+9, "Cutscene Scoring"
+
+10, "Story & Writing"
+
+11, "Silent Threat Writing"
+
+12, "Mission Editor, PXO & Tools"
+
+13, "Real-time Voice Technology"
+
+14, "Voice Actors"
+
+15, "Administrative & Technical Support"
+
+16, "German Localization Assistance"
+
+17, "Testers"
+
+18, "Special Thanks"
+
+19, "Visit us at www.volition-inc.com"
+
+20, "For Interplay Productions"
+
+21, "Vice President of Development"
+
+22, "Producer"
+
+23, "Movie Compression Technology"
+
+24, "Director of Quality Assurance"
+
+25, "QA Managers"
+
+26, "Director of Compatibility"
+
+27, "IS/Compatibility Manager"
+
+28, "QA Project Supervisor"
+
+29, "Assisting QA Project Supervisors"
+
+30, "Compatibility Technicians"
+
+31, "Silent Threat Testers"
+
+32, "Senior IS Technician"
+
+33, "IS Technicians"
+
+34, "Director Of Marketing"
+
+35, "Product Marketing Managers"
+
+36, "Communications Manager"
+
+37, "Traffic Manager"
+
+38, "Package Design"
+
+39, "Deep in the Ross 128 system, the GTA Installation Riviera picks up a
+distress call from a Terran pilot.  A disbelieving communications
+officer listens as the pilot frantically requests cover from
+phantom attackers."
+
+40, "The ancients discover subspace and begin their empire."
+
+41, "A joint Terran-Vasudan science team conducts experiments
+utilizing captured Shivan technology."
+
+42, "GTA Intelligence briefs pilots on a daring and important plan
+to counter Shivan advancement."
+
+43, "Strange and powerful forces attack the ancients."
+
+44, "A GTA boarding party attempts to neutralize forces in a captured Shivan
+freighter."
+
+45, "The ancients begin their final struggle."
+
+46, "The ancients understand their destruction."
+
+47, "The ancients discover a weakness in their dark enemies but not in time
+to save themselves."
+
+48, "The Shivan Super Destroyer almost makes it to the Sol System but the Terran-Vasudan
+forces emerge victorious."
+
+49, "For having attained an outstanding number of confirmed kills you are hereby awarded the Ace."
+
+50, "For your fine accomplishments as a skilled pilot and for your considerable number of enemy kills, it is an honor to present you the Double Ace."
+
+51, "For your truly impressive ability as a pilot and for the exceptional number of confirmed enemy kills, it is a rare honor to present you the Triple Ace.  Few pilots are so distinguished."
+
+52, "Is that the best they can do?"
+
+53, "Radar's clean and clear."
+
+54, "Glad that's over."
+
+55, "Area secured."
+
+56, "I think that's all of them."
+
+57, "Enemy wing just arrived!"
+
+58, "Heads up we have company!"
+
+59, "Heads up, we've got visitors!"
+
+60, "New bandits in the area."
+
+61, "New hostiles in the area!"
+
+62, "Enemy presence detected."
+
+63, "Enemy wing has just arrived!"
+
+64, "Breaking to attack!"
+
+65, "Affirmative Sir, attacking your target!"
+
+66, "Attacking your target!"
+
+67, "Attacking now Sir."
+
+68, "Target aquired."
+
+69, "Reinforcements awaiting orders."
+
+70, "Reinforcements here Sir, awaiting orders."
+
+71, "Reinforcements here Sir."
+
+72, "Beta wing has arrived, awaiting orders."
+
+73, "Beta wing has arrived."
+
+74, "You've got a bogie on your tail!"
+
+75, "Check your six pilot!"
+
+76, "Fighter on your tail Sir!"
+
+77, "Watch your back Sir!"
+
+78, "Aaaaaaaah!!!"
+
+79, "Noooooooo!!!"
+
+80, "Damn it!!"
+
+81, "Nooooooooo!!!"
+
+82, "Our flame will not be extinguished!"
+
+83, "Delta wing has arrived, awaiting orders."
+
+84, "Yes Sir, leaving battle area."
+
+85, "I'm outta here."
+
+86, "Subspace node activated."
+
+87, "That's affirmative Sir, departing now."
+
+88, "Roger Sir, entering subspace."
+
+89, "Entering subspace."
+
+90, "Roger, disabling your target."
+
+91, "Yes Sir, disabling target."
+
+92, "Affirmative, targeting the engine."
+
+93, "Affirmative, targeting the engines."
+
+94, "Affirmative Sir, disarming your target."
+
+95, "Disarming target Sir."
+
+96, "Roger Sir, disarming your target."
+
+97, "Affirmative, disarming your target."
+
+98, "Engaging enemy."
+
+99, "Engaging now Sir."
+
+100, "Breaking to attack."
+
+101, "Epsilon wing has arrived, awaiting orders."
+
+102, "Epsilon wing has arrived."
+
+103, "Gamma Wing has arrived, awaiting orders."
+
+104, "Gamma Wing has arrived."
+
+105, "Taking damage, request cover!"
+
+106, "Could one of you flyboys give me some cover?"
+
+107, "Hull taking serious damage!"
+
+108, "I'm losing systems, help me out!"
+
+109, "Taking severe damage."
+
+110, "Yes Sir, disregarding target."
+
+111, "Roger Sir, ignoring your target."
+
+112, "Roger disregarding your target."
+
+113, "Yes Sir, ignoring target."
+
+114, "Ignoring target."
+
+115, "Sorry Sir, I can't do that."
+
+116, "Not here Sir."
+
+117, "I cannot comply Sir."
+
+118, "Cannot comply Sir."
+
+119, "No can do Sir."
+
+120, "I cannot do that."
+
+121, "Select a target Sir!"
+
+122, "You have nothing targeted Sir."
+
+123, "Which target Sir?"
+
+124, "Target? What target?"
+
+125, "We require target data."
+
+126, "Cease firing on friendly craft."
+
+127, "Aim at the hostiles pilot."
+
+128, "I'm on your side pilot."
+
+129, "Damn it, don't shoot me."
+
+130, "Hey, I'm on your side pilot."
+
+131, "Firing upon us negates the treaty Terran."
+
+132, "You are firing on friendly targets pilot."
+
+133, "Ship down! Ship down!"
+
+134, "Alpha one, please respond!"
+
+135, "We've lost Alpha 1!"
+
+136, "Alpha one is down!"
+
+137, "We've lost a friendly."
+
+138, "The blood you draw, is your own!!"
+
+139, "Great shot!"
+
+140, "Good kill!"
+
+141, "Impressive pilot!"
+
+142, "Excellent job pilot!"
+
+143, "Impressive for a Terran."
+
+144, "I'm out of missles! Calling in a support ship!"
+
+145, "I need to rearm! Calling in a support ship."
+
+146, "I need to rearm! Calling in some support."
+
+147, "I need to rearm."
+
+148, "I need to rearm, calling in support."
+
+149, "Weapons array diminished, Calling in for support."
+
+150, "Sir, calling in for repair!"
+
+151, "Taking heavy damage, need to repair."
+
+152, "This crate's about to blow, calling in for support."
+
+153, "Sir I need a repair ship."
+
+154, "This crate's about to blow, calling in for repair!"
+
+155, "Your straying too far from mission objectives!"
+
+156, "Where are you going pilot?"
+
+157, "Where are you going Terran?"
+
+158, "You'll pay for that traitor."
+
+159, "You'll pay for your treason pilot."
+
+160, "You will pay for your treason pilot."
+
+161, "You have tested our patience long enough Terran."
+
+162, "All Terran pilots, shoot to kill Alpha One."
+
+163, "Affirmative Sir."
+
+164, "I'm on it."
+
+165, "Roger that Sir."
+
+166, "Yes Sir."
+
+167, "As you wish."
+
+168, "Roger Sir, on our way."
+
+169, "We're already on our way, Sir."
+
+170, "Support ship being deployed."
+
+171, "Rearming complete, Sir."
+
+172, "Rearming sequence aborted."
+
+173, "Support has been destroyed."
+
+174, "Alpha1 your all alone. No reinforcements available."
+
+175, "Have you lost your mind?  Training is terminated!  Return to base."
+
+176, "You are ordered to return at once pilot."
+
+177, "Pilot, you are being removed from battle because of your insubordination."
+
+178, "Dang, you're still an ensign!  You must have gotten busted!"
+
+179, "Congratulations.  Your achievements have been noted and you are duly awarded the rank Lieutenant Junior Grade."
+
+180, "Per GTAR 64-2a you are hereby promoted to the rank of Lieutenant.  Congratulations."
+
+181, "Congratulations, your achievements have been noted and you are duly awarded the rank of Lieutenant Commander."
+
+182, "Because of your consistent sense of duty and obvious skill as a leader, you have been promoted to the rank of Commander."
+
+183, "For displaying a commanding nature and the ability to lead others you are hereby promoted to Captain.  Congratulations!"
+
+184, "For outstanding service through the war, leading many successful missions, and promoting a sense of honor and pride in the Alliance you have been promoted to the rank of Commodore. "
+
+185, "We aren't sure how you've done it, but you are hereby promoted to the prestigious rank of Rear Admiral.  (We think you cheated.)"
+
+186, "You really must have cheated to get this rank!  Do you want to sit behind a desk or something?  That is what Vice Admirals do."
+
+187, "You really have got to stop cheating.  This could become a natural thing for you... and that would be bad.  Go on Admiral Cheater
+I think you have to perform some ceremony or inspection or something."
+
+188, "Advanced Space Superiority"
+
+189, "Excellent"
+
+190, "Light"
+
+191, "Triton Dynamics"
+
+192, "Excellent all-around fighter.
+Offers superior maneuverability and
+a high top speed.  Smaller missile
+payload than other GTA fighters."
+
+193, "Developed in a joint operation by the Vasudan and Terran governments, the GTF Ulysses is an Excellent all-around fighter.  It offers superior maneuverability and a high top speed."
+
+194, "Space Superiority"
+
+195, "Fair"
+
+196, "Medium"
+
+197, "Han-Ronald Corp."
+
+198, "Original space superiority
+of the GTA fleet.  Highly versatile,
+often doubles as assault type.
+Low weapon compatibility."
+
+199, "The Apollo is the most common GTA fighter.  It is highly versatile and can perform multiple roles, including space superiority, interception and assault."
+
+200, "Interceptor"
+
+201, "Good"
+
+202, "High speed recon and bomber-
+intercept fighter.  Offers high
+weapon compatibility and payload."
+
+203, "Using the old GTF Angel Scout Fighter as a template, the GTA created the Valkyrie Interceptor Fighter.  It has two additional engines, as well as an additional set of primary hardpoints.  This makes the Valkyrie the best bomber interceptor in the fleet.  Its speed is unmatched in the GTA, and its maneuverability is above average.  Its only drawbacks are a small secondary payload and weak hull."
+
+204, "Heavy Assault"
+
+205, "Average"
+
+206, "Han-Ronald Corp"
+
+207, "Low max velocity offset by its
+tremendous offensive capabilities.
+High weapon capacity."
+
+208, "The Hercules is the slowest and most unmanageable fighter in the fleet.  This is offset, however, by its overpowering weaponry and shielding.  It carries 6 primary weapons, as well as two full secondary banks.  This heavy assault fighter is best suited for small target attacks and bomber escort."
+
+209, "Recon"
+
+210, "High"
+
+211, "Low"
+
+212, "High max velocity offset by its
+tiny payload.
+High weapon capacity."
+
+213, "Designed by GTI engineers, the Loki is undoubtedly the best reconaissance craft in Terran or Vasudan service.  Its hull shape and shielded reactor chamber lends itself to providing a low sensor profile, and is yet capable of very high speed maneuvers.  Its relatively light armament and low armor rating make it unsuitable for extended firefights, however."
+
+214, "Light Bomber"
+
+215, "Dynamic Metamer"
+
+216, "Excellent for hit-and-run bombing.
+Good speed for its size, with a high
+capacity afterburner reserve."
+
+217, "The smallest bomber in the fleet, the Athena has oftentimes been mistaken for a fighter.  However, one should not be fooled by its small size.  The Athena can carry light bombs, and most missiles.  It also has the ability to dogfight well.  Its strong shielding and hull make it the favored Lightning Bomber of the GTA."
+
+218, "Heavy Bomber"
+
+219, "Poor"
+
+220, "Heavy"
+
+221, "Suitable for any size target.
+Carries most missile types, but few
+cannons.  Armed with defensive
+turret, but still requires escort."
+
+222, "The Medusa is the standard attack bomber in the GTA.  Its strong shielding and large secondary capacity make it the favored attack craft against cruiser class targets.  As the first bomber to carry the Tsunami bomb, the Medusa is considered the staple of any bomber pilots career."
+
+223, "Assault Bomber"
+
+224, "Very Poor"
+
+225, "Designed to annihilate capital
+ships and cruisers.  Slow but
+offers unparalleled assault
+bombing capability."
+
+226, "The Ursa is the first bomber designed specifically for the purpose of annihilating capital ships.  It carries a massive payload and is the only bomber in the GTA which can equip the Harbinger Bomb.  Strong shielding and hull make the Ursa very difficult to destroy."
+
+227, "Stealth Bomber"
+
+228, "Excellent for hit-and-run bombing.
+Can carry Tsunamis.  Good afterburner
+supply."
+
+229, "Another product of GTI R&D, the Zeus strike bomber is a worthy successor to the Athena.  It's balanced design and increased reactor capacity give it remarkable speed for a bomber, yet still remains capable of carrying the powerful Tsunami bombs.  These features will make the Zeus a versatile and effective weapon against capital ships."
+
+230, "The Amazon is a simple drone, used for basic combat training.  They are unmanned, and carry only the weakest of weaponry."
+
+231, "The Advanced Amazon is a larger drone, used by the GTA for subsystem and large target training.  They are unmanned and inexpensive."
+
+232, "The Centaur support ship is designed to get in and out of battle as quick as possible.  It is fast, and quite maneuverable, allowing it to dock with fighters in a minimum amount of time.  Most notable about the Centaur, however, is its extremely large explosion radius.  The amount of warheads carried on a support ship makes it very dangerous to be close to an exploding Centaur."
+
+233, "The Poseidon is the standard military freighter in the GTA.  It is designed to protect its cargo from any kind of attack, and has four turrets with which to do so."
+
+234, "The TC2 is the standard issue cargo container in the GTA for deep space cargo transport.  It has all the electronics and systems needed to preserve any cargo within it at whatever conditions are necessary.  TC2s are cheap to manufacture, and heavily used throughout the Alliance."
+
+235, "The Chronos is a freighter of civilian design.  As the Terran Vasudan war dragged on, more and more of these vessels were commissioned by the GTA for use in military operations.  These vessels are slow but strong."
+
+236, "The TAC 1 (Called the TacOne by most pilots) is a heavily armored container, usually for carrying volatile or dangerous substances.  It is also the preferred supply container for use in front line operations."
+
+237, "The TTC 1 is another example of civilian equipment used by the GTA League of Defense.  It is primarily a Tech Container, used for research purposes, especially Zero-G development operations.  It is not very strong, however, and is often a target of enemy attacks."
+
+238, "The mainstay of the Terran Fleet, these vessels have served in both strike and defense purposes.  From nose to tail it measures 260 meters.  With a full array of weapon systems and a strong enough hull to withstand the strongest enemy warheads, a Fenris Cruiser can be found in almost any system that the GTA is operating in.  The Fenris cruiser was originally designed as a strike weapon, hence its fast speed and decent turning rate.  It was later decided that a second line of cruisers would be produced, for defensive purposes, once it became apparent that the V-T war wouldn't be over in a few months."
+
+239, "After the Vasudans began making incursions into GTA space, command decided that it needed a new defensive cruiser.  Changes to the Fenris led to the GTC Leviathan line of cruisers, produced as mobile defense battleships.  Their speed and maneuverability were greatly reduced in tradeoff for more powerful weapons and a stronger hull.  Production was discontinued when the GTA thought they would win the Vasudan war after the Battle of Gulnara, and then the production was started up again after the defeat at the Talania system.  Because of the on-again off-again nature of this vessel's production, almost all of the Leviathan Cruisers have different armaments, but all have consistent hulls and speeds."
+
+240, "The Faustus Science vessel was, and still is, a civilian craft. However, in the 14 years since the Terran-Vasudan war began, more and more of these were commissioned by the GTA in order to pursue military research.  However, its obvious value, poor fighting capabilities, and lack of speed make it a prime target for enemy ships. Hence, you will rarely find many of these anywhere near the front lines of battle."
+
+241, "The Orion is the capital ship of the GTA.  Measuring a frightening 2.1 kilometers in length, the cost to build one of these far outweighs the cost of paying the crew of this ship for 3 years.  There is no more important symbol of Terran Pride than a ship like the Galatea or the Intrepid cruising past a colonized planet, patrolling the system and ensuring safety.  In the course of the 14 year war, very few of these have ever been lost, making the destruction of an Orion a truly horrible defeat."
+
+242, "Nothing much is known about the GTD Hades.  It seems to be the GTI's top project.  We believe the goal of the project is to recreate the SD Lucifer.  The GTD Hades should be considered a Class A threat."
+
+243, "Early Terran space stations were constructed much smaller, and were mostly used for Zero-G research purposes.  Later on, with advancements in space construction technologies, stations grew bigger and bigger.  When the first Arcadia-class station was commissioned, GTA decided to rename it to an Installation rather than a Space Station.  Used for a variety of purposes, almost all major systems are home to at least one Installation, which is often used as the center of trade and communications.  Home to scores of small ship, including repair vessels, fighters, and transports, an Arcadia class Installation is always a safe haven for a convoy of attack ships, returning from battle.  Where the Orion is the symbol of Terran power, the Arcadia is the shining beacon of stability."
+
+244, "Since the start of space colonization, this standard transport has been used by everyone, both civilian and military.  While it has undergone minor changes time and again, it remains a simple design: A vehicle meant to transport personnel from one place to another."
+
+245, "The Watchdog is the standard unmanned defensive sentry turret for the GTA.  It fires two standard plasma bursts at any nearby hostile targets."
+
+246, "The Cerberus is an advanced version of the Watchdog, with stronger weaponry and the ability to withstand more damage."
+
+247, "The Hermes Escape pod has been used since the destruction of the GTD Goliath over 12 years ago.  They are used by the crews of destroyers and installations to escape destruction.  It is always best to be prepared."
+
+248, "Light Skirmish"
+
+249, "PVN"
+
+250, "Lowest power Vasudan craft. Offers little
+in the way of offensive or defensive capabilities.
+Best used in swarm situations."
+
+251, "The Anubis is the weakest fighter in the Vasudan Navy.  However, they are extremely cheap to manufacture, and are often used in swarm situations to try to overwhelm the opponent with numbers.  A few radical Vasudans have been known to load the ship with explosives and attempt to steer themselves into GTA capital ships.  The first occurrence of this was the battle of Rexias 4, where the GTD Goliath was destroyed by a squadron of kamikaze pilots.
+Due to its lack of afterburners and low weapon capacity, the GTA has classified the Anubis as a class D threat."
+
+252, "Heavy Fighter"
+
+253, "Slow and sluggish, but heavily armored.
+Has high afterburner speed.  Useful for
+hit and run attacks.  High payload capacity."
+
+254, "As the slowest fighter in the PVN, the Seth has earned itself a reputation as the Turtle of the Vasudan fleet.  Even though it is quite compact in size, the Seth can carry a massive payload, and has a lot of shielding.  Its standard impulse engines aren't very powerful, but the Seth gains an incredible speed boost when using its afterburners.  The Seth is primarily used is convoy attacks and capital ship escort duties.
+The GTA considers the PVF Seth to be a Class C threat."
+
+255, "Very Good"
+
+256, "Extremely fast with good weapons compatibility.
+Very useful in any kind of engagement."
+
+257, "The Horus interceptor can outrun any ship in the PVN or the GTA.  This makes it extremely dangerous.  Its above average weapons capacity, combined with its good maneuverability and shielding make this one of the most well designed Interceptors in the galaxy.  This ship is responsible for the destruction of more GTA bombers than any other.
+As a C class threat, Horus interceptors should be dealt with as quickly as possible."
+
+258, "PVN/Hammer Of Light"
+
+259, "Excellent fighter.  Small and hard to hit,
+with speed and maneuverability to match.  Good
+payload makes it the most versatile fighter in
+the PVN."
+
+260, "The Thoth is the most dangerous ship to be created by the PVN.  Manufactured solely at the Altairian Ship Yards, the Thoth has only been produced in small numbers as of yet.  When the Altairian Yards defected to the Hammer of Light rebels, the production of Thoths by the PVN dropped to nil.  The Thoth is now completely in the hands of the Hammer of Light.
+What makes the Thoth so versatile is its small size, extremely high maneuverability, and advanced weapon systems.  It is extremely difficult to hit, in the hands of a skilled pilot.  The design for the Thoth was simultaneous with the design for the Ulysses, and these two ships were designed by some of the same technicians.  Thus they are quite a match for our Ulysses class fighters.  This is why they are considered a B class threat.  Any non registered Thoths should be destroyed immediately, and their presence reported upon completion of the mission."
+
+261, "Bomber"
+
+262, "Low maneuverability and low top speed.  However,
+carries good payload including space bombs. Most
+commonly used in cruiser strikes."
+
+263, "The Osiris has now become the standard bomber for use in PVN operations.  It has replaced the Amun, correcting many of the faults of its predecessor.  It is not quite as sturdy, but it has nearly the same weapons capacity, and is faster and more maneuverable.
+The Osiris should be considered a C class threat to Fenris class cruisers, and a D class threat otherwise."
+
+264, "Lowest maneuverability and extremely low top speed.
+Moving target, but the heaviest bomber in the PVN.
+Used against capital ships."
+
+265, "The Amun is the Vasudans heaviest bomber class ship.  It carries a massive payload and has been responsible for the destruction of at least 3 Orion class destroyers in the past 2 years.  Fortunately, it is slow and has low maneuverability, making it an easy target for our fighters.  Fighter pilots should be wary of the two turrets on this ship: they are not to be ignored.
+The Amun is considered a B class threat to all cruisers and capital ships.  They should be given top priority in target selection during escort operations."
+
+266, "The Scarab is very similar to our Centaur: We believe the Vasudans stole the design of this ship from us.  It is used for in flight rearming of fighters and bombers.  In longer engagements, these ships can mean the difference between victory and defeat.  The major difference between this ship and the Centaur is that the Scarab is unmanned."
+
+267, "The Isis transport is quite fast and maneuverable for a ship of its size.  Most often it is used for personnel transfer, although occasionally they have been known to act as repair ships and tugboats.  It is well protected with its turrets, and it is not unheard of for the PVN to use a wing of Isises to conduct an assault on a fortified position."
+
+268, "The Bast freighter is unarmed, and considered a non threat.  We believe that it is mainly used by Vasudan civilians, but we have seen some in front line operations.  It has very low target value, but should be destroyed, as any kind of resupply ship is a danger to the GTA."
+
+269, "The standard Vasudan cargo container is only slightly different from our own.  The primary difference is that the Vasudan cargo containers are atmospheric as well as deep-space.  Vasudans used cargo containers well before we did, as they needed to transport raw materials from other systems to their own barren world.  Our cargo container was modelled after theirs, although ours is slightly superior in durability."
+
+270, "With three turrets, the Ma'at is a hairy target for GTA pilots to attack.  However, it is slow enough that it can be destroyed with enough patience.  As always, supply ships for the PVN are considered to be valid targets."
+
+271, "the VAC 4 series of cargo is much like its normal counterpart, only it has much more plating.  However, this container is no more dangerous than the standard version, and is nothing more than ML-16 bait without protection of some kind."
+
+272, "The dreaded Satis freighter was thought to be a warship when it was first encountered in the Aldebaran Encounter.  It has five turrets and a strong hull, making it quite dangerous to the inexperienced pilot.  However, most experienced pilots in the GTA know enough to attack the Satis' main weakness: its weak plating around the turrets.  Disarming a Satis is most often the best way to destroy it.
+While capturing supply ships is often an intelligent plan, the Satis has been considered dangerous enough to rank as a Class C threat.  Treat it as one. "
+
+273, "The Aten class cruiser, while far stronger than most of the Vasudans warships, falls short as a attack cruiser.  It does not have the armor or the firepower to stand up to GTA weaponry.  With a cruiser speed of 25 m/s and only six weapon turrets, the Aten just cannot muster the kind of firepower needed to do real damage to targets of size.
+Most GTA pilots have learned to exploit the primary weakness of the Aten: its extremely weak weapons subsystem.
+The Aten class cruiser is considered by the GTA to be a Class B threat."
+
+274, "Where the Aten cruiser failed, the Typhon succeeded well past expectations.  The Typhon is an incredible work of engineering and the model of Vasudan technology.  When the first one was sighted at the Vega Engagement, it was laughed at by our technicians as a foolish display of non utilitarian design.  The subsequent destruction of the GTD Eisenhower and the total decimation of the 4th fleet changed their minds very quickly.  The Typhon should never be underestimated.  It wields massive weaponry, and has more armor plating than any Terran Destroyer.  Its only known weakness is its turret armor, which is significant, but lower than expected.  In the two years since this ship first appeared, we have only managed to destroy two of them.
+The Typhon is considered a Class A threat to any ships within the same system.  Do not engage without backup."
+
+275, "The Ankh is the standard Vasudan sentry gun.  Its most common usage is guarding supply depots.  However, since the development of the Anubis, its usage has dropped off significantly."
+
+276, "The Ra has been used by Vasudans since our first encounter with them.  Every Vasudan capital ship has a few of these lifeboats."
+
+277, "The Shivan Dragon is easily the most impressive fightercraft we have yet seen.  Its maneuverability is unmatched, and it has quite a few other advantages, including a good top speed, powerful afterburners, and strong shields.  It is the only Shivan fighter we have been able to study up close, and we have learned a great deal about Shivan engineering from it.
+It seems that the Shivan shield systems are extremely strong, but their hulls are far weaker than our own.  They also rely on primary weapons far more then secondaries, as evidenced by the Dragon's small capacity.
+The GTA considers the Dragon as a Class A threat."
+
+278, "The Basilisk seems to be a Shivan heavy attack fighter.  It is not as maneuverable as other Shivan fighters, but it packs quite a punch, and it is very resistant to our weaponry.  Most often they have been used in attacking our supply convoys and transports.
+Treat the Basilisk as a Class C threat."
+
+279, "We believe that the Manticore is a Shivan interceptor.  It has a very high top speed, and its maneuverability is quite good.  However, its shield system isn't strong enough to withstand constant fighting for long, which leads us to believe the Manticore's primary purpose is to destroy enemy bombers.
+The Manticore ranks as a Class B threat."
+
+280, "We originally thought the Scorpion was the Shivans best fighter.  However, we now believe that the Scorpion is nothing more than a Shivan scout ship.  Their vast numbers and seeming unimportance to the Shivan war effort leads us to this belief.  Regardless of its purpose, the Scorpion is highly maneuverable, fast, and difficult to destroy.  It can also do damage equivalent to our space superiority fighters.
+In the event that you encounter Scorpions, regard them as a Class C threat."
+
+281, "The Shaitan bomber is only slightly superior to our own bombers - it's shielding is better, but its capacity seems to be far worse.  Perhaps the Shivans were so assured that they would only need one payload to destroy a target.
+We consider the Shaitan to be a Class C threat."
+
+282, "The Nephilim class bomber is the most alien of the Shivan ships.  We are still unsure as to why the Shivans chose this odd shape for arguably their most powerful attack craft.  However, with four primary cannons and two turrets, as well as a massive payload, the Nephilim is undoubtedly a serious threat to the GTA.  We have already lost two Orion class destroyers to a wing of Nephilims.  Unless we learn a weakness soon, we will most likely lose two more.
+The Nephilim has been designated a Class A threat to GTA destroyers and cruisers.  In unpopulated systems, it is to be considered a Class B threat."
+
+283, "The new Seraphim class bomber is the Shivan's latest threat.  It is three times larger than a Nephilim, and carries a massive payload at least 150% the size of the Nephilim.  With strong hulls and almost impenetrable shield system, the Seraphim is easily the most dangerous bomber we have yet encountered.  The Seraphim has been designated a Class A threat to GTA destroyers and cruisers.  In unpopulated systems, it is to be considered a Class B threat."
+
+284, "The Azrael is most likely a Shivan transport.  While we are not completely sure of its uses, we do know that they can house many Shivans.  It is not very heavily armored, and its weaponry is not too strong.  This makes the Azrael the most common target for capture attempts."
+
+285, "The Mephisto freighter behaves much like one of our own.  Only it is far more powerful and dangerous.  Very little data is available on this ship class."
+
+286, "We believe that the Shivans use cargo containers such as these as storage depots.  We have yet to see a Shivan land on a planet.  This leads us to believe that the Shivans plan on keeping all of their materials and resources in deep space."
+
+287, "Almost no data is available on the Asmodeus freighter.  We are aware that it has a strong hull and four turrets.  Any further data on this ship should be immediately delivered to Terran Intelligence."
+
+288, "What we have dubbed the Sac-2 is simply a more heavily armored form of the standard Shivan cargo container.  We believe that this is where the Shivans keep their more precious supplies.  Sac-2s are to be captured or destroyed at every opportunity."
+
+289, "While far more rare than its counterpart, the Cain-class cruiser, the Lilith is one of the most ferocious cruisers we have had the misfortune of combating.  It has extremely strong weapon systems, as well as a very thick armor which our cannons can barely penetrate.  One for one, the Lilith can easily destroy any of our cruisers.  It is for this reason that they should be considered a primary target for all bomber squadrons in the GTA.
+The Lilith should be considered a Class A threat to any ships that encounter it."
+
+290, "The Cain is by far the most common cruiser in the Shivan fleet.  It is also the weakest.  However, the Cain should not be underestimated.  It has many turrets, as well as a cluster bomb defensive mechanism.  As a strike cruiser, the Cain mostly appears in attacks against GTA or PVN capital ships and cruisers.  In these cases, it should be destroyed immediately.  The primary weakness of the Cain appears to be its unshielded turrets.  Most of the turrets on the Cain can be destroyed with minimal damage.
+The Cain is a Class B threat."
+
+291, "While the Demon-class Destroyer is easily one of the most massive ships we have yet seen, it is not the biggest or most powerful in the Shivan armada.  However, it is still quite dangerous, with a plethora of missile turrets and two full squadrons of fighters.  It is suggested that these capital ships be destroyed by bombers, as all cruisers that have attempted to engage a Demon have been destroyed.
+The Demon is a Class A threat in any allied system."
+
+292, "The Lucifer is the greatest threat to the survival of the GTA, the PVN, and both the Terran and Vasudan species.  It wields three massive Flux Cannons which can destroy one of our capital ships in a few hits.  These same cannons have been seen bombarding colonized worlds.  With four full fighter squadrons, and a massive array of defensive turrets, the Lucifer would be extremely difficult to destroy.
+The fact that it is protected by a sheath shielding system which makes it completely impervious to any kind of kinetic or plasma damage makes it impossible to destroy.  We have yet to find a way to breach this shielding technology.  It is hoped that a solution will be found soon.
+Assuming that a solution is found, we have managed to gather enough data on the Lucifer to destroy it.  In a recon mission, we were able to determine that the Lucifer is powered by five reactors across its surface.  If these reactors are destroyed in a short amount of time, the Lucifer will be stopped.
+If we cannot stop the Lucifer, we do not expect to be able to defeat the Shivans.
+We have no way of knowing if there are more than one Lucifer-class destroyer.  However, any that exist should be considered more dangerous than a Class A threat."
+
+293, "We believe that the sole purpose of the Trident is to guard Shivan repair and supply depots.  It is not too strong, but in mass quantities, can be dangerous."
+
+294, "Terrans originated on the third planet in the Sol system, known alternately as Terra or Earth.  Terrans are relatively physically weak, but are highly intelligent and versatile.  This combination of intelligence and versatility have allowed Terrans to evolve from tribal, nomadic primates (not entirely unlike their progenitors) to a spacefaring race.
+
+Terran civilization developed to the point of relatively stable nation-states.  With space travel, the nation-state evolved into the global-state.  With space travel, the Terran species furthered its growth, both in material ways and in immaterial, philosophical ways.  In time, the global-state led to the intersystem-state, which in turn led to the Galactic Terran Alliance, a galactic-state.  
+
+To date, Terrans have successfully colonized 12 worlds outside of the Sol system.  Outposts have been established on 15 other planets and moons throughout the known galaxy.  If the past is any indicator of future trends, unified expansionism will only continue to benefit the Alliance, both politically and economically."
+
+295, "Vasudans originate on the fourth planet of the Vasuda Prime system, the only planet in that system that is capable of supporting life.  The fourth planet of the Vasuda Prime system (also known as Vasuda Prime) is a relatively hostile world.  Both of the twin continents of Vasuda Prime are almost entirely desert, and most of the above-ground water is, even by Vasudan standards, undrinkable.  In order to adapt to these surroundings, Vasudans developed quite rapidly.
+
+Vasudan society is complex and filled with peril for the outsider ignorant of their culture.  Vasudans have a range of social tests and protocols, such as The Conversation.  A Terran mishandling of The Conversation is presumed to be one of the major causes of the V-T War.  The Vasudan government is parliamentary in nature, but is presided over by the Imperial family and the Ambassadors, who are quasi-royal go-betweens for the Parliament and the Imperium.
+
+Vasudan space exploration has been driven primarily by the need to find planets capable of sustaining their species.  As resources on Vasuda Prime have diminished, the drive to colonize has intensified among Vasudans in recent decades."
+
+296, "Despite what information we've been able to obtain, Shivans still remain, on many levels, an enigma to both the Terrans and the Vasudans.  Their origin and their destination remain unknown.  While many have offered up possible explanations as to why the Shivans seem focused on the destruction of all other sentient species, we still do not know why they seem bent on total xenocide.
+
+Shivans have multiple eyes, some of which seem to have the function of compound eyes, not unlike some varieties of insects.  Shivans also have five legs, and can run equally well over a floor or over a ceiling.  It has been hypothesized that Shivans may have spent their evolutionary process in a zero-gravity environment.  Each Shivan leg ends in a very strong claw, capable of crushing even the sturdiest of known alloys.  Parts of their thorax seem to act as compartments, such as ones that might be found on a space suit.  It has been suggested that what we have actually seen have been either robots or organic creatures in some sort of exo-skeleton.  However, we have, at present, no reason to support either hypothesis.
+
+Most likely, we will not learn anything more about the Shivan species until we have actually captured and studied a Shivan."
+
+297, "Create pilot"
+
+298, "Accept"
+
+299, "Help"
+
+300, "Options"
+
+301, "Medals"
+
+302, "Remove"
+
+303, "Set Active"
+
+304, "Clone pilot"
+
+305, "Single Player"
+
+306, "Multi Player"
+
+307, "Convert pilot"
+
+308, "Barracks"
+
+309, "Pilot Stats"
+
+310, "Briefing"
+
+311, "Ship Selection"
+
+312, "Weapons Loadout"
+
+313, "Commit"
+
+314, "@Close"
+
+315, "Clone Pilot"
+
+316, "Choose Pilot"
+
+317, "Select"
+
+318, "Restart Campaign"
+
+319, "Campaigns"
+
+320, "Campaign Information"
+
+321, "Continue"
+
+322, "GTA Command Briefing"
+
+323, "Targeting"
+
+324, "Ship"
+
+325, "Weapons"
+
+326, "Miscellaneous"
+
+327, "Alt"
+
+328, "Shift"
+
+329, "Enable"
+
+330, "Invert"
+
+331, "Cancel"
+
+332, "Undo"
+
+333, "Reset Defaults"
+
+334, "Search Mode"
+
+335, "Bind Mode"
+
+336, "@Conflict"
+
+337, "Clear Conflict"
+
+338, "Clear All"
+
+339, "Clear Selected"
+
+340, "Technical Database"
+
+341, "Mission Simulator"
+
+342, "Cutscenes"
+
+343, "Credits"
+
+344, "Exit"
+
+345, "Debriefing"
+
+346, "Statistics"
+
+347, "Replay Mission"
+
+348, "Recommendations"
+
+349, "@.Medal"
+
+350, "@.Rank"
+
+351, "@.Badge"
+
+352, "Pilot Info"
+
+353, "@Medal"
+
+354, "@Rank"
+
+355, "@Badge"
+
+356, "Kick"
+
+357, "Clear"
+
+358, "Reset"
+
+359, "Hotkey Assignment"
+
+360, "Key Group"
+
+361, "Amber"
+
+362, "Blue"
+
+363, "Green"
+
+364, "On"
+
+365, "Off"
+
+366, "Popup"
+
+367, "HUD Config"
+
+368, "Brightness"
+
+369, "Single Missions"
+
+370, "Campaign Missions"
+
+371, "Mission"
+
+372, "Filename"
+
+373, "Messages"
+
+374, "Events"
+
+375, "Objectives"
+
+376, "Complete"
+
+377, "Incomplete"
+
+378, "Failed"
+
+379, "Mission Log"
+
+380, "Missions"
+
+381, "Close"
+
+382, "All"
+
+383, "Coop"
+
+384, "Team"
+
+385, "Dogfight"
+
+386, "Create Game"
+
+387, "Players"
+
+388, "Pilot Information"
+
+389, "Host Options"
+
+390, "Highest Rank"
+
+391, "Team Leader"
+
+392, "Any Player"
+
+393, "Host"
+
+394, "AI Orders"
+
+395, "End Mission"
+
+396, "Skill Level"
+
+397, "Observers"
+
+398, "Time Limit"
+
+399, "Respawn Limit"
+
+400, "Kill Limit"
+
+401, "Voice Transmission"
+
+402, "Voice Quality"
+
+403, "Message Duration"
+
+404, "Per Player Voice Wait"
+
+405, "Host Modifies Ships"
+
+406, "Host Setup"
+
+407, "Join"
+
+408, "Select Ship"
+
+409, "Name"
+
+410, "Class"
+
+411, "Hull"
+
+412, "Shield"
+
+413, "Refresh"
+
+414, "Status"
+
+415, "Server"
+
+416, "Ping"
+
+417, "Join as Observer"
+
+418, "Join Game"
+
+419, "Team 1"
+
+420, "Team 2"
+
+421, "Open"
+
+422, "Closed"
+
+423, "Password Protected"
+
+424, "Restricted"
+
+425, "Allow Rank"
+
+426, "Or Below"
+
+427, "Or Above"
+
+428, "Title"
+
+429, "Game Type"
+
+430, "@Launch"
+
+431, "Multi"
+
+432, "Detail"
+
+433, "Exit Game"
+
+434, "Controls Config"
+
+435, "Very High"
+
+436, "Custom"
+
+437, "Engine Glow"
+
+438, "off"
+
+439, "on"
+
+440, "Nebulas"
+
+441, "Target View Rendering"
+
+442, "Effects Alpha Blending"
+
+443, "Preset Detail Levels"
+
+444, "Model Detail"
+
+445, "Model Update"
+
+446, "3D Hardware Textures"
+
+447, "Weapon Rendering"
+
+448, "Impact Effects"
+
+449, "Shield Hit Effect"
+
+450, "Stars"
+
+451, "Particles"
+
+452, "Lighting"
+
+453, "Briefing Voice"
+
+454, "Volume"
+
+455, "Effects"
+
+456, "Music"
+
+457, "Voice"
+
+458, "Joystick"
+
+459, "Sensitivity"
+
+460, "Dead Zone"
+
+461, "Mouse"
+
+462, "Add"
+
+463, "Yes"
+
+464, "No"
+
+465, "VMT"
+
+466, "General"
+
+467, "/Multidata"
+
+468, "/Missions"
+
+469, "Never"
+
+470, "Before Game"
+
+471, "IP Address"
+
+472, "Broadcast Locally"
+
+473, "Login"
+
+474, "Password"
+
+475, "Object Update"
+
+476, "Pilot / Squad Images"
+
+477, "Transfer Missions"
+
+478, "Flush Cache"
+
+479, "Mute"
+
+480, "Mic Test"
+
+481, "Quality"
+
+482, "Ignore"
+
+483, "Enter Password"
+
+484, "Exit Mission"
+
+485, "Mission Paused"
+
+486, "Stats"
+
+487, "Available Ships"
+
+488, "Type"
+
+489, "Length"
+
+490, "Max Velocity"
+
+491, "Maneuverability"
+
+492, "Armor"
+
+493, "Gun Mounts"
+
+494, "Missile Banks"
+
+495, "Manufacturer"
+
+496, "@ship_name"
+
+497, "@ship_Type"
+
+498, "@ship_Maneuverability"
+
+499, "@ship_Armor"
+
+500, "@ship_Manufacturer"
+
+501, "@ship_desc"
+
+502, "Lock Players"
+
+503, "Ship Information"
+
+504, "Alpha"
+
+505, "Beta"
+
+506, "Gamma"
+
+507, "Ships"
+
+508, "Species"
+
+509, "GTA Technical Database"
+
+510, "Play"
+
+511, "Cutscene Description"
+
+512, "@weapon_name"
+
+513, "@weapon_desc"
+
+514, "Willfully firing on allied ships is a capital offense, punishable by death.  You are hereby stripped of your rank and your citizenship in the GTA.  You will appear at 0700 hours at the League of Defense Justice Ministry for your court martial."
+
+515, "Don't fire upon friendly ships."
+
+516, "GTW ML-16 Laser"
+
+517, "Standard issue
+Medium Hull Damage
+Minimal Shield Damage"
+
+518, "GTW ML-16 
+
+Argon laser weapon - uses transparent ceramic technology in order to create an optical system that is extremely durable and stable under battle conditions - provides adequate destructive damage to the hull of enemy ships by vaporizing molecular bonds at the target area and destabilizing molecular bonds across the grain of the hull material.
+
+The GTA issues ML-16 Lasers to every fighter and bomber in service."
+
+519, "GTW-41 Disruptor Cannon"
+
+520, "Standard issue
+Tactical Weapon
+Damages Subsystems"
+
+521, "GTW - 41 Disruptor Cannon 
+
+A gas-focused krypton laser - when the ship is in flight, the chamber of the GTW-41 rotates at a constant speed - a small amount of NO2 is injected into the container .05 ms prior to the emission of the laser light - the rotation  of the NO2 in the chamber focuses the laser pulse to a state that is only very slightly (1%) diffused - after the laser pulse is emitted from the chamber into space, the chamber expels the NO2 into space (thus expelling ionized molecules and moisture) - the process repeats for each subsequent burst of laser energy - as this laser is very slightly diffused, it is not effective as a destructive weapon, but as a tactical weapon - the Disruptor Cannon is best suited and is used for the permanent disabling of enemy ship subsystems.
+
+The Disruptor Cannon should be utilized in all capture operations in order to minimize risk of targets destruction."
+
+522, "GTW-41x Advanced Disruptor"
+
+523, "Advanced Version
+Tactical Weapon
+Damages Subsystems"
+
+524, "GTW - 41x Advanced Disruptor Cannon
+
+The Advanced Disruptor Cannon is much like the GTW-41 Disruptor.  However, its speed and higher subsystems damage make it much more useful in operations against faster moving targets."
+
+525, "GTW-15 Avenger Cannon"
+
+526, "Special Issue
+Projectile Weapon
+Low Shield Damage"
+
+527, "GTW -15 Avenger
+
+A rapid-fire, computer-controlled radar and gun system - capable of firing at a rate of more than 4500 rounds per minute - used primarily for close-defense situations - uses closed-loop radar technology to locate, identify, and direct a stream of highly destructive 45mm projectiles to the target.
+
+With the advent of shield technology, the GTW-15 is preferred over the ML-16 in any ship that can carry it.  It's extra damage against hulls make it one of the best anti cruiser weapons.  It has also proven very effective against Vasudan fighters.  However, it's substandard anti-shield capabilities make it a poor choice for dogfighting Shivans, although far better than the ML-16."
+
+528, "GTW-32 Flail Rifle"
+
+529, "Special Issue
+Low Energy Usage
+Kinetic Weapon
+Moderate Shield Damage"
+
+530, "GTW - 32 Flail
+
+A rapid-fire, low energy, ceramic optic focused, krypton laser - used in tactical situations to distract or lead an enemy to their destruction at the hands of other allied fighters - this weapon, if used over an extended period of in-flight battle, can destroy an enemy fighter, but, as a destructive weapon, should only be used as a last resort.
+
+The fast firing rate and high mass of the Flail make it great for changing the velocity vector of an enemy fighter or bomber.  It is slightly more effective than the Avenger against shields, rated at damage/second.  Its low energy consumption rate makes it useful for prolonged engagements.  Note, however, that once you have taken out an enemy's shields, switching to another weapon is advised."
+
+531, "GTW-5 Prometheus Cannon"
+
+532, "Prototype
+High Energy Usage
+High Hull Damage
+Moderate Shield Damage"
+
+533, "GTW - 5 Prometheus
+
+Named after the Titan who gave fire to humanity, the Prometheus is a laser-based weapon - an advanced radar and X-ray tracking system lock on the target and determine the target's material structure - argon laser focused via transparent ceramic optics - the laser is generated at the destructive frequency (full out-of-phase) for the target's material structure - emitted no more than .02 ms after targeting and activation by the pilot, the Prometheus stands as one of the GTA's most effective deterrents to enemy attack, an effective form of defense for GTA pilots, and as a durable, portable, and highly destructive offensive tool.
+
+The Prometheus works best against target hulls.  Against shields, it only achieves mediocre performance.  It's slow speed and high energy consumption work against it as well.  However, the primary advantage of the Prometheus is that it can be equipped on almost any fighter in the GTA."
+
+534, "GTW-7 Banshee"
+
+535, "Special Issue
+EM Weapon
+Very High Energy Usage
+Extreme Shield Damage"
+
+536, "GTW - 7 Banshee 
+
+An electromagnetic weapon - sends rapid pulses of exceptionally strong electromagnetic energy resulting in a 1.63 x 105 J blast that forces its way through any known shield technology and produces a dramatic shearing effect which quickly destroys the target ship's materials - named for the fact that in an atmosphere, the pulse creates an atmospheric disturbance similar to a quasi-human scream at 180 dB - uses up a tremendous amount of available ship energy - already, it is has been used by many GTA fighter aces and test pilots as a coup de grace, although such a use for this massively powerful offensive weapon is officially viewed as poor sportsmanship by the GTA.
+
+The GTW-7's impressive anti-shielding capabilities make it the weapon of choice against the Shivans.  The main limitation of this weapon is low weapons compatibility.  It can only be fitted on a GTF Valkyrie or a GTF Hercules."
+
+537, "GTW-99 Shield Breaker"
+
+538, "Prototype
+Depletes shields"
+
+539, "GTW - 99 Shield Breaker
+
+Developed as an anti-Shivan weapon, the Shield Breaker inflicts massive damage to enemy defensive systems. This weapon causes no structural damage, but coupling it with an anti-hull cannon is very effective against larger Shivan bombers such as the Seraphim."
+
+540, "GTW-43 Leech Cannon"
+
+541, "GTW - 43 Leech Cannon
+
+The Leech Cannon depletes the power supply of enemy fighters.  Use it to disable afterburners, energy weapons, and shields. No subsystems targeting is required, just point and shoot.
+
+The Leech Cannon is an anti-fighter weapon with minimal effect against larger vessels."
+
+542, "GTM MX-50"
+
+543, "Standard Issue
+Fire and Forget"
+
+544, "GTM MX-50
+
+Suitable for all space battles - defensive and offensive - medium payload (16.5 Kt) - infrared tracking and semi-intelligent targeting - pilot chooses desired target, and the MX-50 tracks the chosen target based off the emission of heat from the - engine, the weapon bays, and the cockpit of the target ship - the MX-50 will always attack a target that is determined to be hostile by the onboard computer of any GTA combat vessel, thus ensuring a higher kill rate, should the pilot find himself in a heated battle situation where precise aiming might be difficult.
+
+Early experiments with energy based defenses like the deflector array at Ross 128 have shown that this weapon is exceedingly weak against anything besides steel based targets."
+
+545, "GTM-31 Disruptor Missile"
+
+546, "Advanced Prototype
+Tactical Missile
+Disrupts Subsystems"
+
+547, "GTM - 31 Disruptor Missile
+
+Advanced signal processing - high precision interception capability - small payload (9 Kt), combining both conventional explosives and a localized blast of energy caused by the effect of impact upon the laser-propulsion system of the missile - designed to temporarily disable subsystems on hostile targets.
+
+The D-Missile is designed to temporarily stop a cruiser or destroyer from firing its laser turrets.  The effect will last about 10 seconds per missile fired, so using these to temporarily disable a cruiser should usually be for suppression until the cruiser is destroyed, or whatever was trying to evade the cruiser has gotten out of range.  Only a few ships can carry these - and they are very scarce - so proper utilization is important."
+
+548, "GTM-3 Fury Missile"
+
+549, "Standard Issue
+Maximum Compatibility"
+
+550, "GTM - 2 Fury
+
+Small, fast dumbfire missiles - fired in swarms - GTA fighters can carry more Fury missiles than conventional missiles, due to their small size - used for distraction and other tactical measures - very small payload (3 Kt).
+
+Use is recommended in close combat situations and against larger targets where tracking is a non issue."
+
+551, "GTM-4 Hornet Swarm Missile"
+
+552, "Special Issue
+Swarm Type
+Slow Target Lock"
+
+553, "GTM - 4 Hornet
+
+Infrared and ultraviolet tracking - designed to fire in small groups of 4 missiles per burst - light medium payload per  missile (12 Kt) - semi-intelligent on-board tracking - single-pass kill probability will not exceed 60% on average -designed as an offensive version of the Fury.
+
+As a swarm based weapon, this missile can take out an unshielded fighter without any difficulty.  It's four missile system almost guarantees one or two hits, and its speed is quite amazing.  Twice as powerful against naked hulls."
+
+554, "GTM-9 Interceptor"
+
+555, "Standard Issue
+Fast Target Lock"
+
+556, "GTM - 9 Interceptor
+
+All-aspect seeking - laser tracking senses energy reflected off a target from the primary weapon systems of the target, increasing single-pass kill probability - medium payload (18.5 Kt) - missile is designed to pierce reinforced hull, thus 
+securing itself to the target, prior to detonating (15 ms delay).
+
+This is the standard issue fighter-killer in the GTA.  Designed to take out fighters with minimum hassle, a simple lock is all that is needed to grab the enemies attention.  Short lock time, good speed, and decent payload makes this the best
+missile to use against all but the strongest ships.  It's effectiveness against large targets, however, is less than a typical laser run, making this primarily a ship to ship missile."
+
+557, "GTM Phoenix V"
+
+558, "Special Issue
+Anti-Bomber Missile
+Slow Target Lock"
+
+559, "GTM Phoenix V 
+
+All-aspect seeking - same tracking system as the Interceptor - large payload (50 Kt), but slower than the Interceptor - one of the best fire-and-forget missiles ever developed - many fighter pilots within the GTA regard the Phoenix V as the weapon of choice against high value, heavily defended targets.
+
+The number one bomber killer in our arsenal, this is the single most damaging missile that can be equipped on a fighter craft.  The longer lock time and slower speed make it less of a dogfight weapon and more of an anti- bomber warhead.  It's extra damage against shields makes it especially useful against the Shivan bombers."
+
+560, "GTM-1 Synaptic Bomb"
+
+561, "Advanced Bomb
+Wing Attack Cluster Explosion
+Area Effect"
+
+562, "GTM - 1 Synaptic Bomb
+
+Missile propulsion unit carrying several small intelligent bomblets - when distance to target is less than 100 m or when time to impact is less than 2 sec., bomblets direct missile to the most vulnerable part of the ship of those parts of the ship facing the missile - bomblets then separate from missile propulsion unit and form a sphere - inertia continues to carry bomblets in the direction of the target - the missile propulsion unit continues to advance toward the target - when the missile hits the target or 1.5 sec. after the missile should have hit the target, the bomblets explode - the spherical shape of the formation of the bomblets helps to ensure a fairly even level of damage across a sensitive area on the target - the spherical shape also ensures that the target will not be able to effectively maneuver away from the blast, thus pinning the target to a specific area in space - can also act as dumbfire - medium payload per bomblet (15 Kt) - very small payload for missile (2 Kt).
+
+Nicknamed the Earthshaker by the bomber pilots who tested this, it is a bombers best defense against fighters.  The Synaptic Bomb can do a lot of damage to a lot of ships at one time."
+
+563, "GTM-43 Stiletto"
+
+564, "Standard Issue
+Tactical Missile
+Destroys Subsystems"
+
+565, "GTM - 43 Stiletto
+
+Heat seeking - laser tracking similar to the Interceptor - missile is protected by a small shield system, allowing for greater success in payload delivery during busy melee situations and intense firefights - fast, but low in-flight maneuverability compared to other missiles of comparable size - low maneuverability due to the size of the missile's payload (60 Kt) and on-board shield system.
+
+With the ability to take out most subsystems in one hit, and as simple to fire as an MX-50, the GTM-43 is the best ship disabling bomb developed by the GTA.  Effective against turrets, engines and any other kind of subsystem, the Stiletto is a valuable asset to a bombers arsenal.  However, it's slow, unmanageable, and it can't do any real hull damage."
+
+566, "GTM-86 Cluster Bomb"
+
+567, "Standard Issue
+Tactical Missile"
+
+568, "GTM - 86 Cluster Bomb
+
+A second-generation Synaptic bomb, this GTI-developed cluster warhead has been designed for attacks against entire wings of enemy ships.
+
+Upon reaching its target, the primary warhead fragments into multiple secondary warheads that explode within a split second.  The detonations produce a large field of blast field, making the cluster bomb most effective against fighter formations."
+
+569, "GTM-3 Tsunami Bomb"
+
+570, "Special Issue
+Anti-Cruiser Bomb
+Tactical Anti-Matter Warhead
+Long Lock/Reload Time"
+
+571, "GTM - 3 Tsunami
+
+Intelligent tracking similar to GTA targeting system - prior to launch, communicates with ship computer, gathering data about enemy target types and whereabouts - slow, low maneuverability - antimatter warhead (500 tonne3 mass-to-energy conversion) - due to instability of antimatter, no more than 10 may be carried on board a GTA bomber at any given time, unless pilot is granted a special permit by an appropriate governing body.
+
+The Tsunami has now become the standard Terran bomb used to take out large targets.  It's short life requires that you get within 1500 meters of the target before sending it off, and since it needs a lock to be fired, it takes a brave pilot to fly straight enough for long enough to let one of these fly.  A few Tsunami's will take out almost any ship, barring a destroyer.  The antimatter warhead also washes over shields a little, so as long as it isn't too close to the center of the blast, a fighter or bomber has a good chance of surviving detonation."
+
+572, "GTM-N1 Harbinger Bomb"
+
+573, "Prototype
+Anti-Capital Ship Bomb
+Tactical Fusion Warhead
+Extremely Long Lock/Reload Time"
+
+574, "GTM - N1 Harbinger
+
+Fusion bomb surrounded by 3 salted fission bombs - propulsion unit is a half-size version of a regulation GTA fighter thruster (Class II) - given the weight of the payloads, the missile is slow despite the power of the thruster - as the Harbinger is exceptionally large, GTA bombers are limited to carrying 6 of these weapons at any given time - the resultant shock wave from this weapon is potentially deadly, due to the size of the payloads (5000 Mt in total) - use near allied installations or allied ship groupings is strongly discouraged by the GTA - most effective when used in preemptive defensive strike against non-military installations.
+
+The Harbinger is our best chance of destroying the Lucifer."
+
+575, "GTM-11 EM Pulse"
+
+576, "Advanced Missile
+Electromagnetic Pulse weapon
+Anti-bomber weapon"
+
+577, "GTM - 11 EM Pulse
+
+Upon impact, the EM Pulse temporarily disables the electronics systems of the target ship.  This renders the target ship unable to track targets, manage communications, or gain aspect missile lock.  This has numerous tactical applications. For example, a direct hit with an EM Pulse missile will prevent bombers from launching aspect-seeking warheads for several seconds. Once the EMP field has worn off, they must also take the time to reacquire missile lock, granting you valuable time."
+
+578, "GTM-84 Corkscrew Missile"
+
+579, "Wacky fun corkscrew missiles"
+
+580, "Developed by the GTI for Silent Threat. Deemed too wacky for final release."
+
+#end
+
+#german
+0, "(gr)For Volition, Inc."
+
+1, "(gr)Original Design"
+
+2, "(gr)Programming"
+
+3, "(gr)Real-time Art"
+
+4, "(gr)Cutscene Art & Animation"
+
+5, "(gr)Mission Design"
+
+6, "(gr)Silent Threat Mission Design"
+
+7, "(gr)Third Party Missions"
+
+8, "(gr)Music & Sound Effects"
+
+9, "(gr)Cutscene Scoring"
+
+10, "(gr)Story & Writing"
+
+11, "(gr)Silent Threat Writing"
+
+12, "(gr)Mission Editor, PXO & Tools"
+
+13, "(gr)Real-time Voice Technology"
+
+14, "(gr)Voice Actors"
+
+15, "(gr)Administrative & Technical Support"
+
+16, "(gr)German Localization Assistance"
+
+17, "(gr)Testers"
+
+18, "(gr)Special Thanks"
+
+19, "(gr)Visit us at www.volition-inc.com"
+
+20, "(gr)For Interplay Productions"
+
+21, "(gr)Vice President of Development"
+
+22, "(gr)Producer"
+
+23, "(gr)Movie Compression Technology"
+
+24, "(gr)Director of Quality Assurance"
+
+25, "(gr)QA Managers"
+
+26, "(gr)Director of Compatibility"
+
+27, "(gr)IS/Compatibility Manager"
+
+28, "(gr)QA Project Supervisor"
+
+29, "(gr)Assisting QA Project Supervisors"
+
+30, "(gr)Compatibility Technicians"
+
+31, "(gr)Silent Threat Testers"
+
+32, "(gr)Senior IS Technician"
+
+33, "(gr)IS Technicians"
+
+34, "(gr)Director Of Marketing"
+
+35, "(gr)Product Marketing Managers"
+
+36, "(gr)Communications Manager"
+
+37, "(gr)Traffic Manager"
+
+38, "(gr)Package Design"
+
+39, "(gr)Deep in the Ross 128 system, the GTA Installation Riviera picks up a
+distress call from a Terran pilot.  A disbelieving communications
+officer listens as the pilot frantically requests cover from
+phantom attackers."
+
+40, "(gr)The ancients discover subspace and begin their empire."
+
+41, "(gr)A joint Terran-Vasudan science team conducts experiments
+utilizing captured Shivan technology."
+
+42, "(gr)GTA Intelligence briefs pilots on a daring and important plan
+to counter Shivan advancement."
+
+43, "(gr)Strange and powerful forces attack the ancients."
+
+44, "(gr)A GTA boarding party attempts to neutralize forces in a captured Shivan
+freighter."
+
+45, "(gr)The ancients begin their final struggle."
+
+46, "(gr)The ancients understand their destruction."
+
+47, "(gr)The ancients discover a weakness in their dark enemies but not in time
+to save themselves."
+
+48, "(gr)The Shivan Super Destroyer almost makes it to the Sol System but the Terran-Vasudan
+forces emerge victorious."
+
+49, "(gr)For having attained an outstanding number of confirmed kills you are hereby awarded the Ace."
+
+50, "(gr)For your fine accomplishments as a skilled pilot and for your considerable number of enemy kills, it is an honor to present you the Double Ace."
+
+51, "(gr)For your truly impressive ability as a pilot and for the exceptional number of confirmed enemy kills, it is a rare honor to present you the Triple Ace.  Few pilots are so distinguished."
+
+52, "(gr)Is that the best they can do?"
+
+53, "(gr)Radar's clean and clear."
+
+54, "(gr)Glad that's over."
+
+55, "(gr)Area secured."
+
+56, "(gr)I think that's all of them."
+
+57, "(gr)Enemy wing just arrived!"
+
+58, "(gr)Heads up we have company!"
+
+59, "(gr)Heads up, we've got visitors!"
+
+60, "(gr)New bandits in the area."
+
+61, "(gr)New hostiles in the area!"
+
+62, "(gr)Enemy presence detected."
+
+63, "(gr)Enemy wing has just arrived!"
+
+64, "(gr)Breaking to attack!"
+
+65, "(gr)Affirmative Sir, attacking your target!"
+
+66, "(gr)Attacking your target!"
+
+67, "(gr)Attacking now Sir."
+
+68, "(gr)Target aquired."
+
+69, "(gr)Reinforcements awaiting orders."
+
+70, "(gr)Reinforcements here Sir, awaiting orders."
+
+71, "(gr)Reinforcements here Sir."
+
+72, "(gr)Beta wing has arrived, awaiting orders."
+
+73, "(gr)Beta wing has arrived."
+
+74, "(gr)You've got a bogie on your tail!"
+
+75, "(gr)Check your six pilot!"
+
+76, "(gr)Fighter on your tail Sir!"
+
+77, "(gr)Watch your back Sir!"
+
+78, "(gr)Aaaaaaaah!!!"
+
+79, "(gr)Noooooooo!!!"
+
+80, "(gr)Damn it!!"
+
+81, "(gr)Nooooooooo!!!"
+
+82, "(gr)Our flame will not be extinguished!"
+
+83, "(gr)Delta wing has arrived, awaiting orders."
+
+84, "(gr)Yes Sir, leaving battle area."
+
+85, "(gr)I'm outta here."
+
+86, "(gr)Subspace node activated."
+
+87, "(gr)That's affirmative Sir, departing now."
+
+88, "(gr)Roger Sir, entering subspace."
+
+89, "(gr)Entering subspace."
+
+90, "(gr)Roger, disabling your target."
+
+91, "(gr)Yes Sir, disabling target."
+
+92, "(gr)Affirmative, targeting the engine."
+
+93, "(gr)Affirmative, targeting the engines."
+
+94, "(gr)Affirmative Sir, disarming your target."
+
+95, "(gr)Disarming target Sir."
+
+96, "(gr)Roger Sir, disarming your target."
+
+97, "(gr)Affirmative, disarming your target."
+
+98, "(gr)Engaging enemy."
+
+99, "(gr)Engaging now Sir."
+
+100, "(gr)Breaking to attack."
+
+101, "(gr)Epsilon wing has arrived, awaiting orders."
+
+102, "(gr)Epsilon wing has arrived."
+
+103, "(gr)Gamma Wing has arrived, awaiting orders."
+
+104, "(gr)Gamma Wing has arrived."
+
+105, "(gr)Taking damage, request cover!"
+
+106, "(gr)Could one of you flyboys give me some cover?"
+
+107, "(gr)Hull taking serious damage!"
+
+108, "(gr)I'm losing systems, help me out!"
+
+109, "(gr)Taking severe damage."
+
+110, "(gr)Yes Sir, disregarding target."
+
+111, "(gr)Roger Sir, ignoring your target."
+
+112, "(gr)Roger disregarding your target."
+
+113, "(gr)Yes Sir, ignoring target."
+
+114, "(gr)Ignoring target."
+
+115, "(gr)Sorry Sir, I can't do that."
+
+116, "(gr)Not here Sir."
+
+117, "(gr)I cannot comply Sir."
+
+118, "(gr)Cannot comply Sir."
+
+119, "(gr)No can do Sir."
+
+120, "(gr)I cannot do that."
+
+121, "(gr)Select a target Sir!"
+
+122, "(gr)You have nothing targeted Sir."
+
+123, "(gr)Which target Sir?"
+
+124, "(gr)Target? What target?"
+
+125, "(gr)We require target data."
+
+126, "(gr)Cease firing on friendly craft."
+
+127, "(gr)Aim at the hostiles pilot."
+
+128, "(gr)I'm on your side pilot."
+
+129, "(gr)Damn it, don't shoot me."
+
+130, "(gr)Hey, I'm on your side pilot."
+
+131, "(gr)Firing upon us negates the treaty Terran."
+
+132, "(gr)You are firing on friendly targets pilot."
+
+133, "(gr)Ship down! Ship down!"
+
+134, "(gr)Alpha one, please respond!"
+
+135, "(gr)We've lost Alpha 1!"
+
+136, "(gr)Alpha one is down!"
+
+137, "(gr)We've lost a friendly."
+
+138, "(gr)The blood you draw, is your own!!"
+
+139, "(gr)Great shot!"
+
+140, "(gr)Good kill!"
+
+141, "(gr)Impressive pilot!"
+
+142, "(gr)Excellent job pilot!"
+
+143, "(gr)Impressive for a Terran."
+
+144, "(gr)I'm out of missles! Calling in a support ship!"
+
+145, "(gr)I need to rearm! Calling in a support ship."
+
+146, "(gr)I need to rearm! Calling in some support."
+
+147, "(gr)I need to rearm."
+
+148, "(gr)I need to rearm, calling in support."
+
+149, "(gr)Weapons array diminished, Calling in for support."
+
+150, "(gr)Sir, calling in for repair!"
+
+151, "(gr)Taking heavy damage, need to repair."
+
+152, "(gr)This crate's about to blow, calling in for support."
+
+153, "(gr)Sir I need a repair ship."
+
+154, "(gr)This crate's about to blow, calling in for repair!"
+
+155, "(gr)Your straying too far from mission objectives!"
+
+156, "(gr)Where are you going pilot?"
+
+157, "(gr)Where are you going Terran?"
+
+158, "(gr)You'll pay for that traitor."
+
+159, "(gr)You'll pay for your treason pilot."
+
+160, "(gr)You will pay for your treason pilot."
+
+161, "(gr)You have tested our patience long enough Terran."
+
+162, "(gr)All Terran pilots, shoot to kill Alpha One."
+
+163, "(gr)Affirmative Sir."
+
+164, "(gr)I'm on it."
+
+165, "(gr)Roger that Sir."
+
+166, "(gr)Yes Sir."
+
+167, "(gr)As you wish."
+
+168, "(gr)Roger Sir, on our way."
+
+169, "(gr)We're already on our way, Sir."
+
+170, "(gr)Support ship being deployed."
+
+171, "(gr)Rearming complete, Sir."
+
+172, "(gr)Rearming sequence aborted."
+
+173, "(gr)Support has been destroyed."
+
+174, "(gr)Alpha1 your all alone. No reinforcements available."
+
+175, "(gr)Have you lost your mind?  Training is terminated!  Return to base."
+
+176, "(gr)You are ordered to return at once pilot."
+
+177, "(gr)Pilot, you are being removed from battle because of your insubordination."
+
+178, "(gr)Dang, you're still an ensign!  You must have gotten busted!"
+
+179, "(gr)Congratulations.  Your achievements have been noted and you are duly awarded the rank Lieutenant Junior Grade."
+
+180, "(gr)Per GTAR 64-2a you are hereby promoted to the rank of Lieutenant.  Congratulations."
+
+181, "(gr)Congratulations, your achievements have been noted and you are duly awarded the rank of Lieutenant Commander."
+
+182, "(gr)Because of your consistent sense of duty and obvious skill as a leader, you have been promoted to the rank of Commander."
+
+183, "(gr)For displaying a commanding nature and the ability to lead others you are hereby promoted to Captain.  Congratulations!"
+
+184, "(gr)For outstanding service through the war, leading many successful missions, and promoting a sense of honor and pride in the Alliance you have been promoted to the rank of Commodore. "
+
+185, "(gr)We aren't sure how you've done it, but you are hereby promoted to the prestigious rank of Rear Admiral.  (We think you cheated.)"
+
+186, "(gr)You really must have cheated to get this rank!  Do you want to sit behind a desk or something?  That is what Vice Admirals do."
+
+187, "(gr)You really have got to stop cheating.  This could become a natural thing for you... and that would be bad.  Go on Admiral Cheater
+I think you have to perform some ceremony or inspection or something."
+
+188, "(gr)Advanced Space Superiority"
+
+189, "(gr)Excellent"
+
+190, "(gr)Light"
+
+191, "(gr)Triton Dynamics"
+
+192, "(gr)Excellent all-around fighter.
+Offers superior maneuverability and
+a high top speed.  Smaller missile
+payload than other GTA fighters."
+
+193, "(gr)Developed in a joint operation by the Vasudan and Terran governments, the GTF Ulysses is an Excellent all-around fighter.  It offers superior maneuverability and a high top speed."
+
+194, "(gr)Space Superiority"
+
+195, "(gr)Fair"
+
+196, "(gr)Medium"
+
+197, "(gr)Han-Ronald Corp."
+
+198, "(gr)Original space superiority
+of the GTA fleet.  Highly versatile,
+often doubles as assault type.
+Low weapon compatibility."
+
+199, "(gr)The Apollo is the most common GTA fighter.  It is highly versatile and can perform multiple roles, including space superiority, interception and assault."
+
+200, "(gr)Interceptor"
+
+201, "(gr)Good"
+
+202, "(gr)High speed recon and bomber-
+intercept fighter.  Offers high
+weapon compatibility and payload."
+
+203, "(gr)Using the old GTF Angel Scout Fighter as a template, the GTA created the Valkyrie Interceptor Fighter.  It has two additional engines, as well as an additional set of primary hardpoints.  This makes the Valkyrie the best bomber interceptor in the fleet.  Its speed is unmatched in the GTA, and its maneuverability is above average.  Its only drawbacks are a small secondary payload and weak hull."
+
+204, "(gr)Heavy Assault"
+
+205, "(gr)Average"
+
+206, "(gr)Han-Ronald Corp"
+
+207, "(gr)Low max velocity offset by its
+tremendous offensive capabilities.
+High weapon capacity."
+
+208, "(gr)The Hercules is the slowest and most unmanageable fighter in the fleet.  This is offset, however, by its overpowering weaponry and shielding.  It carries 6 primary weapons, as well as two full secondary banks.  This heavy assault fighter is best suited for small target attacks and bomber escort."
+
+209, "(gr)Recon"
+
+210, "(gr)High"
+
+211, "(gr)Low"
+
+212, "(gr)High max velocity offset by its
+tiny payload.
+High weapon capacity."
+
+213, "(gr)Designed by GTI engineers, the Loki is undoubtedly the best reconaissance craft in Terran or Vasudan service.  Its hull shape and shielded reactor chamber lends itself to providing a low sensor profile, and is yet capable of very high speed maneuvers.  Its relatively light armament and low armor rating make it unsuitable for extended firefights, however."
+
+214, "(gr)Light Bomber"
+
+215, "(gr)Dynamic Metamer"
+
+216, "(gr)Excellent for hit-and-run bombing.
+Good speed for its size, with a high
+capacity afterburner reserve."
+
+217, "(gr)The smallest bomber in the fleet, the Athena has oftentimes been mistaken for a fighter.  However, one should not be fooled by its small size.  The Athena can carry light bombs, and most missiles.  It also has the ability to dogfight well.  Its strong shielding and hull make it the favored Lightning Bomber of the GTA."
+
+218, "(gr)Heavy Bomber"
+
+219, "(gr)Poor"
+
+220, "(gr)Heavy"
+
+221, "(gr)Suitable for any size target.
+Carries most missile types, but few
+cannons.  Armed with defensive
+turret, but still requires escort."
+
+222, "(gr)The Medusa is the standard attack bomber in the GTA.  Its strong shielding and large secondary capacity make it the favored attack craft against cruiser class targets.  As the first bomber to carry the Tsunami bomb, the Medusa is considered the staple of any bomber pilots career."
+
+223, "(gr)Assault Bomber"
+
+224, "(gr)Very Poor"
+
+225, "(gr)Designed to annihilate capital
+ships and cruisers.  Slow but
+offers unparalleled assault
+bombing capability."
+
+226, "(gr)The Ursa is the first bomber designed specifically for the purpose of annihilating capital ships.  It carries a massive payload and is the only bomber in the GTA which can equip the Harbinger Bomb.  Strong shielding and hull make the Ursa very difficult to destroy."
+
+227, "(gr)Stealth Bomber"
+
+228, "(gr)Excellent for hit-and-run bombing.
+Can carry Tsunamis.  Good afterburner
+supply."
+
+229, "(gr)Another product of GTI R&D, the Zeus strike bomber is a worthy successor to the Athena.  It's balanced design and increased reactor capacity give it remarkable speed for a bomber, yet still remains capable of carrying the powerful Tsunami bombs.  These features will make the Zeus a versatile and effective weapon against capital ships."
+
+230, "(gr)The Amazon is a simple drone, used for basic combat training.  They are unmanned, and carry only the weakest of weaponry."
+
+231, "(gr)The Advanced Amazon is a larger drone, used by the GTA for subsystem and large target training.  They are unmanned and inexpensive."
+
+232, "(gr)The Centaur support ship is designed to get in and out of battle as quick as possible.  It is fast, and quite maneuverable, allowing it to dock with fighters in a minimum amount of time.  Most notable about the Centaur, however, is its extremely large explosion radius.  The amount of warheads carried on a support ship makes it very dangerous to be close to an exploding Centaur."
+
+233, "(gr)The Poseidon is the standard military freighter in the GTA.  It is designed to protect its cargo from any kind of attack, and has four turrets with which to do so."
+
+234, "(gr)The TC2 is the standard issue cargo container in the GTA for deep space cargo transport.  It has all the electronics and systems needed to preserve any cargo within it at whatever conditions are necessary.  TC2s are cheap to manufacture, and heavily used throughout the Alliance."
+
+235, "(gr)The Chronos is a freighter of civilian design.  As the Terran Vasudan war dragged on, more and more of these vessels were commissioned by the GTA for use in military operations.  These vessels are slow but strong."
+
+236, "(gr)The TAC 1 (Called the TacOne by most pilots) is a heavily armored container, usually for carrying volatile or dangerous substances.  It is also the preferred supply container for use in front line operations."
+
+237, "(gr)The TTC 1 is another example of civilian equipment used by the GTA League of Defense.  It is primarily a Tech Container, used for research purposes, especially Zero-G development operations.  It is not very strong, however, and is often a target of enemy attacks."
+
+238, "(gr)The mainstay of the Terran Fleet, these vessels have served in both strike and defense purposes.  From nose to tail it measures 260 meters.  With a full array of weapon systems and a strong enough hull to withstand the strongest enemy warheads, a Fenris Cruiser can be found in almost any system that the GTA is operating in.  The Fenris cruiser was originally designed as a strike weapon, hence its fast speed and decent turning rate.  It was later decided that a second line of cruisers would be produced, for defensive purposes, once it became apparent that the V-T war wouldn't be over in a few months."
+
+239, "(gr)After the Vasudans began making incursions into GTA space, command decided that it needed a new defensive cruiser.  Changes to the Fenris led to the GTC Leviathan line of cruisers, produced as mobile defense battleships.  Their speed and maneuverability were greatly reduced in tradeoff for more powerful weapons and a stronger hull.  Production was discontinued when the GTA thought they would win the Vasudan war after the Battle of Gulnara, and then the production was started up again after the defeat at the Talania system.  Because of the on-again off-again nature of this vessel's production, almost all of the Leviathan Cruisers have different armaments, but all have consistent hulls and speeds."
+
+240, "(gr)The Faustus Science vessel was, and still is, a civilian craft. However, in the 14 years since the Terran-Vasudan war began, more and more of these were commissioned by the GTA in order to pursue military research.  However, its obvious value, poor fighting capabilities, and lack of speed make it a prime target for enemy ships. Hence, you will rarely find many of these anywhere near the front lines of battle."
+
+241, "(gr)The Orion is the capital ship of the GTA.  Measuring a frightening 2.1 kilometers in length, the cost to build one of these far outweighs the cost of paying the crew of this ship for 3 years.  There is no more important symbol of Terran Pride than a ship like the Galatea or the Intrepid cruising past a colonized planet, patrolling the system and ensuring safety.  In the course of the 14 year war, very few of these have ever been lost, making the destruction of an Orion a truly horrible defeat."
+
+242, "(gr)Nothing much is known about the GTD Hades.  It seems to be the GTI's top project.  We believe the goal of the project is to recreate the SD Lucifer.  The GTD Hades should be considered a Class A threat."
+
+243, "(gr)Early Terran space stations were constructed much smaller, and were mostly used for Zero-G research purposes.  Later on, with advancements in space construction technologies, stations grew bigger and bigger.  When the first Arcadia-class station was commissioned, GTA decided to rename it to an Installation rather than a Space Station.  Used for a variety of purposes, almost all major systems are home to at least one Installation, which is often used as the center of trade and communications.  Home to scores of small ship, including repair vessels, fighters, and transports, an Arcadia class Installation is always a safe haven for a convoy of attack ships, returning from battle.  Where the Orion is the symbol of Terran power, the Arcadia is the shining beacon of stability."
+
+244, "(gr)Since the start of space colonization, this standard transport has been used by everyone, both civilian and military.  While it has undergone minor changes time and again, it remains a simple design: A vehicle meant to transport personnel from one place to another."
+
+245, "(gr)The Watchdog is the standard unmanned defensive sentry turret for the GTA.  It fires two standard plasma bursts at any nearby hostile targets."
+
+246, "(gr)The Cerberus is an advanced version of the Watchdog, with stronger weaponry and the ability to withstand more damage."
+
+247, "(gr)The Hermes Escape pod has been used since the destruction of the GTD Goliath over 12 years ago.  They are used by the crews of destroyers and installations to escape destruction.  It is always best to be prepared."
+
+248, "(gr)Light Skirmish"
+
+249, "(gr)PVN"
+
+250, "(gr)Lowest power Vasudan craft. Offers little
+in the way of offensive or defensive capabilities.
+Best used in swarm situations."
+
+251, "(gr)The Anubis is the weakest fighter in the Vasudan Navy.  However, they are extremely cheap to manufacture, and are often used in swarm situations to try to overwhelm the opponent with numbers.  A few radical Vasudans have been known to load the ship with explosives and attempt to steer themselves into GTA capital ships.  The first occurrence of this was the battle of Rexias 4, where the GTD Goliath was destroyed by a squadron of kamikaze pilots.
+Due to its lack of afterburners and low weapon capacity, the GTA has classified the Anubis as a class D threat."
+
+252, "(gr)Heavy Fighter"
+
+253, "(gr)Slow and sluggish, but heavily armored.
+Has high afterburner speed.  Useful for
+hit and run attacks.  High payload capacity."
+
+254, "(gr)As the slowest fighter in the PVN, the Seth has earned itself a reputation as the Turtle of the Vasudan fleet.  Even though it is quite compact in size, the Seth can carry a massive payload, and has a lot of shielding.  Its standard impulse engines aren't very powerful, but the Seth gains an incredible speed boost when using its afterburners.  The Seth is primarily used is convoy attacks and capital ship escort duties.
+The GTA considers the PVF Seth to be a Class C threat."
+
+255, "(gr)Very Good"
+
+256, "(gr)Extremely fast with good weapons compatibility.
+Very useful in any kind of engagement."
+
+257, "(gr)The Horus interceptor can outrun any ship in the PVN or the GTA.  This makes it extremely dangerous.  Its above average weapons capacity, combined with its good maneuverability and shielding make this one of the most well designed Interceptors in the galaxy.  This ship is responsible for the destruction of more GTA bombers than any other.
+As a C class threat, Horus interceptors should be dealt with as quickly as possible."
+
+258, "(gr)PVN/Hammer Of Light"
+
+259, "(gr)Excellent fighter.  Small and hard to hit,
+with speed and maneuverability to match.  Good
+payload makes it the most versatile fighter in
+the PVN."
+
+260, "(gr)The Thoth is the most dangerous ship to be created by the PVN.  Manufactured solely at the Altairian Ship Yards, the Thoth has only been produced in small numbers as of yet.  When the Altairian Yards defected to the Hammer of Light rebels, the production of Thoths by the PVN dropped to nil.  The Thoth is now completely in the hands of the Hammer of Light.
+What makes the Thoth so versatile is its small size, extremely high maneuverability, and advanced weapon systems.  It is extremely difficult to hit, in the hands of a skilled pilot.  The design for the Thoth was simultaneous with the design for the Ulysses, and these two ships were designed by some of the same technicians.  Thus they are quite a match for our Ulysses class fighters.  This is why they are considered a B class threat.  Any non registered Thoths should be destroyed immediately, and their presence reported upon completion of the mission."
+
+261, "(gr)Bomber"
+
+262, "(gr)Low maneuverability and low top speed.  However,
+carries good payload including space bombs. Most
+commonly used in cruiser strikes."
+
+263, "(gr)The Osiris has now become the standard bomber for use in PVN operations.  It has replaced the Amun, correcting many of the faults of its predecessor.  It is not quite as sturdy, but it has nearly the same weapons capacity, and is faster and more maneuverable.
+The Osiris should be considered a C class threat to Fenris class cruisers, and a D class threat otherwise."
+
+264, "(gr)Lowest maneuverability and extremely low top speed.
+Moving target, but the heaviest bomber in the PVN.
+Used against capital ships."
+
+265, "(gr)The Amun is the Vasudans heaviest bomber class ship.  It carries a massive payload and has been responsible for the destruction of at least 3 Orion class destroyers in the past 2 years.  Fortunately, it is slow and has low maneuverability, making it an easy target for our fighters.  Fighter pilots should be wary of the two turrets on this ship: they are not to be ignored.
+The Amun is considered a B class threat to all cruisers and capital ships.  They should be given top priority in target selection during escort operations."
+
+266, "(gr)The Scarab is very similar to our Centaur: We believe the Vasudans stole the design of this ship from us.  It is used for in flight rearming of fighters and bombers.  In longer engagements, these ships can mean the difference between victory and defeat.  The major difference between this ship and the Centaur is that the Scarab is unmanned."
+
+267, "(gr)The Isis transport is quite fast and maneuverable for a ship of its size.  Most often it is used for personnel transfer, although occasionally they have been known to act as repair ships and tugboats.  It is well protected with its turrets, and it is not unheard of for the PVN to use a wing of Isises to conduct an assault on a fortified position."
+
+268, "(gr)The Bast freighter is unarmed, and considered a non threat.  We believe that it is mainly used by Vasudan civilians, but we have seen some in front line operations.  It has very low target value, but should be destroyed, as any kind of resupply ship is a danger to the GTA."
+
+269, "(gr)The standard Vasudan cargo container is only slightly different from our own.  The primary difference is that the Vasudan cargo containers are atmospheric as well as deep-space.  Vasudans used cargo containers well before we did, as they needed to transport raw materials from other systems to their own barren world.  Our cargo container was modelled after theirs, although ours is slightly superior in durability."
+
+270, "(gr)With three turrets, the Ma'at is a hairy target for GTA pilots to attack.  However, it is slow enough that it can be destroyed with enough patience.  As always, supply ships for the PVN are considered to be valid targets."
+
+271, "(gr)the VAC 4 series of cargo is much like its normal counterpart, only it has much more plating.  However, this container is no more dangerous than the standard version, and is nothing more than ML-16 bait without protection of some kind."
+
+272, "(gr)The dreaded Satis freighter was thought to be a warship when it was first encountered in the Aldebaran Encounter.  It has five turrets and a strong hull, making it quite dangerous to the inexperienced pilot.  However, most experienced pilots in the GTA know enough to attack the Satis' main weakness: its weak plating around the turrets.  Disarming a Satis is most often the best way to destroy it.
+While capturing supply ships is often an intelligent plan, the Satis has been considered dangerous enough to rank as a Class C threat.  Treat it as one. "
+
+273, "(gr)The Aten class cruiser, while far stronger than most of the Vasudans warships, falls short as a attack cruiser.  It does not have the armor or the firepower to stand up to GTA weaponry.  With a cruiser speed of 25 m/s and only six weapon turrets, the Aten just cannot muster the kind of firepower needed to do real damage to targets of size.
+Most GTA pilots have learned to exploit the primary weakness of the Aten: its extremely weak weapons subsystem.
+The Aten class cruiser is considered by the GTA to be a Class B threat."
+
+274, "(gr)Where the Aten cruiser failed, the Typhon succeeded well past expectations.  The Typhon is an incredible work of engineering and the model of Vasudan technology.  When the first one was sighted at the Vega Engagement, it was laughed at by our technicians as a foolish display of non utilitarian design.  The subsequent destruction of the GTD Eisenhower and the total decimation of the 4th fleet changed their minds very quickly.  The Typhon should never be underestimated.  It wields massive weaponry, and has more armor plating than any Terran Destroyer.  Its only known weakness is its turret armor, which is significant, but lower than expected.  In the two years since this ship first appeared, we have only managed to destroy two of them.
+The Typhon is considered a Class A threat to any ships within the same system.  Do not engage without backup."
+
+275, "(gr)The Ankh is the standard Vasudan sentry gun.  Its most common usage is guarding supply depots.  However, since the development of the Anubis, its usage has dropped off significantly."
+
+276, "(gr)The Ra has been used by Vasudans since our first encounter with them.  Every Vasudan capital ship has a few of these lifeboats."
+
+277, "(gr)The Shivan Dragon is easily the most impressive fightercraft we have yet seen.  Its maneuverability is unmatched, and it has quite a few other advantages, including a good top speed, powerful afterburners, and strong shields.  It is the only Shivan fighter we have been able to study up close, and we have learned a great deal about Shivan engineering from it.
+It seems that the Shivan shield systems are extremely strong, but their hulls are far weaker than our own.  They also rely on primary weapons far more then secondaries, as evidenced by the Dragon's small capacity.
+The GTA considers the Dragon as a Class A threat."
+
+278, "(gr)The Basilisk seems to be a Shivan heavy attack fighter.  It is not as maneuverable as other Shivan fighters, but it packs quite a punch, and it is very resistant to our weaponry.  Most often they have been used in attacking our supply convoys and transports.
+Treat the Basilisk as a Class C threat."
+
+279, "(gr)We believe that the Manticore is a Shivan interceptor.  It has a very high top speed, and its maneuverability is quite good.  However, its shield system isn't strong enough to withstand constant fighting for long, which leads us to believe the Manticore's primary purpose is to destroy enemy bombers.
+The Manticore ranks as a Class B threat."
+
+280, "(gr)We originally thought the Scorpion was the Shivans best fighter.  However, we now believe that the Scorpion is nothing more than a Shivan scout ship.  Their vast numbers and seeming unimportance to the Shivan war effort leads us to this belief.  Regardless of its purpose, the Scorpion is highly maneuverable, fast, and difficult to destroy.  It can also do damage equivalent to our space superiority fighters.
+In the event that you encounter Scorpions, regard them as a Class C threat."
+
+281, "(gr)The Shaitan bomber is only slightly superior to our own bombers - it's shielding is better, but its capacity seems to be far worse.  Perhaps the Shivans were so assured that they would only need one payload to destroy a target.
+We consider the Shaitan to be a Class C threat."
+
+282, "(gr)The Nephilim class bomber is the most alien of the Shivan ships.  We are still unsure as to why the Shivans chose this odd shape for arguably their most powerful attack craft.  However, with four primary cannons and two turrets, as well as a massive payload, the Nephilim is undoubtedly a serious threat to the GTA.  We have already lost two Orion class destroyers to a wing of Nephilims.  Unless we learn a weakness soon, we will most likely lose two more.
+The Nephilim has been designated a Class A threat to GTA destroyers and cruisers.  In unpopulated systems, it is to be considered a Class B threat."
+
+283, "(gr)The new Seraphim class bomber is the Shivan's latest threat.  It is three times larger than a Nephilim, and carries a massive payload at least 150% the size of the Nephilim.  With strong hulls and almost impenetrable shield system, the Seraphim is easily the most dangerous bomber we have yet encountered.  The Seraphim has been designated a Class A threat to GTA destroyers and cruisers.  In unpopulated systems, it is to be considered a Class B threat."
+
+284, "(gr)The Azrael is most likely a Shivan transport.  While we are not completely sure of its uses, we do know that they can house many Shivans.  It is not very heavily armored, and its weaponry is not too strong.  This makes the Azrael the most common target for capture attempts."
+
+285, "(gr)The Mephisto freighter behaves much like one of our own.  Only it is far more powerful and dangerous.  Very little data is available on this ship class."
+
+286, "(gr)We believe that the Shivans use cargo containers such as these as storage depots.  We have yet to see a Shivan land on a planet.  This leads us to believe that the Shivans plan on keeping all of their materials and resources in deep space."
+
+287, "(gr)Almost no data is available on the Asmodeus freighter.  We are aware that it has a strong hull and four turrets.  Any further data on this ship should be immediately delivered to Terran Intelligence."
+
+288, "(gr)What we have dubbed the Sac-2 is simply a more heavily armored form of the standard Shivan cargo container.  We believe that this is where the Shivans keep their more precious supplies.  Sac-2s are to be captured or destroyed at every opportunity."
+
+289, "(gr)While far more rare than its counterpart, the Cain-class cruiser, the Lilith is one of the most ferocious cruisers we have had the misfortune of combating.  It has extremely strong weapon systems, as well as a very thick armor which our cannons can barely penetrate.  One for one, the Lilith can easily destroy any of our cruisers.  It is for this reason that they should be considered a primary target for all bomber squadrons in the GTA.
+The Lilith should be considered a Class A threat to any ships that encounter it."
+
+290, "(gr)The Cain is by far the most common cruiser in the Shivan fleet.  It is also the weakest.  However, the Cain should not be underestimated.  It has many turrets, as well as a cluster bomb defensive mechanism.  As a strike cruiser, the Cain mostly appears in attacks against GTA or PVN capital ships and cruisers.  In these cases, it should be destroyed immediately.  The primary weakness of the Cain appears to be its unshielded turrets.  Most of the turrets on the Cain can be destroyed with minimal damage.
+The Cain is a Class B threat."
+
+291, "(gr)While the Demon-class Destroyer is easily one of the most massive ships we have yet seen, it is not the biggest or most powerful in the Shivan armada.  However, it is still quite dangerous, with a plethora of missile turrets and two full squadrons of fighters.  It is suggested that these capital ships be destroyed by bombers, as all cruisers that have attempted to engage a Demon have been destroyed.
+The Demon is a Class A threat in any allied system."
+
+292, "(gr)The Lucifer is the greatest threat to the survival of the GTA, the PVN, and both the Terran and Vasudan species.  It wields three massive Flux Cannons which can destroy one of our capital ships in a few hits.  These same cannons have been seen bombarding colonized worlds.  With four full fighter squadrons, and a massive array of defensive turrets, the Lucifer would be extremely difficult to destroy.
+The fact that it is protected by a sheath shielding system which makes it completely impervious to any kind of kinetic or plasma damage makes it impossible to destroy.  We have yet to find a way to breach this shielding technology.  It is hoped that a solution will be found soon.
+Assuming that a solution is found, we have managed to gather enough data on the Lucifer to destroy it.  In a recon mission, we were able to determine that the Lucifer is powered by five reactors across its surface.  If these reactors are destroyed in a short amount of time, the Lucifer will be stopped.
+If we cannot stop the Lucifer, we do not expect to be able to defeat the Shivans.
+We have no way of knowing if there are more than one Lucifer-class destroyer.  However, any that exist should be considered more dangerous than a Class A threat."
+
+293, "(gr)We believe that the sole purpose of the Trident is to guard Shivan repair and supply depots.  It is not too strong, but in mass quantities, can be dangerous."
+
+294, "(gr)Terrans originated on the third planet in the Sol system, known alternately as Terra or Earth.  Terrans are relatively physically weak, but are highly intelligent and versatile.  This combination of intelligence and versatility have allowed Terrans to evolve from tribal, nomadic primates (not entirely unlike their progenitors) to a spacefaring race.
+
+Terran civilization developed to the point of relatively stable nation-states.  With space travel, the nation-state evolved into the global-state.  With space travel, the Terran species furthered its growth, both in material ways and in immaterial, philosophical ways.  In time, the global-state led to the intersystem-state, which in turn led to the Galactic Terran Alliance, a galactic-state.  
+
+To date, Terrans have successfully colonized 12 worlds outside of the Sol system.  Outposts have been established on 15 other planets and moons throughout the known galaxy.  If the past is any indicator of future trends, unified expansionism will only continue to benefit the Alliance, both politically and economically."
+
+295, "(gr)Vasudans originate on the fourth planet of the Vasuda Prime system, the only planet in that system that is capable of supporting life.  The fourth planet of the Vasuda Prime system (also known as Vasuda Prime) is a relatively hostile world.  Both of the twin continents of Vasuda Prime are almost entirely desert, and most of the above-ground water is, even by Vasudan standards, undrinkable.  In order to adapt to these surroundings, Vasudans developed quite rapidly.
+
+Vasudan society is complex and filled with peril for the outsider ignorant of their culture.  Vasudans have a range of social tests and protocols, such as The Conversation.  A Terran mishandling of The Conversation is presumed to be one of the major causes of the V-T War.  The Vasudan government is parliamentary in nature, but is presided over by the Imperial family and the Ambassadors, who are quasi-royal go-betweens for the Parliament and the Imperium.
+
+Vasudan space exploration has been driven primarily by the need to find planets capable of sustaining their species.  As resources on Vasuda Prime have diminished, the drive to colonize has intensified among Vasudans in recent decades."
+
+296, "(gr)Despite what information we've been able to obtain, Shivans still remain, on many levels, an enigma to both the Terrans and the Vasudans.  Their origin and their destination remain unknown.  While many have offered up possible explanations as to why the Shivans seem focused on the destruction of all other sentient species, we still do not know why they seem bent on total xenocide.
+
+Shivans have multiple eyes, some of which seem to have the function of compound eyes, not unlike some varieties of insects.  Shivans also have five legs, and can run equally well over a floor or over a ceiling.  It has been hypothesized that Shivans may have spent their evolutionary process in a zero-gravity environment.  Each Shivan leg ends in a very strong claw, capable of crushing even the sturdiest of known alloys.  Parts of their thorax seem to act as compartments, such as ones that might be found on a space suit.  It has been suggested that what we have actually seen have been either robots or organic creatures in some sort of exo-skeleton.  However, we have, at present, no reason to support either hypothesis.
+
+Most likely, we will not learn anything more about the Shivan species until we have actually captured and studied a Shivan."
+
+297, "(gr)Create pilot"
+
+298, "(gr)Accept"
+
+299, "(gr)Help"
+
+300, "(gr)Options"
+
+301, "(gr)Medals"
+
+302, "(gr)Remove"
+
+303, "(gr)Set Active"
+
+304, "(gr)Clone pilot"
+
+305, "(gr)Single Player"
+
+306, "(gr)Multi Player"
+
+307, "(gr)Convert pilot"
+
+308, "(gr)Barracks"
+
+309, "(gr)Pilot Stats"
+
+310, "(gr)Briefing"
+
+311, "(gr)Ship Selection"
+
+312, "(gr)Weapons Loadout"
+
+313, "(gr)Commit"
+
+314, "(gr)@Close"
+
+315, "(gr)Clone Pilot"
+
+316, "(gr)Choose Pilot"
+
+317, "(gr)Select"
+
+318, "(gr)Restart Campaign"
+
+319, "(gr)Campaigns"
+
+320, "(gr)Campaign Information"
+
+321, "(gr)Continue"
+
+322, "(gr)GTA Command Briefing"
+
+323, "(gr)Targeting"
+
+324, "(gr)Ship"
+
+325, "(gr)Weapons"
+
+326, "(gr)Miscellaneous"
+
+327, "(gr)Alt"
+
+328, "(gr)Shift"
+
+329, "(gr)Enable"
+
+330, "(gr)Invert"
+
+331, "(gr)Cancel"
+
+332, "(gr)Undo"
+
+333, "(gr)Reset Defaults"
+
+334, "(gr)Search Mode"
+
+335, "(gr)Bind Mode"
+
+336, "(gr)@Conflict"
+
+337, "(gr)Clear Conflict"
+
+338, "(gr)Clear All"
+
+339, "(gr)Clear Selected"
+
+340, "(gr)Technical Database"
+
+341, "(gr)Mission Simulator"
+
+342, "(gr)Cutscenes"
+
+343, "(gr)Credits"
+
+344, "(gr)Exit"
+
+345, "(gr)Debriefing"
+
+346, "(gr)Statistics"
+
+347, "(gr)Replay Mission"
+
+348, "(gr)Recommendations"
+
+349, "(gr)@.Medal"
+
+350, "(gr)@.Rank"
+
+351, "(gr)@.Badge"
+
+352, "(gr)Pilot Info"
+
+353, "(gr)@Medal"
+
+354, "(gr)@Rank"
+
+355, "(gr)@Badge"
+
+356, "(gr)Kick"
+
+357, "(gr)Clear"
+
+358, "(gr)Reset"
+
+359, "(gr)Hotkey Assignment"
+
+360, "(gr)Key Group"
+
+361, "(gr)Amber"
+
+362, "(gr)Blue"
+
+363, "(gr)Green"
+
+364, "(gr)On"
+
+365, "(gr)Off"
+
+366, "(gr)Popup"
+
+367, "(gr)HUD Config"
+
+368, "(gr)Brightness"
+
+369, "(gr)Single Missions"
+
+370, "(gr)Campaign Missions"
+
+371, "(gr)Mission"
+
+372, "(gr)Filename"
+
+373, "(gr)Messages"
+
+374, "(gr)Events"
+
+375, "(gr)Objectives"
+
+376, "(gr)Complete"
+
+377, "(gr)Incomplete"
+
+378, "(gr)Failed"
+
+379, "(gr)Mission Log"
+
+380, "(gr)Missions"
+
+381, "(gr)Close"
+
+382, "(gr)All"
+
+383, "(gr)Coop"
+
+384, "(gr)Team"
+
+385, "(gr)Dogfight"
+
+386, "(gr)Create Game"
+
+387, "(gr)Players"
+
+388, "(gr)Pilot Information"
+
+389, "(gr)Host Options"
+
+390, "(gr)Highest Rank"
+
+391, "(gr)Team Leader"
+
+392, "(gr)Any Player"
+
+393, "(gr)Host"
+
+394, "(gr)AI Orders"
+
+395, "(gr)End Mission"
+
+396, "(gr)Skill Level"
+
+397, "(gr)Observers"
+
+398, "(gr)Time Limit"
+
+399, "(gr)Respawn Limit"
+
+400, "(gr)Kill Limit"
+
+401, "(gr)Voice Transmission"
+
+402, "(gr)Voice Quality"
+
+403, "(gr)Message Duration"
+
+404, "(gr)Per Player Voice Wait"
+
+405, "(gr)Host Modifies Ships"
+
+406, "(gr)Host Setup"
+
+407, "(gr)Join"
+
+408, "(gr)Select Ship"
+
+409, "(gr)Name"
+
+410, "(gr)Class"
+
+411, "(gr)Hull"
+
+412, "(gr)Shield"
+
+413, "(gr)Refresh"
+
+414, "(gr)Status"
+
+415, "(gr)Server"
+
+416, "(gr)Ping"
+
+417, "(gr)Join as Observer"
+
+418, "(gr)Join Game"
+
+419, "(gr)Team 1"
+
+420, "(gr)Team 2"
+
+421, "(gr)Open"
+
+422, "(gr)Closed"
+
+423, "(gr)Password Protected"
+
+424, "(gr)Restricted"
+
+425, "(gr)Allow Rank"
+
+426, "(gr)Or Below"
+
+427, "(gr)Or Above"
+
+428, "(gr)Title"
+
+429, "(gr)Game Type"
+
+430, "(gr)@Launch"
+
+431, "(gr)Multi"
+
+432, "(gr)Detail"
+
+433, "(gr)Exit Game"
+
+434, "(gr)Controls Config"
+
+435, "(gr)Very High"
+
+436, "(gr)Custom"
+
+437, "(gr)Engine Glow"
+
+438, "(gr)off"
+
+439, "(gr)on"
+
+440, "(gr)Nebulas"
+
+441, "(gr)Target View Rendering"
+
+442, "(gr)Effects Alpha Blending"
+
+443, "(gr)Preset Detail Levels"
+
+444, "(gr)Model Detail"
+
+445, "(gr)Model Update"
+
+446, "(gr)3D Hardware Textures"
+
+447, "(gr)Weapon Rendering"
+
+448, "(gr)Impact Effects"
+
+449, "(gr)Shield Hit Effect"
+
+450, "(gr)Stars"
+
+451, "(gr)Particles"
+
+452, "(gr)Lighting"
+
+453, "(gr)Briefing Voice"
+
+454, "(gr)Volume"
+
+455, "(gr)Effects"
+
+456, "(gr)Music"
+
+457, "(gr)Voice"
+
+458, "(gr)Joystick"
+
+459, "(gr)Sensitivity"
+
+460, "(gr)Dead Zone"
+
+461, "(gr)Mouse"
+
+462, "(gr)Add"
+
+463, "(gr)Yes"
+
+464, "(gr)No"
+
+465, "(gr)VMT"
+
+466, "(gr)General"
+
+467, "(gr)/Multidata"
+
+468, "(gr)/Missions"
+
+469, "(gr)Never"
+
+470, "(gr)Before Game"
+
+471, "(gr)IP Address"
+
+472, "(gr)Broadcast Locally"
+
+473, "(gr)Login"
+
+474, "(gr)Password"
+
+475, "(gr)Object Update"
+
+476, "(gr)Pilot / Squad Images"
+
+477, "(gr)Transfer Missions"
+
+478, "(gr)Flush Cache"
+
+479, "(gr)Mute"
+
+480, "(gr)Mic Test"
+
+481, "(gr)Quality"
+
+482, "(gr)Ignore"
+
+483, "(gr)Enter Password"
+
+484, "(gr)Exit Mission"
+
+485, "(gr)Mission Paused"
+
+486, "(gr)Stats"
+
+487, "(gr)Available Ships"
+
+488, "(gr)Type"
+
+489, "(gr)Length"
+
+490, "(gr)Max Velocity"
+
+491, "(gr)Maneuverability"
+
+492, "(gr)Armor"
+
+493, "(gr)Gun Mounts"
+
+494, "(gr)Missile Banks"
+
+495, "(gr)Manufacturer"
+
+496, "(gr)@ship_name"
+
+497, "(gr)@ship_Type"
+
+498, "(gr)@ship_Maneuverability"
+
+499, "(gr)@ship_Armor"
+
+500, "(gr)@ship_Manufacturer"
+
+501, "(gr)@ship_desc"
+
+502, "(gr)Lock Players"
+
+503, "(gr)Ship Information"
+
+504, "(gr)Alpha"
+
+505, "(gr)Beta"
+
+506, "(gr)Gamma"
+
+507, "(gr)Ships"
+
+508, "(gr)Species"
+
+509, "(gr)GTA Technical Database"
+
+510, "(gr)Play"
+
+511, "(gr)Cutscene Description"
+
+512, "(gr)@weapon_name"
+
+513, "(gr)@weapon_desc"
+
+514, "(gr)Willfully firing on allied ships is a capital offense, punishable by death.  You are hereby stripped of your rank and your citizenship in the GTA.  You will appear at 0700 hours at the League of Defense Justice Ministry for your court martial."
+
+515, "(gr)Don't fire upon friendly ships."
+
+516, "(gr)GTW ML-16 Laser"
+
+517, "(gr)Standard issue
+Medium Hull Damage
+Minimal Shield Damage"
+
+518, "(gr)GTW ML-16 
+
+Argon laser weapon - uses transparent ceramic technology in order to create an optical system that is extremely durable and stable under battle conditions - provides adequate destructive damage to the hull of enemy ships by vaporizing molecular bonds at the target area and destabilizing molecular bonds across the grain of the hull material.
+
+The GTA issues ML-16 Lasers to every fighter and bomber in service."
+
+519, "(gr)GTW-41 Disruptor Cannon"
+
+520, "Standard issue
+Tactical Weapon
+Damages Subsystems"
+
+521, "(gr)GTW - 41 Disruptor Cannon 
+
+A gas-focused krypton laser - when the ship is in flight, the chamber of the GTW-41 rotates at a constant speed - a small amount of NO2 is injected into the container .05 ms prior to the emission of the laser light - the rotation  of the NO2 in the chamber focuses the laser pulse to a state that is only very slightly (1%) diffused - after the laser pulse is emitted from the chamber into space, the chamber expels the NO2 into space (thus expelling ionized molecules and moisture) - the process repeats for each subsequent burst of laser energy - as this laser is very slightly diffused, it is not effective as a destructive weapon, but as a tactical weapon - the Disruptor Cannon is best suited and is used for the permanent disabling of enemy ship subsystems.
+
+The Disruptor Cannon should be utilized in all capture operations in order to minimize risk of targets destruction."
+
+522, "(gr)GTW-41x Advanced Disruptor"
+
+523, "Advanced Version
+Tactical Weapon
+Damages Subsystems"
+
+524, "(gr)GTW - 41x Advanced Disruptor Cannon
+
+The Advanced Disruptor Cannon is much like the GTW-41 Disruptor.  However, its speed and higher subsystems damage make it much more useful in operations against faster moving targets."
+
+525, "(gr)GTW-15 Avenger Cannon"
+
+526, "(gr)Special Issue
+Projectile Weapon
+Low Shield Damage"
+
+527, "(gr)GTW -15 Avenger
+
+A rapid-fire, computer-controlled radar and gun system - capable of firing at a rate of more than 4500 rounds per minute - used primarily for close-defense situations - uses closed-loop radar technology to locate, identify, and direct a stream of highly destructive 45mm projectiles to the target.
+
+With the advent of shield technology, the GTW-15 is preferred over the ML-16 in any ship that can carry it.  It's extra damage against hulls make it one of the best anti cruiser weapons.  It has also proven very effective against Vasudan fighters.  However, it's substandard anti-shield capabilities make it a poor choice for dogfighting Shivans, although far better than the ML-16."
+
+528, "(gr)GTW-32 Flail Rifle"
+
+529, "Special Issue
+Low Energy Usage
+Kinetic Weapon
+Moderate Shield Damage"
+
+530, "(gr)GTW - 32 Flail
+
+A rapid-fire, low energy, ceramic optic focused, krypton laser - used in tactical situations to distract or lead an enemy to their destruction at the hands of other allied fighters - this weapon, if used over an extended period of in-flight battle, can destroy an enemy fighter, but, as a destructive weapon, should only be used as a last resort.
+
+The fast firing rate and high mass of the Flail make it great for changing the velocity vector of an enemy fighter or bomber.  It is slightly more effective than the Avenger against shields, rated at damage/second.  Its low energy consumption rate makes it useful for prolonged engagements.  Note, however, that once you have taken out an enemy's shields, switching to another weapon is advised."
+
+531, "(gr)GTW-5 Prometheus Cannon"
+
+532, "(gr)Prototype
+High Energy Usage
+High Hull Damage
+Moderate Shield Damage"
+
+533, "(gr)GTW - 5 Prometheus
+
+Named after the Titan who gave fire to humanity, the Prometheus is a laser-based weapon - an advanced radar and X-ray tracking system lock on the target and determine the target's material structure - argon laser focused via transparent ceramic optics - the laser is generated at the destructive frequency (full out-of-phase) for the target's material structure - emitted no more than .02 ms after targeting and activation by the pilot, the Prometheus stands as one of the GTA's most effective deterrents to enemy attack, an effective form of defense for GTA pilots, and as a durable, portable, and highly destructive offensive tool.
+
+The Prometheus works best against target hulls.  Against shields, it only achieves mediocre performance.  It's slow speed and high energy consumption work against it as well.  However, the primary advantage of the Prometheus is that it can be equipped on almost any fighter in the GTA."
+
+534, "(gr)GTW-7 Banshee"
+
+535, "(gr)Special Issue
+EM Weapon
+Very High Energy Usage
+Extreme Shield Damage"
+
+536, "(gr)GTW - 7 Banshee 
+
+An electromagnetic weapon - sends rapid pulses of exceptionally strong electromagnetic energy resulting in a 1.63 x 105 J blast that forces its way through any known shield technology and produces a dramatic shearing effect which quickly destroys the target ship's materials - named for the fact that in an atmosphere, the pulse creates an atmospheric disturbance similar to a quasi-human scream at 180 dB - uses up a tremendous amount of available ship energy - already, it is has been used by many GTA fighter aces and test pilots as a coup de grace, although such a use for this massively powerful offensive weapon is officially viewed as poor sportsmanship by the GTA.
+
+The GTW-7's impressive anti-shielding capabilities make it the weapon of choice against the Shivans.  The main limitation of this weapon is low weapons compatibility.  It can only be fitted on a GTF Valkyrie or a GTF Hercules."
+
+537, "(gr)GTW-99 Shield Breaker"
+
+538, "(gr)Prototype
+Depletes shields"
+
+539, "(gr)GTW - 99 Shield Breaker
+
+Developed as an anti-Shivan weapon, the Shield Breaker inflicts massive damage to enemy defensive systems. This weapon causes no structural damage, but coupling it with an anti-hull cannon is very effective against larger Shivan bombers such as the Seraphim."
+
+540, "(gr)GTW-43 Leech Cannon"
+
+541, "(gr)GTW - 43 Leech Cannon
+
+The Leech Cannon depletes the power supply of enemy fighters.  Use it to disable afterburners, energy weapons, and shields. No subsystems targeting is required, just point and shoot.
+
+The Leech Cannon is an anti-fighter weapon with minimal effect against larger vessels."
+
+542, "(gr)GTM MX-50"
+
+543, "(gr)Standard Issue
+Fire and Forget"
+
+544, "(gr)GTM MX-50
+
+Suitable for all space battles - defensive and offensive - medium payload (16.5 Kt) - infrared tracking and semi-intelligent targeting - pilot chooses desired target, and the MX-50 tracks the chosen target based off the emission of heat from the - engine, the weapon bays, and the cockpit of the target ship - the MX-50 will always attack a target that is determined to be hostile by the onboard computer of any GTA combat vessel, thus ensuring a higher kill rate, should the pilot find himself in a heated battle situation where precise aiming might be difficult.
+
+Early experiments with energy based defenses like the deflector array at Ross 128 have shown that this weapon is exceedingly weak against anything besides steel based targets."
+
+545, "(gr)GTM-31 Disruptor Missile"
+
+546, "(gr)Advanced Prototype
+Tactical Missile
+Disrupts Subsystems"
+
+547, "(gr)GTM - 31 Disruptor Missile
+
+Advanced signal processing - high precision interception capability - small payload (9 Kt), combining both conventional explosives and a localized blast of energy caused by the effect of impact upon the laser-propulsion system of the missile - designed to temporarily disable subsystems on hostile targets.
+
+The D-Missile is designed to temporarily stop a cruiser or destroyer from firing its laser turrets.  The effect will last about 10 seconds per missile fired, so using these to temporarily disable a cruiser should usually be for suppression until the cruiser is destroyed, or whatever was trying to evade the cruiser has gotten out of range.  Only a few ships can carry these - and they are very scarce - so proper utilization is important."
+
+548, "(gr)GTM-3 Fury Missile"
+
+549, "(gr)Standard Issue
+Maximum Compatibility"
+
+550, "(gr)GTM - 2 Fury
+
+Small, fast dumbfire missiles - fired in swarms - GTA fighters can carry more Fury missiles than conventional missiles, due to their small size - used for distraction and other tactical measures - very small payload (3 Kt).
+
+Use is recommended in close combat situations and against larger targets where tracking is a non issue."
+
+551, "(gr)GTM-4 Hornet Swarm Missile"
+
+552, "(gr)Special Issue
+Swarm Type
+Slow Target Lock"
+
+553, "(gr)GTM - 4 Hornet
+
+Infrared and ultraviolet tracking - designed to fire in small groups of 4 missiles per burst - light medium payload per  missile (12 Kt) - semi-intelligent on-board tracking - single-pass kill probability will not exceed 60% on average -designed as an offensive version of the Fury.
+
+As a swarm based weapon, this missile can take out an unshielded fighter without any difficulty.  It's four missile system almost guarantees one or two hits, and its speed is quite amazing.  Twice as powerful against naked hulls."
+
+554, "(gr)GTM-9 Interceptor"
+
+555, "(gr)Standard Issue
+Fast Target Lock"
+
+556, "(gr)GTM - 9 Interceptor
+
+All-aspect seeking - laser tracking senses energy reflected off a target from the primary weapon systems of the target, increasing single-pass kill probability - medium payload (18.5 Kt) - missile is designed to pierce reinforced hull, thus 
+securing itself to the target, prior to detonating (15 ms delay).
+
+This is the standard issue fighter-killer in the GTA.  Designed to take out fighters with minimum hassle, a simple lock is all that is needed to grab the enemies attention.  Short lock time, good speed, and decent payload makes this the best
+missile to use against all but the strongest ships.  It's effectiveness against large targets, however, is less than a typical laser run, making this primarily a ship to ship missile."
+
+557, "(gr)GTM Phoenix V"
+
+558, "(gr)Special Issue
+Anti-Bomber Missile
+Slow Target Lock"
+
+559, "(gr)GTM Phoenix V 
+
+All-aspect seeking - same tracking system as the Interceptor - large payload (50 Kt), but slower than the Interceptor - one of the best fire-and-forget missiles ever developed - many fighter pilots within the GTA regard the Phoenix V as the weapon of choice against high value, heavily defended targets.
+
+The number one bomber killer in our arsenal, this is the single most damaging missile that can be equipped on a fighter craft.  The longer lock time and slower speed make it less of a dogfight weapon and more of an anti- bomber warhead.  It's extra damage against shields makes it especially useful against the Shivan bombers."
+
+560, "(gr)GTM-1 Synaptic Bomb"
+
+561, "(gr)Advanced Bomb
+Wing Attack Cluster Explosion
+Area Effect"
+
+562, "(gr)GTM - 1 Synaptic Bomb
+
+Missile propulsion unit carrying several small intelligent bomblets - when distance to target is less than 100 m or when time to impact is less than 2 sec., bomblets direct missile to the most vulnerable part of the ship of those parts of the ship facing the missile - bomblets then separate from missile propulsion unit and form a sphere - inertia continues to carry bomblets in the direction of the target - the missile propulsion unit continues to advance toward the target - when the missile hits the target or 1.5 sec. after the missile should have hit the target, the bomblets explode - the spherical shape of the formation of the bomblets helps to ensure a fairly even level of damage across a sensitive area on the target - the spherical shape also ensures that the target will not be able to effectively maneuver away from the blast, thus pinning the target to a specific area in space - can also act as dumbfire - medium payload per bomblet (15 Kt) - very small payload for missile (2 Kt).
+
+Nicknamed the Earthshaker by the bomber pilots who tested this, it is a bombers best defense against fighters.  The Synaptic Bomb can do a lot of damage to a lot of ships at one time."
+
+563, "(gr)GTM-43 Stiletto"
+
+564, "(gr)Standard Issue
+Tactical Missile
+Destroys Subsystems"
+
+565, "(gr)GTM - 43 Stiletto
+
+Heat seeking - laser tracking similar to the Interceptor - missile is protected by a small shield system, allowing for greater success in payload delivery during busy melee situations and intense firefights - fast, but low in-flight maneuverability compared to other missiles of comparable size - low maneuverability due to the size of the missile's payload (60 Kt) and on-board shield system.
+
+With the ability to take out most subsystems in one hit, and as simple to fire as an MX-50, the GTM-43 is the best ship disabling bomb developed by the GTA.  Effective against turrets, engines and any other kind of subsystem, the Stiletto is a valuable asset to a bombers arsenal.  However, it's slow, unmanageable, and it can't do any real hull damage."
+
+566, "(gr)GTM-86 Cluster Bomb"
+
+567, "(gr)Standard Issue
+Tactical Missile"
+
+568, "(gr)GTM - 86 Cluster Bomb
+
+A second-generation Synaptic bomb, this GTI-developed cluster warhead has been designed for attacks against entire wings of enemy ships.
+
+Upon reaching its target, the primary warhead fragments into multiple secondary warheads that explode within a split second.  The detonations produce a large field of blast field, making the cluster bomb most effective against fighter formations."
+
+569, "(gr)GTM-3 Tsunami Bomb"
+
+570, "(gr)Special Issue
+Anti-Cruiser Bomb
+Tactical Anti-Matter Warhead
+Long Lock/Reload Time"
+
+571, "(gr)GTM - 3 Tsunami
+
+Intelligent tracking similar to GTA targeting system - prior to launch, communicates with ship computer, gathering data about enemy target types and whereabouts - slow, low maneuverability - antimatter warhead (500 tonne3 mass-to-energy conversion) - due to instability of antimatter, no more than 10 may be carried on board a GTA bomber at any given time, unless pilot is granted a special permit by an appropriate governing body.
+
+The Tsunami has now become the standard Terran bomb used to take out large targets.  It's short life requires that you get within 1500 meters of the target before sending it off, and since it needs a lock to be fired, it takes a brave pilot to fly straight enough for long enough to let one of these fly.  A few Tsunami's will take out almost any ship, barring a destroyer.  The antimatter warhead also washes over shields a little, so as long as it isn't too close to the center of the blast, a fighter or bomber has a good chance of surviving detonation."
+
+572, "(gr)GTM-N1 Harbinger Bomb"
+
+573, "(gr)Prototype
+Anti-Capital Ship Bomb
+Tactical Fusion Warhead
+Extremely Long Lock/Reload Time"
+
+574, "(gr)GTM - N1 Harbinger
+
+Fusion bomb surrounded by 3 salted fission bombs - propulsion unit is a half-size version of a regulation GTA fighter thruster (Class II) - given the weight of the payloads, the missile is slow despite the power of the thruster - as the Harbinger is exceptionally large, GTA bombers are limited to carrying 6 of these weapons at any given time - the resultant shock wave from this weapon is potentially deadly, due to the size of the payloads (5000 Mt in total) - use near allied installations or allied ship groupings is strongly discouraged by the GTA - most effective when used in preemptive defensive strike against non-military installations.
+
+The Harbinger is our best chance of destroying the Lucifer."
+
+575, "(gr)GTM-11 EM Pulse"
+
+576, "(gr)Advanced Missile
+Electromagnetic Pulse weapon
+Anti-bomber weapon"
+
+577, "(gr)GTM - 11 EM Pulse
+
+Upon impact, the EM Pulse temporarily disables the electronics systems of the target ship.  This renders the target ship unable to track targets, manage communications, or gain aspect missile lock.  This has numerous tactical applications. For example, a direct hit with an EM Pulse missile will prevent bombers from launching aspect-seeking warheads for several seconds. Once the EMP field has worn off, they must also take the time to reacquire missile lock, granting you valuable time."
+
+578, "(gr)GTM-84 Corkscrew Missile"
+
+579, "(gr)Wacky fun corkscrew missiles"
+
+580, "(gr)Developed by the GTI for Silent Threat. Deemed too wacky for final release."
+
+#end
+
+#french
+0, "(fr)For Volition, Inc."
+
+1, "(fr)Original Design"
+
+2, "(fr)Programming"
+
+3, "(fr)Real-time Art"
+
+4, "(fr)Cutscene Art & Animation"
+
+5, "(fr)Mission Design"
+
+6, "(fr)Silent Threat Mission Design"
+
+7, "(fr)Third Party Missions"
+
+8, "(fr)Music & Sound Effects"
+
+9, "(fr)Cutscene Scoring"
+
+10, "(fr)Story & Writing"
+
+11, "(fr)Silent Threat Writing"
+
+12, "(fr)Mission Editor, PXO & Tools"
+
+13, "(fr)Real-time Voice Technology"
+
+14, "(fr)Voice Actors"
+
+15, "(fr)Administrative & Technical Support"
+
+16, "(fr)German Localization Assistance"
+
+17, "(fr)Testers"
+
+18, "(fr)Special Thanks"
+
+19, "(fr)Visit us at www.volition-inc.com"
+
+20, "(fr)For Interplay Productions"
+
+21, "(fr)Vice President of Development"
+
+22, "(fr)Producer"
+
+23, "(fr)Movie Compression Technology"
+
+24, "(fr)Director of Quality Assurance"
+
+25, "(fr)QA Managers"
+
+26, "(fr)Director of Compatibility"
+
+27, "(fr)IS/Compatibility Manager"
+
+28, "(fr)QA Project Supervisor"
+
+29, "(fr)Assisting QA Project Supervisors"
+
+30, "(fr)Compatibility Technicians"
+
+31, "(fr)Silent Threat Testers"
+
+32, "(fr)Senior IS Technician"
+
+33, "(fr)IS Technicians"
+
+34, "(fr)Director Of Marketing"
+
+35, "(fr)Product Marketing Managers"
+
+36, "(fr)Communications Manager"
+
+37, "(fr)Traffic Manager"
+
+38, "(fr)Package Design"
+
+39, "(fr)Deep in the Ross 128 system, the GTA Installation Riviera picks up a
+distress call from a Terran pilot.  A disbelieving communications
+officer listens as the pilot frantically requests cover from
+phantom attackers."
+
+40, "(fr)The ancients discover subspace and begin their empire."
+
+41, "(fr)A joint Terran-Vasudan science team conducts experiments
+utilizing captured Shivan technology."
+
+42, "(fr)GTA Intelligence briefs pilots on a daring and important plan
+to counter Shivan advancement."
+
+43, "(fr)Strange and powerful forces attack the ancients."
+
+44, "(fr)A GTA boarding party attempts to neutralize forces in a captured Shivan
+freighter."
+
+45, "(fr)The ancients begin their final struggle."
+
+46, "(fr)The ancients understand their destruction."
+
+47, "(fr)The ancients discover a weakness in their dark enemies but not in time
+to save themselves."
+
+48, "(fr)The Shivan Super Destroyer almost makes it to the Sol System but the Terran-Vasudan
+forces emerge victorious."
+
+49, "(fr)For having attained an outstanding number of confirmed kills you are hereby awarded the Ace."
+
+50, "(fr)For your fine accomplishments as a skilled pilot and for your considerable number of enemy kills, it is an honor to present you the Double Ace."
+
+51, "(fr)For your truly impressive ability as a pilot and for the exceptional number of confirmed enemy kills, it is a rare honor to present you the Triple Ace.  Few pilots are so distinguished."
+
+52, "(fr)Is that the best they can do?"
+
+53, "(fr)Radar's clean and clear."
+
+54, "(fr)Glad that's over."
+
+55, "(fr)Area secured."
+
+56, "(fr)I think that's all of them."
+
+57, "(fr)Enemy wing just arrived!"
+
+58, "(fr)Heads up we have company!"
+
+59, "(fr)Heads up, we've got visitors!"
+
+60, "(fr)New bandits in the area."
+
+61, "(fr)New hostiles in the area!"
+
+62, "(fr)Enemy presence detected."
+
+63, "(fr)Enemy wing has just arrived!"
+
+64, "(fr)Breaking to attack!"
+
+65, "(fr)Affirmative Sir, attacking your target!"
+
+66, "(fr)Attacking your target!"
+
+67, "(fr)Attacking now Sir."
+
+68, "(fr)Target aquired."
+
+69, "(fr)Reinforcements awaiting orders."
+
+70, "(fr)Reinforcements here Sir, awaiting orders."
+
+71, "(fr)Reinforcements here Sir."
+
+72, "(fr)Beta wing has arrived, awaiting orders."
+
+73, "(fr)Beta wing has arrived."
+
+74, "(fr)You've got a bogie on your tail!"
+
+75, "(fr)Check your six pilot!"
+
+76, "(fr)Fighter on your tail Sir!"
+
+77, "(fr)Watch your back Sir!"
+
+78, "(fr)Aaaaaaaah!!!"
+
+79, "(fr)Noooooooo!!!"
+
+80, "(fr)Damn it!!"
+
+81, "(fr)Nooooooooo!!!"
+
+82, "(fr)Our flame will not be extinguished!"
+
+83, "(fr)Delta wing has arrived, awaiting orders."
+
+84, "(fr)Yes Sir, leaving battle area."
+
+85, "(fr)I'm outta here."
+
+86, "(fr)Subspace node activated."
+
+87, "(fr)That's affirmative Sir, departing now."
+
+88, "(fr)Roger Sir, entering subspace."
+
+89, "(fr)Entering subspace."
+
+90, "(fr)Roger, disabling your target."
+
+91, "(fr)Yes Sir, disabling target."
+
+92, "(fr)Affirmative, targeting the engine."
+
+93, "(fr)Affirmative, targeting the engines."
+
+94, "(fr)Affirmative Sir, disarming your target."
+
+95, "(fr)Disarming target Sir."
+
+96, "(fr)Roger Sir, disarming your target."
+
+97, "(fr)Affirmative, disarming your target."
+
+98, "(fr)Engaging enemy."
+
+99, "(fr)Engaging now Sir."
+
+100, "(fr)Breaking to attack."
+
+101, "(fr)Epsilon wing has arrived, awaiting orders."
+
+102, "(fr)Epsilon wing has arrived."
+
+103, "(fr)Gamma Wing has arrived, awaiting orders."
+
+104, "(fr)Gamma Wing has arrived."
+
+105, "(fr)Taking damage, request cover!"
+
+106, "(fr)Could one of you flyboys give me some cover?"
+
+107, "(fr)Hull taking serious damage!"
+
+108, "(fr)I'm losing systems, help me out!"
+
+109, "(fr)Taking severe damage."
+
+110, "(fr)Yes Sir, disregarding target."
+
+111, "(fr)Roger Sir, ignoring your target."
+
+112, "(fr)Roger disregarding your target."
+
+113, "(fr)Yes Sir, ignoring target."
+
+114, "(fr)Ignoring target."
+
+115, "(fr)Sorry Sir, I can't do that."
+
+116, "(fr)Not here Sir."
+
+117, "(fr)I cannot comply Sir."
+
+118, "(fr)Cannot comply Sir."
+
+119, "(fr)No can do Sir."
+
+120, "(fr)I cannot do that."
+
+121, "(fr)Select a target Sir!"
+
+122, "(fr)You have nothing targeted Sir."
+
+123, "(fr)Which target Sir?"
+
+124, "(fr)Target? What target?"
+
+125, "(fr)We require target data."
+
+126, "(fr)Cease firing on friendly craft."
+
+127, "(fr)Aim at the hostiles pilot."
+
+128, "(fr)I'm on your side pilot."
+
+129, "(fr)Damn it, don't shoot me."
+
+130, "(fr)Hey, I'm on your side pilot."
+
+131, "(fr)Firing upon us negates the treaty Terran."
+
+132, "(fr)You are firing on friendly targets pilot."
+
+133, "(fr)Ship down! Ship down!"
+
+134, "(fr)Alpha one, please respond!"
+
+135, "(fr)We've lost Alpha 1!"
+
+136, "(fr)Alpha one is down!"
+
+137, "(fr)We've lost a friendly."
+
+138, "(fr)The blood you draw, is your own!!"
+
+139, "(fr)Great shot!"
+
+140, "(fr)Good kill!"
+
+141, "(fr)Impressive pilot!"
+
+142, "(fr)Excellent job pilot!"
+
+143, "(fr)Impressive for a Terran."
+
+144, "(fr)I'm out of missles! Calling in a support ship!"
+
+145, "(fr)I need to rearm! Calling in a support ship."
+
+146, "(fr)I need to rearm! Calling in some support."
+
+147, "(fr)I need to rearm."
+
+148, "(fr)I need to rearm, calling in support."
+
+149, "(fr)Weapons array diminished, Calling in for support."
+
+150, "(fr)Sir, calling in for repair!"
+
+151, "(fr)Taking heavy damage, need to repair."
+
+152, "(fr)This crate's about to blow, calling in for support."
+
+153, "(fr)Sir I need a repair ship."
+
+154, "(fr)This crate's about to blow, calling in for repair!"
+
+155, "(fr)Your straying too far from mission objectives!"
+
+156, "(fr)Where are you going pilot?"
+
+157, "(fr)Where are you going Terran?"
+
+158, "(fr)You'll pay for that traitor."
+
+159, "(fr)You'll pay for your treason pilot."
+
+160, "(fr)You will pay for your treason pilot."
+
+161, "(fr)You have tested our patience long enough Terran."
+
+162, "(fr)All Terran pilots, shoot to kill Alpha One."
+
+163, "(fr)Affirmative Sir."
+
+164, "(fr)I'm on it."
+
+165, "(fr)Roger that Sir."
+
+166, "(fr)Yes Sir."
+
+167, "(fr)As you wish."
+
+168, "(fr)Roger Sir, on our way."
+
+169, "(fr)We're already on our way, Sir."
+
+170, "(fr)Support ship being deployed."
+
+171, "(fr)Rearming complete, Sir."
+
+172, "(fr)Rearming sequence aborted."
+
+173, "(fr)Support has been destroyed."
+
+174, "(fr)Alpha1 your all alone. No reinforcements available."
+
+175, "(fr)Have you lost your mind?  Training is terminated!  Return to base."
+
+176, "(fr)You are ordered to return at once pilot."
+
+177, "(fr)Pilot, you are being removed from battle because of your insubordination."
+
+178, "(fr)Dang, you're still an ensign!  You must have gotten busted!"
+
+179, "(fr)Congratulations.  Your achievements have been noted and you are duly awarded the rank Lieutenant Junior Grade."
+
+180, "(fr)Per GTAR 64-2a you are hereby promoted to the rank of Lieutenant.  Congratulations."
+
+181, "(fr)Congratulations, your achievements have been noted and you are duly awarded the rank of Lieutenant Commander."
+
+182, "(fr)Because of your consistent sense of duty and obvious skill as a leader, you have been promoted to the rank of Commander."
+
+183, "(fr)For displaying a commanding nature and the ability to lead others you are hereby promoted to Captain.  Congratulations!"
+
+184, "(fr)For outstanding service through the war, leading many successful missions, and promoting a sense of honor and pride in the Alliance you have been promoted to the rank of Commodore. "
+
+185, "(fr)We aren't sure how you've done it, but you are hereby promoted to the prestigious rank of Rear Admiral.  (We think you cheated.)"
+
+186, "(fr)You really must have cheated to get this rank!  Do you want to sit behind a desk or something?  That is what Vice Admirals do."
+
+187, "(fr)You really have got to stop cheating.  This could become a natural thing for you... and that would be bad.  Go on Admiral Cheater
+I think you have to perform some ceremony or inspection or something."
+
+188, "(fr)Advanced Space Superiority"
+
+189, "(fr)Excellent"
+
+190, "(fr)Light"
+
+191, "(fr)Triton Dynamics"
+
+192, "(fr)Excellent all-around fighter.
+Offers superior maneuverability and
+a high top speed.  Smaller missile
+payload than other GTA fighters."
+
+193, "(fr)Developed in a joint operation by the Vasudan and Terran governments, the GTF Ulysses is an Excellent all-around fighter.  It offers superior maneuverability and a high top speed."
+
+194, "(fr)Space Superiority"
+
+195, "(fr)Fair"
+
+196, "(fr)Medium"
+
+197, "(fr)Han-Ronald Corp."
+
+198, "(fr)Original space superiority
+of the GTA fleet.  Highly versatile,
+often doubles as assault type.
+Low weapon compatibility."
+
+199, "(fr)The Apollo is the most common GTA fighter.  It is highly versatile and can perform multiple roles, including space superiority, interception and assault."
+
+200, "(fr)Interceptor"
+
+201, "(fr)Good"
+
+202, "(fr)High speed recon and bomber-
+intercept fighter.  Offers high
+weapon compatibility and payload."
+
+203, "(fr)Using the old GTF Angel Scout Fighter as a template, the GTA created the Valkyrie Interceptor Fighter.  It has two additional engines, as well as an additional set of primary hardpoints.  This makes the Valkyrie the best bomber interceptor in the fleet.  Its speed is unmatched in the GTA, and its maneuverability is above average.  Its only drawbacks are a small secondary payload and weak hull."
+
+204, "(fr)Heavy Assault"
+
+205, "(fr)Average"
+
+206, "(fr)Han-Ronald Corp"
+
+207, "(fr)Low max velocity offset by its
+tremendous offensive capabilities.
+High weapon capacity."
+
+208, "(fr)The Hercules is the slowest and most unmanageable fighter in the fleet.  This is offset, however, by its overpowering weaponry and shielding.  It carries 6 primary weapons, as well as two full secondary banks.  This heavy assault fighter is best suited for small target attacks and bomber escort."
+
+209, "(fr)Recon"
+
+210, "(fr)High"
+
+211, "(fr)Low"
+
+212, "(fr)High max velocity offset by its
+tiny payload.
+High weapon capacity."
+
+213, "(fr)Designed by GTI engineers, the Loki is undoubtedly the best reconaissance craft in Terran or Vasudan service.  Its hull shape and shielded reactor chamber lends itself to providing a low sensor profile, and is yet capable of very high speed maneuvers.  Its relatively light armament and low armor rating make it unsuitable for extended firefights, however."
+
+214, "(fr)Light Bomber"
+
+215, "(fr)Dynamic Metamer"
+
+216, "(fr)Excellent for hit-and-run bombing.
+Good speed for its size, with a high
+capacity afterburner reserve."
+
+217, "(fr)The smallest bomber in the fleet, the Athena has oftentimes been mistaken for a fighter.  However, one should not be fooled by its small size.  The Athena can carry light bombs, and most missiles.  It also has the ability to dogfight well.  Its strong shielding and hull make it the favored Lightning Bomber of the GTA."
+
+218, "(fr)Heavy Bomber"
+
+219, "(fr)Poor"
+
+220, "(fr)Heavy"
+
+221, "(fr)Suitable for any size target.
+Carries most missile types, but few
+cannons.  Armed with defensive
+turret, but still requires escort."
+
+222, "(fr)The Medusa is the standard attack bomber in the GTA.  Its strong shielding and large secondary capacity make it the favored attack craft against cruiser class targets.  As the first bomber to carry the Tsunami bomb, the Medusa is considered the staple of any bomber pilots career."
+
+223, "(fr)Assault Bomber"
+
+224, "(fr)Very Poor"
+
+225, "(fr)Designed to annihilate capital
+ships and cruisers.  Slow but
+offers unparalleled assault
+bombing capability."
+
+226, "(fr)The Ursa is the first bomber designed specifically for the purpose of annihilating capital ships.  It carries a massive payload and is the only bomber in the GTA which can equip the Harbinger Bomb.  Strong shielding and hull make the Ursa very difficult to destroy."
+
+227, "(fr)Stealth Bomber"
+
+228, "(fr)Excellent for hit-and-run bombing.
+Can carry Tsunamis.  Good afterburner
+supply."
+
+229, "(fr)Another product of GTI R&D, the Zeus strike bomber is a worthy successor to the Athena.  It's balanced design and increased reactor capacity give it remarkable speed for a bomber, yet still remains capable of carrying the powerful Tsunami bombs.  These features will make the Zeus a versatile and effective weapon against capital ships."
+
+230, "(fr)The Amazon is a simple drone, used for basic combat training.  They are unmanned, and carry only the weakest of weaponry."
+
+231, "(fr)The Advanced Amazon is a larger drone, used by the GTA for subsystem and large target training.  They are unmanned and inexpensive."
+
+232, "(fr)The Centaur support ship is designed to get in and out of battle as quick as possible.  It is fast, and quite maneuverable, allowing it to dock with fighters in a minimum amount of time.  Most notable about the Centaur, however, is its extremely large explosion radius.  The amount of warheads carried on a support ship makes it very dangerous to be close to an exploding Centaur."
+
+233, "(fr)The Poseidon is the standard military freighter in the GTA.  It is designed to protect its cargo from any kind of attack, and has four turrets with which to do so."
+
+234, "(fr)The TC2 is the standard issue cargo container in the GTA for deep space cargo transport.  It has all the electronics and systems needed to preserve any cargo within it at whatever conditions are necessary.  TC2s are cheap to manufacture, and heavily used throughout the Alliance."
+
+235, "(fr)The Chronos is a freighter of civilian design.  As the Terran Vasudan war dragged on, more and more of these vessels were commissioned by the GTA for use in military operations.  These vessels are slow but strong."
+
+236, "(fr)The TAC 1 (Called the TacOne by most pilots) is a heavily armored container, usually for carrying volatile or dangerous substances.  It is also the preferred supply container for use in front line operations."
+
+237, "(fr)The TTC 1 is another example of civilian equipment used by the GTA League of Defense.  It is primarily a Tech Container, used for research purposes, especially Zero-G development operations.  It is not very strong, however, and is often a target of enemy attacks."
+
+238, "(fr)The mainstay of the Terran Fleet, these vessels have served in both strike and defense purposes.  From nose to tail it measures 260 meters.  With a full array of weapon systems and a strong enough hull to withstand the strongest enemy warheads, a Fenris Cruiser can be found in almost any system that the GTA is operating in.  The Fenris cruiser was originally designed as a strike weapon, hence its fast speed and decent turning rate.  It was later decided that a second line of cruisers would be produced, for defensive purposes, once it became apparent that the V-T war wouldn't be over in a few months."
+
+239, "(fr)After the Vasudans began making incursions into GTA space, command decided that it needed a new defensive cruiser.  Changes to the Fenris led to the GTC Leviathan line of cruisers, produced as mobile defense battleships.  Their speed and maneuverability were greatly reduced in tradeoff for more powerful weapons and a stronger hull.  Production was discontinued when the GTA thought they would win the Vasudan war after the Battle of Gulnara, and then the production was started up again after the defeat at the Talania system.  Because of the on-again off-again nature of this vessel's production, almost all of the Leviathan Cruisers have different armaments, but all have consistent hulls and speeds."
+
+240, "(fr)The Faustus Science vessel was, and still is, a civilian craft. However, in the 14 years since the Terran-Vasudan war began, more and more of these were commissioned by the GTA in order to pursue military research.  However, its obvious value, poor fighting capabilities, and lack of speed make it a prime target for enemy ships. Hence, you will rarely find many of these anywhere near the front lines of battle."
+
+241, "(fr)The Orion is the capital ship of the GTA.  Measuring a frightening 2.1 kilometers in length, the cost to build one of these far outweighs the cost of paying the crew of this ship for 3 years.  There is no more important symbol of Terran Pride than a ship like the Galatea or the Intrepid cruising past a colonized planet, patrolling the system and ensuring safety.  In the course of the 14 year war, very few of these have ever been lost, making the destruction of an Orion a truly horrible defeat."
+
+242, "(fr)Nothing much is known about the GTD Hades.  It seems to be the GTI's top project.  We believe the goal of the project is to recreate the SD Lucifer.  The GTD Hades should be considered a Class A threat."
+
+243, "(fr)Early Terran space stations were constructed much smaller, and were mostly used for Zero-G research purposes.  Later on, with advancements in space construction technologies, stations grew bigger and bigger.  When the first Arcadia-class station was commissioned, GTA decided to rename it to an Installation rather than a Space Station.  Used for a variety of purposes, almost all major systems are home to at least one Installation, which is often used as the center of trade and communications.  Home to scores of small ship, including repair vessels, fighters, and transports, an Arcadia class Installation is always a safe haven for a convoy of attack ships, returning from battle.  Where the Orion is the symbol of Terran power, the Arcadia is the shining beacon of stability."
+
+244, "(fr)Since the start of space colonization, this standard transport has been used by everyone, both civilian and military.  While it has undergone minor changes time and again, it remains a simple design: A vehicle meant to transport personnel from one place to another."
+
+245, "(fr)The Watchdog is the standard unmanned defensive sentry turret for the GTA.  It fires two standard plasma bursts at any nearby hostile targets."
+
+246, "(fr)The Cerberus is an advanced version of the Watchdog, with stronger weaponry and the ability to withstand more damage."
+
+247, "(fr)The Hermes Escape pod has been used since the destruction of the GTD Goliath over 12 years ago.  They are used by the crews of destroyers and installations to escape destruction.  It is always best to be prepared."
+
+248, "(fr)Light Skirmish"
+
+249, "(fr)PVN"
+
+250, "(fr)Lowest power Vasudan craft. Offers little
+in the way of offensive or defensive capabilities.
+Best used in swarm situations."
+
+251, "(fr)The Anubis is the weakest fighter in the Vasudan Navy.  However, they are extremely cheap to manufacture, and are often used in swarm situations to try to overwhelm the opponent with numbers.  A few radical Vasudans have been known to load the ship with explosives and attempt to steer themselves into GTA capital ships.  The first occurrence of this was the battle of Rexias 4, where the GTD Goliath was destroyed by a squadron of kamikaze pilots.
+Due to its lack of afterburners and low weapon capacity, the GTA has classified the Anubis as a class D threat."
+
+252, "(fr)Heavy Fighter"
+
+253, "(fr)Slow and sluggish, but heavily armored.
+Has high afterburner speed.  Useful for
+hit and run attacks.  High payload capacity."
+
+254, "(fr)As the slowest fighter in the PVN, the Seth has earned itself a reputation as the Turtle of the Vasudan fleet.  Even though it is quite compact in size, the Seth can carry a massive payload, and has a lot of shielding.  Its standard impulse engines aren't very powerful, but the Seth gains an incredible speed boost when using its afterburners.  The Seth is primarily used is convoy attacks and capital ship escort duties.
+The GTA considers the PVF Seth to be a Class C threat."
+
+255, "(fr)Very Good"
+
+256, "(fr)Extremely fast with good weapons compatibility.
+Very useful in any kind of engagement."
+
+257, "(fr)The Horus interceptor can outrun any ship in the PVN or the GTA.  This makes it extremely dangerous.  Its above average weapons capacity, combined with its good maneuverability and shielding make this one of the most well designed Interceptors in the galaxy.  This ship is responsible for the destruction of more GTA bombers than any other.
+As a C class threat, Horus interceptors should be dealt with as quickly as possible."
+
+258, "(fr)PVN/Hammer Of Light"
+
+259, "(fr)Excellent fighter.  Small and hard to hit,
+with speed and maneuverability to match.  Good
+payload makes it the most versatile fighter in
+the PVN."
+
+260, "(fr)The Thoth is the most dangerous ship to be created by the PVN.  Manufactured solely at the Altairian Ship Yards, the Thoth has only been produced in small numbers as of yet.  When the Altairian Yards defected to the Hammer of Light rebels, the production of Thoths by the PVN dropped to nil.  The Thoth is now completely in the hands of the Hammer of Light.
+What makes the Thoth so versatile is its small size, extremely high maneuverability, and advanced weapon systems.  It is extremely difficult to hit, in the hands of a skilled pilot.  The design for the Thoth was simultaneous with the design for the Ulysses, and these two ships were designed by some of the same technicians.  Thus they are quite a match for our Ulysses class fighters.  This is why they are considered a B class threat.  Any non registered Thoths should be destroyed immediately, and their presence reported upon completion of the mission."
+
+261, "(fr)Bomber"
+
+262, "(fr)Low maneuverability and low top speed.  However,
+carries good payload including space bombs. Most
+commonly used in cruiser strikes."
+
+263, "(fr)The Osiris has now become the standard bomber for use in PVN operations.  It has replaced the Amun, correcting many of the faults of its predecessor.  It is not quite as sturdy, but it has nearly the same weapons capacity, and is faster and more maneuverable.
+The Osiris should be considered a C class threat to Fenris class cruisers, and a D class threat otherwise."
+
+264, "(fr)Lowest maneuverability and extremely low top speed.
+Moving target, but the heaviest bomber in the PVN.
+Used against capital ships."
+
+265, "(fr)The Amun is the Vasudans heaviest bomber class ship.  It carries a massive payload and has been responsible for the destruction of at least 3 Orion class destroyers in the past 2 years.  Fortunately, it is slow and has low maneuverability, making it an easy target for our fighters.  Fighter pilots should be wary of the two turrets on this ship: they are not to be ignored.
+The Amun is considered a B class threat to all cruisers and capital ships.  They should be given top priority in target selection during escort operations."
+
+266, "(fr)The Scarab is very similar to our Centaur: We believe the Vasudans stole the design of this ship from us.  It is used for in flight rearming of fighters and bombers.  In longer engagements, these ships can mean the difference between victory and defeat.  The major difference between this ship and the Centaur is that the Scarab is unmanned."
+
+267, "(fr)The Isis transport is quite fast and maneuverable for a ship of its size.  Most often it is used for personnel transfer, although occasionally they have been known to act as repair ships and tugboats.  It is well protected with its turrets, and it is not unheard of for the PVN to use a wing of Isises to conduct an assault on a fortified position."
+
+268, "(fr)The Bast freighter is unarmed, and considered a non threat.  We believe that it is mainly used by Vasudan civilians, but we have seen some in front line operations.  It has very low target value, but should be destroyed, as any kind of resupply ship is a danger to the GTA."
+
+269, "(fr)The standard Vasudan cargo container is only slightly different from our own.  The primary difference is that the Vasudan cargo containers are atmospheric as well as deep-space.  Vasudans used cargo containers well before we did, as they needed to transport raw materials from other systems to their own barren world.  Our cargo container was modelled after theirs, although ours is slightly superior in durability."
+
+270, "(fr)With three turrets, the Ma'at is a hairy target for GTA pilots to attack.  However, it is slow enough that it can be destroyed with enough patience.  As always, supply ships for the PVN are considered to be valid targets."
+
+271, "(fr)the VAC 4 series of cargo is much like its normal counterpart, only it has much more plating.  However, this container is no more dangerous than the standard version, and is nothing more than ML-16 bait without protection of some kind."
+
+272, "(fr)The dreaded Satis freighter was thought to be a warship when it was first encountered in the Aldebaran Encounter.  It has five turrets and a strong hull, making it quite dangerous to the inexperienced pilot.  However, most experienced pilots in the GTA know enough to attack the Satis' main weakness: its weak plating around the turrets.  Disarming a Satis is most often the best way to destroy it.
+While capturing supply ships is often an intelligent plan, the Satis has been considered dangerous enough to rank as a Class C threat.  Treat it as one. "
+
+273, "(fr)The Aten class cruiser, while far stronger than most of the Vasudans warships, falls short as a attack cruiser.  It does not have the armor or the firepower to stand up to GTA weaponry.  With a cruiser speed of 25 m/s and only six weapon turrets, the Aten just cannot muster the kind of firepower needed to do real damage to targets of size.
+Most GTA pilots have learned to exploit the primary weakness of the Aten: its extremely weak weapons subsystem.
+The Aten class cruiser is considered by the GTA to be a Class B threat."
+
+274, "(fr)Where the Aten cruiser failed, the Typhon succeeded well past expectations.  The Typhon is an incredible work of engineering and the model of Vasudan technology.  When the first one was sighted at the Vega Engagement, it was laughed at by our technicians as a foolish display of non utilitarian design.  The subsequent destruction of the GTD Eisenhower and the total decimation of the 4th fleet changed their minds very quickly.  The Typhon should never be underestimated.  It wields massive weaponry, and has more armor plating than any Terran Destroyer.  Its only known weakness is its turret armor, which is significant, but lower than expected.  In the two years since this ship first appeared, we have only managed to destroy two of them.
+The Typhon is considered a Class A threat to any ships within the same system.  Do not engage without backup."
+
+275, "(fr)The Ankh is the standard Vasudan sentry gun.  Its most common usage is guarding supply depots.  However, since the development of the Anubis, its usage has dropped off significantly."
+
+276, "(fr)The Ra has been used by Vasudans since our first encounter with them.  Every Vasudan capital ship has a few of these lifeboats."
+
+277, "(fr)The Shivan Dragon is easily the most impressive fightercraft we have yet seen.  Its maneuverability is unmatched, and it has quite a few other advantages, including a good top speed, powerful afterburners, and strong shields.  It is the only Shivan fighter we have been able to study up close, and we have learned a great deal about Shivan engineering from it.
+It seems that the Shivan shield systems are extremely strong, but their hulls are far weaker than our own.  They also rely on primary weapons far more then secondaries, as evidenced by the Dragon's small capacity.
+The GTA considers the Dragon as a Class A threat."
+
+278, "(fr)The Basilisk seems to be a Shivan heavy attack fighter.  It is not as maneuverable as other Shivan fighters, but it packs quite a punch, and it is very resistant to our weaponry.  Most often they have been used in attacking our supply convoys and transports.
+Treat the Basilisk as a Class C threat."
+
+279, "(fr)We believe that the Manticore is a Shivan interceptor.  It has a very high top speed, and its maneuverability is quite good.  However, its shield system isn't strong enough to withstand constant fighting for long, which leads us to believe the Manticore's primary purpose is to destroy enemy bombers.
+The Manticore ranks as a Class B threat."
+
+280, "(fr)We originally thought the Scorpion was the Shivans best fighter.  However, we now believe that the Scorpion is nothing more than a Shivan scout ship.  Their vast numbers and seeming unimportance to the Shivan war effort leads us to this belief.  Regardless of its purpose, the Scorpion is highly maneuverable, fast, and difficult to destroy.  It can also do damage equivalent to our space superiority fighters.
+In the event that you encounter Scorpions, regard them as a Class C threat."
+
+281, "(fr)The Shaitan bomber is only slightly superior to our own bombers - it's shielding is better, but its capacity seems to be far worse.  Perhaps the Shivans were so assured that they would only need one payload to destroy a target.
+We consider the Shaitan to be a Class C threat."
+
+282, "(fr)The Nephilim class bomber is the most alien of the Shivan ships.  We are still unsure as to why the Shivans chose this odd shape for arguably their most powerful attack craft.  However, with four primary cannons and two turrets, as well as a massive payload, the Nephilim is undoubtedly a serious threat to the GTA.  We have already lost two Orion class destroyers to a wing of Nephilims.  Unless we learn a weakness soon, we will most likely lose two more.
+The Nephilim has been designated a Class A threat to GTA destroyers and cruisers.  In unpopulated systems, it is to be considered a Class B threat."
+
+283, "(fr)The new Seraphim class bomber is the Shivan's latest threat.  It is three times larger than a Nephilim, and carries a massive payload at least 150% the size of the Nephilim.  With strong hulls and almost impenetrable shield system, the Seraphim is easily the most dangerous bomber we have yet encountered.  The Seraphim has been designated a Class A threat to GTA destroyers and cruisers.  In unpopulated systems, it is to be considered a Class B threat."
+
+284, "(fr)The Azrael is most likely a Shivan transport.  While we are not completely sure of its uses, we do know that they can house many Shivans.  It is not very heavily armored, and its weaponry is not too strong.  This makes the Azrael the most common target for capture attempts."
+
+285, "(fr)The Mephisto freighter behaves much like one of our own.  Only it is far more powerful and dangerous.  Very little data is available on this ship class."
+
+286, "(fr)We believe that the Shivans use cargo containers such as these as storage depots.  We have yet to see a Shivan land on a planet.  This leads us to believe that the Shivans plan on keeping all of their materials and resources in deep space."
+
+287, "(fr)Almost no data is available on the Asmodeus freighter.  We are aware that it has a strong hull and four turrets.  Any further data on this ship should be immediately delivered to Terran Intelligence."
+
+288, "(fr)What we have dubbed the Sac-2 is simply a more heavily armored form of the standard Shivan cargo container.  We believe that this is where the Shivans keep their more precious supplies.  Sac-2s are to be captured or destroyed at every opportunity."
+
+289, "(fr)While far more rare than its counterpart, the Cain-class cruiser, the Lilith is one of the most ferocious cruisers we have had the misfortune of combating.  It has extremely strong weapon systems, as well as a very thick armor which our cannons can barely penetrate.  One for one, the Lilith can easily destroy any of our cruisers.  It is for this reason that they should be considered a primary target for all bomber squadrons in the GTA.
+The Lilith should be considered a Class A threat to any ships that encounter it."
+
+290, "(fr)The Cain is by far the most common cruiser in the Shivan fleet.  It is also the weakest.  However, the Cain should not be underestimated.  It has many turrets, as well as a cluster bomb defensive mechanism.  As a strike cruiser, the Cain mostly appears in attacks against GTA or PVN capital ships and cruisers.  In these cases, it should be destroyed immediately.  The primary weakness of the Cain appears to be its unshielded turrets.  Most of the turrets on the Cain can be destroyed with minimal damage.
+The Cain is a Class B threat."
+
+291, "(fr)While the Demon-class Destroyer is easily one of the most massive ships we have yet seen, it is not the biggest or most powerful in the Shivan armada.  However, it is still quite dangerous, with a plethora of missile turrets and two full squadrons of fighters.  It is suggested that these capital ships be destroyed by bombers, as all cruisers that have attempted to engage a Demon have been destroyed.
+The Demon is a Class A threat in any allied system."
+
+292, "(fr)The Lucifer is the greatest threat to the survival of the GTA, the PVN, and both the Terran and Vasudan species.  It wields three massive Flux Cannons which can destroy one of our capital ships in a few hits.  These same cannons have been seen bombarding colonized worlds.  With four full fighter squadrons, and a massive array of defensive turrets, the Lucifer would be extremely difficult to destroy.
+The fact that it is protected by a sheath shielding system which makes it completely impervious to any kind of kinetic or plasma damage makes it impossible to destroy.  We have yet to find a way to breach this shielding technology.  It is hoped that a solution will be found soon.
+Assuming that a solution is found, we have managed to gather enough data on the Lucifer to destroy it.  In a recon mission, we were able to determine that the Lucifer is powered by five reactors across its surface.  If these reactors are destroyed in a short amount of time, the Lucifer will be stopped.
+If we cannot stop the Lucifer, we do not expect to be able to defeat the Shivans.
+We have no way of knowing if there are more than one Lucifer-class destroyer.  However, any that exist should be considered more dangerous than a Class A threat."
+
+293, "(fr)We believe that the sole purpose of the Trident is to guard Shivan repair and supply depots.  It is not too strong, but in mass quantities, can be dangerous."
+
+294, "(fr)Terrans originated on the third planet in the Sol system, known alternately as Terra or Earth.  Terrans are relatively physically weak, but are highly intelligent and versatile.  This combination of intelligence and versatility have allowed Terrans to evolve from tribal, nomadic primates (not entirely unlike their progenitors) to a spacefaring race.
+
+Terran civilization developed to the point of relatively stable nation-states.  With space travel, the nation-state evolved into the global-state.  With space travel, the Terran species furthered its growth, both in material ways and in immaterial, philosophical ways.  In time, the global-state led to the intersystem-state, which in turn led to the Galactic Terran Alliance, a galactic-state.  
+
+To date, Terrans have successfully colonized 12 worlds outside of the Sol system.  Outposts have been established on 15 other planets and moons throughout the known galaxy.  If the past is any indicator of future trends, unified expansionism will only continue to benefit the Alliance, both politically and economically."
+
+295, "(fr)Vasudans originate on the fourth planet of the Vasuda Prime system, the only planet in that system that is capable of supporting life.  The fourth planet of the Vasuda Prime system (also known as Vasuda Prime) is a relatively hostile world.  Both of the twin continents of Vasuda Prime are almost entirely desert, and most of the above-ground water is, even by Vasudan standards, undrinkable.  In order to adapt to these surroundings, Vasudans developed quite rapidly.
+
+Vasudan society is complex and filled with peril for the outsider ignorant of their culture.  Vasudans have a range of social tests and protocols, such as The Conversation.  A Terran mishandling of The Conversation is presumed to be one of the major causes of the V-T War.  The Vasudan government is parliamentary in nature, but is presided over by the Imperial family and the Ambassadors, who are quasi-royal go-betweens for the Parliament and the Imperium.
+
+Vasudan space exploration has been driven primarily by the need to find planets capable of sustaining their species.  As resources on Vasuda Prime have diminished, the drive to colonize has intensified among Vasudans in recent decades."
+
+296, "(fr)Despite what information we've been able to obtain, Shivans still remain, on many levels, an enigma to both the Terrans and the Vasudans.  Their origin and their destination remain unknown.  While many have offered up possible explanations as to why the Shivans seem focused on the destruction of all other sentient species, we still do not know why they seem bent on total xenocide.
+
+Shivans have multiple eyes, some of which seem to have the function of compound eyes, not unlike some varieties of insects.  Shivans also have five legs, and can run equally well over a floor or over a ceiling.  It has been hypothesized that Shivans may have spent their evolutionary process in a zero-gravity environment.  Each Shivan leg ends in a very strong claw, capable of crushing even the sturdiest of known alloys.  Parts of their thorax seem to act as compartments, such as ones that might be found on a space suit.  It has been suggested that what we have actually seen have been either robots or organic creatures in some sort of exo-skeleton.  However, we have, at present, no reason to support either hypothesis.
+
+Most likely, we will not learn anything more about the Shivan species until we have actually captured and studied a Shivan."
+
+297, "(fr)Create pilot"
+
+298, "(fr)Accept"
+
+299, "(fr)Help"
+
+300, "(fr)Options"
+
+301, "(fr)Medals"
+
+302, "(fr)Remove"
+
+303, "(fr)Set Active"
+
+304, "(fr)Clone pilot"
+
+305, "(fr)Single Player"
+
+306, "(fr)Multi Player"
+
+307, "(fr)Convert pilot"
+
+308, "(fr)Barracks"
+
+309, "(fr)Pilot Stats"
+
+310, "(fr)Briefing"
+
+311, "(fr)Ship Selection"
+
+312, "(fr)Weapons Loadout"
+
+313, "(fr)Commit"
+
+314, "(fr)@Close"
+
+315, "(fr)Clone Pilot"
+
+316, "(fr)Choose Pilot"
+
+317, "(fr)Select"
+
+318, "(fr)Restart Campaign"
+
+319, "(fr)Campaigns"
+
+320, "(fr)Campaign Information"
+
+321, "(fr)Continue"
+
+322, "(fr)GTA Command Briefing"
+
+323, "(fr)Targeting"
+
+324, "(fr)Ship"
+
+325, "(fr)Weapons"
+
+326, "(fr)Miscellaneous"
+
+327, "(fr)Alt"
+
+328, "(fr)Shift"
+
+329, "(fr)Enable"
+
+330, "(fr)Invert"
+
+331, "(fr)Cancel"
+
+332, "(fr)Undo"
+
+333, "(fr)Reset Defaults"
+
+334, "(fr)Search Mode"
+
+335, "(fr)Bind Mode"
+
+336, "(fr)@Conflict"
+
+337, "(fr)Clear Conflict"
+
+338, "(fr)Clear All"
+
+339, "(fr)Clear Selected"
+
+340, "(fr)Technical Database"
+
+341, "(fr)Mission Simulator"
+
+342, "(fr)Cutscenes"
+
+343, "(fr)Credits"
+
+344, "(fr)Exit"
+
+345, "(fr)Debriefing"
+
+346, "(fr)Statistics"
+
+347, "(fr)Replay Mission"
+
+348, "(fr)Recommendations"
+
+349, "(fr)@.Medal"
+
+350, "(fr)@.Rank"
+
+351, "(fr)@.Badge"
+
+352, "(fr)Pilot Info"
+
+353, "(fr)@Medal"
+
+354, "(fr)@Rank"
+
+355, "(fr)@Badge"
+
+356, "(fr)Kick"
+
+357, "(fr)Clear"
+
+358, "(fr)Reset"
+
+359, "(fr)Hotkey Assignment"
+
+360, "(fr)Key Group"
+
+361, "(fr)Amber"
+
+362, "(fr)Blue"
+
+363, "(fr)Green"
+
+364, "(fr)On"
+
+365, "(fr)Off"
+
+366, "(fr)Popup"
+
+367, "(fr)HUD Config"
+
+368, "(fr)Brightness"
+
+369, "(fr)Single Missions"
+
+370, "(fr)Campaign Missions"
+
+371, "(fr)Mission"
+
+372, "(fr)Filename"
+
+373, "(fr)Messages"
+
+374, "(fr)Events"
+
+375, "(fr)Objectives"
+
+376, "(fr)Complete"
+
+377, "(fr)Incomplete"
+
+378, "(fr)Failed"
+
+379, "(fr)Mission Log"
+
+380, "(fr)Missions"
+
+381, "(fr)Close"
+
+382, "(fr)All"
+
+383, "(fr)Coop"
+
+384, "(fr)Team"
+
+385, "(fr)Dogfight"
+
+386, "(fr)Create Game"
+
+387, "(fr)Players"
+
+388, "(fr)Pilot Information"
+
+389, "(fr)Host Options"
+
+390, "(fr)Highest Rank"
+
+391, "(fr)Team Leader"
+
+392, "(fr)Any Player"
+
+393, "(fr)Host"
+
+394, "(fr)AI Orders"
+
+395, "(fr)End Mission"
+
+396, "(fr)Skill Level"
+
+397, "(fr)Observers"
+
+398, "(fr)Time Limit"
+
+399, "(fr)Respawn Limit"
+
+400, "(fr)Kill Limit"
+
+401, "(fr)Voice Transmission"
+
+402, "(fr)Voice Quality"
+
+403, "(fr)Message Duration"
+
+404, "(fr)Per Player Voice Wait"
+
+405, "(fr)Host Modifies Ships"
+
+406, "(fr)Host Setup"
+
+407, "(fr)Join"
+
+408, "(fr)Select Ship"
+
+409, "(fr)Name"
+
+410, "(fr)Class"
+
+411, "(fr)Hull"
+
+412, "(fr)Shield"
+
+413, "(fr)Refresh"
+
+414, "(fr)Status"
+
+415, "(fr)Server"
+
+416, "(fr)Ping"
+
+417, "(fr)Join as Observer"
+
+418, "(fr)Join Game"
+
+419, "(fr)Team 1"
+
+420, "(fr)Team 2"
+
+421, "(fr)Open"
+
+422, "(fr)Closed"
+
+423, "(fr)Password Protected"
+
+424, "(fr)Restricted"
+
+425, "(fr)Allow Rank"
+
+426, "(fr)Or Below"
+
+427, "(fr)Or Above"
+
+428, "(fr)Title"
+
+429, "(fr)Game Type"
+
+430, "(fr)@Launch"
+
+431, "(fr)Multi"
+
+432, "(fr)Detail"
+
+433, "(fr)Exit Game"
+
+434, "(fr)Controls Config"
+
+435, "(fr)Very High"
+
+436, "(fr)Custom"
+
+437, "(fr)Engine Glow"
+
+438, "(fr)off"
+
+439, "(fr)on"
+
+440, "(fr)Nebulas"
+
+441, "(fr)Target View Rendering"
+
+442, "(fr)Effects Alpha Blending"
+
+443, "(fr)Preset Detail Levels"
+
+444, "(fr)Model Detail"
+
+445, "(fr)Model Update"
+
+446, "(fr)3D Hardware Textures"
+
+447, "(fr)Weapon Rendering"
+
+448, "(fr)Impact Effects"
+
+449, "(fr)Shield Hit Effect"
+
+450, "(fr)Stars"
+
+451, "(fr)Particles"
+
+452, "(fr)Lighting"
+
+453, "(fr)Briefing Voice"
+
+454, "(fr)Volume"
+
+455, "(fr)Effects"
+
+456, "(fr)Music"
+
+457, "(fr)Voice"
+
+458, "(fr)Joystick"
+
+459, "(fr)Sensitivity"
+
+460, "(fr)Dead Zone"
+
+461, "(fr)Mouse"
+
+462, "(fr)Add"
+
+463, "(fr)Yes"
+
+464, "(fr)No"
+
+465, "(fr)VMT"
+
+466, "(fr)General"
+
+467, "(fr)/Multidata"
+
+468, "(fr)/Missions"
+
+469, "(fr)Never"
+
+470, "(fr)Before Game"
+
+471, "(fr)IP Address"
+
+472, "(fr)Broadcast Locally"
+
+473, "(fr)Login"
+
+474, "(fr)Password"
+
+475, "(fr)Object Update"
+
+476, "(fr)Pilot / Squad Images"
+
+477, "(fr)Transfer Missions"
+
+478, "(fr)Flush Cache"
+
+479, "(fr)Mute"
+
+480, "(fr)Mic Test"
+
+481, "(fr)Quality"
+
+482, "(fr)Ignore"
+
+483, "(fr)Enter Password"
+
+484, "(fr)Exit Mission"
+
+485, "(fr)Mission Paused"
+
+486, "(fr)Stats"
+
+487, "(fr)Available Ships"
+
+488, "(fr)Type"
+
+489, "(fr)Length"
+
+490, "(fr)Max Velocity"
+
+491, "(fr)Maneuverability"
+
+492, "(fr)Armor"
+
+493, "(fr)Gun Mounts"
+
+494, "(fr)Missile Banks"
+
+495, "(fr)Manufacturer"
+
+496, "(fr)@ship_name"
+
+497, "(fr)@ship_Type"
+
+498, "(fr)@ship_Maneuverability"
+
+499, "(fr)@ship_Armor"
+
+500, "(fr)@ship_Manufacturer"
+
+501, "(fr)@ship_desc"
+
+502, "(fr)Lock Players"
+
+503, "(fr)Ship Information"
+
+504, "(fr)Alpha"
+
+505, "(fr)Beta"
+
+506, "(fr)Gamma"
+
+507, "(fr)Ships"
+
+508, "(fr)Species"
+
+509, "(fr)GTA Technical Database"
+
+510, "(fr)Play"
+
+511, "(fr)Cutscene Description"
+
+512, "(fr)@weapon_name"
+
+513, "(fr)@weapon_desc"
+
+514, "(fr)Willfully firing on allied ships is a capital offense, punishable by death.  You are hereby stripped of your rank and your citizenship in the GTA.  You will appear at 0700 hours at the League of Defense Justice Ministry for your court martial."
+
+515, "(fr)Don't fire upon friendly ships."
+
+516, "(fr)GTW ML-16 Laser"
+
+517, "(fr)Standard issue
+Medium Hull Damage
+Minimal Shield Damage"
+
+518, "(fr)GTW ML-16 
+
+Argon laser weapon - uses transparent ceramic technology in order to create an optical system that is extremely durable and stable under battle conditions - provides adequate destructive damage to the hull of enemy ships by vaporizing molecular bonds at the target area and destabilizing molecular bonds across the grain of the hull material.
+
+The GTA issues ML-16 Lasers to every fighter and bomber in service."
+
+519, "(fr)GTW-41 Disruptor Cannon"
+
+520, "Standard issue
+Tactical Weapon
+Damages Subsystems"
+
+521, "(fr)GTW - 41 Disruptor Cannon 
+
+A gas-focused krypton laser - when the ship is in flight, the chamber of the GTW-41 rotates at a constant speed - a small amount of NO2 is injected into the container .05 ms prior to the emission of the laser light - the rotation  of the NO2 in the chamber focuses the laser pulse to a state that is only very slightly (1%) diffused - after the laser pulse is emitted from the chamber into space, the chamber expels the NO2 into space (thus expelling ionized molecules and moisture) - the process repeats for each subsequent burst of laser energy - as this laser is very slightly diffused, it is not effective as a destructive weapon, but as a tactical weapon - the Disruptor Cannon is best suited and is used for the permanent disabling of enemy ship subsystems.
+
+The Disruptor Cannon should be utilized in all capture operations in order to minimize risk of targets destruction."
+
+522, "(fr)GTW-41x Advanced Disruptor"
+
+523, "Advanced Version
+Tactical Weapon
+Damages Subsystems"
+
+524, "(fr)GTW - 41x Advanced Disruptor Cannon
+
+The Advanced Disruptor Cannon is much like the GTW-41 Disruptor.  However, its speed and higher subsystems damage make it much more useful in operations against faster moving targets."
+
+525, "(fr)GTW-15 Avenger Cannon"
+
+526, "(fr)Special Issue
+Projectile Weapon
+Low Shield Damage"
+
+527, "(fr)GTW -15 Avenger
+
+A rapid-fire, computer-controlled radar and gun system - capable of firing at a rate of more than 4500 rounds per minute - used primarily for close-defense situations - uses closed-loop radar technology to locate, identify, and direct a stream of highly destructive 45mm projectiles to the target.
+
+With the advent of shield technology, the GTW-15 is preferred over the ML-16 in any ship that can carry it.  It's extra damage against hulls make it one of the best anti cruiser weapons.  It has also proven very effective against Vasudan fighters.  However, it's substandard anti-shield capabilities make it a poor choice for dogfighting Shivans, although far better than the ML-16."
+
+528, "(fr)GTW-32 Flail Rifle"
+
+529, "Special Issue
+Low Energy Usage
+Kinetic Weapon
+Moderate Shield Damage"
+
+530, "(fr)GTW - 32 Flail
+
+A rapid-fire, low energy, ceramic optic focused, krypton laser - used in tactical situations to distract or lead an enemy to their destruction at the hands of other allied fighters - this weapon, if used over an extended period of in-flight battle, can destroy an enemy fighter, but, as a destructive weapon, should only be used as a last resort.
+
+The fast firing rate and high mass of the Flail make it great for changing the velocity vector of an enemy fighter or bomber.  It is slightly more effective than the Avenger against shields, rated at damage/second.  Its low energy consumption rate makes it useful for prolonged engagements.  Note, however, that once you have taken out an enemy's shields, switching to another weapon is advised."
+
+531, "(fr)GTW-5 Prometheus Cannon"
+
+532, "(fr)Prototype
+High Energy Usage
+High Hull Damage
+Moderate Shield Damage"
+
+533, "(fr)GTW - 5 Prometheus
+
+Named after the Titan who gave fire to humanity, the Prometheus is a laser-based weapon - an advanced radar and X-ray tracking system lock on the target and determine the target's material structure - argon laser focused via transparent ceramic optics - the laser is generated at the destructive frequency (full out-of-phase) for the target's material structure - emitted no more than .02 ms after targeting and activation by the pilot, the Prometheus stands as one of the GTA's most effective deterrents to enemy attack, an effective form of defense for GTA pilots, and as a durable, portable, and highly destructive offensive tool.
+
+The Prometheus works best against target hulls.  Against shields, it only achieves mediocre performance.  It's slow speed and high energy consumption work against it as well.  However, the primary advantage of the Prometheus is that it can be equipped on almost any fighter in the GTA."
+
+534, "(fr)GTW-7 Banshee"
+
+535, "(fr)Special Issue
+EM Weapon
+Very High Energy Usage
+Extreme Shield Damage"
+
+536, "(fr)GTW - 7 Banshee 
+
+An electromagnetic weapon - sends rapid pulses of exceptionally strong electromagnetic energy resulting in a 1.63 x 105 J blast that forces its way through any known shield technology and produces a dramatic shearing effect which quickly destroys the target ship's materials - named for the fact that in an atmosphere, the pulse creates an atmospheric disturbance similar to a quasi-human scream at 180 dB - uses up a tremendous amount of available ship energy - already, it is has been used by many GTA fighter aces and test pilots as a coup de grace, although such a use for this massively powerful offensive weapon is officially viewed as poor sportsmanship by the GTA.
+
+The GTW-7's impressive anti-shielding capabilities make it the weapon of choice against the Shivans.  The main limitation of this weapon is low weapons compatibility.  It can only be fitted on a GTF Valkyrie or a GTF Hercules."
+
+537, "(fr)GTW-99 Shield Breaker"
+
+538, "(fr)Prototype
+Depletes shields"
+
+539, "(fr)GTW - 99 Shield Breaker
+
+Developed as an anti-Shivan weapon, the Shield Breaker inflicts massive damage to enemy defensive systems. This weapon causes no structural damage, but coupling it with an anti-hull cannon is very effective against larger Shivan bombers such as the Seraphim."
+
+540, "(fr)GTW-43 Leech Cannon"
+
+541, "(fr)GTW - 43 Leech Cannon
+
+The Leech Cannon depletes the power supply of enemy fighters.  Use it to disable afterburners, energy weapons, and shields. No subsystems targeting is required, just point and shoot.
+
+The Leech Cannon is an anti-fighter weapon with minimal effect against larger vessels."
+
+542, "(fr)GTM MX-50"
+
+543, "(fr)Standard Issue
+Fire and Forget"
+
+544, "(fr)GTM MX-50
+
+Suitable for all space battles - defensive and offensive - medium payload (16.5 Kt) - infrared tracking and semi-intelligent targeting - pilot chooses desired target, and the MX-50 tracks the chosen target based off the emission of heat from the - engine, the weapon bays, and the cockpit of the target ship - the MX-50 will always attack a target that is determined to be hostile by the onboard computer of any GTA combat vessel, thus ensuring a higher kill rate, should the pilot find himself in a heated battle situation where precise aiming might be difficult.
+
+Early experiments with energy based defenses like the deflector array at Ross 128 have shown that this weapon is exceedingly weak against anything besides steel based targets."
+
+545, "(fr)GTM-31 Disruptor Missile"
+
+546, "(fr)Advanced Prototype
+Tactical Missile
+Disrupts Subsystems"
+
+547, "(fr)GTM - 31 Disruptor Missile
+
+Advanced signal processing - high precision interception capability - small payload (9 Kt), combining both conventional explosives and a localized blast of energy caused by the effect of impact upon the laser-propulsion system of the missile - designed to temporarily disable subsystems on hostile targets.
+
+The D-Missile is designed to temporarily stop a cruiser or destroyer from firing its laser turrets.  The effect will last about 10 seconds per missile fired, so using these to temporarily disable a cruiser should usually be for suppression until the cruiser is destroyed, or whatever was trying to evade the cruiser has gotten out of range.  Only a few ships can carry these - and they are very scarce - so proper utilization is important."
+
+548, "(fr)GTM-3 Fury Missile"
+
+549, "(fr)Standard Issue
+Maximum Compatibility"
+
+550, "(fr)GTM - 2 Fury
+
+Small, fast dumbfire missiles - fired in swarms - GTA fighters can carry more Fury missiles than conventional missiles, due to their small size - used for distraction and other tactical measures - very small payload (3 Kt).
+
+Use is recommended in close combat situations and against larger targets where tracking is a non issue."
+
+551, "(fr)GTM-4 Hornet Swarm Missile"
+
+552, "(fr)Special Issue
+Swarm Type
+Slow Target Lock"
+
+553, "(fr)GTM - 4 Hornet
+
+Infrared and ultraviolet tracking - designed to fire in small groups of 4 missiles per burst - light medium payload per  missile (12 Kt) - semi-intelligent on-board tracking - single-pass kill probability will not exceed 60% on average -designed as an offensive version of the Fury.
+
+As a swarm based weapon, this missile can take out an unshielded fighter without any difficulty.  It's four missile system almost guarantees one or two hits, and its speed is quite amazing.  Twice as powerful against naked hulls."
+
+554, "(fr)GTM-9 Interceptor"
+
+555, "(fr)Standard Issue
+Fast Target Lock"
+
+556, "(fr)GTM - 9 Interceptor
+
+All-aspect seeking - laser tracking senses energy reflected off a target from the primary weapon systems of the target, increasing single-pass kill probability - medium payload (18.5 Kt) - missile is designed to pierce reinforced hull, thus 
+securing itself to the target, prior to detonating (15 ms delay).
+
+This is the standard issue fighter-killer in the GTA.  Designed to take out fighters with minimum hassle, a simple lock is all that is needed to grab the enemies attention.  Short lock time, good speed, and decent payload makes this the best
+missile to use against all but the strongest ships.  It's effectiveness against large targets, however, is less than a typical laser run, making this primarily a ship to ship missile."
+
+557, "(fr)GTM Phoenix V"
+
+558, "(fr)Special Issue
+Anti-Bomber Missile
+Slow Target Lock"
+
+559, "(fr)GTM Phoenix V 
+
+All-aspect seeking - same tracking system as the Interceptor - large payload (50 Kt), but slower than the Interceptor - one of the best fire-and-forget missiles ever developed - many fighter pilots within the GTA regard the Phoenix V as the weapon of choice against high value, heavily defended targets.
+
+The number one bomber killer in our arsenal, this is the single most damaging missile that can be equipped on a fighter craft.  The longer lock time and slower speed make it less of a dogfight weapon and more of an anti- bomber warhead.  It's extra damage against shields makes it especially useful against the Shivan bombers."
+
+560, "(fr)GTM-1 Synaptic Bomb"
+
+561, "(fr)Advanced Bomb
+Wing Attack Cluster Explosion
+Area Effect"
+
+562, "(fr)GTM - 1 Synaptic Bomb
+
+Missile propulsion unit carrying several small intelligent bomblets - when distance to target is less than 100 m or when time to impact is less than 2 sec., bomblets direct missile to the most vulnerable part of the ship of those parts of the ship facing the missile - bomblets then separate from missile propulsion unit and form a sphere - inertia continues to carry bomblets in the direction of the target - the missile propulsion unit continues to advance toward the target - when the missile hits the target or 1.5 sec. after the missile should have hit the target, the bomblets explode - the spherical shape of the formation of the bomblets helps to ensure a fairly even level of damage across a sensitive area on the target - the spherical shape also ensures that the target will not be able to effectively maneuver away from the blast, thus pinning the target to a specific area in space - can also act as dumbfire - medium payload per bomblet (15 Kt) - very small payload for missile (2 Kt).
+
+Nicknamed the Earthshaker by the bomber pilots who tested this, it is a bombers best defense against fighters.  The Synaptic Bomb can do a lot of damage to a lot of ships at one time."
+
+563, "(fr)GTM-43 Stiletto"
+
+564, "(fr)Standard Issue
+Tactical Missile
+Destroys Subsystems"
+
+565, "(fr)GTM - 43 Stiletto
+
+Heat seeking - laser tracking similar to the Interceptor - missile is protected by a small shield system, allowing for greater success in payload delivery during busy melee situations and intense firefights - fast, but low in-flight maneuverability compared to other missiles of comparable size - low maneuverability due to the size of the missile's payload (60 Kt) and on-board shield system.
+
+With the ability to take out most subsystems in one hit, and as simple to fire as an MX-50, the GTM-43 is the best ship disabling bomb developed by the GTA.  Effective against turrets, engines and any other kind of subsystem, the Stiletto is a valuable asset to a bombers arsenal.  However, it's slow, unmanageable, and it can't do any real hull damage."
+
+566, "(fr)GTM-86 Cluster Bomb"
+
+567, "(fr)Standard Issue
+Tactical Missile"
+
+568, "(fr)GTM - 86 Cluster Bomb
+
+A second-generation Synaptic bomb, this GTI-developed cluster warhead has been designed for attacks against entire wings of enemy ships.
+
+Upon reaching its target, the primary warhead fragments into multiple secondary warheads that explode within a split second.  The detonations produce a large field of blast field, making the cluster bomb most effective against fighter formations."
+
+569, "(fr)GTM-3 Tsunami Bomb"
+
+570, "(fr)Special Issue
+Anti-Cruiser Bomb
+Tactical Anti-Matter Warhead
+Long Lock/Reload Time"
+
+571, "(fr)GTM - 3 Tsunami
+
+Intelligent tracking similar to GTA targeting system - prior to launch, communicates with ship computer, gathering data about enemy target types and whereabouts - slow, low maneuverability - antimatter warhead (500 tonne3 mass-to-energy conversion) - due to instability of antimatter, no more than 10 may be carried on board a GTA bomber at any given time, unless pilot is granted a special permit by an appropriate governing body.
+
+The Tsunami has now become the standard Terran bomb used to take out large targets.  It's short life requires that you get within 1500 meters of the target before sending it off, and since it needs a lock to be fired, it takes a brave pilot to fly straight enough for long enough to let one of these fly.  A few Tsunami's will take out almost any ship, barring a destroyer.  The antimatter warhead also washes over shields a little, so as long as it isn't too close to the center of the blast, a fighter or bomber has a good chance of surviving detonation."
+
+572, "(fr)GTM-N1 Harbinger Bomb"
+
+573, "(fr)Prototype
+Anti-Capital Ship Bomb
+Tactical Fusion Warhead
+Extremely Long Lock/Reload Time"
+
+574, "(fr)GTM - N1 Harbinger
+
+Fusion bomb surrounded by 3 salted fission bombs - propulsion unit is a half-size version of a regulation GTA fighter thruster (Class II) - given the weight of the payloads, the missile is slow despite the power of the thruster - as the Harbinger is exceptionally large, GTA bombers are limited to carrying 6 of these weapons at any given time - the resultant shock wave from this weapon is potentially deadly, due to the size of the payloads (5000 Mt in total) - use near allied installations or allied ship groupings is strongly discouraged by the GTA - most effective when used in preemptive defensive strike against non-military installations.
+
+The Harbinger is our best chance of destroying the Lucifer."
+
+575, "(fr)GTM-11 EM Pulse"
+
+576, "(fr)Advanced Missile
+Electromagnetic Pulse weapon
+Anti-bomber weapon"
+
+577, "(fr)GTM - 11 EM Pulse
+
+Upon impact, the EM Pulse temporarily disables the electronics systems of the target ship.  This renders the target ship unable to track targets, manage communications, or gain aspect missile lock.  This has numerous tactical applications. For example, a direct hit with an EM Pulse missile will prevent bombers from launching aspect-seeking warheads for several seconds. Once the EMP field has worn off, they must also take the time to reacquire missile lock, granting you valuable time."
+
+578, "(fr)GTM-84 Corkscrew Missile"
+      
+579, "(fr)Wacky fun corkscrew missiles"
+
+580, "(fr)Developed by the GTI for Silent Threat. Deemed too wacky for final release."
+
+#end
+

@@ -1,0 +1,24 @@
+#Muzzle flash types
+
+;; small muzzle flash
+$Mflash:
++name:			mflash_small		;; whatever you want to name it
+
++blob_name:		expmissilehit1					;; anim name, offset from muzzle, radius
++blob_offset:	1.0 
++blob_radius:	6.0					
+
++blob_name:		expmissilehit1					;; anim name, offset from muzzle, radius
++blob_offset:	4.5
++blob_radius:	4.0					
+
++blob_name:		expmissilehit1					;; anim name, offset from muzzle, radius
++blob_offset:	6.0
++blob_radius:	3.0					
+
++blob_name:		expmissilehit1					;; anim name, offset from muzzle, radius
++blob_offset:	8.5
++blob_radius:	3.0					
+
+
+#end
