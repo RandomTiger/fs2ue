@@ -224,7 +224,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\Debug/code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -260,7 +260,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\Debug/code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -296,7 +296,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\Release/code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -332,7 +332,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\Release/code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">
@@ -368,7 +368,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\Debug/code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|x64'">
@@ -404,7 +404,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\Debug/code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">
@@ -438,7 +438,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\UnityRelease/code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">
@@ -449,7 +449,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
       <AdditionalIncludeDirectories>3rdParty\VisualLeakDetector\include;3rdParty\AntTweakBar/include;TomLib\src;.;..;anim;asteroid;bmpman;cfile;cmdline;cmeasure;controlconfig;cutscene;debris;debugconsole;directx;fireball;fred;freespace2;fs2launch;gamehelp;gamesequence;gamesnd;glide;globalincs;graphics;hud;io;jumpnode;lighting;math;menuui;mission;missionui;model;movie;network;object;observer;osapi;palman;parse;particle;pcxutils;physics;playerman;popup;radar;render;ship;sndman;sound;starfield;stats;ui;vcodec;weapon;localization;fred2;nebula;TgaUtils;demo;inetfile;exceptionhandler;3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>UNITY_BUILD;NDEBUG;_WINDOWS;WIN32;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>UNITY_BUILD;NDEBUG;_WINDOWS;WIN32;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\code.pch</PrecompiledHeaderOutputFile>
@@ -472,7 +472,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\UnityRelease/code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">
@@ -508,7 +508,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\Debug/code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">
@@ -516,7 +516,7 @@
       <Optimization>Disabled</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <AdditionalIncludeDirectories>3rdParty\VisualLeakDetector\include;3rdParty\AntTweakBar/include;TomLib\src;.;..;anim;asteroid;bmpman;cfile;cmdline;cmeasure;controlconfig;cutscene;debris;debugconsole;directx;fireball;fred;freespace2;fs2launch;gamehelp;gamesequence;gamesnd;glide;globalincs;graphics;hud;io;jumpnode;lighting;math;menuui;mission;missionui;model;movie;network;object;observer;osapi;palman;parse;particle;pcxutils;physics;playerman;popup;radar;render;ship;sndman;sound;starfield;stats;ui;vcodec;weapon;localization;fred2;nebula;TgaUtils;demo;inetfile;exceptionhandler;3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>UNITY_BUILD;_WINDOWS;WIN32;_DEBUG;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;DISABLE_ASSEMBLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>UNITY_BUILD;_WINDOWS;WIN32;_DEBUG;_CRT_SECURE_NO_DEPRECATE;DISABLE_ASSEMBLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Sync</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -544,7 +544,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\Debug/code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
