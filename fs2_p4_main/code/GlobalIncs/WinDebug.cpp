@@ -632,6 +632,7 @@ int PE_Debug::DumpDebugInfo( DumpBuffer& dumpBuffer, const BYTE* caller, HINSTAN
 
 void DumpCallsStack( DumpBuffer& dumpBuffer )
 {
+#if !defined(_WIN64)
 	const char* separator = "------------------------------------------------------------------\r\n" ;
 	static PE_Debug PE_debug ;
 
@@ -693,6 +694,7 @@ void DumpCallsStack( DumpBuffer& dumpBuffer )
 
 	dumpBuffer.Printf( separator ) ;
 	PE_debug.ClearReport() ;  // Prepare for future calls
+#endif
 }
 
 

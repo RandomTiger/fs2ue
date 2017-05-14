@@ -171,6 +171,9 @@ void aaline_init_tables()
 // written to simulate exact hardware behavior.
 long int fix_xy_mult(long int oa, fix_xy ob)
 {
+#if defined(_WIN64)
+	return oa * ob;
+#else
 	int retval;
 
 	_asm {
@@ -181,6 +184,7 @@ long int fix_xy_mult(long int oa, fix_xy ob)
 		mov	retval, eax
 	}
 	return retval;
+#endif
 }
 
 

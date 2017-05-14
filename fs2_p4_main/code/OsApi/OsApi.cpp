@@ -294,6 +294,8 @@ DWORD win32_process2(DWORD lparam)
 // Fills in the Os_debugger_running with non-zero if debugger detected.
 void os_check_debugger()
 {
+#if !defined(_WIN64)
+
 	HMODULE hMod;
 	char search_string[256];
 	char myname[128];
@@ -324,6 +326,7 @@ void os_check_debugger()
 
 	// ... and then search for it.
 	EnumWindows( (int (__stdcall *)(struct HWND__ *,long))os_enum_windows, (long)&search_string );
+#endif
 }
 
 // called at shutdown. Makes sure all thread processing terminates.
@@ -684,9 +687,11 @@ void os_poll()
 
 void debug_int3()
 {
+#if !defined(_WIN64)
 	gr_activate(0);
 	_asm { int 3 };
 	gr_activate(1);
+#endif
 }
 
 

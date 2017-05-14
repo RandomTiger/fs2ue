@@ -36,7 +36,7 @@ static int				ACM_inited = 0;
 //  
 //--------------------------------------------------------------------------;
 
-int CALLBACK ACM_enum_callback(HACMDRIVERID hadid, DWORD dwInstance, DWORD fdwSupport)
+int CALLBACK ACM_enum_callback(HACMDRIVERID hadid, DWORD_PTR dwInstance, DWORD fdwSupport)
 {
     static TCHAR    szBogus[]       = TEXT("????");
 
@@ -46,7 +46,7 @@ int CALLBACK ACM_enum_callback(HACMDRIVERID hadid, DWORD dwInstance, DWORD fdwSu
     BOOL                fDisabled;
     DWORD               dwPriority;
 
-    hlb = (HWND) dwInstance;
+    hlb = (HWND)(UINT)dwInstance;
 
     add.cbStruct = sizeof(add);
     mmr = acmDriverDetails(hadid, &add, 0L);

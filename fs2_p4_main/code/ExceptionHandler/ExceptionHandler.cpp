@@ -310,6 +310,7 @@ static char* GetFilePart(char *source)
 //
 int __cdecl RecordExceptionInfo(PEXCEPTION_POINTERS data, const char *Message)
 {
+#if !defined(_WIN64)
 	static bool BeenHere = false;
 
 	// Going recursive! That must mean this routine crashed!
@@ -483,5 +484,6 @@ int __cdecl RecordExceptionInfo(PEXCEPTION_POINTERS data, const char *Message)
 	// Return the magic value which tells Win32 that this handler didn't
 	// actually handle the exception - so that things will proceed as per
 	// normal.
+#endif
 	return EXCEPTION_CONTINUE_SEARCH;
 }

@@ -1547,6 +1547,8 @@ static int ComputeNomDataF(t_Sample*& inp, const int deltas[], int& level,
 static int ComputeNomDataF(t_Sample*& inp, const int deltas[], int& level)
 #endif
 {
+#if !defined(_WIN64)
+
     int data;
     __asm
     {
@@ -1602,6 +1604,9 @@ static int ComputeNomDataF(t_Sample*& inp, const int deltas[], int& level)
         mov [data], ebx
     }
     return data;
+#else
+	return 0;
+#endif
 }
 
 #pragma warning( pop )

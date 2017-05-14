@@ -42,8 +42,8 @@ typedef struct net_addr	{
 // define these in such a manner that a call to psnet_send_reliable is exactly the same and the new code in unobtrusive
 typedef uint PSNET_SOCKET;
 typedef uint PSNET_SOCKET_RELIABLE;
-//#undef INVALID_SOCKET
-//#define INVALID_SOCKET (PSNET_SOCKET)(~0)
+#undef INVALID_SOCKET
+#define INVALID_SOCKET (PSNET_SOCKET)(~0)
 
 // defines for protocol overheads
 #define UDP_HEADER_SIZE						34
@@ -96,8 +96,6 @@ extern ushort Psnet_default_port;
 #define RNF_DISCONNECTED	3		// Disconnected cleanly
 #define RNF_CONNECTING		4		// We received the connecting message, but haven't told the game yet.
 #define RNF_LIMBO				5		// between connecting and connected
-
-extern uint Unreliable_socket;	// all PXO API modules should use this to send and receive on
 
 // -------------------------------------------------------------------------------------------------------
 // PSNET 2 TOP LAYER FUNCTIONS - these functions simply buffer and store packets based upon type (see PSNET_TYPE_* defines)
