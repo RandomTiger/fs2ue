@@ -60,3 +60,15 @@ Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+*.db
+
+fs2_p4_main/code/TomLib/Debug/
+
+fs2_p4_main/code/UnityDebug/
+
+fs2_p4_main/Debug/
+
+fs2_p4_main/FS2\.pdb
+
+fs2_p4_main/UnityDebug/
