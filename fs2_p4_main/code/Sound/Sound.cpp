@@ -260,6 +260,7 @@ void snd_spew_debug_info()
 //int snd_load( char *filename, int hardware, int use_ds3d, int *sig)
 int snd_load( game_snd *gs, int allow_hardware_load )
 {
+#if defined(PREPROC_ENABLED_DS)
 	int				n, rc, type;
 	sound_info		*si;
 	sound				*snd;
@@ -329,12 +330,15 @@ int snd_load( game_snd *gs, int allow_hardware_load )
 	snd->flags = SND_F_USED;
 
 	snd->sig = snd_next_sig++;
-	if (snd_next_sig < 0 ) snd_next_sig = 1;
+	if (snd_next_sig < 0) snd_next_sig = 1;
 	gs->id_sig = snd->sig;
 	gs->id = n;
 
 	nprintf(("Sound", "Loaded %s\n", gs->filename));
 	return n;
+#else
+		return 0;
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -345,6 +349,8 @@ int snd_load( game_snd *gs, int allow_hardware_load )
 //
 int snd_unload( int n )
 {
+#if defined(PREPROC_ENABLED_DS)
+
 	if (!ds_initialized)
 		return 0;
 
@@ -363,7 +369,7 @@ int snd_unload( int n )
 	}
 
 	Sounds[n].flags &= ~SND_F_USED;
-
+#endif
 	return 1;
 }
 
