@@ -516,7 +516,9 @@ int d3d_create_texture_sub(int bitmap_type, int texture_handle, ushort *data, in
 	sys_texture_surface->Unlock(NULL);
 
 	sys_texture = NULL;
+#if !defined(_WIN64)
 	ddrval = sys_texture_surface->QueryInterface(IID_IDirect3DTexture2, (LPVOID *)&sys_texture);
+#endif
 	if ( (ddrval != DD_OK) || (sys_texture == NULL) ) {
 		mprintf(( "Getting sys surface's texture failed!\n" ));
 
@@ -572,7 +574,9 @@ RetryLoad:
 		}
 
 		t->vram_texture = NULL;
+#if !defined(_WIN64)
 		ddrval = t->vram_texture_surface->QueryInterface(IID_IDirect3DTexture2, (LPVOID *)&t->vram_texture);
+#endif
 		if ( (ddrval != DD_OK) || (t->vram_texture == NULL) )	{
 			mprintf(( "GR_D3D_INIT: TextureSurface->QueryInterface failed.\n" ));
 			vram_full = 1;

@@ -167,6 +167,7 @@ int ds3d_update_listener(vector *pos, vector *vel, matrix *orient)
 //
 int ds3d_init_listener()
 {
+#if defined(PREPROC_ENABLED_DS)
 	HRESULT			hr;
 
 	if ( pDS3D_listener != NULL )
@@ -177,7 +178,7 @@ int ds3d_init_listener()
 		nprintf(("Sound","SOUND => Fatal error calling pPrimaryBuffer->QueryInterface(): %s\n", get_DSERR_text(hr) ));
 		return -1;
 	}
-
+#endif
 	return 0;		
 }
 

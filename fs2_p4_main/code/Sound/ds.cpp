@@ -691,6 +691,7 @@ int ds_dll_load()
 //
 int ds_init_property_set()
 {
+#if defined(PREPROC_ENABLED_DS)
 	HRESULT hr;
 
 	// Create the secondary buffer required for EAX initialization
@@ -729,7 +730,7 @@ int ds_init_property_set()
 	if ((FAILED(hr)) || (pPropertySet == NULL)) {
 		return -1;
 	}
-
+#endif
 	return 0;
 }
 
@@ -740,6 +741,7 @@ int ds_init_property_set()
 //               0           => init success
 int ds_init(int use_a3d, int use_eax)
 {
+#if defined(PREPROC_ENABLED_DS)
 	HRESULT			hr;
 	HWND				hwnd;
 	WAVEFORMATEX	wave_format;
@@ -865,7 +867,7 @@ int ds_init(int use_a3d, int use_eax)
 	ds_init_buffers();
 
 	ds_show_caps(&Soundcard_caps);
-
+#endif
 	return 0;
 }
 
@@ -1153,6 +1155,8 @@ void ds_close()
 //
 void ds_get_3d_interface(LPDIRECTSOUNDBUFFER pdsb, LPDIRECTSOUND3DBUFFER *ppds3db)
 {
+#if defined(PREPROC_ENABLED_DS)
+
 	DSBCAPS			dsbc;
 	HRESULT			DSResult;
 
@@ -1164,6 +1168,7 @@ void ds_get_3d_interface(LPDIRECTSOUNDBUFFER pdsb, LPDIRECTSOUND3DBUFFER *ppds3d
 			nprintf(("SOUND","Could not obtain 3D interface for hardware buffer: %s\n", get_DSERR_text(DSResult) ));
 		}
 	}
+#endif
 }
 
 
@@ -2325,6 +2330,7 @@ void ds_eax_close()
 //
 int ds_eax_init()
 {
+#if defined(PREPROC_ENABLED_DS)
 	HRESULT hr;
 	unsigned long driver_support = 0;
 
@@ -2364,6 +2370,9 @@ ds_eax_init_failed:
 	Ds_eax_inited = 0;
 
 	return -1;
+#else
+	return 0;
+#endif
 }
 
 int ds_eax_is_inited()

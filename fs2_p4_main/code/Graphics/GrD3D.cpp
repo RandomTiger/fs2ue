@@ -553,12 +553,13 @@ BOOL WINAPI gr_d2d_enum( LPGUID lpGUID,
 
 d3d_device *d3d_poll_devices()
 {
+#if !defined(_WIN64)
 	int i;
 	HRESULT ddrval;
 
 	Num_d2d_devices = 0;
 	Num_d3d_devices = 0;
-		
+	
 	ddrval = DirectDrawEnumerate( gr_d2d_enum, NULL );
 	if ( ddrval != DD_OK ) {
 		mprintf(( "GR_D3D_INIT: DirectDrawEnumerate failed.\n" ));
@@ -628,6 +629,7 @@ d3d_device *d3d_poll_devices()
 
 D3DError:
 	mprintf(( "Direct3D Polling failed.\n" ));
+#endif
 	return NULL;
 }
 
@@ -1017,6 +1019,7 @@ bool gr_d3d_init_device(int screen_width, int screen_height)
 	// active d3d device
 	D3D_device = dd;	
 
+#if !defined(_WIN64)
 	os_suspend();
 	ddrval = DirectDrawCreate( dd->pguid_2d, &lpDD1, NULL );
 	os_resume();
@@ -1032,7 +1035,8 @@ bool gr_d3d_init_device(int screen_width, int screen_height)
 		strcpy(Device_init_error, "DirectDrawCreate2 failed");
 		goto D3DError;
 	}	
- 
+#endif
+
 	if(D3D_window){
 		ddrval = lpDD->SetCooperativeLevel( hwnd, DDSCL_NORMAL );
 	} else {
@@ -1058,12 +1062,14 @@ bool gr_d3d_init_device(int screen_width, int screen_height)
 
 	gr_d3d_clip_cursor(1);
 
+#if !defined(_WIN64)
 	ddrval = lpDD->QueryInterface( IID_IDirect3D2, ( LPVOID *) &lpD3D );
 	if ( ddrval != DD_OK ) {
 		// mprintf(( "GR_D3D_INIT: QueryInterface failed.\n" ));
 		strcpy(Device_init_error, "QueryInterface failed.");
 		goto D3DError;
 	}
+#endif
 
 	// create all surfaces here
 	if(!gr_d3d_create_rendering_objects(1)){

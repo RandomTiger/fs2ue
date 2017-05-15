@@ -361,12 +361,6 @@ int Got_message = 0;
 // message handler for the main thread
 LRESULT CALLBACK win32_message_handler(HWND hwnd,UINT msg,WPARAM wParam, LPARAM lParam)
 {
-    // Send event message to AntTweakBar
-	if( TwEventWin(hwnd, msg, wParam, lParam) )
-	{
-        return 0;   // Event has been handled by AntTweakBar
-	}
-
 	// Got_message++;
 
 	switch(msg)	{

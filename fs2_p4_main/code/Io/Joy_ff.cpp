@@ -61,6 +61,7 @@ void init_periodic_effect_struct(di_periodic_effect_struct *effect, int type, in
 
 int joy_ff_init()
 {
+#if defined(PREPROC_ENABLED_FF) 
 	int ff_enabled;
 
 	Joy_ff_enabled = 0;		// Assume no force feedback
@@ -91,12 +92,14 @@ int joy_ff_init()
 			return -1;
 		Joy_ff_enabled = 1;
 	} 
-
+#endif
 	return 0;
 }
 
 void joy_ff_shutdown()
 {
+#if defined(PREPROC_ENABLED_FF)
+
 	if (Joy_ff_enabled) {
 		pSpring->Stop();
 		joy_ff_stop_effects();
@@ -105,6 +108,7 @@ void joy_ff_shutdown()
 		pDiDevice->Release();
 		pDi->Release();
 	}
+#endif
 }
 
 HRESULT joy_ff_handle_error(HRESULT hr, char *eff_name = NULL)
@@ -124,15 +128,17 @@ HRESULT joy_ff_handle_error(HRESULT hr, char *eff_name = NULL)
 
 int joy_ff_create_std_periodic(LPDIRECTINPUTEFFECT *eff, int type, int dur, int per, int ang = 0, int mag = 10000, int att = 0, int fade = 0)
 {
+#if defined(PREPROC_ENABLED_FF)
 	joy_ff_handle_error(SWFF_CreatePeriodicEffect(pDiDevice, eff, type, dur, per, ang, mag, 0, att, 0, fade, 0, -1));
 	if (!*eff)
 		return -1;
-
+#endif
 	return 0;
 }
 
 void joy_ff_start_effect(LPDIRECTINPUTEFFECT eff, char *name)
 {
+#if defined(PREPROC_ENABLED_FF)
 	HRESULT hr;
 
 	nprintf(("Joystick", "FF: Starting effect %s\n", name));
@@ -141,10 +147,12 @@ void joy_ff_start_effect(LPDIRECTINPUTEFFECT eff, char *name)
 		joy_reacquire_ff();
 		joy_ff_handle_error(eff->Start(1, 0));
 	}
+#endif
 }
 
 int joy_ff_create_effects()
 {	
+#if defined(PREPROC_ENABLED_FF)
 	joy_ff_handle_error(SWFF_CreateConstantForceEffect(
 		pDiDevice,
 		&pHitEffect1,
@@ -323,7 +331,7 @@ int joy_ff_create_effects()
 		nprintf(("Joystick", "FF: Deathroll effect 2 loaded\n"));
 	else
 		nprintf(("Joystick", "FF: Deathroll effect 2 failed to load\n"));
-
+#endif
 	return 0;
 }
 
@@ -342,6 +350,7 @@ void joy_ff_mission_init(vector v)
 
 void joy_ff_adjust_handling(int speed)
 {
+#if defined(PREPROC_ENABLED_FF)
 	int v;
 
 	v = speed * joy_ff_handling_scaler * 2 / 3;
@@ -367,10 +376,12 @@ void joy_ff_adjust_handling(int speed)
 			}
 		}
 	}
+#endif
 }
 
 void joy_ff_change_effect(di_periodic_effect_struct *s, LPDIRECTINPUTEFFECT eff, int gain = -1, int dur = 0, int flags = -1)
 {
+#if defined(PREPROC_ENABLED_FF)
 	int reload = 0;
 
 	if ((gain >= 0) && ((int) s->effect.dwGain != gain)) {
@@ -405,6 +416,7 @@ void joy_ff_change_effect(di_periodic_effect_struct *s, LPDIRECTINPUTEFFECT eff,
 
 	} else
 		nprintf(("Joystick", "FF: Swap effect requested, but nothing changed\n"));
+#endif
 }
 
 int joy_ff_effect_playing(LPDIRECTINPUTEFFECT eff)
@@ -445,6 +457,8 @@ int Joy_ff_afterburning = 0;
 
 void joy_ff_afterburn_on()
 {
+#if defined(PREPROC_ENABLED_FF)
+
 	if (pAfterburn1) {
 		pAfterburn1->Stop();
 		joy_ff_change_effect(&Struct_afterburn1, pAfterburn1, 5000, INFINITE, DIEP_DURATION | DIEP_GAIN);
@@ -459,10 +473,12 @@ void joy_ff_afterburn_on()
 
 	nprintf(("Joystick", "FF: Afterburn started\n"));
 	Joy_ff_afterburning = 1;
+#endif
 }
 
 void joy_ff_afterburn_off()
 {
+#if defined(PREPROC_ENABLED_FF)
 	if (!Joy_ff_afterburning)
 		return;
 
@@ -476,10 +492,13 @@ void joy_ff_afterburn_off()
 
 	Joy_ff_afterburning = 0;
 	nprintf(("Joystick", "FF: Afterburn stopped\n"));
+#endif
 }
 
 void joy_ff_deathroll()
 {
+#if defined(PREPROC_ENABLED_FF)
+
 	if (pDeathroll1) {
 		pDeathroll1->Stop();
 		joy_ff_start_effect(pDeathroll1, "Deathroll1");
@@ -489,10 +508,13 @@ void joy_ff_deathroll()
 		pDeathroll2->Stop();
 		joy_ff_start_effect(pDeathroll2, "Deathroll2");
 	}
+#endif
 }
 
 void joy_ff_explode()
 {
+#if defined(PREPROC_ENABLED_FF)
+
 	if (pDeathroll1)
 		pDeathroll1->Stop();
 
@@ -503,10 +525,13 @@ void joy_ff_explode()
 		pExplode->Stop();
 		joy_ff_start_effect(pExplode, "Explode");
 	}
+#endif
 }
 
 void joy_ff_fly_by(int mag)
 {
+#if defined(PREPROC_ENABLED_FF)
+
 	int gain;
 
 	if (Joy_ff_afterburning)
@@ -527,16 +552,20 @@ void joy_ff_fly_by(int mag)
 		joy_ff_change_effect(&Struct_afterburn2, pAfterburn2, gain, 6000 * mag + 400000, DIEP_DURATION | DIEP_GAIN);
 		joy_ff_start_effect(pAfterburn2, "Afterburn2 (Fly by)");
 	}
+#endif
 }
 
 void joy_reacquire_ff()
 {
+#if defined(PREPROC_ENABLED_FF)
+
 	if (!Joy_ff_enabled)
 		return;
 
 	nprintf(("Joystick", "FF: Reacquiring\n"));
 	pDiDevice->Acquire();
 	joy_ff_start_effect(pSpring, "Spring");
+#endif
 }
 
 void joy_unacquire_ff()
@@ -545,6 +574,8 @@ void joy_unacquire_ff()
 
 void joy_ff_play_dir_effect(float x, float y)
 {
+#if defined(PREPROC_ENABLED_FF)
+
 	int idegs, imag;
 	float degs;
 
@@ -600,10 +631,13 @@ void joy_ff_play_dir_effect(float x, float y)
 	joy_ff_start_effect(pHitEffect1, "HitEffect1");
 	joy_ff_start_effect(pHitEffect2, "HitEffect2");
 	//nprintf(("Joystick", "FF: Dir: %d, Mag = %d\n", idegs, imag));
+#endif
 }
 
 void joy_ff_play_vector_effect(vector *v, float scaler)
 {
+#if defined(PREPROC_ENABLED_FF)
+
 	vector vf;
 	float x, y;
 
@@ -618,12 +652,15 @@ void joy_ff_play_vector_effect(vector *v, float scaler)
 		y = vm_vec_mag(&vf);
 
 	joy_ff_play_dir_effect(-x, -y);
+#endif
 }
 
 static int secondary_ff_level = 0;
 
 void joy_ff_play_secondary_shoot(int gain)
 {
+#if defined(PREPROC_ENABLED_FF)
+
 	if (!Joy_ff_enabled)
 		return;
 
@@ -651,12 +688,14 @@ void joy_ff_play_secondary_shoot(int gain)
 
 	pSecShootEffect->Stop();
 	joy_ff_start_effect(pSecShootEffect, "SecShootEffect");
+#endif
 }
 
 static int primary_ff_level = 0;
 
 void joy_ff_play_primary_shoot(int gain)
 {
+#if defined(PREPROC_ENABLED_FF)
 	if (!Joy_ff_enabled)
 		return;
 
@@ -677,10 +716,12 @@ void joy_ff_play_primary_shoot(int gain)
 
 	pShootEffect->Stop();
 	joy_ff_start_effect(pShootEffect, "ShootEffect");
+#endif
 }
 
 void init_periodic_effect_struct(di_periodic_effect_struct *effect, int type, int dur, int per, int ang, int mag, int att, int fade)
 {
+#if defined(PREPROC_ENABLED_FF)
 	// type-specific stuff
 	DWORD dwPhase = 0;
 	GUID guid = GUID_Square;
@@ -749,4 +790,5 @@ void init_periodic_effect_struct(di_periodic_effect_struct *effect, int type, in
 	effect->effect.lpEnvelope					= &effect->envelope_struct;
 	effect->effect.cbTypeSpecificParams		= sizeof(effect->periodic_struct);
 	effect->effect.lpvTypeSpecificParams	= &effect->periodic_struct;
+#endif
 }

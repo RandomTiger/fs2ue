@@ -1,30 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="DebugRelease|Win32">
-      <Configuration>DebugRelease</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="DebugRelease|x64">
-      <Configuration>DebugRelease</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="UnityDebug|Win32">
       <Configuration>UnityDebug</Configuration>
       <Platform>Win32</Platform>
@@ -70,38 +46,6 @@
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -121,383 +65,38 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
-  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\</OutDir>
-    <IntDir>.\Debug\</IntDir>
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\</OutDir>
-    <IntDir>.\Release\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">
-    <OutDir>$(Configuration)\</OutDir>
-    <IntDir>$(Configuration)\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|x64'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">
     <OutDir>$(PATH_FS2)\</OutDir>
-    <IntDir>$(Configuration)\</IntDir>
+    <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <TargetName>FS2tvs2015r_32</TargetName>
     <LibraryPath>$(DIRECTX11_HOME)\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>FS2tvs2015r_32</TargetName>
-    <LibraryPath>$(DIRECTX11_HOME)\Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetName>FS2tvs2015r_64</TargetName>
+    <LibraryPath>$(DIRECTX11_HOME)\Lib\x64;$(LibraryPath)</LibraryPath>
+    <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
+    <OutDir>$(PATH_FS2)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">
     <OutDir>$(PATH_FS2)\</OutDir>
-    <IntDir>$(Configuration)\</IntDir>
+    <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
     <LibraryPath>$(DIRECTX11_HOME)\Lib\x86;$(LibraryPath)</LibraryPath>
     <TargetName>FS2tvs2015d_32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>$(DIRECTX11_HOME)\Lib\x86;$(LibraryPath)</LibraryPath>
-    <TargetName>FS2tvs2015d_32</TargetName>
+    <LibraryPath>$(DIRECTX11_HOME)\Lib\x64;$(LibraryPath)</LibraryPath>
+    <TargetName>FS2tvs2015d_64</TargetName>
+    <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
+    <OutDir>$(PATH_FS2)\</OutDir>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Midl>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>./Freespace2.tlb</TypeLibraryName>
-      <HeaderFileName />
-    </Midl>
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>code\3rdParty\VisualLeakDetector\include;code\3rdParty\AntTweakBar/include;code\TomLib\src;code;code\anim;code\asteroid;code\bmpman;code\cfile;code\cmdline;code\cmeasure;code\controlconfig;code\cutscene;code\debris;code\debugconsole;code\directx;code\fireball;code\gamehelp;code\freespace2;code\fs2launch;code\fred;code\gamesequence;code\gamesnd;code\glide;code\globalincs;code\graphics;code\hud;code\io;code\jumpnode;code\lighting;code\math;code\menuui;code\mission;code\missionui;code\model;code\movie;code\network;code\object;code\observer;code\osapi;code\palman;code\parse;code\particle;code\pcxutils;code\physics;code\playerman;code\popup;code\radar;code\render;code\ship;code\sndman;code\sound;code\starfield;code\stats;code\testcode;code\ui;code\vcodec;code\weapon;code\localization;code\nebula;code\demo;code\inetfile;code\ExceptionHandler;code\3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;NO_CD_CHECK;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;DISABLE_ASSEMBLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MinimalRebuild>true</MinimalRebuild>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <DisableLanguageExtensions>false</DisableLanguageExtensions>
-      <PrecompiledHeaderOutputFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\Freespace2.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</AssemblerListingLocation>
-      <ObjectFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</ProgramDataBaseFileName>
-      <BrowseInformation>true</BrowseInformation>
-      <BrowseInformationFile>.\Debug/</BrowseInformationFile>
-      <WarningLevel>Level4</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <UndefinePreprocessorDefinitions>NDEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Link>
-      <AdditionalDependencies>code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(FS2_GAME_DIR)\FS2_main_D.exe</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>./FS2.pdb</ProgramDatabaseFile>
-      <SubSystem>Windows</SubSystem>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
-    <PostBuildEvent>
-      <Command>xcopy $(ProjectDir)code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
-    </PostBuildEvent>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Midl>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>./Freespace2.tlb</TypeLibraryName>
-      <HeaderFileName>
-      </HeaderFileName>
-    </Midl>
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>code\3rdParty\VisualLeakDetector\include;code\3rdParty\AntTweakBar/include;code\TomLib\src;code;code\anim;code\asteroid;code\bmpman;code\cfile;code\cmdline;code\cmeasure;code\controlconfig;code\cutscene;code\debris;code\debugconsole;code\directx;code\fireball;code\gamehelp;code\freespace2;code\fs2launch;code\fred;code\gamesequence;code\gamesnd;code\glide;code\globalincs;code\graphics;code\hud;code\io;code\jumpnode;code\lighting;code\math;code\menuui;code\mission;code\missionui;code\model;code\movie;code\network;code\object;code\observer;code\osapi;code\palman;code\parse;code\particle;code\pcxutils;code\physics;code\playerman;code\popup;code\radar;code\render;code\ship;code\sndman;code\sound;code\starfield;code\stats;code\testcode;code\ui;code\vcodec;code\weapon;code\localization;code\nebula;code\demo;code\inetfile;code\ExceptionHandler;code\3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;NO_CD_CHECK;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;DISABLE_ASSEMBLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <DisableLanguageExtensions>false</DisableLanguageExtensions>
-      <PrecompiledHeaderOutputFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\Freespace2.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</AssemblerListingLocation>
-      <ObjectFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</ProgramDataBaseFileName>
-      <BrowseInformation>true</BrowseInformation>
-      <BrowseInformationFile>.\Debug/</BrowseInformationFile>
-      <WarningLevel>Level4</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <UndefinePreprocessorDefinitions>NDEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Link>
-      <AdditionalDependencies>code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(FS2_GAME_DIR)\FS2_main_D.exe</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>./FS2.pdb</ProgramDatabaseFile>
-      <SubSystem>Windows</SubSystem>
-    </Link>
-    <PostBuildEvent>
-      <Command>xcopy $(ProjectDir)code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
-    </PostBuildEvent>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Midl>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>./Freespace2.tlb</TypeLibraryName>
-      <HeaderFileName />
-    </Midl>
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>code\3rdParty\VisualLeakDetector\include;code\3rdParty\AntTweakBar/include;code\TomLib\src;code;code\anim;code\asteroid;code\bmpman;code\cfile;code\cmdline;code\cmeasure;code\controlconfig;code\cutscene;code\debris;code\debugconsole;code\directx;code\fireball;code\gamehelp;code\freespace2;code\fs2launch;code\fred;code\gamesequence;code\gamesnd;code\glide;code\globalincs;code\graphics;code\hud;code\io;code\jumpnode;code\lighting;code\math;code\menuui;code\mission;code\missionui;code\model;code\movie;code\network;code\object;code\observer;code\osapi;code\palman;code\parse;code\particle;code\pcxutils;code\physics;code\playerman;code\popup;code\radar;code\render;code\ship;code\sndman;code\sound;code\starfield;code\stats;code\testcode;code\ui;code\vcodec;code\weapon;code\localization;code\nebula;code\demo;code\inetfile;code\ExceptionHandler;code\3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NO_CD_CHECK;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
-      <PrecompiledHeaderOutputFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\Freespace2.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</AssemblerListingLocation>
-      <ObjectFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ForcedIncludeFiles>PSTypes.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <UndefinePreprocessorDefinitions>_DEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Link>
-      <AdditionalDependencies>code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;code.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(FS2_GAME_DIR)\FS2_main_R.exe</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>./FS2.pdb</ProgramDatabaseFile>
-      <GenerateMapFile>true</GenerateMapFile>
-      <MapFileName>.\Release/FS2.map</MapFileName>
-      <SubSystem>Windows</SubSystem>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>./Freespace2.bsc</OutputFile>
-    </Bscmake>
-    <PostBuildEvent>
-      <Command>xcopy $(ProjectDir)code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
-    </PostBuildEvent>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Midl>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>./Freespace2.tlb</TypeLibraryName>
-      <HeaderFileName>
-      </HeaderFileName>
-    </Midl>
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>code\3rdParty\VisualLeakDetector\include;code\3rdParty\AntTweakBar/include;code\TomLib\src;code;code\anim;code\asteroid;code\bmpman;code\cfile;code\cmdline;code\cmeasure;code\controlconfig;code\cutscene;code\debris;code\debugconsole;code\directx;code\fireball;code\gamehelp;code\freespace2;code\fs2launch;code\fred;code\gamesequence;code\gamesnd;code\glide;code\globalincs;code\graphics;code\hud;code\io;code\jumpnode;code\lighting;code\math;code\menuui;code\mission;code\missionui;code\model;code\movie;code\network;code\object;code\observer;code\osapi;code\palman;code\parse;code\particle;code\pcxutils;code\physics;code\playerman;code\popup;code\radar;code\render;code\ship;code\sndman;code\sound;code\starfield;code\stats;code\testcode;code\ui;code\vcodec;code\weapon;code\localization;code\nebula;code\demo;code\inetfile;code\ExceptionHandler;code\3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NO_CD_CHECK;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
-      <PrecompiledHeaderOutputFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\Freespace2.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</AssemblerListingLocation>
-      <ObjectFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ForcedIncludeFiles>PSTypes.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <UndefinePreprocessorDefinitions>_DEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Link>
-      <AdditionalDependencies>code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;code.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(FS2_GAME_DIR)\FS2_main_R.exe</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>./FS2.pdb</ProgramDatabaseFile>
-      <GenerateMapFile>true</GenerateMapFile>
-      <MapFileName>.\Release/FS2.map</MapFileName>
-      <SubSystem>Windows</SubSystem>
-    </Link>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>./Freespace2.bsc</OutputFile>
-    </Bscmake>
-    <PostBuildEvent>
-      <Command>xcopy $(ProjectDir)code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
-    </PostBuildEvent>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">
-    <Midl>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>./Freespace2.tlb</TypeLibraryName>
-      <HeaderFileName />
-    </Midl>
-    <ClCompile>
-      <AdditionalOptions>/Ze %(AdditionalOptions)</AdditionalOptions>
-      <Optimization>Disabled</Optimization>
-      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>code\3rdParty\VisualLeakDetector\include;code\3rdParty\AntTweakBar/include;code\TomLib\src;code;code\anim;code\asteroid;code\bmpman;code\cfile;code\cmdline;code\cmeasure;code\controlconfig;code\cutscene;code\debris;code\debugconsole;code\directx;code\fireball;code\gamehelp;code\freespace2;code\fs2launch;code\fred;code\gamesequence;code\gamesnd;code\glide;code\globalincs;code\graphics;code\hud;code\io;code\jumpnode;code\lighting;code\math;code\menuui;code\mission;code\missionui;code\model;code\movie;code\network;code\object;code\observer;code\osapi;code\palman;code\parse;code\particle;code\pcxutils;code\physics;code\playerman;code\popup;code\radar;code\render;code\ship;code\sndman;code\sound;code\starfield;code\stats;code\testcode;code\ui;code\vcodec;code\weapon;code\localization;code\nebula;code\demo;code\inetfile;code\ExceptionHandler;code\3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;NO_CD_CHECK;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MinimalRebuild>false</MinimalRebuild>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <DisableLanguageExtensions>false</DisableLanguageExtensions>
-      <PrecompiledHeaderOutputFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\Freespace2.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</AssemblerListingLocation>
-      <ObjectFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</ProgramDataBaseFileName>
-      <BrowseInformation />
-      <BrowseInformationFile>.\Debug/</BrowseInformationFile>
-      <WarningLevel>Level4</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <UndefinePreprocessorDefinitions>NDEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Link>
-      <AdditionalDependencies>code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;code.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(FS2_GAME_DIR)\FS2_main_DR.exe</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>./FS2.pdb</ProgramDatabaseFile>
-      <SubSystem>Windows</SubSystem>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
-    <PostBuildEvent>
-      <Command>xcopy $(ProjectDir)code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
-    </PostBuildEvent>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|x64'">
-    <Midl>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>./Freespace2.tlb</TypeLibraryName>
-      <HeaderFileName>
-      </HeaderFileName>
-    </Midl>
-    <ClCompile>
-      <AdditionalOptions>/Ze %(AdditionalOptions)</AdditionalOptions>
-      <Optimization>Disabled</Optimization>
-      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>code\3rdParty\VisualLeakDetector\include;code\3rdParty\AntTweakBar/include;code\TomLib\src;code;code\anim;code\asteroid;code\bmpman;code\cfile;code\cmdline;code\cmeasure;code\controlconfig;code\cutscene;code\debris;code\debugconsole;code\directx;code\fireball;code\gamehelp;code\freespace2;code\fs2launch;code\fred;code\gamesequence;code\gamesnd;code\glide;code\globalincs;code\graphics;code\hud;code\io;code\jumpnode;code\lighting;code\math;code\menuui;code\mission;code\missionui;code\model;code\movie;code\network;code\object;code\observer;code\osapi;code\palman;code\parse;code\particle;code\pcxutils;code\physics;code\playerman;code\popup;code\radar;code\render;code\ship;code\sndman;code\sound;code\starfield;code\stats;code\testcode;code\ui;code\vcodec;code\weapon;code\localization;code\nebula;code\demo;code\inetfile;code\ExceptionHandler;code\3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;NO_CD_CHECK;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MinimalRebuild>false</MinimalRebuild>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <DisableLanguageExtensions>false</DisableLanguageExtensions>
-      <PrecompiledHeaderOutputFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\Freespace2.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</AssemblerListingLocation>
-      <ObjectFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</ProgramDataBaseFileName>
-      <BrowseInformation>
-      </BrowseInformation>
-      <BrowseInformationFile>.\Debug/</BrowseInformationFile>
-      <WarningLevel>Level4</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <UndefinePreprocessorDefinitions>NDEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Link>
-      <AdditionalDependencies>code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;code.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(FS2_GAME_DIR)\FS2_main_DR.exe</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>./FS2.pdb</ProgramDatabaseFile>
-      <SubSystem>Windows</SubSystem>
-    </Link>
-    <PostBuildEvent>
-      <Command>xcopy $(ProjectDir)code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
-    </PostBuildEvent>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">
     <Midl>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -525,14 +124,15 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <UndefinePreprocessorDefinitions>_DEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <BrowseInformationFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</BrowseInformationFile>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(PATH_FS2)\$(TargetFileName)</OutputFile>
+      <AdditionalDependencies>D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)\$(TargetFileName)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -549,7 +149,8 @@
       <OutputFile>./Freespace2.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
-      <Command>xcopy $(ProjectDir)code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">
@@ -579,14 +180,15 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <UndefinePreprocessorDefinitions>_DEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <BrowseInformationFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</BrowseInformationFile>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(PATH_FS2)\$(TargetFileName)</OutputFile>
+      <AdditionalDependencies>D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)\$(TargetFileName)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -602,7 +204,8 @@
       <OutputFile>./Freespace2.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
-      <Command>xcopy $(ProjectDir)code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">
@@ -627,7 +230,7 @@
       <ObjectFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ObjectFileName>
       <ProgramDataBaseFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
-      <BrowseInformationFile>.\UnityDebug/</BrowseInformationFile>
+      <BrowseInformationFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</BrowseInformationFile>
       <WarningLevel>Level4</WarningLevel>
       <TreatWarningAsError>false</TreatWarningAsError>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -639,8 +242,8 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(PATH_FS2)\$(TargetFileName)</OutputFile>
+      <AdditionalDependencies>D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)\$(TargetFileName)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -651,7 +254,8 @@
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(ProjectDir)code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">
@@ -675,7 +279,7 @@
       <ObjectFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ObjectFileName>
       <ProgramDataBaseFileName>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
-      <BrowseInformationFile>.\UnityDebug/</BrowseInformationFile>
+      <BrowseInformationFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</BrowseInformationFile>
       <WarningLevel>Level4</WarningLevel>
       <TreatWarningAsError>false</TreatWarningAsError>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -687,8 +291,8 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>code\3rdParty\AntTweakBar\lib\AntTweakBar.lib;D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(PATH_FS2)\$(TargetFileName)</OutputFile>
+      <AdditionalDependencies>D3dx9.lib;D3d9.lib;odbc32.lib;odbccp32.lib;wsock32.lib;winmm.lib;vfw32.lib;msacm32.lib;comctl32.lib;sapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)\$(TargetFileName)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -698,7 +302,8 @@
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(ProjectDir)code\3rdParty\AntTweakBar\lib\*.dll "$(TargetDir)" /Y /F</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -722,20 +327,11 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="code\FREESPACE2\FreeSpace.rc">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">code\FREESPACE2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugRelease|x64'">code\FREESPACE2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">code\FREESPACE2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">code\FREESPACE2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">code\FREESPACE2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">code\FREESPACE2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">code\FREESPACE2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">code\FREESPACE2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">code\FREESPACE2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">code\FREESPACE2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="code\3rdParty\VisualLeakDetector\lib\Win32\vld.lib" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="code\code.vcxproj">

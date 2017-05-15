@@ -527,6 +527,7 @@ void mouse_set_pos(int xpos, int ypos)
 
 int di_init()
 {
+#if defined(PREPROC_ENABLED_DI)
 	HRESULT hr;
 
 	if (Mouse_mode == MOUSE_MODE_WIN){
@@ -588,11 +589,13 @@ int di_init()
 	Di_mouse->Acquire();
 
 	Di_mouse_inited = 1;
+#endif
 	return TRUE;
 }
 
 void di_cleanup()
 {
+#if defined(PREPROC_ENABLED_DI)
 	// Destroy any lingering IDirectInputDevice object.
 	if (Di_mouse) {
 		// Unacquire the device one last time just in case we got really confused
@@ -608,6 +611,6 @@ void di_cleanup()
 		Di_mouse_obj->Release();
 		Di_mouse_obj = NULL;
 	}
-
+#endif
 	Di_mouse_inited = 0;
 }

@@ -4,6 +4,13 @@
 
 #pragma message("UNITY BUILD: " __FILE__)
 
+#if !defined(_WIN64)
+#define PREPROC_ENABLED_FF
+#define PREPROC_ENABLED_JOY
+#define PREPROC_ENABLED_DS
+#define PREPROC_ENABLED_DI
+#endif
+
 #include <windows.h>
 #if defined(_DEBUG) && defined(LEAK_DETECTOR_ENABLED)
 #include "vld.h"
@@ -17,8 +24,6 @@
 #include <assert.h>
 #include <raserror.h>
 #include <float.h>
-
-#include "AntTweakBar.h"
 
 #include <winsock.h>
 #include <wsipx.h>

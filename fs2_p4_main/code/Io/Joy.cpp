@@ -98,6 +98,8 @@ void joy_flush()
 //
 DWORD joy_process(DWORD lparam)
 {
+#if defined(PREPROC_ENABLED_JOY)
+
 	MMRESULT		rs;
 	JOYINFOEX	ji;
 	int			i,state;
@@ -220,7 +222,7 @@ DWORD joy_process(DWORD lparam)
 	}
 
 	SetEvent(Joy_thread_says_its_done_event);	
-
+#endif
 	return 0;
 }
 
@@ -231,6 +233,7 @@ DWORD joy_process(DWORD lparam)
 //
 void joy_close()
 {
+#if defined(PREPROC_ENABLED_JOY)
 	if (!Joy_inited)
 		return;
 
@@ -268,7 +271,7 @@ void joy_close()
 	}
 
 	g_ForceFeedback.Shutdown(InputController::kIN_JOYSTICK);
-
+#endif
 }
 
 // --------------------------------------------------------------
@@ -356,6 +359,7 @@ DCF(joytest2, "Test joystick (extended)")
 
 int joy_init(int type)
 {
+#if defined(PREPROC_ENABLED_JOY)
 	int i, n, count;
 	MMRESULT rs;
 	JOYINFOEX ji;
@@ -435,6 +439,9 @@ int joy_init(int type)
 
 	g_ForceFeedback.Init(type);
 	return joy_num_sticks;
+#else
+	return 0;
+#endif
 }
 
 // --------------------------------------------------------------
@@ -1108,6 +1115,7 @@ BOOL FAR PASCAL InitJoystickInput(LPCDIDEVICEINSTANCE pdinst, LPVOID pvRef)
 */
 int joy_di_init()
 {
+#if defined(PREPROC_ENABLED_JOY)
 	HRESULT hr;
    LPDIRECTINPUTDEVICE pdev;
 
@@ -1179,11 +1187,13 @@ int joy_di_init()
 	pdev->Release();
 	Joy_di_inited = 1;
 	nprintf(("Joystick", "DirectInput initialization of joystick succeeded\n"));
+#endif
 	return 0;
 }
 
 int joy_di_shutdown()
 {
+#if defined(PREPROC_ENABLED_JOY)
 	// Destroy any lingering IDirectInputDevice object.
 	if (Di_joystick) {
 		// Unacquire the device one last time just in case we got really confused
@@ -1201,6 +1211,7 @@ int joy_di_shutdown()
 	}
 
 	Joy_di_inited = 0;
+#endif
 	return 0;
 }
 

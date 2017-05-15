@@ -53,9 +53,6 @@ void gr_d3d9_start_frame()
 }
 void gr_d3d9_stop_frame()
 {
-	// Draw tweak bars
-    TwDraw();
-
 	HRESULT hr = S_OK;
 	hr = pD3DDevice->EndScene();
 	assert(SUCCEEDED(hr));
@@ -106,13 +103,6 @@ bool gr_d3d9_init()
 	{
 		return false;
 	}
-
-	// Initialize AntTweakBar
-    // (note that the Direct3D device pointer must be passed to TwInit)
-    if( !TwInit(TW_DIRECT3D9, pD3DDevice) )
-    {
-        MessageBox((HWND)os_get_window(), TwGetLastError(), "Cannot initialize AntTweakBar", MB_OK|MB_ICONERROR);
-    }
 
 	SetupTextureSystem();
 	SetupRenderSystem();
@@ -248,8 +238,6 @@ void gr_d3d9_cleanup()
 	CleanupShaderSystem();
 	CleanupTextureSystem();
 	CleanupRenderSystem();
-
-	TwTerminate();
 
 	if(pD3DDevice)
 	{

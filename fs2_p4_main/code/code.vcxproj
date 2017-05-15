@@ -1,30 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="DebugRelease|Win32">
-      <Configuration>DebugRelease</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="DebugRelease|x64">
-      <Configuration>DebugRelease</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="UnityDebug|Win32">
       <Configuration>UnityDebug</Configuration>
       <Platform>Win32</Platform>
@@ -68,36 +44,6 @@
     <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -117,296 +63,30 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
-  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\..\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>.\..\$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>$(DIRECTX11_HOME)\include;$(IncludePath)</IncludePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(DIRECTX11_HOME)\include;$(IncludePath)</IncludePath>
-    <OutDir>.\..\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>.\..\$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\..\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>.\..\$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">
-    <OutDir>.\..\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>.\..\$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">
-    <OutDir>.\..\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>.\..\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
+    <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
     <IncludePath>$(DIRECTX11_HOME)\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">
     <IncludePath>$(DIRECTX11_HOME)\include;$(IncludePath)</IncludePath>
-    <OutDir>.\..\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>.\..\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
+    <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">
-    <OutDir>.\..\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>.\..\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
+    <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
     <IncludePath>$(DIRECTX11_HOME)\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">
     <IncludePath>$(DIRECTX11_HOME)\include;$(IncludePath)</IncludePath>
-    <OutDir>.\..\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>.\..\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
+    <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|x64'">
-    <OutDir>.\..\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>.\..\$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>.\..\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>.\..\$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>3rdParty\VisualLeakDetector\include;3rdParty\AntTweakBar/include;TomLib\src;.;..;anim;asteroid;bmpman;cfile;cmdline;cmeasure;controlconfig;cutscene;debris;debugconsole;directx;fireball;fred;freespace2;fs2launch;gamehelp;gamesequence;gamesnd;glide;globalincs;graphics;hud;io;jumpnode;lighting;math;menuui;mission;missionui;model;movie;network;object;observer;osapi;palman;parse;particle;pcxutils;physics;playerman;popup;radar;render;ship;sndman;sound;starfield;stats;ui;vcodec;weapon;localization;fred2;nebula;TgaUtils;demo;inetfile;exceptionhandler;3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_WINDOWS;WIN32;_DEBUG;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;DISABLE_ASSEMBLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <DisableLanguageExtensions>false</DisableLanguageExtensions>
-      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
-      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\code.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\..\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
-      <BrowseInformation>true</BrowseInformation>
-      <WarningLevel>Level4</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <ForcedIncludeFiles>PSTypes.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <UndefinePreprocessorDefinitions>NDEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Lib>
-      <AdditionalDependencies>xinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.lib</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-    </Lib>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
-    </Bscmake>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>3rdParty\VisualLeakDetector\include;3rdParty\AntTweakBar/include;TomLib\src;.;..;anim;asteroid;bmpman;cfile;cmdline;cmeasure;controlconfig;cutscene;debris;debugconsole;directx;fireball;fred;freespace2;fs2launch;gamehelp;gamesequence;gamesnd;glide;globalincs;graphics;hud;io;jumpnode;lighting;math;menuui;mission;missionui;model;movie;network;object;observer;osapi;palman;parse;particle;pcxutils;physics;playerman;popup;radar;render;ship;sndman;sound;starfield;stats;ui;vcodec;weapon;localization;fred2;nebula;TgaUtils;demo;inetfile;exceptionhandler;3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_WINDOWS;WIN32;_DEBUG;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;DISABLE_ASSEMBLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <DisableLanguageExtensions>false</DisableLanguageExtensions>
-      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
-      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\code.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\..\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
-      <BrowseInformation>true</BrowseInformation>
-      <WarningLevel>Level4</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ForcedIncludeFiles>PSTypes.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <UndefinePreprocessorDefinitions>NDEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Lib>
-      <AdditionalDependencies>xinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.lib</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-    </Lib>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
-    </Bscmake>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <OmitFramePointers>true</OmitFramePointers>
-      <WholeProgramOptimization>false</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>3rdParty\VisualLeakDetector\include;3rdParty\AntTweakBar/include;TomLib\src;.;..;anim;asteroid;bmpman;cfile;cmdline;cmeasure;controlconfig;cutscene;debris;debugconsole;directx;fireball;fred;freespace2;fs2launch;gamehelp;gamesequence;gamesnd;glide;globalincs;graphics;hud;io;jumpnode;lighting;math;menuui;mission;missionui;model;movie;network;object;observer;osapi;palman;parse;particle;pcxutils;physics;playerman;popup;radar;render;ship;sndman;sound;starfield;stats;ui;vcodec;weapon;localization;fred2;nebula;TgaUtils;demo;inetfile;exceptionhandler;3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;WIN32;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
-      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\code.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\..\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
-      <WarningLevel>Level4</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ForcedIncludeFiles>PSTypes.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <UndefinePreprocessorDefinitions>_DEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Lib>
-      <AdditionalDependencies>xinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.lib</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-    </Lib>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
-    </Bscmake>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <OmitFramePointers>true</OmitFramePointers>
-      <WholeProgramOptimization>false</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>3rdParty\VisualLeakDetector\include;3rdParty\AntTweakBar/include;TomLib\src;.;..;anim;asteroid;bmpman;cfile;cmdline;cmeasure;controlconfig;cutscene;debris;debugconsole;directx;fireball;fred;freespace2;fs2launch;gamehelp;gamesequence;gamesnd;glide;globalincs;graphics;hud;io;jumpnode;lighting;math;menuui;mission;missionui;model;movie;network;object;observer;osapi;palman;parse;particle;pcxutils;physics;playerman;popup;radar;render;ship;sndman;sound;starfield;stats;ui;vcodec;weapon;localization;fred2;nebula;TgaUtils;demo;inetfile;exceptionhandler;3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;WIN32;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
-      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\code.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\..\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
-      <WarningLevel>Level4</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ForcedIncludeFiles>PSTypes.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <UndefinePreprocessorDefinitions>_DEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Lib>
-      <AdditionalDependencies>xinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.lib</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-    </Lib>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
-    </Bscmake>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|Win32'">
-    <ClCompile>
-      <AdditionalOptions>/Ze %(AdditionalOptions)</AdditionalOptions>
-      <Optimization>Disabled</Optimization>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>3rdParty\VisualLeakDetector\include;3rdParty\AntTweakBar/include;TomLib\src;.;..;anim;asteroid;bmpman;cfile;cmdline;cmeasure;controlconfig;cutscene;debris;debugconsole;directx;fireball;fred;freespace2;fs2launch;gamehelp;gamesequence;gamesnd;glide;globalincs;graphics;hud;io;jumpnode;lighting;math;menuui;mission;missionui;model;movie;network;object;observer;osapi;palman;parse;particle;pcxutils;physics;playerman;popup;radar;render;ship;sndman;sound;starfield;stats;ui;vcodec;weapon;localization;fred2;nebula;TgaUtils;demo;inetfile;exceptionhandler;3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_WINDOWS;WIN32;_DEBUG;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <DisableLanguageExtensions>false</DisableLanguageExtensions>
-      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\code.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\..\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
-      <BrowseInformation>true</BrowseInformation>
-      <WarningLevel>Level4</WarningLevel>
-      <TreatWarningAsError>false</TreatWarningAsError>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ForcedIncludeFiles>PSTypes.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <UndefinePreprocessorDefinitions>NDEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Lib>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.lib</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-    </Lib>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
-    </Bscmake>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugRelease|x64'">
-    <ClCompile>
-      <AdditionalOptions>/Ze %(AdditionalOptions)</AdditionalOptions>
-      <Optimization>Disabled</Optimization>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>3rdParty\VisualLeakDetector\include;3rdParty\AntTweakBar/include;TomLib\src;.;..;anim;asteroid;bmpman;cfile;cmdline;cmeasure;controlconfig;cutscene;debris;debugconsole;directx;fireball;fred;freespace2;fs2launch;gamehelp;gamesequence;gamesnd;glide;globalincs;graphics;hud;io;jumpnode;lighting;math;menuui;mission;missionui;model;movie;network;object;observer;osapi;palman;parse;particle;pcxutils;physics;playerman;popup;radar;render;ship;sndman;sound;starfield;stats;ui;vcodec;weapon;localization;fred2;nebula;TgaUtils;demo;inetfile;exceptionhandler;3dnow;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_WINDOWS;WIN32;_DEBUG;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <DisableLanguageExtensions>false</DisableLanguageExtensions>
-      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\code.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\..\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
-      <BrowseInformation>true</BrowseInformation>
-      <WarningLevel>Level4</WarningLevel>
-      <TreatWarningAsError>false</TreatWarningAsError>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <ForcedIncludeFiles>PSTypes.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <UndefinePreprocessorDefinitions>NDEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-    <Lib>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.lib</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-    </Lib>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
-    </Bscmake>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
@@ -418,14 +98,15 @@
       <PreprocessorDefinitions>UNITY_BUILD;NDEBUG;_WINDOWS;WIN32;_USE_32BIT_TIME_T;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
-      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\code.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\..\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\code.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</AssemblerListingLocation>
+      <ObjectFileName>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ProgramDataBaseFileName>
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <UndefinePreprocessorDefinitions>_DEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <BrowseInformationFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</BrowseInformationFile>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -438,7 +119,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">
@@ -452,14 +133,15 @@
       <PreprocessorDefinitions>UNITY_BUILD;NDEBUG;_WINDOWS;WIN32;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
-      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\code.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\..\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\code.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</AssemblerListingLocation>
+      <ObjectFileName>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ProgramDataBaseFileName>
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <UndefinePreprocessorDefinitions>_DEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <BrowseInformationFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</BrowseInformationFile>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -472,7 +154,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">
@@ -486,16 +168,17 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
-      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\code.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\..\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\code.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</AssemblerListingLocation>
+      <ObjectFileName>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
       <WarningLevel>Level4</WarningLevel>
       <TreatWarningAsError>false</TreatWarningAsError>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <UndefinePreprocessorDefinitions>NDEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <BrowseInformationFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</BrowseInformationFile>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -508,7 +191,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">
@@ -522,16 +205,17 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
-      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\code.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\..\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\code.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</AssemblerListingLocation>
+      <ObjectFileName>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</ProgramDataBaseFileName>
       <BrowseInformation>true</BrowseInformation>
       <WarningLevel>Level4</WarningLevel>
       <TreatWarningAsError>false</TreatWarningAsError>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <UndefinePreprocessorDefinitions>NDEBUG;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <BrowseInformationFile>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</BrowseInformationFile>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -544,7 +228,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\$(Platform)\$(Configuration)\code.bsc</OutputFile>
+      <OutputFile>.\..\$(Platform)\$(Configuration)\$(MSBuildProjectName)\code.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -1135,8 +819,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="MissionUI\Chatbox.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1145,8 +827,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="MissionUI\MissionBrief.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1155,8 +835,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="MissionUI\MissionCmdBrief.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1165,8 +843,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="MissionUI\MissionDebrief.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1181,8 +857,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="MissionUI\MissionPause.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1191,8 +865,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="MissionUI\MissionScreenCommon.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1201,8 +873,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="MissionUI\MissionShipChoice.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1211,8 +881,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="MissionUI\MissionWeaponChoice.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1221,8 +889,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="MissionUI\RedAlert.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1231,8 +897,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="Mission\MissionBriefCommon.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1325,8 +989,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Nebula\NebLightning.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1689,8 +1351,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Ship\Afterburner.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1699,8 +1359,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="Ship\ai.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1709,8 +1367,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="Ship\AiBig.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1719,8 +1375,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="Ship\AiCode.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1729,8 +1383,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="Ship\AiGoals.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1739,8 +1391,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="Ship\AWACS.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1749,8 +1399,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="Ship\Shield.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1759,8 +1407,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="Ship\Ship.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1769,8 +1415,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="Ship\ShipContrails.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1779,8 +1423,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="Ship\ShipFX.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1789,8 +1431,6 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="Ship\ShipHit.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Disabled</Optimization>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
@@ -1972,18 +1612,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="UnityBuild.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="UnityBuildD3D.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="UnityBuildD3D9.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="UnityBuild.cpp" />
+    <ClCompile Include="UnityBuildD3D.cpp" />
+    <ClCompile Include="UnityBuildD3D9.cpp" />
     <ClCompile Include="VCodec\CODEC1.CPP">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
@@ -3322,18 +2953,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
     </CustomBuild>
-    <CustomBuild Include="UnityBuild.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="UnityBuildD3D.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="UnityBuildD3D9.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </CustomBuild>
+    <CustomBuild Include="UnityBuild.h" />
+    <CustomBuild Include="UnityBuildD3D.h" />
+    <CustomBuild Include="UnityBuildD3D9.h" />
     <CustomBuild Include="VCodec\CODEC1.H">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>

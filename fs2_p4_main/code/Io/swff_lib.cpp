@@ -58,7 +58,7 @@ BOOL CALLBACK DIEnumDevicesProc(LPCDIDEVICEINSTANCE lpddi, LPVOID lpvContext);
 // Function: 	SWFF_OpenDefaultFFJoystick
 // Parameters:	HWND hWnd						  - Client Window Handle 
 //				LPDIRECTINPUT* ppDI				  - Pointer to DIRECTINPUT
-//				LPDIRECTINPUTDEVICE2* ppDIDevice) - Pointer to IDIRECTINPUTDEVICE2
+//				LPDIRECTINPUTDEVICE2* ppDIDevice) - Pointer to IDIRECTINPUTDEVICE2#if defined(PREPROC_ENABLED_FF)
 //
 // Returns:
 // Algorithm:
@@ -69,6 +69,8 @@ HRESULT SWFF_OpenDefaultFFJoystick(
 	LPDIRECTINPUT* ppDI, 
 	LPDIRECTINPUTDEVICE2* ppDIDevice)
 {
+#if defined(PREPROC_ENABLED_JOY)
+
 	HRESULT hResult;
 	if(hWnd == NULL || ppDI == NULL || ppDIDevice == NULL)
 	{
@@ -171,6 +173,7 @@ HRESULT SWFF_OpenDefaultFFJoystick(
 		*ppDI = NULL;
 		return hResult;
 	}
+#endif
 	return S_OK;
 } 
 
@@ -194,6 +197,8 @@ HRESULT SWFF_OpenDefaultFFJoystickEx(
 	OUT LPDIRECTINPUTDEVICE2* ppDIDevice,
 	IN DWORD dwFlags)
 {
+#if defined(PREPROC_ENABLED_JOY)
+
 	HRESULT hResult;
 	if(hWnd == NULL || hInstance == NULL || ppDI == NULL || ppDIDevice == NULL)
 	{
@@ -296,6 +301,7 @@ HRESULT SWFF_OpenDefaultFFJoystickEx(
 		*ppDI = NULL;
 		return hResult;
 	}
+#endif
 	return S_OK;
 } 
 
@@ -1541,6 +1547,8 @@ HRESULT SWFF_CreatePeriodicEffect(	IN LPDIRECTINPUTDEVICE2 pDIDevice,
 								IN DWORD dwFadeLevel,		
 								IN LONG lButton)			
 {
+#if defined(PREPROC_ENABLED_JOY)
+
 	if(pDIDevice == NULL || ppDIEffect == NULL)
 		return SFERR_INVALID_PARAM;
 	// Always clear return IPtr
@@ -1623,7 +1631,12 @@ HRESULT SWFF_CreatePeriodicEffect(	IN LPDIRECTINPUTDEVICE2 pDIDevice,
 	hResult = pDIDevice->CreateEffect(guid, &DIEffectStruct, ppDIEffect, NULL);
 
 	return hResult;
+#else
+	return S_OK;
+#endif
 }
+
+#if defined(PREPROC_ENABLED_FF)
 
 // ----------------------------------------------------------------------------
 // Function: 	SWFF_CreateSpringEffect
@@ -2197,7 +2210,7 @@ HRESULT SWFF_CreateConstantForceEffect(
 
 	return hResult;
 }
-
+#endif
 
 // ----------------------------------------------------------------------------
 // Function: 	SWFF_CreateWallEffect
