@@ -104,7 +104,11 @@ HRESULT DrawPrimitive2D(D3DPRIMITIVETYPE primType, const int primCount, void *da
 	{
 		mprintf(("Failed DrawPrimitiveUP\n"));
 	}
+#if defined(_WIN64)
+	return S_OK;
+#else
 	return hr == S_OK;
+#endif
 }
 
 HRESULT SetRenderState( D3DRENDERSTATETYPE dwRenderStateType,  DWORD dwRenderState )

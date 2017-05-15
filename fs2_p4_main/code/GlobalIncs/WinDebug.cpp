@@ -817,6 +817,7 @@ void _cdecl Error( char * filename, int line, char * format, ... )
 
 void _cdecl Warning( char * filename, int line, char * format, ... )
 {
+#if !defined(_WIN64)
 #ifndef NDEBUG
 
 	int id;
@@ -856,6 +857,7 @@ void _cdecl Warning( char * filename, int line, char * format, ... )
 #endif
 	}
 #endif // NDEBUG
+#endif
 }
 
 
