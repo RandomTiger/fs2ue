@@ -81,31 +81,19 @@ fs2_p4_main/Release/
 
 fs2_p4_main/UnityRelease/
 
-fs2_p4_main/Win32/UnityDebug/
-
-fs2_p4_main/Win32/UnityRelease/
+fs2_p4_main/Win32/
 
 *.7z
 
-fs2_p4_main/x64/DebugRelease/
+fs2_p4_main/x64/
 
-fs2_p4_main/x64/UnityDebug/
+fs2_p4_main/code/TomLib/x64/
 
-fs2_p4_main/code/TomLib/x64/Debug/
-
-fs2_p4_main/code/TomLib/x64/UnityRelease/
-
-fs2_p4_main/x64/Debug/
-
-fs2_p4_main/x64/UnityRelease/
+fs2_p4_main/x64/
 
 fs2_p4_main/code/Win32/UnityDebug/code/
 
-fs2_p4_main/code/x64/UnityDebug/code/
-
-fs2_p4_main/code/x64/UnityRelease/code/code\.tlog/
-
-fs2_p4_main/code/x64/UnityRelease/code/
+fs2_p4_main/code/x64/
 
 fs2ue/Saved/
 
