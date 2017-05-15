@@ -228,7 +228,7 @@ void mission_campaign_maybe_add( char *filename, int multiplayer )
 // global variables
 void mission_campaign_build_list( int multiplayer )
 {
-	int find_handle;
+	intptr_t find_handle;
 	_finddata_t find;
 	char wild_card[256];
 

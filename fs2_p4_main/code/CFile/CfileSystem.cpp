@@ -62,7 +62,7 @@ typedef struct cf_file {
 	char		name_ext[CF_MAX_FILENAME_LENGTH];		// Filename and extension
 	int		root_index;										// Where in Roots this is located
 	int		pathtype_index;								// Where in Paths this is located
-	time_t	write_time;										// When it was last written
+	fs2_time_t	write_time;										// When it was last written
 	int		size;												// How big it is in bytes
 	int		pack_offset;									// For pack files, where it is at.   0 if not in a pack file.  This can be used to tell if in a pack file.
 } cf_file;
@@ -155,7 +155,7 @@ int cf_get_packfile_count(cf_root *root)
 
 		strcat( filespec, "*.vp" );
 
-		int find_handle;
+		intptr_t find_handle;
 		_finddata_t find;
 		
 		find_handle = _findfirst( filespec, &find );
@@ -223,7 +223,7 @@ void cf_build_pack_list( cf_root *root )
 		}
 		strcat( filespec, "*.vp" );
 
-		int find_handle;
+		intptr_t find_handle;
 		_finddata_t find;
 		
 		find_handle = _findfirst( filespec, &find );
@@ -358,7 +358,7 @@ void cf_search_root_path(int root_index)
 
 		strcat( search_path, "*.*" );
 
-		int find_handle;
+		intptr_t find_handle;
 		_finddata_t find;
 		
 		find_handle = _findfirst( search_path, &find );
@@ -407,7 +407,7 @@ typedef struct VP_FILE {
 	int	offset;
 	int	size;
 	char	filename[32];
-	time_t write_time;
+	fs2_time_t write_time;
 } VP_FILE;
 
 void cf_search_root_pack(int root_index)
@@ -748,7 +748,8 @@ int cf_file_already_in_list( int num_files, char **list, char *filename )
 int cf_get_file_list( int max, char **list, int pathtype, char *filter, int sort, file_list_info *info )
 {
 	char *ptr;
-	int i, l, find_handle, num_files = 0, own_flag = 0;
+	int i, l, num_files = 0, own_flag = 0;
+	intptr_t find_handle;
 	_finddata_t find;
 
 	if (max < 1) {
@@ -909,7 +910,7 @@ int cf_get_file_list_preallocated( int max, char arr[][MAX_FILENAME_LEN], char *
 	cf_create_default_path_string( filespec, pathtype, filter );
 
 	// Search the default directories
-	int find_handle;
+	intptr_t find_handle;
 	_finddata_t find;
 	
 	find_handle = _findfirst( filespec, &find );

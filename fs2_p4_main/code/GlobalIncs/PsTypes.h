@@ -56,6 +56,12 @@ inline void Unused(int i)
 #include "GlobalIncs/SafeArray.h"
 #endif
 
+#if defined(_WIN64) 
+typedef long fs2_time_t;
+#else 
+typedef time_t fs2_time_t;
+#endif 
+
 // value to represent an uninitialized state in any int or uint
 #define UNINITIALIZED 0x7f8e6d9c
 

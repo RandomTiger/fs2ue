@@ -29,7 +29,7 @@ typedef struct CFILE {
 
 // extra info that can be returned when getting a file listing
 typedef struct {
-	time_t write_time;
+	fs2_time_t write_time;
 } file_list_info;
 
 

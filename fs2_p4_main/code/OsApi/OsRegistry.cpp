@@ -23,7 +23,12 @@ static char			szCompanyName[128];
 static char			szAppName[128];
 static char			szAppVersion[128];
 
+#if defined(_WIN64) 
+char *Osreg_company_name = "WOW6432Node\\Volition";
+#else  
 char *Osreg_company_name = "Volition";
+#endif 
+
 char *Osreg_class_name = "Freespace2Class";
 #if defined(FS2_DEMO)
 char *Osreg_app_name = "FreeSpace2Demo";
