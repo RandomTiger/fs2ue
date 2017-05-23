@@ -39,8 +39,8 @@
 #include "demo.h"
 #include "fishtank.h"
 
-#include "Io\VoiceRecognition.h"
-#include "Io\TextToSpeech.h"
+#include "Io/VoiceRecognition.h"
+#include "Io/TextToSpeech.h"
 #endif
 
 // #include "movie.h"

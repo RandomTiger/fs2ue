@@ -202,7 +202,9 @@ template <class T> T min(const T& a, const T& b) {return (a < b) ? a : b; }
 template <class T> T max(const T& a, const T& b) {return (a > b) ? a : b; }
 #endif
 
+#ifndef FS2_UE
 const float PI	= 3.141592654f;
+#endif
 const float PI2 = PI * 2.0f;	// PI*2
 inline float ANG_TO_RAD(const float x) { return x * PI / 180.0f;}
 

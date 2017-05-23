@@ -6,7 +6,10 @@ public class fs2ue : ModuleRules
 {
 	public fs2ue(TargetInfo Target)
 	{
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+        Definitions.Add("UNITY_BUILD");
+        Definitions.Add("FS2_UE");
+
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
