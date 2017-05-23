@@ -98,3 +98,27 @@ fs2_p4_main/code/x64/
 fs2ue/Saved/
 
 fs2ue/Intermediate/
+
+fs2ue/Binaries/
+
+fs2ue/Source/fs2_source/code/Win32/
+
+fs2ue/Source/fs2_source/code/x64/
+
+fs2ue/Source/fs2_source/Win32/
+
+fs2ue/Source/fs2_source/x64/Ignore\.txt
+
+fs2ue/Source/fs2_source/Release/
+
+*.pdb
+
+fs2ue/Source/fs2_source/Debug/
+
+*.bsc
+
+fs2ue/Source/fs2_source/code/TomLib/Debug/
+
+fs2ue/Source/fs2_source/code/TomLib/x64/
+
+fs2ue/Source/fs2_source/x64/
