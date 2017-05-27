@@ -429,7 +429,7 @@ void gr_string_win(int x, int y, char *s)
 	SIZE size;
 
 	if ( MyhFont==NULL )	{
-		MyhFont = CreateFont(14, 0, 0, 0,				// height,width,?,?
+		MyhFont = CreateFontA(14, 0, 0, 0,				// height,width,?,?
 				700,
 				FALSE,
 				FALSE,
@@ -467,13 +467,13 @@ void gr_string_win(int x, int y, char *s)
 	y += gr_screen.offset_y;
 	//ptr = strchr(s,'\n);
 	while ((ptr = strchr(s, '\n'))!=NULL) {
-		TextOut(hDibDC, x, y, s, ptr - s);
-		GetTextExtentPoint32(hDibDC, s, ptr - s, &size);
+		TextOutA(hDibDC, x, y, s, ptr - s);
+		GetTextExtentPoint32A(hDibDC, s, ptr - s, &size);
 		y += size.cy;
 		s = ptr + 1;
 	}
 
-	TextOut(hDibDC, x, y, s, strlen(s));
+	TextOutA(hDibDC, x, y, s, strlen(s));
 	SelectClipRgn(hDibDC, NULL);
 	DeleteObject(hclip);
 }
@@ -494,13 +494,13 @@ void gr_get_string_size_win(int *w, int *h, char *text)
 	SelectObject( hDibDC, MyhFont );
 
 	if (!ptr)	{
-		GetTextExtentPoint32( hDibDC, text, strlen(text), &size);
+		GetTextExtentPoint32A( hDibDC, text, strlen(text), &size);
 		if (w) *w = size.cx;
 		if (h) *h = size.cy;
 		return;
 	}
 
-	GetTextExtentPoint32(hDibDC, text, ptr - text, &size);
+	GetTextExtentPoint32A(hDibDC, text, ptr - text, &size);
 	gr_get_string_size_win(w, h, ptr+1);
 	if (w && (size.cx > *w) )
 		*w = size.cx;

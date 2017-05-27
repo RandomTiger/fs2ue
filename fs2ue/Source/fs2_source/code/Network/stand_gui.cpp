@@ -7,6 +7,7 @@
  *
 */
 
+#if defined(PREPROC_ENABLED_NET)
 
 #ifndef UNITY_BUILD
 #include <windows.h>
@@ -52,7 +53,7 @@
 #include "Timer.h"
 #include "version.h"
 #else
-#include "FreespaceResource.h"
+#include "Freespace2/FreespaceResource.h"
 #endif
 
 HANDLE Standalone_thread;
@@ -2081,3 +2082,6 @@ void std_deinit_standalone()
 	}
 }
 
+
+
+#endif

@@ -8,6 +8,7 @@
 */
 
 // #include "vd3drm.h"
+#ifndef UNITY_BUILD
 #include "freespace.h"
 #include "timer.h"
 #include "linklist.h"
@@ -19,6 +20,7 @@
 #include "object.h"
 #include "key.h"
 #include "gamesnd.h"
+#endif
 
 #ifndef OO_NEW
 

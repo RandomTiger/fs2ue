@@ -806,6 +806,7 @@ BOOL SWFF_WriteRegString(
 #define GUID_VFX_Object "{04ace0a7-1fa8-11d0-aa22-00a0c911f471}"
 BOOL SWFF_RegisterVFXObject(IN LPCTSTR pszVFXPath)
 {
+#if !defined(FS2_UE)
 	if(pszVFXPath == NULL)
 		return FALSE;
 
@@ -818,6 +819,7 @@ BOOL SWFF_RegisterVFXObject(IN LPCTSTR pszVFXPath)
 		&&	SWFF_WriteRegString("\\CLSID\\{04ace0a7-1fa8-11d0-aa22-00a0c911f471}\\VersionIndependentProgID", "VFX")
 		&&	SWFF_WriteRegString("\\CLSID\\{04ace0a7-1fa8-11d0-aa22-00a0c911f471}\\InprocServer32", pszVFXPath)
 		&&	SWFF_WriteRegString("\\CLSID\\{04ace0a7-1fa8-11d0-aa22-00a0c911f471}\\NotInsertable", "");
+#endif
 }
 
 // ----------------------------------------------------------------------------
@@ -2423,7 +2425,9 @@ BOOL SWFF_GetJoyData(int nJoyID, JOYINFOEX * pjix, char *pszErr)
 // 
 // ----------------------------------------------------------------------------
 void SWFF_ErrorCodeToString(HRESULT hResult, TCHAR * pszCodeString)
-{       	
+{       
+#if defined(PREPROC_ENABLED_JOY)
+
 	if(pszCodeString == NULL)
 		return;
 
@@ -2496,5 +2500,5 @@ void SWFF_ErrorCodeToString(HRESULT hResult, TCHAR * pszCodeString)
 	}
 
 //XSTR:ON
-
+#endif
 } 

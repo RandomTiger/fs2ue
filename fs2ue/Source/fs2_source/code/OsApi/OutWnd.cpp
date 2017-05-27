@@ -29,6 +29,9 @@
 #include "systemvars.h"
 #endif
 
+#if !defined(FS2_EU)
+#include "FreespaceResource.h"
+
 #define MAX_FILTERS 48
 #define SCROLL_BUFFER_SIZE	512
 #define MAX_LINE_WIDTH	128
@@ -1249,3 +1252,4 @@ void outwnd_close()
 
 
 #endif //NDEBUG
+#endif

@@ -12,6 +12,11 @@
 #ifndef _PSTYPES_H
 #define _PSTYPES_H
 
+#ifndef UNITY_BUILD
+#include "math/fix.h"
+#include "math/floating.h"
+#endif
+
 class GlobalConst
 {
 public:
@@ -142,7 +147,7 @@ typedef struct bitmap {
 	ubyte *palette;	// If bpp==8, this is pointer to palette.   If the BMP_NO_PALETTE_MAP flag
 							// is not set, this palette just points to the screen palette. (gr_palette)
 
-	uint GetDataAsUint() {return (uint) data;}
+//	uint GetDataAsUint() {return (uint) data;}
 } bitmap;
 
 //This are defined in MainWin.c
@@ -322,11 +327,6 @@ void dc_printf( char *format, ... );
 //======================================================================================
 //======================================================================================
 //======================================================================================
-
-
-
-#include "math/fix.h"
-#include "math/floating.h"
 
 // Some constants for stuff
 #define MAX_FILENAME_LEN	32			// Length for filenames, ie "title.pcx"

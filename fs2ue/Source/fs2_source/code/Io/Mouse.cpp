@@ -16,6 +16,8 @@
 #include "MouseController.h"
 #include "2d.h"
 #include "OsApi.h"
+#include "GameSequence.h"
+#include "vdinput.h"
 #endif
 
 #define MOUSE_MODE_DI	0
@@ -327,8 +329,6 @@ void mouse_force_pos(int x, int y)
 	}
 }
 
-#include "GameSequence.h"
-
 // change in mouse position since last call
 void mouse_eval_deltas()
 {
@@ -374,8 +374,6 @@ void mouse_eval_deltas()
 
 	LEAVE_CRITICAL_SECTION(&mouse_lock);
 }
-
-#include "vdinput.h"
 
 static LPDIRECTINPUT			Di_mouse_obj = NULL;
 static LPDIRECTINPUTDEVICE	Di_mouse = NULL;

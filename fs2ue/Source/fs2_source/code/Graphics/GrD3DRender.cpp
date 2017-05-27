@@ -632,7 +632,10 @@ void gr_d3d_tmapper( int nverts, vertex **verts, uint flags )
 	gr_d3d_tmapper_internal( nverts, verts, flags, 0 );
 }
 
-#define FIND_SCALED_NUM(x,x0,x1,y0,y1) (((((x)-(x0))*((y1)-(y0)))/((x1)-(x0)))+(y0))
+float FIND_SCALED_NUM(float x, float x0, float x1, float y0, float y1)
+{
+	return (((x - x0)*(y1 - y0)) / (x1 - x0)) + y0;
+}
 
 void gr_d3d_scaler(vertex *va, vertex *vb )
 {

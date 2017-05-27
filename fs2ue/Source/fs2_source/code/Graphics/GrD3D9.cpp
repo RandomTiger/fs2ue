@@ -10,7 +10,7 @@
 #include <D3d9.h>
 #include <assert.h>
 #include <d3d9types.h>
-#include "Graphics\Font.h"
+#include "Graphics/Font.h"
 #include <windows.h>
 
 #include "Cmdline/cmdline.h"

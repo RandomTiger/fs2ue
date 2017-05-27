@@ -1884,7 +1884,7 @@ static void InterpolateEveryOther(t_Sample* bufIn, t_Sample* bufOut, int size)
 #if defined(USE_LPC10)
 extern "C"
 {
-    #include "lpc10\ulaw.h" // it's the LAW
+    #include "lpc10/ulaw.h" // it's the LAW
 };
 // can operate in place
 static void ConvertToLPC10(t_Sample* bufIn, t_Sample* bufOut, int size)

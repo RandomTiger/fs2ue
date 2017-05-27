@@ -6,6 +6,7 @@
  * source.
  *
 */
+#if !defined(FS2_UE)
 
 #ifndef UNITY_BUILD
 #include <windows.h>
@@ -501,3 +502,4 @@ Cleanup:
 
 	return default_value;
 }
+#endif

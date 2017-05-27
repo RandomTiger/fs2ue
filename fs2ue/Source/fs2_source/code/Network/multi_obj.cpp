@@ -1953,8 +1953,6 @@ void multi_oo_calc_interp_splines(int ship_index, vector *cur_pos, matrix *cur_o
 	// we'll modify our velocity to move along a blend of these splines.
 }
 
-#include "alphacolors.h"
-
 void oo_update_time()
 {	
 }

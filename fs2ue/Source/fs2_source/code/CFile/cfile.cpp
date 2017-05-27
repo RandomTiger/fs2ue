@@ -159,7 +159,7 @@ int cfile_init(char *exe_dir, char *cdrom_dir)
 
 		// are we in a root directory?		
 		if(cfile_in_root_dir(buf)){
-			MessageBox((HWND)NULL, "Freespace2/Fred2 cannot be run from a drive root directory!", "Error", MB_OK);
+			MessageBoxA((HWND)NULL, "Freespace2/Fred2 cannot be run from a drive root directory!", "Error", MB_OK);
 			return 1;
 		}		
 
@@ -173,7 +173,7 @@ int cfile_init(char *exe_dir, char *cdrom_dir)
 			buf[i] = 0;						
 			cfile_chdir(buf);
 		} else {
-			MessageBox((HWND)NULL, "Error trying to determine executable root directory!", "Error", MB_OK);
+			MessageBoxA((HWND)NULL, "Error trying to determine executable root directory!", "Error", MB_OK);
 			return 1;
 		}
 
@@ -437,8 +437,8 @@ void cf_attrib(char *filename, int set, int clear, int dir_type)
 	if (fp) {
 		fclose(fp);
 
-		DWORD z = GetFileAttributes(longname);
-		SetFileAttributes(longname, z | set & ~clear);
+		DWORD z = GetFileAttributesA(longname);
+		SetFileAttributesA(longname, z | set & ~clear);
 	}
 
 }
@@ -596,7 +596,7 @@ CFILE *cfopen(char *file_path, char *mode, int type, int dir_type, bool localize
 			if ( offset == 0 )	{
 				HANDLE hFile;
 
-				hFile = CreateFile(longname, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+				hFile = CreateFileA(longname, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 
 				if (hFile != INVALID_HANDLE_VALUE)	{
 					return cf_open_mapped_fill_cfblock(hFile, dir_type);

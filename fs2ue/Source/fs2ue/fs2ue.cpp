@@ -4,8 +4,6 @@
 #include "../Test.h"
 #include "../Test.cpp"
 
-#define UNITY_BUILD
-
 #include "../fs2_source/code/UnityBuild.h"
 #include "../fs2_source/code/UnityBuild.cpp"
 

@@ -1107,12 +1107,12 @@ bool gr_d3d_init_device(int screen_width, int screen_height)
 
 	if ( Largest_alpha == 0 )	{
 		gr_d3d_cleanup();
-		MessageBox( NULL, XSTR("Alpha channel textures",620), XSTR("Missing Features",621), MB_OK|MB_TASKMODAL|MB_SETFOREGROUND );
+		MessageBoxA( NULL, XSTR("Alpha channel textures",620), XSTR("Missing Features",621), MB_OK|MB_TASKMODAL|MB_SETFOREGROUND );
 		exit(1);
 	}
 	if ( Largest_rgb == 0 )	{
 		gr_d3d_cleanup();
-		MessageBox( NULL, XSTR("16-bpp RGB textures",622), XSTR("Missing Features",621), MB_OK|MB_TASKMODAL|MB_SETFOREGROUND );
+		MessageBoxA( NULL, XSTR("16-bpp RGB textures",622), XSTR("Missing Features",621), MB_OK|MB_TASKMODAL|MB_SETFOREGROUND );
 		exit(1);
 	}
 
@@ -1252,7 +1252,7 @@ bool gr_d3d_init_device(int screen_width, int screen_height)
 
 		if ( not_good )	{
 			gr_d3d_cleanup();
-			MessageBox( NULL, missing_features, XSTR("Missing Features",621), MB_OK|MB_TASKMODAL|MB_SETFOREGROUND );
+			MessageBoxA( NULL, missing_features, XSTR("Missing Features",621), MB_OK|MB_TASKMODAL|MB_SETFOREGROUND );
 			exit(1);
 		}	
 	}

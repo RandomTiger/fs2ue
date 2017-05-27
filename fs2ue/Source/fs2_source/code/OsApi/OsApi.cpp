@@ -41,6 +41,10 @@
 #include "VoiceRecognition.h"
 #endif
 
+#if !defined(FS2_UE)
+#include "FreespaceResource.h"
+#endif
+
 // ----------------------------------------------------------------------------------------------------
 // OSAPI DEFINES/VARS
 //
@@ -582,6 +586,7 @@ LRESULT CALLBACK win32_message_handler(HWND hwnd,UINT msg,WPARAM wParam, LPARAM 
 // create the main window
 BOOL win32_create_window()
 {
+#if !defined(FS2_EU)
 	int windowed = Cmdline_window;
 
 	WNDCLASSEX wclass;
@@ -654,7 +659,7 @@ BOOL win32_create_window()
 		ShowWindow( hwndApp, SW_SHOWNORMAL );
 		UpdateWindow( hwndApp );
 	}
-
+#endif
 	return TRUE;
 }
 

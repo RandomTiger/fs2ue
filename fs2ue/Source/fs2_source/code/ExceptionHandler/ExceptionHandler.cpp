@@ -7,7 +7,7 @@
  *
 */
 
-
+#if !defined(FS2_UE)
 
 // Copyright © 1998 Bruce Dawson.
 /*
@@ -116,7 +116,7 @@ static void ShowModuleInfo(HANDLE LogFile, HINSTANCE ModuleHandle)
 {
 	char ModName[MAX_PATH];
 	__try {
-		if (GetModuleFileName(ModuleHandle, ModName, sizeof(ModName)) > 0) {
+		if (GetModuleFileNameA(ModuleHandle, ModName, sizeof(ModName)) > 0) {
 			// If GetModuleFileName returns greater than zero then this must
 			// be a valid code module address. Therefore we can try to walk
 			// our way through its structures to find the link time stamp.
@@ -132,7 +132,7 @@ static void ShowModuleInfo(HANDLE LogFile, HINSTANCE ModuleHandle)
 
 			// Open the code module file so that we can get its file date
 			// and size.
-			HANDLE ModuleFile = CreateFile(ModName, GENERIC_READ, 
+			HANDLE ModuleFile = CreateFileA(ModName, GENERIC_READ, 
 						FILE_SHARE_READ, 0, OPEN_EXISTING,
 						FILE_ATTRIBUTE_NORMAL, 0);
 			char TimeBuffer[100] = "";
@@ -211,12 +211,12 @@ static void RecordSystemInformation(HANDLE LogFile)
 	PrintTime(TimeBuffer, CurrentTime);
 	hprintf(LogFile, "Error occurred at %s.\r\n", TimeBuffer);
 	char	ModuleName[MAX_PATH];
-	if (GetModuleFileName(0, ModuleName, sizeof(ModuleName)) <= 0) {
+	if (GetModuleFileNameA(0, ModuleName, sizeof(ModuleName)) <= 0) {
 		lstrcpy(ModuleName, "Unknown");
 	}
 	char	UserName[200];
 	DWORD UserNameSize = sizeof(UserName);
-	if (!GetUserName(UserName, &UserNameSize)) {
+	if (!GetUserNameA(UserName, &UserNameSize)) {
 		lstrcpy(UserName, "Unknown");
 	}
 	hprintf(LogFile, "%s, run by %s.\r\n", ModuleName, UserName);
@@ -487,3 +487,4 @@ int __cdecl RecordExceptionInfo(PEXCEPTION_POINTERS data, const char *Message)
 #endif
 	return EXCEPTION_CONTINUE_SEARCH;
 }
+#endif

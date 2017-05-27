@@ -1419,11 +1419,11 @@ void standalone_main_init()
 
 	// if we failed to startup on our desired protocol, fail	
 	if((Multi_options_g.protocol == NET_IPX) && !Ipx_active){						
-		MessageBox((HWND)os_get_window(), XSTR( "You have selected IPX for multiplayer Freespace, but the IPX protocol was not detected on your machine.", 1402), "Error", MB_OK);
+		MessageBoxA((HWND)os_get_window(), XSTR( "You have selected IPX for multiplayer Freespace, but the IPX protocol was not detected on your machine.", 1402), "Error", MB_OK);
 		exit(1);
 	} 
 	if((Multi_options_g.protocol == NET_TCP) && !Tcp_active){		
-		MessageBox((HWND)os_get_window(), XSTR("You have selected TCP/IP for multiplayer Freespace, but the TCP/IP protocol was not detected on your machine.", 362), "Error", MB_OK);
+		MessageBoxA((HWND)os_get_window(), XSTR("You have selected TCP/IP for multiplayer Freespace, but the TCP/IP protocol was not detected on your machine.", 362), "Error", MB_OK);
 		exit(1);
 	}
 	

@@ -4,7 +4,7 @@
 #include "UnityBuild.h"
 
 //Get rid of ths
-#include "Freespace.h"
+#include "Freespace2/Freespace.h"
 
 #include "Anim/AnimPlay.cpp"
 #include "Anim/PackUnpack.cpp"

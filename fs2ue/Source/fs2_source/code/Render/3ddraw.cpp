@@ -18,7 +18,7 @@
 #include "BmpMan.h"
 #include "SystemVars.h"
 #include "Alphacolors.h"
-
+#include "2d.h"
 #include "key.h"
 #endif
 
@@ -838,9 +838,6 @@ float g3_draw_rotated_bitmap_area(vertex *pnt,float angle, float rad,uint tmap_f
 	return g3_draw_poly_constant_sw_area(4, vertlist, tmap_flags, sw, area );		
 }
 
-
-
-#include "2d.h"
 typedef struct horz_pt {
 	float x, y;
 	int edge;

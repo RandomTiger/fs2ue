@@ -11,16 +11,16 @@
 #define _GRD3DINTERNAL_H
 
 #ifndef UNITY_BUILD
-#include "DirectX\vD3d.h"
-#include "DirectX\vD3dcaps.h"
-#include "DirectX\vd3drm.h"
-#include "DirectX\vd3drmdef.h"
-#include "DirectX\vd3drmobj.h"
-#include "DirectX\vd3drmwin.h"
-#include "DirectX\vD3dtypes.h"
-#include "DirectX\vDdraw.h"
-#include "Graphics\GrInternal.h"
-#include "GlobalIncs\SafeArray.h"
+#include "DirectX/vD3d.h"
+#include "DirectX/vD3dcaps.h"
+#include "DirectX/vd3drm.h"
+#include "DirectX/vd3drmdef.h"
+#include "DirectX/vd3drmobj.h"
+#include "DirectX/vd3drmwin.h"
+#include "DirectX/vD3dtypes.h"
+#include "DirectX/vDdraw.h"
+#include "Graphics/GrInternal.h"
+#include "GlobalIncs/SafeArray.h"
 
 #include <windows.h>
 #include <windowsx.h>

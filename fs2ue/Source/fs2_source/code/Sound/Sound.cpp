@@ -128,7 +128,7 @@ int snd_init(int use_a3d, int use_eax)
 
 		if ( num_tries++ > 5 ) {
 			if ( !gave_warning ) {
-				MessageBox(NULL, XSTR("DirectSound could not be initialized.  If you are running any applications playing sound in the background, you should stop them before continuing.",971), NULL, MB_OK);
+				MessageBoxA(NULL, XSTR("DirectSound could not be initialized.  If you are running any applications playing sound in the background, you should stop them before continuing.",971), NULL, MB_OK);
 				gave_warning = 1;
 			} else {
 				goto Failure;
@@ -139,7 +139,7 @@ int snd_init(int use_a3d, int use_eax)
 	// Init the Audio Compression Manager
 	if ( ACM_init() == -1 ) {
 		HWND hwnd = (HWND)os_get_window();
-		MessageBox(hwnd, XSTR("Could not properly initialize the Microsoft ADPCM codec.\n\nPlease see the readme.txt file for detailed instructions on installing the Microsoft ADPCM codec.",972), NULL, MB_OK);
+		MessageBoxA(hwnd, XSTR("Could not properly initialize the Microsoft ADPCM codec.\n\nPlease see the readme.txt file for detailed instructions on installing the Microsoft ADPCM codec.",972), NULL, MB_OK);
 //		Warning(LOCATION, "Could not properly initialize the Microsoft ADPCM codec.\nPlease see the readme.txt file for detailed instructions on installing the Microsoft ADPCM codec.");
 	}
 

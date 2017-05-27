@@ -7,7 +7,7 @@
  *
 */ 
 
-
+#if !defined(FS2_UE)
 
 // Nothing in this module should be externalized!!!
 //XSTR:OFF
@@ -556,7 +556,7 @@ void PE_Debug :: FindDebugInfo()
 void PE_Debug :: MapFileInMemory( const char* module )
   {
   ClearFileCache() ;
-  hFile = CreateFile( module, GENERIC_READ, FILE_SHARE_READ, NULL,
+  hFile = CreateFileA( module, GENERIC_READ, FILE_SHARE_READ, NULL,
                              OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0 ) ;
   if( hFile != INVALID_HANDLE_VALUE )
     {
@@ -574,7 +574,7 @@ int PE_Debug::DumpDebugInfo( DumpBuffer& dumpBuffer, const BYTE* caller, HINSTAN
 	// by caching the latest and comparing the actual module with
 	// the latest one.
 	static char module[ MAX_MODULENAME_LEN ] ;
-	GetModuleFileName( hInstance, module, MAX_MODULENAME_LEN ) ;
+	GetModuleFileNameA( hInstance, module, MAX_MODULENAME_LEN ) ;
 
 	// New module
 	if( strcmpi( latestModule, module ) )	{
@@ -759,7 +759,7 @@ void _cdecl WinAssert(char * text, char * filename, int linenum )
 		dumpBuffer.Printf( "\r\n[ This info is in the clipboard so you can paste it somewhere now ]\r\n" );
 		dumpBuffer.Printf( "\r\n\r\nUse Ok to break into Debugger, Cancel to exit.\r\n");
 
-		val = MessageBox(NULL, dumpBuffer.buffer, "Assertion Failed!", MB_OKCANCEL|flags );
+		val = MessageBoxA(NULL, dumpBuffer.buffer, "Assertion Failed!", MB_OKCANCEL|flags );
 	#else
 		val = MessageBox(NULL, AssertText1, "Assertion Failed!", MB_OKCANCEL|flags );
 	#endif
@@ -798,7 +798,7 @@ void _cdecl Error( char * filename, int line, char * format, ... )
 		dumpBuffer.Printf( "\r\n[ This info is in the clipboard so you can paste it somewhere now ]\r\n" );
 		dumpBuffer.Printf( "\r\n\r\nUse Ok to break into Debugger, Cancel exits.\r\n");
 
-		val = MessageBox(NULL, dumpBuffer.buffer, "Error!", flags|MB_OKCANCEL );
+		val = MessageBoxA(NULL, dumpBuffer.buffer, "Error!", flags|MB_OKCANCEL );
 	#else
 		strcat(AssertText2,"\r\n\r\nUse Ok to break into Debugger, Cancel exits.\r\n");
 		val = MessageBox(NULL, AssertText2, "Error!", flags|MB_OKCANCEL );
@@ -1166,3 +1166,4 @@ void vm_free_all()
 
 
 
+#endif

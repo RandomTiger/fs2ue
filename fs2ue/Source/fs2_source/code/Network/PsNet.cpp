@@ -9,7 +9,7 @@
 
 
 
-
+#ifndef UNITY_BUILD
 #include <windows.h>
 #include <windowsx.h>
 #include <stdio.h>
@@ -29,6 +29,7 @@
 #include "timer.h"
 #include "multi_log.h"
 #include "cmdline.h"
+#endif
 
 #ifndef PSNET2
 

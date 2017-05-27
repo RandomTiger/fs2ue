@@ -8,6 +8,7 @@
 */
 
 
+#ifndef UNITY_BUILD
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -16,6 +17,7 @@
 
 #include "encrypt.h"
 #include "scramble.h"
+#endif
 
 #define MAX_LINE_LEN	512
 

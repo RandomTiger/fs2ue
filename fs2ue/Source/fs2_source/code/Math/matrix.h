@@ -1,5 +1,8 @@
 #pragma once
 
+#pragma warning( push )  
+#pragma warning( disable : 4587 ) 
+
 typedef class matrix {
 public:
 	matrix() 
@@ -27,3 +30,5 @@ public:
 		return *this;
 	}
 } matrix;
+
+#pragma warning( pop )  

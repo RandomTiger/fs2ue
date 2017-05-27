@@ -8,7 +8,6 @@
 */
 
 
-#ifndef UNITY_BUILD
 #include <windows.h>
 #include <windowsx.h>
 #include <stdio.h>
@@ -19,6 +18,7 @@
 #include <raserror.h>
 #include <limits.h>
 
+#ifndef UNITY_BUILD
 #include "multi.h"
 #include "multiutil.h"
 #include "multilag.h"

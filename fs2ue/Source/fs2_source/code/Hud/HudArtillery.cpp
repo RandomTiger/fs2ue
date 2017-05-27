@@ -25,12 +25,14 @@
 // ARTILLERY FUNCTIONS
 //
 
+#ifndef UNITY_BUILD
 #include "linklist.h"
 #include "timer.h"
 #include "parselo.h"
 #include "multi.h"
 #include "fireballs.h"
 #include "freespace.h"
+#endif
 
 // test code for subspace missile strike -------------------------------------------
 

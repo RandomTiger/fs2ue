@@ -11,6 +11,10 @@
 #define PREPROC_ENABLED_DI
 #endif
 
+#if !defined(FS2_UE)
+#define PREPROC_ENABLED_NET
+#endif
+
 #include <windows.h>
 #if defined(_DEBUG) && defined(LEAK_DETECTOR_ENABLED)
 #include "vld.h"

@@ -69,6 +69,7 @@ void ResetShaderSystem()
 bool SetShader(VertexShaderType vshader, PixelShaderType pshader, const int left, const int right, const int top, const int bottom)
 {
 	bool result = true;
+#if defined(USE_D3DX_MATH)
 
 	if(vshader != VertexShader_None)
 	{
@@ -91,6 +92,7 @@ bool SetShader(VertexShaderType vshader, PixelShaderType pshader, const int left
 	{
 		result = result && gPixelShaderList[pshader]->SetShader();
 	}
+#endif
 	return result;
 }
 

@@ -13,7 +13,7 @@
 #include "Graphics/GrD3D9Texture.h"
 #include "Graphics/GrD3D9Shader.h"
 
-#include "Graphics\Font.h"
+#include "Graphics/Font.h"
 #include "osapi.h"
 #include "2d.h"
 #include "GrInternal.h"
@@ -819,7 +819,7 @@ void gr_d3d9_string(int sx,int sy, const char *text)
 	}
 }
 
-float FIND_SCALED_NUM(float x, float x0, float x1, float y0, float y1) 
+float FIND_SCALED_NUM9(float x, float x0, float x1, float y0, float y1)
 {
 	return (((x-x0)*(y1-y0))/(x1-x0))+y0;
 }
@@ -857,25 +857,25 @@ void gr_d3d9_scaler(vertex *va, vertex *vb )
 
 	// Clip the left, moving u0 right as necessary
 	if ( x0 < xmin ) 	{
-		clipped_u0 = FIND_SCALED_NUM(xmin,x0,x1,u0,u1);
+		clipped_u0 = FIND_SCALED_NUM9(xmin,x0,x1,u0,u1);
 		clipped_x0 = xmin;
 	}
 
 	// Clip the right, moving u1 left as necessary
 	if ( x1 > xmax )	{
-		clipped_u1 = FIND_SCALED_NUM(xmax,x0,x1,u0,u1);
+		clipped_u1 = FIND_SCALED_NUM9(xmax,x0,x1,u0,u1);
 		clipped_x1 = xmax;
 	}
 
 	// Clip the top, moving v0 down as necessary
 	if ( y0 < ymin ) 	{
-		clipped_v0 = FIND_SCALED_NUM(ymin,y0,y1,v0,v1);
+		clipped_v0 = FIND_SCALED_NUM9(ymin,y0,y1,v0,v1);
 		clipped_y0 = ymin;
 	}
 
 	// Clip the bottom, moving v1 up as necessary
 	if ( y1 > ymax ) 	{
-		clipped_v1 = FIND_SCALED_NUM(ymax,y0,y1,v0,v1);
+		clipped_v1 = FIND_SCALED_NUM9(ymax,y0,y1,v0,v1);
 		clipped_y1 = ymax;
 	}
 	
