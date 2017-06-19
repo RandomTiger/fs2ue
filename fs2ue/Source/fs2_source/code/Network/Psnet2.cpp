@@ -2179,6 +2179,8 @@ DWORD (__stdcall *pRasGetProjectionInfo)(HRASCONN hrasconn, RASPROJECTION raspro
 // functions to get the status of a RAS connection
 unsigned int psnet_ras_status()
 {
+#if !defined(FS2_UE)
+
 	int rval;
 	unsigned long size, num_connections, i;
 	RASCONN rasbuffer[25];
@@ -2269,6 +2271,9 @@ unsigned int psnet_ras_status()
 
 	//The ip of the RAS connection
 	return rasip;
+#else
+	return INADDR_ANY;
+#endif
 }
  
 // functions to get the status of a RAS connection

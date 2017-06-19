@@ -762,6 +762,7 @@ BOOL SWFF_WriteRegString(
 	IN LPCTSTR pszKey,
 	IN LPCTSTR pszValue)
 {
+#if !defined(FS2_UE) 
 	HKEY hKey;
 	LONG lRet;
 	int nLen;
@@ -788,7 +789,7 @@ BOOL SWFF_WriteRegString(
 	RegCloseKey(hKey);
 	if(lRet != ERROR_SUCCESS)
 		return FALSE;
-
+#endif
 	// if we have reached this point, then it was a success
 	return TRUE;
 }
@@ -819,6 +820,8 @@ BOOL SWFF_RegisterVFXObject(IN LPCTSTR pszVFXPath)
 		&&	SWFF_WriteRegString("\\CLSID\\{04ace0a7-1fa8-11d0-aa22-00a0c911f471}\\VersionIndependentProgID", "VFX")
 		&&	SWFF_WriteRegString("\\CLSID\\{04ace0a7-1fa8-11d0-aa22-00a0c911f471}\\InprocServer32", pszVFXPath)
 		&&	SWFF_WriteRegString("\\CLSID\\{04ace0a7-1fa8-11d0-aa22-00a0c911f471}\\NotInsertable", "");
+#else
+	return INADDR_ANY;
 #endif
 }
 

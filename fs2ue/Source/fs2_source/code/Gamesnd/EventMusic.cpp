@@ -27,8 +27,6 @@
 #include "localize.h"
 #endif
 
-#pragma optimize("", off)
-
 #define DEFAULT_MASTER_EVENT_MUSIC_VOLUME	0.5f
 
 #define HULL_VALUE_TO_PLAY_INTENSE_BATTLE_MUSIC 0.75f
@@ -1385,5 +1383,3 @@ void event_music_hostile_ship_destroyed()
 	Battle_over_timestamp = timestamp(BATTLE_CHECK_INTERVAL);
 }
 
-
-#pragma optimize("", on)

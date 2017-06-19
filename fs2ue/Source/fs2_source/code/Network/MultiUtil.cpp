@@ -3178,8 +3178,6 @@ void multi_make_fake_players(int count)
 // PACK UNPACK STUFF
 //
 
-#pragma optimize("", off)
-
 typedef struct bitbuffer {
 	ubyte		mask;
    int		rack;
@@ -3857,4 +3855,3 @@ int multi_pack_unpack_desired_rotvel( int write, ubyte *data, matrix *orient, ve
 		return bitbuffer_read_flush(&buf);
 	}
 }
-#pragma optimize("", on)

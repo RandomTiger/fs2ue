@@ -148,7 +148,7 @@ void multi_options_read_config()
 
 					// yuck
 					extern HWND Multi_std_host_passwd;
-					SetWindowText(Multi_std_host_passwd, Multi_options_g.std_passwd);
+					SetWindowTextA(Multi_std_host_passwd, Multi_options_g.std_passwd);
 				}
 			} else 
 			if(SETTING("+low_update")){

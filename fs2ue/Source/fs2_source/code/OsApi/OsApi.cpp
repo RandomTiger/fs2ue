@@ -140,7 +140,7 @@ void os_init(char * wclass, char * title, char *app_name, char *version_string )
 void os_set_title( char * title )
 {
 	strcpy( szWinTitle, title );
-	SetWindowText( hwndApp, szWinTitle );
+	SetWindowTextA( hwndApp, szWinTitle );
 }
 
 // call at program end
@@ -348,7 +348,7 @@ BOOL __stdcall os_enum_windows( HWND hwnd, char * search_string )
 	char tmp[128];
 	int len;
 
-	len = GetWindowText( hwnd, tmp, 127 );
+	len = GetWindowTextA( hwnd, tmp, 127 );
 	 
 	if ( len )	{
 		if ( strstr( tmp, search_string ))	{
@@ -586,7 +586,7 @@ LRESULT CALLBACK win32_message_handler(HWND hwnd,UINT msg,WPARAM wParam, LPARAM 
 // create the main window
 BOOL win32_create_window()
 {
-#if !defined(FS2_EU)
+#if !defined(FS2_UE)
 	int windowed = Cmdline_window;
 
 	WNDCLASSEX wclass;
@@ -625,7 +625,7 @@ BOOL win32_create_window()
 	// Make a 32x32 window.  It never should get shown, because the graphics code
 	// will then size it.
 	if(windowed){
-		hwndApp = CreateWindow( szWinClass, szWinTitle,
+		hwndApp = CreateWindowA( szWinClass, szWinTitle,
 									style,   
 									CW_USEDEFAULT,
 									CW_USEDEFAULT,
@@ -635,7 +635,7 @@ BOOL win32_create_window()
 	} else {
 		// Make a 32x32 window.  It never should get shown, because the graphics code
 		// will then size it.
-		hwndApp = CreateWindow( szWinClass, szWinTitle,
+		hwndApp = CreateWindowA( szWinClass, szWinTitle,
 									style,   
 									(GetSystemMetrics( SM_CXSCREEN )-32 )/2,	//x
 									(GetSystemMetrics( SM_CYSCREEN )-32 )/2,	//y

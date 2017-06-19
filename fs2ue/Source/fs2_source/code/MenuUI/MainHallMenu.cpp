@@ -677,6 +677,7 @@ void main_hall_init(int main_hall_num)
 		main_hall_do_multi_ready();
 	}
 
+#if !defined(FS2_UE)
 	if(Cmdline_voicer == 1)
 	{
 		if(g_VoiceRecognition.IsInit())
@@ -691,6 +692,7 @@ void main_hall_init(int main_hall_num)
 			g_TextToSpeech.Play(buffer);
 		}
 	}
+#endif
 }
 
 void main_hall_exit_game()

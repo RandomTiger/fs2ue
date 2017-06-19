@@ -62,9 +62,6 @@
 #include "fvi.h"
 #endif
 
-#pragma optimize("", off)
-#pragma auto_inline(off)
-
 const float AIUNINITIALIZED_VALUE = -99999.9f;
 
 #define INSTRUCTOR_SHIP_NAME NOX("instructor")

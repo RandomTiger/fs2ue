@@ -69,9 +69,6 @@
 #include "Cmdline/Cmdline.h"
 #endif
 
-//#pragma optimize("", off)
-//#pragma auto_inline(off)
-
 typedef struct spark_pair {
 	int index1, index2;
 	float dist;

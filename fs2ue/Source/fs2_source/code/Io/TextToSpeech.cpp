@@ -1,3 +1,4 @@
+#if !defined(FS2_UE)
 #ifndef UNITY_BUILD
 #include <windows.h>
 #include <atlbase.h>
@@ -86,3 +87,4 @@ bool TextToSpeech::SetVoice(void *new_voice)
 {
     return SUCCEEDED(m_pVoiceDevice->SetVoice( (ISpObjectToken *) new_voice ));
 }
+#endif

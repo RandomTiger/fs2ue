@@ -6,13 +6,13 @@
 
 #include "../fs2_source/code/UnityBuild.h"
 #include "../fs2_source/code/UnityBuild.cpp"
-
+#if !defined(FS2_UE)
 #include "../fs2_source/code/UnityBuildD3D.h"
 #include "../fs2_source/code/UnityBuildD3D.cpp"
 
 #include "../fs2_source/code/UnityBuildD3D9.h"
 #include "../fs2_source/code/UnityBuildD3D9.cpp"
-
+#endif
 IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, fs2ue, "fs2ue" );
 
 Test test;

@@ -759,9 +759,6 @@ void brief_init_map()
 	Num_fade_icons=0;
 }
 
-
-#pragma optimize("", off)
-
 // render fade-out anim frame
 static int Fade_frame_count[128];			// for debug
 
@@ -1072,8 +1069,6 @@ void brief_render_icon(int stage_num, int icon_num, float frametime, int selecte
 
 	}  // end if vertex is projected
 }
-
-#pragma optimize("", on)
 
 // -------------------------------------------------------------------------------------
 // brief_render_icons()

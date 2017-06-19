@@ -26,9 +26,6 @@
 #include "Asteroid.h"
 #endif
 
-//#pragma optimize("", off)
-//#pragma auto_inline(off)
-
 #define COLLISION_FRICTION_FACTOR	0.0
 const int COLLISION_ROTATION_FACTOR	= 0.2;
 #define SEP_VEL	5.0f		// separation velocity between two ships that collide on same team.

@@ -1,5 +1,7 @@
 #pragma once
 
+#if !defined(FS2_UE)
+
 struct ISpVoice;
 
 class TextToSpeech
@@ -27,3 +29,4 @@ private:
 };
 
 extern TextToSpeech g_TextToSpeech; 
+#endif

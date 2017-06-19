@@ -1009,6 +1009,7 @@ int Di_joy_guid_valid = 0;
 
 BOOL CALLBACK joy_di_enum(LPCDIDEVICEINSTANCE lpddi, LPVOID pvRef)
 {
+#if !defined(FS2_UE) 
 	char buf[64];   
 
 	nprintf(("Joystick", "Joystick detected: %s (%s)\n", lpddi->tszInstanceName, lpddi->tszProductName));
@@ -1018,7 +1019,7 @@ BOOL CALLBACK joy_di_enum(LPCDIDEVICEINSTANCE lpddi, LPVOID pvRef)
 		Di_joy_guid_valid = 1;
 		nprintf(("Joystick", "   (Selected joystick)\n"));
 	}
-
+#endif
 	return DIENUM_CONTINUE;
 }
 /*

@@ -42,9 +42,6 @@
 #include "MissionParse.h"
 #endif
 
-#pragma optimize("", off)
-#pragma auto_inline(off)
-
 #define SCAN_FIGHTERS_INTERVAL	2000		// how often an AI fighter/bomber should scan for enemy fighter/bombers
 														// if sitting still and pounding on a big ship.  If enemy fighters are
 														// close ( < ENTER_STRAFE_THREAT_DIST ), then enter AIM_STRAFE
