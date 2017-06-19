@@ -7,8 +7,6 @@
  *
 */ 
 
-#if !defined(FS2_UE)
-
 // Nothing in this module should be externalized!!!
 //XSTR:OFF
 
@@ -22,13 +20,13 @@
 #include <vector>
 #endif
 
-//Uncomment SHOW_CALL_STACK to show the call stack in Asserts, Warnings, and Errors
-#define SHOW_CALL_STACK
-
-#ifdef SHOW_CALL_STACK
-
 std::vector<char *> gStrdupLeakList;
 bool gbStrdupDupFreeTestEnbaled = false;
+
+//Uncomment SHOW_CALL_STACK to show the call stack in Asserts, Warnings, and Errors
+//#define SHOW_CALL_STACK
+
+#ifdef SHOW_CALL_STACK
 
 class DumpBuffer
   {
@@ -761,7 +759,7 @@ void _cdecl WinAssert(char * text, char * filename, int linenum )
 
 		val = MessageBoxA(NULL, dumpBuffer.buffer, "Assertion Failed!", MB_OKCANCEL|flags );
 	#else
-		val = MessageBox(NULL, AssertText1, "Assertion Failed!", MB_OKCANCEL|flags );
+		val = MessageBoxA(NULL, AssertText1, "Assertion Failed!", MB_OKCANCEL|flags );
 	#endif
 
 	if (val == IDCANCEL)
@@ -801,7 +799,7 @@ void _cdecl Error( char * filename, int line, char * format, ... )
 		val = MessageBoxA(NULL, dumpBuffer.buffer, "Error!", flags|MB_OKCANCEL );
 	#else
 		strcat(AssertText2,"\r\n\r\nUse Ok to break into Debugger, Cancel exits.\r\n");
-		val = MessageBox(NULL, AssertText2, "Error!", flags|MB_OKCANCEL );
+		val = MessageBoxA(NULL, AssertText2, "Error!", flags|MB_OKCANCEL );
 	#endif
 
 	if (val == IDCANCEL ) {
@@ -1163,7 +1161,3 @@ void vm_free_all()
 {
 }
 
-
-
-
-#endif

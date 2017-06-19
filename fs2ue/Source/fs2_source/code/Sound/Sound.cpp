@@ -74,6 +74,7 @@ int ds_priority(int priority)
 
 void snd_clear()
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	int i;
 
 	// flag all Sounds[] as free
@@ -86,6 +87,7 @@ void snd_clear()
 	// reset how much storage sounds are taking up in memory
 	Snd_sram = 0;
 	Snd_hram = 0;
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -99,6 +101,7 @@ void snd_clear()
 //
 int snd_init(int use_a3d, int use_eax)
 {
+#if !defined(FS2_UE)
 	int rval;
 
 	if ( Cmdline_freespace_no_sound )
@@ -147,17 +150,21 @@ int snd_init(int use_a3d, int use_eax)
 	audiostream_init();
 			
 	ds_initialized = 1;
+#endif
 	return 1;
 
-Failure:
+#if !defined(FS2_UE)
+	Failure:
 //	Warning(LOCATION, "Sound system was unable to be initialized.  If you continue, sound will be disabled.\n");
 	nprintf(( "Sound", "SOUND => Direct Sound init unsuccessful, continuing without sound.\n" ));
 	return 0;
+#endif
 }
 
 
 void snd_spew_info()
 {
+#if !defined(PREPROC_ENABLED_SOUND)
 	int idx;
 	char txt[512] = "";
 	CFILE *out = cfopen("sounds.txt", "wt", CFILE_NORMAL, CF_TYPE_DATA);
@@ -182,8 +189,10 @@ void snd_spew_info()
 		cfclose(out);
 		out = NULL;
 	}
+#endif
 }
 
+#if defined(PREPROC_ENABLED_SOUND)
 int Sound_spew = 0;
 DCF(show_sounds, "")
 {
@@ -194,8 +203,10 @@ DCF(show_sounds, "")
 		dc_printf("Sound debug info OFF");
 	}
 }
+#endif
 void snd_spew_debug_info()
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	int game_sounds = 0;
 	int message_sounds = 0;
 	int interface_sounds = 0;
@@ -242,6 +253,7 @@ void snd_spew_debug_info()
 	gr_printf(30, 110, "Interface sounds : %d\n", interface_sounds);
 	gr_printf(30, 120, "Message sounds : %d\n", message_sounds);
 	gr_printf(30, 130, "Total sounds : %d\n", game_sounds + interface_sounds + message_sounds);
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -381,11 +393,13 @@ int snd_unload( int n )
 //
 void snd_unload_all()
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	int i;
 	for (i=0; i<MAX_SOUNDS; i++ )	{
 		if ( Sounds[i].flags & SND_F_USED )
 			snd_unload(i);
 	}
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -395,6 +409,7 @@ void snd_unload_all()
 //
 void snd_close(void)
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	snd_stop_all();
 	if (!ds_initialized) return;
 	snd_unload_all();		// free the sound data stored in DirectSound secondary buffers
@@ -402,6 +417,7 @@ void snd_close(void)
 	ds3d_close();	// Close DirectSound3D
 	dscap_close();	// Close DirectSoundCapture
 	ds_close();		// Close DirectSound off
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -415,6 +431,7 @@ void snd_close(void)
 //
 int snd_play_raw( int soundnum, float pan, float vol_scale, int priority )
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	game_snd gs;
 	int		rval;
 
@@ -427,10 +444,14 @@ int snd_play_raw( int soundnum, float pan, float vol_scale, int priority )
 
 	rval = snd_play(&gs, 0.0f, vol_scale, priority, true);
 	return rval;
+#endif
+	return 0;
 }
 
+#if defined(PREPROC_ENABLED_SOUND)
 MONITOR( NumSoundsStarted );
 MONITOR( NumSoundsLoaded );
+#endif
 
 // ---------------------------------------------------------------------------------------
 //	snd_play()
@@ -451,6 +472,7 @@ MONITOR( NumSoundsLoaded );
 //
 int snd_play( game_snd *gs, float pan, float vol_scale, int priority, bool is_voice_msg )
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	float volume;
 	sound	*snd;
 
@@ -495,10 +517,15 @@ int snd_play( game_snd *gs, float pan, float vol_scale, int priority, bool is_vo
 	}
 
 	return handle;
+#else
+	return -1;
+#endif
 }
 
+#if defined(PREPROC_ENABLED_SOUND)
 MONITOR( Num3DSoundsStarted );
 MONITOR( Num3DSoundsLoaded );
+#endif
 
 // ---------------------------------------------------------------------------------------
 // snd_play_3d()
@@ -525,6 +552,7 @@ MONITOR( Num3DSoundsLoaded );
 //
 int snd_play_3d(game_snd *gs, vector *source_pos, vector *listen_pos, float radius, vector *source_vel, int looping, float vol_scale, int priority, vector *sound_fvec, float range_factor, int force )
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	int		handle, min_range, max_range;
 	vector	vector_to_sound;
 	sound		*snd;
@@ -618,11 +646,15 @@ int snd_play_3d(game_snd *gs, vector *source_pos, vector *listen_pos, float radi
 	}
 
 	return handle;
+#else
+	return -1;
+#endif
 }
 
 // update the given 3d sound with a new position
 void snd_update_3d_pos(int soundnum, game_snd *gs, vector *new_pos)
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	float vol, pan;
 	
 	// get new volume and pan vals
@@ -633,6 +665,7 @@ void snd_update_3d_pos(int soundnum, game_snd *gs, vector *new_pos)
 
 	// set pan
 	snd_set_pan(soundnum, pan);
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -656,6 +689,7 @@ void snd_update_3d_pos(int soundnum, game_snd *gs, vector *new_pos)
 //
 int snd_get_3d_vol_and_pan(game_snd *gs, vector *pos, float* vol, float *pan, float radius)
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	vector	vector_to_sound;
 	float		distance, max_volume;
 	sound		*snd;
@@ -696,7 +730,7 @@ int snd_get_3d_vol_and_pan(game_snd *gs, vector *pos, float* vol, float *pan, fl
 		else
 			*pan = vm_vec_dot(&View_matrix.rvec,&vector_to_sound);
 	}
-
+#endif
 	return 0;
 }
 
@@ -723,6 +757,7 @@ int snd_get_3d_vol_and_pan(game_snd *gs, vector *pos, float* vol, float *pan, fl
 //
 int snd_play_looping( game_snd *gs, float pan, int start_loop, int stop_loop, float vol_scale, int priority, int force )
 {	
+#if defined(PREPROC_ENABLED_SOUND)
 	float volume;
 	int	handle = -1;
 	sound	*snd;	
@@ -760,6 +795,9 @@ int snd_play_looping( game_snd *gs, float pan, int start_loop, int stop_loop, fl
 	}
 
 	return handle;
+#else
+	return -1;
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -771,6 +809,7 @@ int snd_play_looping( game_snd *gs, float pan, int start_loop, int stop_loop, fl
 //
 void snd_stop( int sig )
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	int channel;
 
 	if (!ds_initialized) return;
@@ -781,6 +820,7 @@ void snd_stop( int sig )
 		return;
 	
 	ds_stop_channel(channel);
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -793,6 +833,7 @@ void snd_stop( int sig )
 //
 void snd_set_volume( int sig, float volume )
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	int	channel;
 	float	new_volume;
 
@@ -810,6 +851,7 @@ void snd_set_volume( int sig, float volume )
 
 	new_volume = volume * Master_sound_volume;
 	ds_set_volume( channel, ds_convert_volume(new_volume) );
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -822,6 +864,8 @@ void snd_set_volume( int sig, float volume )
 //
 void snd_set_pan( int sig, float pan )
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	int channel;
 
 	if (!ds_initialized)
@@ -837,6 +881,7 @@ void snd_set_pan( int sig, float pan )
 	}
 
 	ds_set_pan( channel, fl2i(pan*MAX_PAN) );
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -850,6 +895,8 @@ void snd_set_pan( int sig, float pan )
 //
 int snd_get_pitch(int sig)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	int channel, pitch=10000;
 
 	if (!ds_initialized)
@@ -867,6 +914,9 @@ int snd_get_pitch(int sig)
 	pitch = ds_get_pitch(channel);
 
 	return pitch;
+#else
+	return -1;
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -879,6 +929,8 @@ int snd_get_pitch(int sig)
 //
 void snd_set_pitch( int sig, int pitch )
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	int channel;
 
 	if (!ds_initialized) return;
@@ -891,6 +943,7 @@ void snd_set_pitch( int sig, int pitch )
 	}
 
 	ds_set_pitch(channel, pitch);
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -905,6 +958,8 @@ void snd_set_pitch( int sig, int pitch )
 //
 int snd_is_playing( int sig )
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	int	channel, is_playing;
 
 	if (!ds_initialized)
@@ -921,7 +976,7 @@ int snd_is_playing( int sig )
 	if ( is_playing == TRUE ) {
 		return 1;
 	}
-
+#endif
 	return 0;
 }
 
@@ -936,6 +991,7 @@ int snd_is_playing( int sig )
 //
 void snd_chg_loop_status(int sig, int loop)
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	int channel;
 
 	if (!ds_initialized)
@@ -951,6 +1007,7 @@ void snd_chg_loop_status(int sig, int loop)
 	}
 
 	ds_chg_loop_status(channel, loop);
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -963,10 +1020,12 @@ void snd_chg_loop_status(int sig, int loop)
 //
 void snd_stop_all()
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	if (!ds_initialized)
 		return;
 
 	ds_stop_channel_all();
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -977,7 +1036,12 @@ void snd_stop_all()
 //
 uint sound_get_ds()
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	return (uint)pDirectSound;
+#else 
+	return 0;
+#endif
 }
 
 // ---------------------------------------------------------------------------------------
@@ -986,9 +1050,10 @@ uint sound_get_ds()
 // 
 int snd_is_inited()
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	if ( !ds_initialized )
 		return FALSE;
-
+#endif
 	return TRUE;
 }
 
@@ -1002,19 +1067,26 @@ int snd_get_duration(int snd_id)
 }
 
 
+#if defined(PREPROC_ENABLED_SOUND)
 MONITOR( SoundChannels );
+#endif
 
 // update the position of the listener for the specific 3D sound API we're 
 // using
 void snd_update_listener(vector *pos, vector *vel, matrix *orient)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	MONITOR_INC( SoundChannels, ds_get_number_channels() );
 	ds3d_update_listener(pos, vel, orient);
+#endif
 }
 
 // this could probably be optimized a bit
 void snd_rewind(int snd_handle, game_snd *gs, float seconds)
 {			
+#if defined(PREPROC_ENABLED_SOUND)
+
 	float current_time,desired_time;
 	float bps;
 	DWORD current_offset,desired_offset;
@@ -1037,11 +1109,14 @@ void snd_rewind(int snd_handle, game_snd *gs, float seconds)
 	desired_offset = (DWORD)(desired_time * bps);								// the target
 			
 	ds_set_position(ds_get_channel(snd_handle),desired_offset);
+#endif
 }
 
 // this could probably be optimized a bit
 void snd_ffwd(int snd_handle, game_snd *gs, float seconds)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	if(!snd_is_playing(snd_handle))
 		return;
 
@@ -1067,11 +1142,14 @@ void snd_ffwd(int snd_handle, game_snd *gs, float seconds)
 	desired_offset = (DWORD)(desired_time * bps);								// the target
 			
 	ds_set_position(ds_get_channel(snd_handle),desired_offset);
+#endif
 }
 
 // this could probably be optimized a bit
 void snd_set_pos(int snd_handle, game_snd *gs, float val,int as_pct)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	if(!snd_is_playing(snd_handle))
 		return;
 
@@ -1090,6 +1168,7 @@ void snd_set_pos(int snd_handle, game_snd *gs, float val,int as_pct)
 		bps = (float)snd->sample_rate * (float)snd->bits;							// data rate			
 		ds_set_position(ds_get_channel(snd_handle),(DWORD)(bps * val));
 	}
+#endif
 }
 
 // Return the number of sounds currently playing
@@ -1120,36 +1199,44 @@ void snd_stop_any_sound()
 //				!0	=>	fail
 int snd_get_data(int handle, char *data)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	Assert(handle >= 0 && handle < MAX_SOUNDS);
 	if ( ds_get_data(Sounds[handle].sid, data) ) {
 		return -1;
 	}
-
+#endif
 	return 0;
 }
 
 // return the size of the sound data associated with the sound handle
 int snd_size(int handle, int *size)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	Assert(handle >= 0 && handle < MAX_SOUNDS);
 	if ( ds_get_size(Sounds[handle].sid, size) ) {
 		return -1;
 	}
-
+#endif
 	return 0;
 }
 
 // retrieve the bits per sample and frequency for a given sound
 void snd_get_format(int handle, int *bits_per_sample, int *frequency)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	Assert(handle >= 0 && handle < MAX_SOUNDS);
 	*bits_per_sample = Sounds[handle].info.bits;
 	*frequency = Sounds[handle].info.sample_rate;
+#endif
 }
 
 // return the time for the sound to play in milliseconds
 int snd_time_remaining(int handle, int bits_per_sample, int frequency)
 {
+#if defined(PREPROC_ENABLED_SOUND)
 	int channel, is_playing, time_remaining = 0;
 
 	if (!ds_initialized)
@@ -1180,6 +1267,9 @@ int snd_time_remaining(int handle, int bits_per_sample, int frequency)
 
 //	mprintf(("time_remaining: %d\n", time_remaining));	
 	return time_remaining;
+#else
+	return 0;
+#endif
 }
 
 

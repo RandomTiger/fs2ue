@@ -31,7 +31,6 @@
 #include "GrD3D.h"
 #include "GrOpenGL.h"
 #include "GrDirectDraw.h"
-#include "DebugSys/DebugSys.h"
 
 screen gr_screen;
 
@@ -65,9 +64,6 @@ void gr_close()
 	gr_clean();
 	gr_font_close();
 	Gr_inited = 0;
-
-	
-	DebugSys::Deinit();
 }
 
 // set screen clear color
@@ -256,9 +252,6 @@ int gr_init(int res, int mode, int depth, int fred_x, int fred_y)
 
 	// Call some initialization functions
 	gr_set_shader(NULL);
-
-	DebugSys::Init(gr_screen.max_w, gr_screen.max_h);
-
 	return 0;
 }
 

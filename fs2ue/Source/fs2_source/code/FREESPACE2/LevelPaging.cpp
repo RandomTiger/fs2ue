@@ -6,6 +6,7 @@
  * source.
  *
 */
+#if !defined(FS2_UE)
 
 #include "UnityBuild.h"
 
@@ -13,6 +14,7 @@
 #include "Freespace.h"
 #include "bmpman/BmpMan.h"
 #include "LevelPaging.h"
+#endif
 #endif
 
 // All the page in functions

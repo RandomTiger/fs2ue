@@ -7,6 +7,7 @@
  *
 */
 
+#if defined(PREPROC_ENABLED_SOUND)
 
 // ??
 #define VC_EXTRALEAN
@@ -1360,9 +1361,11 @@ AudioStreamServices * m_pass = NULL;   // ptr to AudioStreamServices object
 
 #define MAX_AUDIO_STREAMS	30
 AudioStream Audio_streams[MAX_AUDIO_STREAMS];
-
+#endif
 void audiostream_init()
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	int i;
 
 	if ( Audiostream_inited == 1 )
@@ -1420,12 +1423,15 @@ void audiostream_init()
 	InitializeCriticalSection( &Global_service_lock );
 
 	Audiostream_inited = 1;
+#endif
 }
 
 // Close down the audiostream system.  Must call audiostream_init() before any audiostream functions can
 // be used.
 void audiostream_close()
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	int i;
 	if ( Audiostream_inited == 0 )
 		return;
@@ -1467,6 +1473,7 @@ void audiostream_close()
 	DeleteCriticalSection( &Global_service_lock );
 
 	Audiostream_inited = 0;
+#endif
 }
 
 // Open a digital sound file for streaming
@@ -1481,6 +1488,8 @@ void audiostream_close()
 //				failure => -1
 int audiostream_open( char * filename, int type )
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	int i, rc;
 	if (!Audiostream_inited || !snd_is_inited())
 		return -1;
@@ -1518,11 +1527,17 @@ int audiostream_open( char * filename, int type )
 	}
 	else
 		return i;
+#else
+	return -1;
+#endif
+
 }
 
 
 void audiostream_close_file(int i, int fade)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	if (!Audiostream_inited)
 		return;
 
@@ -1539,10 +1554,13 @@ void audiostream_close_file(int i, int fade)
 			Audio_streams[i].Destroy();
 		}
 	}
+#endif
 }
 
 void audiostream_close_all(int fade)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	int i;
 
 	for ( i = 0; i < MAX_AUDIO_STREAMS; i++ ) {
@@ -1551,12 +1569,15 @@ void audiostream_close_all(int fade)
 
 		audiostream_close_file(i, fade);
 	}
+#endif
 }
 
 extern int ds_convert_volume(float volume);
 
 void audiostream_play(int i, float volume, int looping)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	if (!Audiostream_inited)
 		return;
 
@@ -1579,10 +1600,13 @@ void audiostream_play(int i, float volume, int looping)
 	Assert( Audio_streams[i].status == ASF_USED );
 	Audio_streams[i].Set_Default_Volume(converted_volume);
 	Audio_streams[i].Play(converted_volume, looping);
+#endif
 }
 
 void audiostream_stop(int i, int rewind, int paused)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	if (!Audiostream_inited) return;
 
 	if ( i == -1 )
@@ -1595,10 +1619,13 @@ void audiostream_stop(int i, int rewind, int paused)
 		Audio_streams[i].Stop_and_Rewind();
 	else
 		Audio_streams[i].Stop(paused);
+#endif
 }
 
 int audiostream_is_playing(int i)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	if ( i == -1 )
 		return 0;
 
@@ -1607,11 +1634,16 @@ int audiostream_is_playing(int i)
 		return 0;
 
 	return Audio_streams[i].Is_Playing();
+#else
+	return false;
+#endif
 }
 
 
 void audiostream_set_volume_all(float volume, int type)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	int i;
 
 	for ( i = 0; i < MAX_AUDIO_STREAMS; i++ ) {
@@ -1624,11 +1656,14 @@ void audiostream_set_volume_all(float volume, int type)
 			Audio_streams[i].Set_Volume(converted_volume);
 		}
 	}
+#endif
 }
 
 
 void audiostream_set_volume(int i, float volume)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	if ( i == -1 )
 		return;
 
@@ -1641,11 +1676,14 @@ void audiostream_set_volume(int i, float volume)
 	int converted_volume;
 	converted_volume = ds_convert_volume(volume);
 	Audio_streams[i].Set_Volume(converted_volume);
+#endif
 }
 
 
 int audiostream_is_paused(int i)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	if ( i == -1 )
 		return 0;
 
@@ -1656,11 +1694,16 @@ int audiostream_is_paused(int i)
 	BOOL is_paused;
 	is_paused = Audio_streams[i].Is_Paused();
 	return is_paused;
+#else
+	return 0;
+#endif
 }
 
 
 void audiostream_set_byte_cutoff(int i, unsigned int cutoff)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	if ( i == -1 )
 		return;
 
@@ -1671,11 +1714,14 @@ void audiostream_set_byte_cutoff(int i, unsigned int cutoff)
 		return;
 
 	Audio_streams[i].Set_Byte_Cutoff(cutoff);
+#endif
 }
 
 
 unsigned int audiostream_get_bytes_committed(int i)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	if ( i == -1 )
 		return 0;
 
@@ -1687,10 +1733,15 @@ unsigned int audiostream_get_bytes_committed(int i)
 	unsigned int num_bytes_committed;
 	num_bytes_committed = Audio_streams[i].Get_Bytes_Committed();
 	return num_bytes_committed;
+#else
+	return 0;
+#endif
 }
 
 int audiostream_done_reading(int i)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	if ( i == -1 )
 		return 0;
 
@@ -1702,17 +1753,27 @@ int audiostream_done_reading(int i)
 	int done_reading;
 	done_reading = Audio_streams[i].Is_Past_Limit();
 	return done_reading;
+#else
+	return 0;
+#endif
 }
 
 
 int audiostream_is_inited()
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	return Audiostream_inited;
+#else
+	return true;
+#endif
 }
 
 // pause a single audio stream, indentified by handle i.
 void audiostream_pause(int i)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	if ( i == -1 )
 		return;
 
@@ -1723,11 +1784,14 @@ void audiostream_pause(int i)
 	if ( audiostream_is_playing(i) == TRUE ) {
 		audiostream_stop(i, 0, 1);
 	}
+#endif
 }
 
 // pause all audio streams that are currently playing.
 void audiostream_pause_all()
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	int i;
 
 	for ( i = 0; i < MAX_AUDIO_STREAMS; i++ ) {
@@ -1736,11 +1800,14 @@ void audiostream_pause_all()
 
 		audiostream_pause(i);
 	}
+#endif
 }
 
 // unpause the audio stream identified by handle i.
 void audiostream_unpause(int i)
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	int is_looping;
 
 	if ( i == -1 )
@@ -1754,11 +1821,14 @@ void audiostream_unpause(int i)
 		is_looping = Audio_streams[i].Is_looping();
 		audiostream_play(i, -1.0f, is_looping);
 	}
+#endif
 }
 
 // unpause all audio streams that are currently paused
 void audiostream_unpause_all()
 {
+#if defined(PREPROC_ENABLED_SOUND)
+
 	int i;
 
 	for ( i = 0; i < MAX_AUDIO_STREAMS; i++ ) {
@@ -1767,4 +1837,5 @@ void audiostream_unpause_all()
 
 		audiostream_unpause(i);
 	}
+#endif
 }

@@ -7,6 +7,8 @@
  *
 */
 
+#if !defined(FS2_UE)
+
 // Backwards compatibility for non unity build
 #ifdef UNITY_BUILD
 #include "UnityBuild.h"
@@ -19,10 +21,13 @@
 #undef UNITY_BUILD
 #endif
 
+#endif
+
 #include "Horde.h"
 #include "LevelPaging.h"
 #include "FreespaceResource.h"
 #include "Freespace.h"
+#include "../Threading/Thread.h"
 
 #ifdef NDEBUG
 #ifdef FRED
@@ -815,8 +820,6 @@ void game_assign_sound_environment()
 	Game_sound_env_update_timestamp = timestamp(1);
 }
 
-#include "Threading/Thread.h"
-
 class LoadGame : public Thread
 {
 public:
@@ -1118,7 +1121,7 @@ void game_init()
 	// int s2, e2;
 
 	char whee[1024];
-	GetCurrentDirectory(1024, whee);
+	GetCurrentDirectoryA(1024, whee);
 	strcat(whee, "\\");
 	strcat(whee, EXE_FNAME);
 
@@ -1147,8 +1150,12 @@ void game_init()
 	if (Is_standalone) {
 		std_init_standalone();
 	} else {		
+#if defined(FS2_UE)
+		os_init("", "");
+#else
 		os_init( Osreg_class_name, Osreg_app_name );
 		os_set_title(Osreg_title);
+#endif
 	}
 
 	// initialize localization module. Make sure this is down AFTER initialzing OS.
@@ -1193,7 +1200,9 @@ void game_init()
 		snd_init(use_a3d, use_eax);
 	}
 
+#if !defined(FS2_UE)
 	g_TextToSpeech.Init();
+#endif
 	if(Cmdline_voicer == 1)
 	{
 		//const bool voiceRectOn = 
@@ -1251,7 +1260,7 @@ void game_init()
 		has_sparky_hi = 1;
 	} else {
 		char dir[MAX_PATH];
-		GetCurrentDirectory(MAX_PATH,dir);
+		GetCurrentDirectoryA(MAX_PATH,dir);
 		mprintf(("No sparky_hi_fs2.vp in directory %s\n", dir));
 	}
 
@@ -1273,7 +1282,7 @@ void game_init()
 	extern int Gr_inited;
 	if(!Gr_inited){
 		extern char Device_init_error[512];		
-		MessageBox( NULL, Device_init_error, "Error intializing Direct3D", MB_OK|MB_TASKMODAL|MB_SETFOREGROUND );
+		MessageBoxA( NULL, Device_init_error, "Error intializing Direct3D", MB_OK|MB_TASKMODAL|MB_SETFOREGROUND );
 		exit(1);
 		return;
 	}
@@ -2670,7 +2679,7 @@ void game_flip_page_and_time_it()
 	t2 = timer_get_fixed_seconds();
 	d = t2 - t1;
 	t = (gr_screen.max_w*gr_screen.max_h*gr_screen.bytes_per_pixel)/1024;
-	sprintf( transfer_text, NOX("%d MB/s"), fixmuldiv(t,65,d) );
+	sprintf( transfer_text, NOX("%d MB/s"), (int) fixmuldiv(t,65,d) );
 }
 
 void game_simulation_frame()
@@ -5408,14 +5417,14 @@ int game_do_ram_check(unsigned long ram_in_bytes)
 			sprintf( tmp, XSTR( "FreeSpace has detected that you only have %dMB of free memory.\n\nFreeSpace requires at least 32MB of memory to run.  If you think you have more than %dMB of physical memory, ensure that you aren't running SmartDrive (SMARTDRV.EXE).  Any memory allocated to SmartDrive is not usable by applications\n\nPress 'OK' to continue running with less than the minimum required memory\n", 193), Freespace_total_ram_MB, Freespace_total_ram_MB);
 
 			int msgbox_rval;
-			msgbox_rval = MessageBox( NULL, tmp, XSTR( "Not Enough RAM", 194), MB_OKCANCEL );
+			msgbox_rval = MessageBoxA( NULL, tmp, XSTR( "Not Enough RAM", 194), MB_OKCANCEL );
 			if ( msgbox_rval == IDCANCEL ) {
 				return -1;
 			}
 
 		} else {
 			sprintf( tmp, XSTR( "FreeSpace has detected that you only have %dMB of free memory.\n\nFreeSpace requires at least 32MB of memory to run.  If you think you have more than %dMB of physical memory, ensure that you aren't running SmartDrive (SMARTDRV.EXE).  Any memory allocated to SmartDrive is not usable by applications\n", 195), Freespace_total_ram_MB, Freespace_total_ram_MB);
-			MessageBox( NULL, tmp, XSTR( "Not Enough RAM", 194), MB_OK );
+			MessageBoxA( NULL, tmp, XSTR( "Not Enough RAM", 194), MB_OK );
 			return -1;
 		}
 	}
@@ -5444,22 +5453,22 @@ void game_maybe_update_launcher(char *exe_dir)
 	}
 	fclose(fp);
 
-	SetFileAttributes(dest_filename, FILE_ATTRIBUTE_NORMAL);
+	SetFileAttributesA(dest_filename, FILE_ATTRIBUTE_NORMAL);
 
 	// copy updated freespace.exe to freespace exe dir
-	if ( CopyFile(src_filename, dest_filename, 0) == 0 ) {
-		MessageBox( NULL, XSTR("Unable to copy freespace.exe from update directory to installed directory.  You should copy freespace.exe from the update directory (located in your FreeSpace install directory) to your install directory", 988), NULL, MB_OK|MB_TASKMODAL|MB_SETFOREGROUND );
+	if ( CopyFileA(src_filename, dest_filename, 0) == 0 ) {
+		MessageBoxA( NULL, XSTR("Unable to copy freespace.exe from update directory to installed directory.  You should copy freespace.exe from the update directory (located in your FreeSpace install directory) to your install directory", 988), NULL, MB_OK|MB_TASKMODAL|MB_SETFOREGROUND );
 		return;
 	}
 
 	// delete the file in the update directory
-	DeleteFile(src_filename);
+	DeleteFileA(src_filename);
 
 	// safe to assume directory is empty, since freespace.exe should only be the file ever in the update dir
 	char update_dir[MAX_PATH];
 	strcpy(update_dir, exe_dir);
 	strcat(update_dir, NOX("\\update"));
-	RemoveDirectory(update_dir);
+	RemoveDirectoryA(update_dir);
 }
 
 void game_spew_pof_info_sub(int model_num, polymodel *pm, int sm, CFILE *out, int *out_total, int *out_destroyed_total)
@@ -5588,7 +5597,7 @@ int PASCAL WinMainSub(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCm
 	int state;		
 
 	// Don't let more than one instance of Freespace run.
-	HWND hwnd = FindWindow( NOX( "FreeSpaceClass" ), NULL );
+	HWND hwnd = FindWindowA( NOX( "FreeSpaceClass" ), NULL );
 	if ( hwnd )	{
 		SetForegroundWindow(hwnd);
 		return 0;
@@ -5605,18 +5614,18 @@ int PASCAL WinMainSub(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCm
 	}
 
 	if ( ms.dwTotalVirtual < 1024 )	{
-		MessageBox( NULL, XSTR( "FreeSpace requires virtual memory to run.\r\n", 196), XSTR( "No Virtual Memory", 197), MB_OK );
+		MessageBoxA( NULL, XSTR( "FreeSpace requires virtual memory to run.\r\n", 196), XSTR( "No Virtual Memory", 197), MB_OK );
 		return 0;
 	}
 
 	if (!vm_init(24*1024*1024)) {
-		MessageBox( NULL, XSTR( "Not enough memory to run Freespace.\r\nTry closing down some other applications.\r\n", 198), XSTR( "Not Enough Memory", 199), MB_OK );
+		MessageBoxA( NULL, XSTR( "Not enough memory to run Freespace.\r\nTry closing down some other applications.\r\n", 198), XSTR( "Not Enough Memory", 199), MB_OK );
 		return 0;
 	}
 		
 	char *tmp_mem = (char *) malloc(16 * 1024 * 1024);
 	if (!tmp_mem) {
-		MessageBox(NULL, XSTR( "Not enough memory to run Freespace.\r\nTry closing down some other applications.\r\n", 198), XSTR( "Not Enough Memory", 199), MB_OK);
+		MessageBoxA(NULL, XSTR( "Not enough memory to run Freespace.\r\nTry closing down some other applications.\r\n", 198), XSTR( "Not Enough Memory", 199), MB_OK);
 		return 0;
 	}
 
@@ -5691,7 +5700,7 @@ int PASCAL WinMainSub(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCm
 	// Make sure we're running in the right directory.
 	char exe_dir[1024];
 
-	if ( GetModuleFileName( hInst, exe_dir, 1023 ) > 0 )	{
+	if ( GetModuleFileNameA( hInst, exe_dir, 1023 ) > 0 )	{
 		char *p = exe_dir + strlen(exe_dir);
 
 		// chop off the filename
@@ -5702,7 +5711,7 @@ int PASCAL WinMainSub(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCm
 
 		// Set directory
 		if ( strlen(exe_dir) > 0 )	{
-			SetCurrentDirectory(exe_dir);
+			SetCurrentDirectoryA(exe_dir);
 		}
 
 		// check for updated freespace.exe
@@ -5815,6 +5824,7 @@ int PASCAL WinMainSub(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCm
 	return 1;
 }
 
+#if !defined(FS2_UE)
 int PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCmdShow)
 {
 	int result = -1;
@@ -5833,20 +5843,21 @@ int PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCmdSh
 	}
 	return !result;
 }
+#endif
 
 // launcher the fslauncher program on exit
 void game_launch_launcher_on_exit()
 {
-	STARTUPINFO si;
+	STARTUPINFOA si;
 	PROCESS_INFORMATION pi;
 	char cmd_line[2048];
 	char original_path[MAX_PATH] = "";
 	
-	memset( &si, 0, sizeof(STARTUPINFO) );
+	memset( &si, 0, sizeof(STARTUPINFOA) );
 	si.cb = sizeof(si);
 
 	// directory
-	GetCurrentDirectory(MAX_PATH, original_path);
+	GetCurrentDirectoryA(MAX_PATH, original_path);
 	//_getcwd(original_path, 1023);
 
 	// set up command line
@@ -5855,7 +5866,7 @@ void game_launch_launcher_on_exit()
 	strcat(cmd_line, LAUNCHER_FNAME);
 	strcat(cmd_line, " -straight_to_update");		
 
-	BOOL ret = CreateProcess(	NULL,									// pointer to name of executable module 
+	BOOL ret = CreateProcessA(	NULL,									// pointer to name of executable module 
 										cmd_line,							// pointer to command line string
 										NULL,									// pointer to process security attributes 
 										NULL,									// pointer to thread security attributes 
@@ -5880,7 +5891,9 @@ void game_shutdown(void)
 	timeEndPeriod(1);
 
 	g_VoiceRecognition.Deinit();
+#if !defined(FS2_UE)
 	g_TextToSpeech.Deinit();
+#endif
 
 	// don't ever flip a page on the standalone!
 	if(!(Game_mode & GM_STANDALONE_SERVER)){
@@ -6968,13 +6981,13 @@ uint game_get_cd_used_space(char *path)
 	uint total = 0;
 	char use_path[512] = "";
 	char sub_path[512] = "";
-	WIN32_FIND_DATA	find;
+	WIN32_FIND_DATAA	find;
 	HANDLE find_handle;
 
 	// recurse through all files and directories
 	strcpy(use_path, path);
 	strcat(use_path, "*.*");
-	find_handle = FindFirstFile(use_path, &find);
+	find_handle = FindFirstFileA(use_path, &find);
 
 	// bogus
 	if(find_handle == INVALID_HANDLE_VALUE){
@@ -6993,7 +7006,7 @@ uint game_get_cd_used_space(char *path)
 		} else {
 			total += (uint)find.nFileSizeLow;
 		}				
-	} while(FindNextFile(find_handle, &find));	
+	} while(FindNextFileA(find_handle, &find));	
 
 	// close
 	FindClose(find_handle);
@@ -7014,7 +7027,7 @@ int find_freespace_cd(char *volume_name)
 	_finddata_t find;
 	intptr_t find_handle;
 
-	GetCurrentDirectory(MAX_PATH, oldpath);
+	GetCurrentDirectoryA(MAX_PATH, oldpath);
 
 	for (i = 0; i < 26; i++) 
 	{
@@ -7023,9 +7036,9 @@ int find_freespace_cd(char *volume_name)
 //XSTR:ON
 
 		path[0] = (char)('A'+i);
-		if (GetDriveType(path) == DRIVE_CDROM) {
+		if (GetDriveTypeA(path) == DRIVE_CDROM) {
 			cdrom_drive = -3;
-			if ( GetVolumeInformation(path, volume, 256, NULL, NULL, NULL, NULL, 0) == TRUE ) {
+			if ( GetVolumeInformationA(path, volume, 256, NULL, NULL, NULL, NULL, 0) == TRUE ) {
 				nprintf(("CD", "CD volume: %s\n", volume));
 			
 				// check for any CD volume
@@ -7088,7 +7101,7 @@ int find_freespace_cd(char *volume_name)
 					// we don't care about CD1 though. let it be whatever size it wants, since the game will demand CD's 2 and 3 at the proper time
 					if(volume2_present || volume3_present) {
 						// first step - check to make sure its a cdrom
-						if(GetDriveType(path) != DRIVE_CDROM){							
+						if(GetDriveTypeA(path) != DRIVE_CDROM){							
 							break;
 						}
 
@@ -7113,7 +7126,7 @@ int find_freespace_cd(char *volume_name)
 		}
 	}	
 
-	SetCurrentDirectory(oldpath);
+	SetCurrentDirectoryA(oldpath);
 	return cdrom_drive;
 }
 
@@ -7175,7 +7188,7 @@ int game_cd_changed()
 		init_cdrom();
 	}
 
-	found = GetVolumeInformation(Game_CDROM_dir, label, 256, NULL, NULL, NULL, NULL, 0);
+	found = GetVolumeInformationA(Game_CDROM_dir, label, 256, NULL, NULL, NULL, NULL, 0);
 
 	if ( found != Last_cd_label_found )	{
 		Last_cd_label_found = found;

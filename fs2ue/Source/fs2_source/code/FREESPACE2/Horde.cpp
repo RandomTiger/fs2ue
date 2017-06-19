@@ -1,3 +1,4 @@
+#if !defined(FS2_UE)
 // Backwards compatibility for non unity build
 #ifdef UNITY_BUILD
 #include "UnityBuild.h"
@@ -8,6 +9,7 @@
 #include "UnityBuild.h"
 // Disable Pretend
 #undef UNITY_BUILD
+#endif
 #endif
 
 bool BuyShip(const int index);

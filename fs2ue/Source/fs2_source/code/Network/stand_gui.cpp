@@ -7,7 +7,7 @@
  *
 */
 
-#if defined(PREPROC_ENABLED_NET)
+#if !defined(FS2_UE)
 
 #ifndef UNITY_BUILD
 #include <windows.h>
@@ -121,10 +121,12 @@ BOOL CALLBACK std_gen_dialog_proc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM
 	}
 	return FALSE;
 }
-
+#endif
 // create the validate dialog 
 void std_create_gen_dialog(char *title)
 {
+#if !defined(FS2_UE)
+
 	// if the dialog is already active, do nothing
 	if(Multi_gen_dialog != NULL){
 		return;
@@ -135,11 +137,14 @@ void std_create_gen_dialog(char *title)
 	if(Multi_gen_dialog != NULL){
 		SetWindowText(Multi_gen_dialog, title);		
 	}
+#endif
 }
 
 // kill the validate dialog();
 void std_destroy_gen_dialog()
 {
+#if !defined(FS2_UE)
+
 	// if the dialog is not active, do nothing
 	if(Multi_gen_dialog == NULL){
 		return;
@@ -148,12 +153,15 @@ void std_destroy_gen_dialog()
 	// kill it
 	DestroyWindow(Multi_gen_dialog);
 	Multi_gen_dialog = NULL;
+#endif
 }
 
 // set the text in the filename of the validate dialog
 // valid values for field_num == 0 .. 2
 void std_gen_set_text(char *str, int field_num)
 {
+#if !defined(FS2_UE)
+
 	HWND ctrl;
 
 	// if the dialog is not active
@@ -175,13 +183,20 @@ void std_gen_set_text(char *str, int field_num)
 		break;	
 	}
 	SetWindowText(ctrl, str);
+#endif
 }
 
 // is the validate dialog active
 int std_gen_is_active()
 {
+#if !defined(FS2_UE)
+
 	return Multi_gen_dialog != NULL;
+#else
+	return false;
+#endif
 }
+#if !defined(FS2_UE)
 
 // ----------------------------------------------------------------------------------------
 // connection page/tab functions

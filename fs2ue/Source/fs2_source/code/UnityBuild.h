@@ -13,6 +13,7 @@
 
 #if !defined(FS2_UE)
 #define PREPROC_ENABLED_NET
+#define PREPROC_ENABLED_SOUND
 #endif
 
 #include <windows.h>
@@ -37,7 +38,6 @@
 #include <msacm.h>
 
 #include "GlobalIncs/Pragma.h"
-#include "TomLib/src/Debug/Profiler.h"
 #include "TomLib/src/StateMachine/StateMachine.h"
 #include "TomLib/src/ComponentSystem/ComponentSystem.h"
 
@@ -91,7 +91,6 @@
 #include "CMeasure/CMeasure.h"
 #include "Cutscene/Cutscenes.h"
 #include "Debris/Debris.h"
-#include "DebugSys/DebugSys.h"
 #include "Demo/Demo.h"
 #include "DirectX/vasync.h"
 #include "DirectX/vDinput.h"

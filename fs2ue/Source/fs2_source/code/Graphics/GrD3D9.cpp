@@ -20,9 +20,6 @@
 #include "Graphics/GrD3D9Line.h"
 
 #include "Io/MouseController.h"
-#include "DebugSys/DebugSys.h"
-#include "TomLib/src/Debug/Profiler.h"
-
 #include "AntTweakBar.h"
 #endif
 
@@ -285,19 +282,7 @@ void gr_d3d9_flip()
 		}		
 	} 	
 
-	DebugSys::GetProfiler()->EndBlock();
-	DebugSys::GetProfiler()->EndFrame();
-	DebugSys::Render();
-	DebugSys::GetProfiler()->StartFrame();
-
-
-	DebugSys::GetProfiler()->StartBlock(0xff0000ff);
-
 	gr_stop_frame();
-
-	DebugSys::GetProfiler()->EndBlock();
-	DebugSys::GetProfiler()->StartBlock(0xffff0000);
-
 	d3d9_tcache_frame();
 
 	int cnt = D3D9_activate;
