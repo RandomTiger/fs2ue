@@ -38,22 +38,22 @@ static int				ACM_inited = 0;
 
 int CALLBACK ACM_enum_callback(HACMDRIVERID hadid, DWORD_PTR dwInstance, DWORD fdwSupport)
 {
-    static TCHAR    szBogus[]       = TEXT("????");
+    static CHAR    szBogus[]       = "????";
 
     MMRESULT            mmr;
     HWND                hlb;
-    ACMDRIVERDETAILS    add;
+    ACMDRIVERDETAILSA    add;
     BOOL                fDisabled;
     DWORD               dwPriority;
 
     hlb = (HWND)(UINT)dwInstance;
 
     add.cbStruct = sizeof(add);
-    mmr = acmDriverDetails(hadid, &add, 0L);
+    mmr = acmDriverDetailsA(hadid, &add, 0L);
     if (MMSYSERR_NOERROR != mmr)
     {
-        lstrcpy(add.szShortName, szBogus);
-        lstrcpy(add.szLongName,  szBogus);
+        lstrcpyA(add.szShortName, szBogus);
+        lstrcpyA(add.szLongName,  szBogus);
     }
 
     dwPriority = (DWORD)-1L;
@@ -280,7 +280,7 @@ int ACM_init()
 	if ( ACM_inited == 1 )
 		return 0;
 
-	ghinstAcm = LoadLibrary(NOX("msacm32.dll"));
+	ghinstAcm = LoadLibraryA(NOX("msacm32.dll"));
 	if (ghinstAcm == NULL) {
 		return -1;
 	}

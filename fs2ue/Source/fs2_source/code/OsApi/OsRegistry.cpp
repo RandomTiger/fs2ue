@@ -128,12 +128,14 @@ Cleanup:
 	if ( hKey )
 		RegCloseKey(hKey);
 }
-
+#endif
 // Writes a string to the INI file.  If value is NULL,
 // removes the string. Writing a NULL value to a NULL name will delete
 // the section.
 void os_config_write_string( char *section, char *name, char *value )
 {
+#if !defined(FS2_UE)
+
 	HKEY hKey = NULL;
 	DWORD dwDisposition;
 	char keyname[1024];
@@ -182,11 +184,14 @@ void os_config_write_string( char *section, char *name, char *value )
 Cleanup:
 	if ( hKey )
 		RegCloseKey(hKey);
+#endif
 }
 
 // same as previous function except we don't use the application name to build up the keyname
 void os_config_write_string2( char *section, char *name, char *value )
 {
+#if !defined(FS2_UE)
+
 	HKEY hKey = NULL;
 	DWORD dwDisposition;
 	char keyname[1024];
@@ -235,11 +240,14 @@ void os_config_write_string2( char *section, char *name, char *value )
 Cleanup:
 	if ( hKey )
 		RegCloseKey(hKey);
+#endif
 }
 
 // Writes an unsigned int to the INI file.  
 void os_config_write_uint( char *section, char *name, uint value )
 {
+#if !defined(FS2_UE)
+
 	HKEY hKey = NULL;
 	DWORD dwDisposition;
 	char keyname[1024];
@@ -287,9 +295,10 @@ void os_config_write_uint( char *section, char *name, uint value )
 Cleanup:
 	if ( hKey )
 		RegCloseKey(hKey);
-
+#endif
 }
 
+#if !defined(FS2_UE)
 
 // Reads a string from the INI file.  If default is passed,
 // and the string isn't found, returns ptr to default otherwise

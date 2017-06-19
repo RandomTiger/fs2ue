@@ -673,7 +673,7 @@ void ds_dll_get_functions()
 int ds_dll_load()
 {
 	if ( !Ds_dll_loaded ) {
-		Ds_dll_handle = LoadLibrary("dsound.dll");
+		Ds_dll_handle = LoadLibraryA("dsound.dll");
 		if ( !Ds_dll_handle ) {
 			return -1;
 		}

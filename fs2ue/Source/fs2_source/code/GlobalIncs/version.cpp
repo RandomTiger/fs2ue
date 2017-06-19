@@ -35,7 +35,9 @@
 // fills in user version and latest version values if non-NULL
 int version_compare(char *filename, int *u_major, int *u_minor, int *u_build, int *l_major, int *l_minor, int *l_build)
 {	
+#if !defined(FS2_UE)
 	int usr_major, usr_minor, usr_build;
+#endif
 	int latest_major, latest_minor, latest_build;
 
 	// open file and try backup, if needed
@@ -83,7 +85,7 @@ int version_compare(char *filename, int *u_major, int *u_minor, int *u_build, in
 		// MessageBox(XSTR("Couldn't parse Version file!", 1205), XSTR("Error!", 1185), MB_OK|MB_ICONERROR);
 		return -1;
 	}
-
+#if !defined(FS2_UE)
 	// retrieve the user's current version
 	usr_major = os_config_read_uint("Version", "Major", 0);
 	usr_minor = os_config_read_uint("Version", "Minor", 0);
@@ -119,7 +121,7 @@ int version_compare(char *filename, int *u_major, int *u_minor, int *u_build, in
 	if (VER(usr_major, usr_minor, usr_build) < VER(latest_major, latest_minor, latest_build)) {		
 		return 0;
 	}
-
+#endif
 	// same version
 	return 1;
 }

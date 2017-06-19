@@ -3,11 +3,11 @@
 #pragma message("UNITY BUILD: " __FILE__)
 
 #include "UnityBuildD3D.h"
-
+#if !defined(FS2_UE)
 #include "Graphics/GrD3D.cpp"
 #include "Graphics/GrD3DRender.cpp"
 #include "Graphics/GrD3DTexture.cpp"
-
+#endif
 #include "Sound/acm.cpp"
 #include "Sound/AudioStr.cpp"
 #include "Sound/ds.cpp"

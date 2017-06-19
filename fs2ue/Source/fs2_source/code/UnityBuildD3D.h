@@ -8,9 +8,10 @@
 #include "DirectX/vDsound.h"
 
 #include "UnityBuild.h"
-
+#if !defined(FS2_UE)
 #include "Graphics/GrD3D.h"
 #include "Graphics/GrD3DInternal.h"
+#endif
 
 #include "Sound/ds3d.h"
 #include "Sound/acm.h"
