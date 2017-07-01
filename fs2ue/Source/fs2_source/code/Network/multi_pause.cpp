@@ -290,13 +290,16 @@ int multi_pause_eat_keys()
 void multi_pause_init(UI_WINDOW *Ui_window)
 {
 	int i;	
+#if !defined(FS2_UE)
 
 	// standalone shouldn't be doing any freespace interface stuff
 	if (Game_mode & GM_STANDALONE_SERVER){
 		std_debug_set_standalone_state_string("Multi paused do");
 	} 
 	// everyone else should be doing UI stuff
-	else {
+	else 
+#endif
+	{
 		// switch off the text messaging system if it is active
 		multi_msg_text_flush();				
 
@@ -385,7 +388,9 @@ void multi_pause_close()
 {
 	// set the standalonest
 	if (Game_mode & GM_STANDALONE_SERVER) {
+#if !defined(FS2_UE)
 		std_debug_set_standalone_state_string("Game play");
+#endif
 	} else {
 		// free the screen up
 		gr_free_screen(Multi_paused_screen_id);

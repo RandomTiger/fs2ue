@@ -1148,7 +1148,9 @@ void game_init()
 	*/
 
 	if (Is_standalone) {
+#if !defined(FS2_UE)
 		std_init_standalone();
+#endif
 	} else {		
 #if defined(FS2_UE)
 		os_init("", "");
@@ -1281,8 +1283,12 @@ void game_init()
 	
 	extern int Gr_inited;
 	if(!Gr_inited){
+
+#if !defined(FS2_UE)
+
 		extern char Device_init_error[512];		
 		MessageBoxA( NULL, Device_init_error, "Error intializing Direct3D", MB_OK|MB_TASKMODAL|MB_SETFOREGROUND );
+#endif
 		exit(1);
 		return;
 	}
@@ -1638,7 +1644,9 @@ void game_show_standalone_framerate()
 	gr_set_color_fast(&Color_text_normal);
 	gr_printf( 50, 40, "FPS: %.1f", frame_rate );
 
+#if !defined(FS2_UE)
 	std_set_standalone_fps(frame_rate);
+#endif
 	Framecount++;
 }
 
@@ -3429,9 +3437,11 @@ void game_do_frame()
 	game_set_frametime(GS_STATE_GAME_PLAY);
 	game_update_missiontime();
 
+#if !defined(FS2_UE)
 	if (Game_mode & GM_STANDALONE_SERVER) {
 		std_multi_set_standalone_missiontime(f2fl(Missiontime));
 	}
+#endif
 
 	if ( game_single_step && (last_single_step == game_single_step) ) {
 		os_set_title( NOX("SINGLE STEP MODE (Pause exits, any other key steps)") );

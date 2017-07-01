@@ -57,7 +57,6 @@ int Multi_campaign_accept_flags[MAX_PLAYERS];
 void multi_campaign_start(char *filename)
 {
 	int max_players;
-	char str[255];
 	
 	// set the netgame mode
 	Netgame.campaign_mode = MP_CAMPAIGN;		
@@ -80,8 +79,10 @@ void multi_campaign_start(char *filename)
 		strcpy(Netgame.campaign_name,filename);
 		strcpy(Game_current_mission_filename,Netgame.mission_name);
 
+#if !defined(FS2_UE)
 		// if we're the standalone server, set the mission and campaign names
 		if(Game_mode & GM_STANDALONE_SERVER){
+			char str[255];
 			memset(str,0,255);
 			strcpy(str,Netgame.mission_name);
 			strcat(str," (");
@@ -91,7 +92,7 @@ void multi_campaign_start(char *filename)
 			// set the control on the stand_gui
 			std_multi_set_standalone_mission_name(str);
 		}
-
+#endif
 		// maybe override the Netgame.respawn setting
 		max_players = mission_parse_get_multi_mission_info( Netgame.mission_name );				
 		Netgame.respawn = The_mission.num_respawns;
@@ -114,8 +115,6 @@ void multi_campaign_client_start()
 // move everything and eveyrone into the next mission state
 void multi_campaign_next_mission()
 {
-	char str[255];
-
 	// flush the important data
 	multi_campaign_flush_data();
 
@@ -128,8 +127,10 @@ void multi_campaign_next_mission()
 		strncpy(Game_current_mission_filename, Campaign.missions[Campaign.current_mission].name, MAX_FILENAME_LEN);
 		strcpy(Netgame.mission_name,Game_current_mission_filename);			
 
+#if !defined(FS2_UE)
 		// if we're the standalone server, set the mission and campaign names
 		if(Game_mode & GM_STANDALONE_SERVER){
+			char str[255];
 			memset(str,0,255);
 			strcpy(str,Netgame.mission_name);
 			strcat(str," (");
@@ -139,7 +140,7 @@ void multi_campaign_next_mission()
 			// set the control on the stand_gui
 			std_multi_set_standalone_mission_name(str);
 		}
-
+#endif
 	}
 }
 

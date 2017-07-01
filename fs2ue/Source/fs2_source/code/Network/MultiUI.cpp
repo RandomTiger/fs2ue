@@ -7688,10 +7688,12 @@ void multi_sync_pre_init()
 		// setup some of my own data
 		Net_player->flags |= NETINFO_FLAG_MISSION_OK;		
 
+#if !defined(FS2_UE)
 		// do any output stuff
 		if(Game_mode & GM_STANDALONE_SERVER){
 			std_debug_set_standalone_state_string("Mission Sync");			
-		}		
+		}	
+#endif
 
 		// do this here to insure we have the most up to date file checksum info
 		multi_get_mission_checksum(Game_current_mission_filename);

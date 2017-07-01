@@ -1291,10 +1291,12 @@ void multi_do_frame()
 	// process any player messaging details
 	multi_msg_process();		
 	
+#if !defined(FS2_UE)
 	// if on the standalone, do any gui stuff
 	if(Game_mode & GM_STANDALONE_SERVER){
 		std_do_gui_frame();
 	}	
+#endif
 
 	// dogfight nonstandalone players should recalc the escort list every frame
 	if(!(Game_mode & GM_STANDALONE_SERVER) && (Netgame.type_flags & NG_TYPE_DOGFIGHT) && MULTI_IN_MISSION){
@@ -1391,10 +1393,12 @@ void multi_pause_do_frame()
 		multi_oo_process();
 	}
 
+#if !defined(FS2_UE)
 	// if on the standalone, do any gui stuff
 	if(Game_mode & GM_STANDALONE_SERVER){
 		std_do_gui_frame();
 	}
+#endif
 }
 
 
@@ -1407,8 +1411,9 @@ float frame_time = (float)1.0/(float)30.0;
 
 void standalone_main_init()
 {
-   std_debug_set_standalone_state_string("Main Init");   
-
+#if !defined(FS2_UE)
+	std_debug_set_standalone_state_string("Main Init");
+#endif
 	Game_mode = (GM_STANDALONE_SERVER | GM_MULTIPLAYER);	
 
 	// NETLOG
@@ -1513,8 +1518,10 @@ void standalone_main_init()
 	}
 	*/
 
+#if !defined(FS2_UE)
 	// setup the default game name for the standalone
 	std_connect_set_gamename(NULL);
+#endif
 
 	// set netgame default options
 	multi_options_set_netgame_defaults(&Netgame.options);
@@ -1544,9 +1551,11 @@ void standalone_main_init()
 	game_flush();
 	ship_init();
 
+#if !defined(FS2_UE)
 	std_debug_set_standalone_state_string("Main Do");
 	std_set_standalone_fps((float)0);
 	std_multi_set_standalone_missiontime((float)0);
+#endif
 
 	// load my missions and campaigns
 	multi_create_list_load_missions();
@@ -1584,7 +1593,9 @@ void standalone_main_do()
 
 void standalone_main_close()
 {
-   std_debug_set_standalone_state_string("Main Close");	
+#if !defined(FS2_UE)
+	std_debug_set_standalone_state_string("Main Close");
+#endif
 }
 
 void multi_standalone_reset_all()
@@ -1597,8 +1608,10 @@ void multi_standalone_reset_all()
 	// shut all game stuff down
 	game_level_close();
 
+#if !defined(FS2_UE)
 	// reinitialize the gui
 	std_reset_standalone_gui();	
+#endif
 
 	// close down all sockets
 	for(idx=0;idx<MAX_PLAYERS;idx++){
@@ -1623,8 +1636,10 @@ void multi_standalone_reset_all()
 
 void multi_standalone_wait_init()
 {	
+#if !defined(FS2_UE)
 	std_debug_set_standalone_state_string("Wait Do");
 	std_multi_add_goals();   // fill in the goals for the mission into the tree view
+#endif
 	multi_reset_timestamps();
 
 	// create the bogus standalone object
@@ -1650,8 +1665,9 @@ void multi_standalone_wait_do()
 
 void multi_standalone_wait_close()
 {
+#if !defined(FS2_UE)
 	std_debug_set_standalone_state_string("Wait Close / Game Play");
-	
+#endif
 	// all players should reset sequencing
 	int idx;
 	for(idx=0;idx<MAX_PLAYERS;idx++){
@@ -1669,8 +1685,9 @@ void multi_standalone_wait_close()
 extern int Multi_debrief_server_framecount;
 void multi_standalone_postgame_init()	
 {
+#if !defined(FS2_UE)
 	std_debug_set_standalone_state_string("Postgame / Send Stats");
-
+#endif
 	// NETLOG
 	ml_string(NOX("Standlone entering postgame"));
 
@@ -1740,8 +1757,10 @@ void multi_reset_timestamps()
 		Net_players[i].s_info.voice_token_timestamp = -1;
 	}
 
+#if !defined(FS2_UE)
 	// reset standalone gui timestamps (these are not game critical, so there is not much danger)
 	std_reset_timestamps();
+#endif
 
 	// initialize all object update timestamps
 	multi_oo_gameplay_init();

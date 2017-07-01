@@ -1551,6 +1551,7 @@ void process_leave_game_packet(ubyte* data, header* hinfo)
 		*/
 	delete_player(player_num);	
 
+#if !defined(FS2_UE)
 	// OSAPI GUI stuff (if standalone)
 	if (Game_mode & GM_STANDALONE_SERVER) {
       // returns true if we should reset the standalone
@@ -1563,6 +1564,7 @@ void process_leave_game_packet(ubyte* data, header* hinfo)
 		std_connect_set_host_connect_status();
 		std_connect_set_connect_count();
 	}
+#endif
 }
 
 // send information about this currently active game to the specified address
@@ -1589,9 +1591,11 @@ void send_game_active_packet(net_addr* addr)
 	
 	// add the proper flags
 	flags = 0;
+#if !defined(FS2_UE)
 	if((Netgame.mode == NG_MODE_PASSWORD) || ((Game_mode & GM_STANDALONE_SERVER) && (multi_num_players() == 0) && (std_is_host_passwd()))){
 		flags |= AG_FLAG_PASSWD;
 	}
+#endif
 
 	// proper netgame type flags
 	if(Netgame.type_flags & NG_TYPE_TEAM){
@@ -3095,10 +3099,11 @@ void process_pong_packet(ubyte *data, header *hinfo)
 			
 		// put in calls to any functions which may want to know about the ping times from 
 		// this guy
+#if !defined(FS2_UE)
 		if(Game_mode & GM_STANDALONE_SERVER){
 		   std_update_player_ping(p);	
 		}
-
+#endif
 		// mark his socket as still alive (extra precaution)
 		psnet_mark_received(Net_players[lookup].reliable_socket);
 	}

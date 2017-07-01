@@ -6,7 +6,6 @@
  * source.
  *
 */
-#if !defined(FS2_UE)
 
 #ifndef UNITY_BUILD
 #include <windows.h>
@@ -43,6 +42,7 @@ char *Osreg_title = "Freespace 2";
 #endif
 
 int Os_reg_inited = 0;
+#if !defined(FS2_UE)
 
 
 // ------------------------------------------------------------------------------------------------------------
@@ -298,8 +298,6 @@ Cleanup:
 #endif
 }
 
-#if !defined(FS2_UE)
-
 // Reads a string from the INI file.  If default is passed,
 // and the string isn't found, returns ptr to default otherwise
 // returns NULL;    Copy the return value somewhere before
@@ -323,7 +321,7 @@ char * os_config_read_string( char *section, char *name, char *default_value )
 		sprintf( keyname, "Software\\%s\\%s", szCompanyName, szAppName );
 	}
 
-	lResult = RegOpenKeyEx( HKEY_LOCAL_MACHINE,							// Where it is
+	lResult = RegOpenKeyExA( HKEY_LOCAL_MACHINE,							// Where it is
 											 keyname,								// name of key
 											 NULL,									// DWORD reserved
 											 KEY_QUERY_VALUE,						// Allows all changes
@@ -338,7 +336,7 @@ char * os_config_read_string( char *section, char *name, char *default_value )
 	}
 
 	dwLen = 1024;
-	lResult = RegQueryValueEx( hKey,									// Handle to key
+	lResult = RegQueryValueExA( hKey,									// Handle to key
 									 name,											// The values name
 									 NULL,											// DWORD reserved
 	                         &dwType,										// What kind it is
@@ -357,6 +355,7 @@ Cleanup:
 
 	return default_value;
 }
+#if !defined(FS2_UE)
 
 // same as previous function except we don't use the application name to build up the keyname
 char * os_config_read_string2( char *section, char *name, char *default_value )
@@ -410,7 +409,7 @@ Cleanup:
 
 	return default_value;
 }
-
+#endif
 // Reads a string from the INI file.  Default_value must 
 // be passed, and if 'name' isn't found, then returns default_value
 uint  os_config_read_uint( char *section, char *name, uint default_value )
@@ -431,7 +430,7 @@ uint  os_config_read_uint( char *section, char *name, uint default_value )
 		sprintf( keyname, "Software\\%s\\%s", szCompanyName, szAppName );
 	}
 
-	lResult = RegOpenKeyEx( HKEY_LOCAL_MACHINE,							// Where it is
+	lResult = RegOpenKeyExA( HKEY_LOCAL_MACHINE,							// Where it is
 											 keyname,								// name of key
 											 NULL,									// DWORD reserved
 											 KEY_QUERY_VALUE,						// Allows all changes
@@ -446,7 +445,7 @@ uint  os_config_read_uint( char *section, char *name, uint default_value )
 	}
 
 	dwLen = 4;
-	lResult = RegQueryValueEx( hKey,									// Handle to key
+	lResult = RegQueryValueExA( hKey,									// Handle to key
 									 name,											// The values name
 									 NULL,											// DWORD reserved
 	                         &dwType,										// What kind it is
@@ -474,7 +473,7 @@ char * os_config_read_string_ex( char *keyname, char *name, char *default_value 
 	DWORD dwType, dwLen;
 	LONG lResult;
 
-	lResult = RegOpenKeyEx( HKEY_LOCAL_MACHINE,							// Where it is
+	lResult = RegOpenKeyExA( HKEY_LOCAL_MACHINE,							// Where it is
 											 keyname,								// name of key
 											 NULL,									// DWORD reserved
 											 KEY_QUERY_VALUE,						// Allows all changes
@@ -491,7 +490,7 @@ char * os_config_read_string_ex( char *keyname, char *name, char *default_value 
 	}
 
 	dwLen = 1024;
-	lResult = RegQueryValueEx( hKey,									// Handle to key
+	lResult = RegQueryValueExA( hKey,									// Handle to key
 									 name,											// The values name
 									 NULL,											// DWORD reserved
 	                         &dwType,										// What kind it is
@@ -511,4 +510,3 @@ Cleanup:
 
 	return default_value;
 }
-#endif

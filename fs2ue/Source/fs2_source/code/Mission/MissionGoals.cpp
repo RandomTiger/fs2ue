@@ -1055,10 +1055,12 @@ void mission_eval_goals()
 		mission_maybe_play_directive_success_sound();
 	}
 
-   // update goal status if playing on a multiplayer standalone server
+#if !defined(FS2_UE)
+	// update goal status if playing on a multiplayer standalone server
 	if (Game_mode & GM_STANDALONE_SERVER){
 		std_multi_update_goals();
 	}
+#endif
 }
 
 //	evaluate_primary_goals() will determine if the primary goals for a mission are complete

@@ -133,22 +133,26 @@ void multi_options_read_config()
 					}
 				}
 			} else 
-			if(SETTING("+ban")){
+#if !defined(FS2_UE)
+				if(SETTING("+ban")){
 				// ban a player
 				NEXT_TOKEN();
 				if(tok != NULL){
 					std_add_ban(tok);
 				}
 			} else 
+#endif
 			if(SETTING("+passwd")){
 				// set the standalone host password
 				NEXT_TOKEN();
 				if(tok != NULL){
+#if !defined(FS2_UE)
 					strncpy(Multi_options_g.std_passwd, tok, STD_PASSWD_LEN);
 
 					// yuck
 					extern HWND Multi_std_host_passwd;
 					SetWindowTextA(Multi_std_host_passwd, Multi_options_g.std_passwd);
+#endif
 				}
 			} else 
 			if(SETTING("+low_update")){
@@ -482,8 +486,10 @@ void multi_options_process_packet(unsigned char *data, header *hinfo)
 		}
 
 		// update standalone stuff
+#if !defined(FS2_UE)
 		std_connect_set_gamename(Netgame.name);
 		std_multi_update_netgame_info_controls();
+#endif
 		break;
 
 	// get mission choice options
@@ -532,6 +538,7 @@ void multi_options_process_packet(unsigned char *data, header *hinfo)
 
 			Netgame.campaign_mode = 1;
 
+#if !defined(FS2_UE)
 			// put brackets around the campaign name
 			if(Game_mode & GM_STANDALONE_SERVER){
 				strcpy(str,"(");
@@ -539,6 +546,7 @@ void multi_options_process_packet(unsigned char *data, header *hinfo)
 				strcat(str,")");
 				std_multi_set_standalone_mission_name(str);
 			}
+#endif
 		}
 		// non-campaign mode
 		else {
@@ -557,10 +565,12 @@ void multi_options_process_packet(unsigned char *data, header *hinfo)
 
 			Netgame.campaign_mode = 0;
 
+#if !defined(FS2_UE)
 			// set the mission name
 			if(Game_mode & GM_STANDALONE_SERVER){
 				std_multi_set_standalone_mission_name(Netgame.mission_name);			
 			}
+#endif
 		}
 		
 		send_netgame_update_packet();	   

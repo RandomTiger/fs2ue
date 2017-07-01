@@ -25,12 +25,19 @@
 
 // 3dnow stuff
 // #include "amd3d.h"
+
 #endif
 
+
+
+#if defined(FS2_UE)
+int gr_zbuffering_mode = 0;
+#else
 // Includes for different rendering systems
 #include "GrD3D.h"
 #include "GrOpenGL.h"
 #include "GrDirectDraw.h"
+#endif
 
 screen gr_screen;
 
@@ -204,6 +211,7 @@ int gr_init(int res, int mode, int depth, int fred_x, int fred_y)
 	gr_screen.clip_height = gr_screen.max_h;
 
 	switch( gr_screen.mode )	{
+#if !defined(FS2_UE)
 
 		case GR_DIRECT3D9:
 			extern bool gr_d3d9_init();
@@ -219,6 +227,7 @@ int gr_init(int res, int mode, int depth, int fred_x, int fred_y)
 				return 1;
 			}
 			break;
+#endif
 		case GR_DUMMY:
 			extern bool gr_dummy_init();
 			if(gr_dummy_init() == false)
@@ -268,7 +277,8 @@ void gr_activate(int active)
 	if ( !Gr_inited ) return;
 
 	switch( gr_screen.mode )	{
-	
+#if !defined(FS2_UE)
+
 		case GR_DIRECT3D5:
 			{	
 				extern void gr_d3d_activate(int active);
@@ -279,6 +289,7 @@ void gr_activate(int active)
 				extern void gr_d3d9_activate(int active);
 				gr_d3d9_activate(active);
 				break;
+#endif
 		case GR_DUMMY:
 			break;
 		default:

@@ -394,16 +394,14 @@ int ds_load_buffer(int *sid, int *hid, int *final_size, void *header, sound_info
 	DSBUFFERDESC	BufferDesc;
 	WAVEFORMATEX	WaveFormat;
 	HRESULT			DSReturn;
-	int				rc, final_sound_size, DSOUND_load_buffer_result = 0;
+	int				final_sound_size, DSOUND_load_buffer_result = 0;
 	BYTE				*pData, *pData2;
 	DWORD				DataSize, DataSize2;
 
 	// the below two covnert_ variables are only used when the wav format is not 
 	// PCM.  DirectSound only takes PCM sound data, so we must convert to PCM if required
 	ubyte *convert_buffer = NULL;		// storage for converted wav file 
-	int	convert_len;					// num bytes of converted wav file
-	uint	src_bytes_used;				// number of source bytes actually converted (should always be equal to original size)
-
+	
 	// Ensure DirectSound initialized
 	if (!ds_initialized) {
 		DSOUND_load_buffer_result = -1;
@@ -423,19 +421,23 @@ int ds_load_buffer(int *sid, int *hid, int *final_size, void *header, sound_info
 
 //	Assert(WaveFormat.nChannels == 1);
 
-	switch ( si->format ) {
-		case WAVE_FORMAT_PCM:
-			break;
+	switch (si->format) {
+	case WAVE_FORMAT_PCM:
+		break;
 
+#if !defined(FS2_UE)
 		case WAVE_FORMAT_ADPCM:
-			
-			nprintf(( "Sound", "SOUND ==> converting sound from ADPCM to PCM\n" ));
+		{
+			int	convert_len;					// num bytes of converted wav file
+			uint	src_bytes_used;				// number of source bytes actually converted (should always be equal to original size)
+			int				rc;
+
+			nprintf(("Sound", "SOUND ==> converting sound from ADPCM to PCM\n"));
 			rc = ACM_convert_ADPCM_to_PCM(pwfx, si->data, si->size, &convert_buffer, 0, &convert_len, &src_bytes_used, 8);
-			if ( rc == -1 ) {
+			if (rc == -1) {
 				DSOUND_load_buffer_result = -1;
 				goto DSOUND_load_buffer_done;
 			}
-
 			if (src_bytes_used != si->size) {
 				Int3();	// ACM conversion failed?
 				DSOUND_load_buffer_result = -1;
@@ -445,16 +447,18 @@ int ds_load_buffer(int *sid, int *hid, int *final_size, void *header, sound_info
 			final_sound_size = convert_len;
 
 			// Set up the WAVEFORMATEX structure to have the right PCM characteristics
-			WaveFormat.wFormatTag		= WAVE_FORMAT_PCM;
-			WaveFormat.nChannels			= (unsigned short)si->n_channels;
-			WaveFormat.nSamplesPerSec	= si->sample_rate;
-			WaveFormat.wBitsPerSample	= 8;
-			WaveFormat.cbSize				= 0;
-			WaveFormat.nBlockAlign		= (unsigned short)(( WaveFormat.nChannels * WaveFormat.wBitsPerSample ) / 8);
+			WaveFormat.wFormatTag = WAVE_FORMAT_PCM;
+			WaveFormat.nChannels = (unsigned short)si->n_channels;
+			WaveFormat.nSamplesPerSec = si->sample_rate;
+			WaveFormat.wBitsPerSample = 8;
+			WaveFormat.cbSize = 0;
+			WaveFormat.nBlockAlign = (unsigned short)((WaveFormat.nChannels * WaveFormat.wBitsPerSample) / 8);
 			WaveFormat.nAvgBytesPerSec = WaveFormat.nBlockAlign * WaveFormat.nSamplesPerSec;
 
-			nprintf(( "Sound", "SOUND ==> Coverted sound from ADPCM to PCM successfully\n" ));
-			break;	
+			nprintf(("Sound", "SOUND ==> Coverted sound from ADPCM to PCM successfully\n"));
+			break;
+		}
+#endif
 
 		default:
 			nprintf(( "Sound", "Unsupported sound encoding\n" ));

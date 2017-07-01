@@ -7,6 +7,8 @@
  *
 */
 
+#if defined(PREPROC_ENABLED_SOUND)
+
 
 #ifndef UNITY_BUILD
 #include <windows.h>
@@ -327,3 +329,5 @@ int ACM_is_inited()
 {
 	return ACM_inited;
 }
+
+#endif

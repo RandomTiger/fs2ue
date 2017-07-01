@@ -918,11 +918,13 @@ void delete_player(int player_num,int kicked_reason)
 		multi_display_chat_msg(notify_string,0,0);
 	}
 	
+#if !defined(FS2_UE)
 	// standalone gui type stuff
 	if (Game_mode & GM_STANDALONE_SERVER) {
 		std_remove_player(&Net_players[player_num]);
 		std_connect_set_connect_count();
 	}
+#endif
 
 	// blast this memory clean
 	memset(&Net_players[player_num], 0, sizeof(net_player));
@@ -1928,10 +1930,12 @@ int multi_eval_join_request(join_request *jr,net_addr *addr)
 				}			
 			}			
 
+#if !defined(FS2_UE)
 			// if we're password protected		
 			if(std_is_host_passwd() && strcmp(jr->passwd, Multi_options_g.std_passwd)){
 				return JOIN_DENY_JR_PASSWD;
 			}
+#endif
 				
 			// don't allow the host to join as an observer
 			if(jr->flags & JOIN_FLAG_AS_OBSERVER){
@@ -1996,11 +2000,12 @@ int multi_eval_join_request(join_request *jr,net_addr *addr)
 		return JOIN_DENY_JR_TYPE;
 	}	
 
+#if !defined(FS2_UE)
 	// if the player was banned by the standalone
 	if((Game_mode & GM_STANDALONE_SERVER) && std_player_is_banned(jr->callsign)){
 		return JOIN_DENY_JR_BANNED;
 	}
-
+#endif
 	// if the game is in-mission, make sure there are ships available
 	if(MULTI_IN_MISSION && !(jr->flags & JOIN_FLAG_AS_OBSERVER)){
 		team0_avail = 0;
@@ -2463,12 +2468,15 @@ void multi_process_valid_join_request(join_request *jr, net_addr *who_from, int 
 	// copy in his options
 	memcpy(&Net_players[net_player_num].p_info.options, &jr->player_options, sizeof(multi_local_options));
 
+#if !defined(FS2_UE)
 	// if on the standalone, then do any necessary gui updating
 	if(Game_mode & GM_STANDALONE_SERVER) {		
 		std_add_player(&Net_players[net_player_num]);
 		std_connect_set_connect_count();
 		std_connect_set_host_connect_status();
-	} else {
+	} else 
+#endif
+	{
 		// let the create game screen know someone has joined
 		if(gameseq_get_state() == GS_STATE_MULTI_HOST_SETUP){
 			multi_create_handle_join(&Net_players[net_player_num]);
@@ -2702,10 +2710,12 @@ void multi_flush_mission_stuff()
 
 	multi_xfer_reset();
 
+#if !defined(FS2_UE)
 	// standalone servers should clear their goal trees now
 	if(Game_mode & GM_STANDALONE_SERVER){
 		std_multi_setup_goal_tree();
 	}
+#endif
 	
 	// object signatures
 	// this will eventually get reset to Netgame.security the next time an object gets its signature assigned.
@@ -2771,11 +2781,13 @@ int multi_kill_limit_reached()
 // display a chat message (write to the correct spot - hud, standalone gui, chatbox, etc)
 void multi_display_chat_msg(char *msg, int player_index, int add_id)
 {
+#if !defined(FS2_UE)
 	// if i'm a standalone, always add to the gui
 	if(Game_mode & GM_STANDALONE_SERVER){
 		std_add_chat_text(msg,player_index,add_id);
 		return;
 	}
+#endif
 	
 	// in gameplay
 	if(Game_mode & GM_IN_MISSION){					
