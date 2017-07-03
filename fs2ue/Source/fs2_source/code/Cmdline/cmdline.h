@@ -53,6 +53,7 @@ extern int Cmdline_bootcheck;
 extern bool Cmdline_anttweakbar;
 extern bool Cmdline_forceDirect3d9;
 extern bool Cmdline_forceDirect3d5;
+extern bool Cmdline_forceDummy;
 extern bool Cmdline_splitscreen;
 extern bool Cmdline_horde;
 

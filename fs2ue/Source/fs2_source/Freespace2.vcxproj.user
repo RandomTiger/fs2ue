@@ -3,12 +3,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">
     <LocalDebuggerWorkingDirectory>$(PATH_FS2)</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommandArguments>-window</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-window -autoload "MDH-04" -forcedummy</LocalDebuggerCommandArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">
     <LocalDebuggerWorkingDirectory>$(PATH_FS2)</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommandArguments>-window</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-window -autoload "MDH-04"</LocalDebuggerCommandArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">
     <LocalDebuggerCommandArguments>-window</LocalDebuggerCommandArguments>

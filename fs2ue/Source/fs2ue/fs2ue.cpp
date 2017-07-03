@@ -43,3 +43,10 @@ IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, fs2ue, "fs2ue" );
 Test test;
 
 // GEngine->GameViewport->GetWindow()->GetNativeWindow()->GetOSWindowHandle();
+
+/*
+//Cmdline_freespace_no_sound = 1;
+//Cmdline_freespace_no_music = 1;
+
+// -window -autoload "MDH-04" -forcedummy
+*/

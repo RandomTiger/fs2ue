@@ -68,6 +68,7 @@ cmdline_parm param_bootcheck("-bootcheck", NULL);
 cmdline_parm param_anttweakbar("-anttweakbar", NULL);
 cmdline_parm param_forceDirect3D5("-forced3d5", NULL);
 cmdline_parm param_forceDirect3D9("-forced3d9", NULL);
+cmdline_parm param_forceDummy("-forcedummy", NULL);
 cmdline_parm param_splitscreen("-splitscreen", NULL);
 cmdline_parm param_horde("-horde", NULL);
 
@@ -97,6 +98,7 @@ char *Cmdline_autoload = 0;
 bool Cmdline_anttweakbar = false;
 bool Cmdline_forceDirect3d9 = false;
 bool Cmdline_forceDirect3d5 = false;
+bool Cmdline_forceDummy = false;
 bool Cmdline_splitscreen = false;
 bool Cmdline_horde = false;
 
@@ -456,6 +458,11 @@ int parse_cmdline(char *cmdline)
 	if(param_forceDirect3D5.found())
 	{
 		Cmdline_forceDirect3d5 = true;
+	}
+
+	if (param_forceDummy.found())
+	{
+		Cmdline_forceDummy = true;
 	}
 
 	if(param_splitscreen.found())

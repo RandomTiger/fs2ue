@@ -1273,9 +1273,16 @@ void game_init()
 	}
 	if(Cmdline_forceDirect3d5)
 	{
-		assert(Cmdline_anttweakbar == false);
 		lDefaultMode = GR_DIRECT3D5;
 	}
+	if (Cmdline_forceDummy)
+	{
+		lDefaultMode = GR_DUMMY;
+	}
+
+#if defined(FS2_UE)
+	lDefaultMode = GR_DUMMY;
+#endif
 
 	assert(has_sparky_hi);
 	int initResult = gr_init(GR_1024, lDefaultMode, 32);
@@ -5155,7 +5162,7 @@ void game_do_state(int state)
 			if(Cmdline_autoload)
 			{
 				// No support for skipping setup
-				Assert(Cmdline_splitscreen);
+				//Assert(Cmdline_splitscreen);
 
 				// Set defaults
 				strcpy_s(Game_current_mission_filename, MAX_FILENAME_LEN, Cmdline_autoload);
