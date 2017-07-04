@@ -5609,13 +5609,15 @@ DCF(pofspew, "")
 	game_spew_pof_info();
 }
 
-int PASCAL WinMainSub(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCmdShow)
+bool FREESPACE_Init(
+#if !defined(FS2_UE)
+	HINSTANCE hInst,
+#endif
+	LPSTR szCmdLine)
 {
-	int state;		
-
 	// Don't let more than one instance of Freespace run.
-	HWND hwnd = FindWindowA( NOX( "FreeSpaceClass" ), NULL );
-	if ( hwnd )	{
+	HWND hwnd = FindWindowA(NOX("FreeSpaceClass"), NULL);
+	if (hwnd) {
 		SetForegroundWindow(hwnd);
 		return 0;
 	}
@@ -5626,130 +5628,132 @@ int PASCAL WinMainSub(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCm
 	GlobalMemoryStatus(&ms);
 	Freespace_total_ram = ms.dwTotalPhys;
 
-	if ( game_do_ram_check(Freespace_total_ram) == -1 ) {
+	if (game_do_ram_check(Freespace_total_ram) == -1) {
 		return 0;
 	}
 
-	if ( ms.dwTotalVirtual < 1024 )	{
-		MessageBoxA( NULL, XSTR( "FreeSpace requires virtual memory to run.\r\n", 196), XSTR( "No Virtual Memory", 197), MB_OK );
+	if (ms.dwTotalVirtual < 1024) {
+		MessageBoxA(NULL, XSTR("FreeSpace requires virtual memory to run.\r\n", 196), XSTR("No Virtual Memory", 197), MB_OK);
 		return 0;
 	}
 
-	if (!vm_init(24*1024*1024)) {
-		MessageBoxA( NULL, XSTR( "Not enough memory to run Freespace.\r\nTry closing down some other applications.\r\n", 198), XSTR( "Not Enough Memory", 199), MB_OK );
+	if (!vm_init(24 * 1024 * 1024)) {
+		MessageBoxA(NULL, XSTR("Not enough memory to run Freespace.\r\nTry closing down some other applications.\r\n", 198), XSTR("Not Enough Memory", 199), MB_OK);
 		return 0;
 	}
-		
-	char *tmp_mem = (char *) malloc(16 * 1024 * 1024);
+
+	char *tmp_mem = (char *)malloc(16 * 1024 * 1024);
 	if (!tmp_mem) {
-		MessageBoxA(NULL, XSTR( "Not enough memory to run Freespace.\r\nTry closing down some other applications.\r\n", 198), XSTR( "Not Enough Memory", 199), MB_OK);
+		MessageBoxA(NULL, XSTR("Not enough memory to run Freespace.\r\nTry closing down some other applications.\r\n", 198), XSTR("Not Enough Memory", 199), MB_OK);
 		return 0;
 	}
 
 	free(tmp_mem);
 	tmp_mem = NULL;
 
-/* this code doesn't work, and we will hit an error about being unable to load the direct draw
-	dll before we get here anyway if it's not installed (unless we load it manually, which doesn't
-	seem worth bothering with.
+	/* this code doesn't work, and we will hit an error about being unable to load the direct draw
+		dll before we get here anyway if it's not installed (unless we load it manually, which doesn't
+		seem worth bothering with.
 
-	LONG lResult;
+		LONG lResult;
 
-	lResult = RegOpenKeyEx(
-		HKEY_LOCAL_MACHINE,					// Where it is
-		"Software\\Microsoft\\DirectX",	// name of key
-		NULL,										// DWORD reserved
-		KEY_QUERY_VALUE,						// Allows all changes
-		&hKey										// Location to store key
-	);
-
-	if (lResult == ERROR_SUCCESS) {
-		char version[32];
-		DWORD dwType, dwLen;
-
-		dwLen = 32;
-		lResult = RegQueryValueEx(
-			hKey,									// Handle to key
-			"Version",							// The values name
-			NULL,									// DWORD reserved
-			&dwType,								// What kind it is
-			(ubyte *) version, 				// value to set
-			&dwLen								// How many bytes to set
+		lResult = RegOpenKeyEx(
+			HKEY_LOCAL_MACHINE,					// Where it is
+			"Software\\Microsoft\\DirectX",	// name of key
+			NULL,										// DWORD reserved
+			KEY_QUERY_VALUE,						// Allows all changes
+			&hKey										// Location to store key
 		);
 
 		if (lResult == ERROR_SUCCESS) {
-			dx_version = atoi(strstr(version, ".") + 1);
-
-		} else {
-			int val;
+			char version[32];
 			DWORD dwType, dwLen;
 
-			dwLen = 4;
+			dwLen = 32;
 			lResult = RegQueryValueEx(
 				hKey,									// Handle to key
-				"InstalledVersion",				// The values name
+				"Version",							// The values name
 				NULL,									// DWORD reserved
 				&dwType,								// What kind it is
-				(ubyte *) &val,					// value to set
+				(ubyte *) version, 				// value to set
 				&dwLen								// How many bytes to set
 			);
 
 			if (lResult == ERROR_SUCCESS) {
-				dx_version = val;
+				dx_version = atoi(strstr(version, ".") + 1);
+
+			} else {
+				int val;
+				DWORD dwType, dwLen;
+
+				dwLen = 4;
+				lResult = RegQueryValueEx(
+					hKey,									// Handle to key
+					"InstalledVersion",				// The values name
+					NULL,									// DWORD reserved
+					&dwType,								// What kind it is
+					(ubyte *) &val,					// value to set
+					&dwLen								// How many bytes to set
+				);
+
+				if (lResult == ERROR_SUCCESS) {
+					dx_version = val;
+				}
 			}
+
+			RegCloseKey(hKey);
 		}
 
-		RegCloseKey(hKey);
-	}
+		if (dx_version < 3) {
+			MessageBox(NULL, "DirectX 3.0 or higher is required and wasn't detected.  You can get the\n"
+				"latest version of DirectX at:\n\n"
+				"http://www.microsoft.com/msdownload/directx/dxf/enduser5.0/default.htm", "DirectX required", MB_OK);
 
-	if (dx_version < 3) {
-		MessageBox(NULL, "DirectX 3.0 or higher is required and wasn't detected.  You can get the\n"
-			"latest version of DirectX at:\n\n"
-			"http://www.microsoft.com/msdownload/directx/dxf/enduser5.0/default.htm", "DirectX required", MB_OK);
+			MessageBox(NULL, "DirectX 3.0 or higher is required and wasn't detected.  You can install\n"
+				"DirectX 5.2 by pressing the 'Install DirectX' button on the FreeSpace Launcher", "DirectX required", MB_OK);
 
-		MessageBox(NULL, "DirectX 3.0 or higher is required and wasn't detected.  You can install\n"
-			"DirectX 5.2 by pressing the 'Install DirectX' button on the FreeSpace Launcher", "DirectX required", MB_OK);
-
-		return 0;
-	}
-*/
+			return 0;
+		}
+	*/
+#if !defined(FS2_UE)
 	//=====================================================
 	// Make sure we're running in the right directory.
 	char exe_dir[1024];
 
-	if ( GetModuleFileNameA( hInst, exe_dir, 1023 ) > 0 )	{
+	if (GetModuleFileNameA(hInst, exe_dir, 1023) > 0) {
 		char *p = exe_dir + strlen(exe_dir);
 
 		// chop off the filename
-		while( (p>exe_dir) && (*p!='\\') && (*p!='/') && (*p!=':') )	{
+		while ((p > exe_dir) && (*p != '\\') && (*p != '/') && (*p != ':')) {
 			p--;
 		}
 		*p = 0;
 
 		// Set directory
-		if ( strlen(exe_dir) > 0 )	{
+		if (strlen(exe_dir) > 0) {
 			SetCurrentDirectoryA(exe_dir);
 		}
 
 		// check for updated freespace.exe
 		game_maybe_update_launcher(exe_dir);
 	}
+#endif
 
-	
-	#ifndef NDEBUG				
+
+#ifndef NDEBUG				
 	{
 		extern void windebug_memwatch_init();
 		windebug_memwatch_init();
 	}
-	#endif
-	
-	parse_cmdline(szCmdLine);	
+#endif
+
+	parse_cmdline(szCmdLine);
 
 #ifdef STANDALONE_ONLY_BUILD
 	Is_standalone = 1;
 	nprintf(("Network", "Standalone running"));
 #else
-	if (Is_standalone){
+	if (Is_standalone) {
 		nprintf(("Network", "Standalone running"));
 	}
 #endif
@@ -5759,18 +5763,18 @@ int PASCAL WinMainSub(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCm
 	game_stop_time();
 
 	// maybe spew pof stuff
-	if(Cmdline_spew_pof_info){
+	if (Cmdline_spew_pof_info) {
 		game_spew_pof_info();
 		game_shutdown();
 		return 1;
 	}
 
 	// non-demo, non-standalone, play the intro movie
-	if(!Is_standalone){
+	if (!Is_standalone) {
 #ifndef DEMO
 #ifdef RELEASE_REAL
 		char *plist[5];
-		if( (cf_get_file_list(2, plist, CF_TYPE_MULTI_PLAYERS, NOX("*.plr"))	<= 0) && (cf_get_file_list(2, plist, CF_TYPE_SINGLE_PLAYERS, NOX("*.plr"))	<= 0) ){
+		if ((cf_get_file_list(2, plist, CF_TYPE_MULTI_PLAYERS, NOX("*.plr")) <= 0) && (cf_get_file_list(2, plist, CF_TYPE_SINGLE_PLAYERS, NOX("*.plr")) <= 0)) {
 			// prompt for cd 2
 #if defined(OEM_BUILD)
 			game_do_cd_check_specific(FS_CDROM_VOLUME_1, 1);
@@ -5781,40 +5785,45 @@ int PASCAL WinMainSub(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCm
 #endif
 	}
 
-	if ( !Is_standalone ) {
+	if (!Is_standalone) {
 
 		// release -- movies always play
-		#if defined(NDEBUG)
+#if defined(NDEBUG)
 
-		// in RELEASE_REAL builds make the user stick in CD2 if there are no pilots on disk so that we guarantee he plays the movie
-		// no soup for you!
-		// movie_play( NOX("intro.mve"), 0 );
+// in RELEASE_REAL builds make the user stick in CD2 if there are no pilots on disk so that we guarantee he plays the movie
+// no soup for you!
+// movie_play( NOX("intro.mve"), 0 );
 
-		// debug version, movie will only play with -showmovies
-		#else if !defined(NDEBUG)
-		
-		// no soup for you!
-		// movie_play( NOX("intro.mve"), 0);
+// debug version, movie will only play with -showmovies
+#else if !defined(NDEBUG)
+
+// no soup for you!
+// movie_play( NOX("intro.mve"), 0);
 /*
 #ifndef NDEBUG
 		if ( Cmdline_show_movies )
 			movie_play( NOX("intro.mve"), 0 );
 #endif
 */
-		#endif
+#endif
 	}
 
 #endif	
 
-	if (Is_standalone){
+	if (Is_standalone) {
 		gameseq_post_event(GS_EVENT_STANDALONE_MAIN);
-	} else {
+	}
+	else {
 		gameseq_post_event(GS_EVENT_GAME_INIT);		// start the game rolling -- check for default pilot, or go to the pilot select screen
 	}
 
-	while (1) {
-		// only important for non THREADED mode
-		os_poll();
+	return 1;
+}
+
+bool FREESPACE_Update(const float DeltaTime)
+{
+	// only important for non THREADED mode
+	os_poll();
 
 	static int lastGameTime = 0;
 	const int now = timer_get_milliseconds();
@@ -5822,12 +5831,16 @@ int PASCAL WinMainSub(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCm
 	g_MouseController.Update(now - lastGameTime, 0, 0, gr_screen.max_w, gr_screen.max_h);
 	lastGameTime = now;
 
-		state = gameseq_process_events();
-		if ( state == GS_STATE_QUIT_GAME ){
-			break;
-		}
-	} 
+	int state = gameseq_process_events();
+	if (state == GS_STATE_QUIT_GAME) {
+		return false;
+	}
 
+	return true;
+}
+
+void FREESPACE_Shutdown()
+{
 #ifdef FS2_DEMO
 	if(!Is_standalone){
 		demo_upsell_show_screens();
@@ -5838,10 +5851,28 @@ int PASCAL WinMainSub(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCm
 #endif
 
 	game_shutdown();
-	return 1;
 }
 
 #if !defined(FS2_UE)
+int PASCAL WinMainSub(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCmdShow)
+{
+	if (FREESPACE_Init(hInst, szCmdLine) == false)
+	{
+		return 0;
+	}
+
+	while (1) 
+	{
+		if (FREESPACE_Update(0) == false)
+		{
+			break;
+		}
+	}
+
+	FREESPACE_Shutdown();
+	return 1;
+}
+
 int PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR szCmdLine, int nCmdShow)
 {
 	int result = -1;

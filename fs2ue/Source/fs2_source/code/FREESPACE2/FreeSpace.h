@@ -201,4 +201,15 @@ int game_hacked_data();
 void oem_upsell_show_screens();
 
 #endif			// endif of #ifndef STAMPER_PROGRAM
+
+
+bool FREESPACE_Init(
+#if !defined(FS2_UE)
+	HINSTANCE hInst,
+#endif
+	LPSTR szCmdLine);
+
+bool FREESPACE_Update(const float DeltaTime);
+void FREESPACE_Shutdown();
+
 #endif 
