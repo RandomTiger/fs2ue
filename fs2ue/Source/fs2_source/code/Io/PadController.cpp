@@ -183,6 +183,7 @@ bool GameController::HasUnpauseBeenPressed()
 
 void GameController::Update()
 {
+#if !defined(FS2_UE)
 
 	// Default to 24% of the +/- 32767 range.   This is a reasonable default value but can be altered if needed.
 	const float INPUT_DEADZONE = ( 0.24f * FLOAT(0x7FFF) ) ;
@@ -219,6 +220,7 @@ void GameController::Update()
 			}
 		}
 	}
+#endif
 }
 
 bool GameController::ProcessMessage(MessageBase *lpMsgBase)

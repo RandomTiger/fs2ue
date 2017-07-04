@@ -82,6 +82,8 @@ void ForceFeedback::Shutdown(int type)
 
 void ForceFeedback::StopEffects()
 {
+#if !defined(FS2_UE)
+
 	if(m_type == InputController::kIN_360PAD)
 	{
 		for(int padNum = 0; padNum < MAX_CONTROLLERS; padNum++)
@@ -93,6 +95,7 @@ void ForceFeedback::StopEffects()
 		}
 	}
 	else
+#endif
 	{
 		joy_ff_stop_effects();
 	}
@@ -289,6 +292,8 @@ void ForceFeedback::EndEffects(int padNum, float fadeTime)
 
 void ForceFeedback::Update(float frameTimeMS)
 {
+#if !defined(FS2_UE)
+
 	if(m_initType == InputController::kIN_360PAD)
 	{
 		MsgGetPad lMsg;
@@ -309,12 +314,15 @@ void ForceFeedback::Update(float frameTimeMS)
 		for(int e = 0; e < MAX_EFFECTS_PER_CONTROLLER; e++)
 		{
 			g_Controllers[padNum].lastState = g_Controllers[padNum].state;
+
+#if !defined(FS2_UE)
 			g_Controllers[padNum].dwResult = XInputGetState( padNum, &g_Controllers[padNum].state );
 
 			if( g_Controllers[padNum].dwResult != ERROR_SUCCESS )
 			{
 				continue;
 			}
+#endif
 
 			if(m_Effects[padNum][e].IsActive())
 			{
@@ -355,5 +363,6 @@ void ForceFeedback::Update(float frameTimeMS)
 			assert(0);
 		}*/
 	}
+#endif
 
 }

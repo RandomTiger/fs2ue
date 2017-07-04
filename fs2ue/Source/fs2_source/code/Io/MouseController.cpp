@@ -19,6 +19,7 @@ void MouseController::Init(const int inputType)
 
 	mouse_init();
 
+#if !defined(FS2_UE)
 	if(m_type == InputController::kIN_360PAD)
 	{
 		lastbuttonDownA = false;
@@ -32,6 +33,7 @@ void MouseController::Init(const int inputType)
 			m_type = InputController::kIN_MOUSE;
 		}
 	}
+#endif
 }
 
 void MouseController::Update(const int frameTimeMS, const int minX, const int minY, const int maxX, const int maxY)
