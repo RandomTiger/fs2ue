@@ -1,5 +1,7 @@
 // Copyright (C) Thomas Liam Whittaker 2017.  All rights reserved. All modified source code herein is the property of Thomas Liam Whittaker. You may not sell or otherwise commercially exploit the source or things you created based on the source. Original source code is owned by Volition, Inc and covered by their copywrite.
 
+// Must be first
+#include "fs2ue.h"
 
 #include "../fs2_source/code/TomLib/src/StateMachine/StateMachine.h"
 #include "../fs2_source/code/TomLib/src/StateMachine/StateMachine.cpp"
@@ -38,8 +40,6 @@
 // -window -autoload "MDH-04" -forcedummy
 */
 
-
-#include "fs2ue.h"
 #include "FS2GameMode.h"
 
 DEFINE_LOG_CATEGORY(FS2Code);
