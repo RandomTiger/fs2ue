@@ -1248,8 +1248,7 @@ void game_init()
 
 	if(!Is_standalone){
 		
-		if(!stricmp(ptr, "Aucune accélération 3D") || !stricmp(ptr, "Keine 3D-Beschleunigerkarte") || !stricmp(ptr, "No 3D acceleration")){
-			MessageBox((HWND)os_get_window(), XSTR("Warning, Freespace 2 requires Glide or Direct3D hardware accleration. You will not be able to run Freespace 2 without it.", 1448), XSTR("Warning", 1449), MB_OK);		
+		if(!stricmp(ptr, "Aucune accï¿½lï¿½ration 3D") || !stricmp(ptr, "Keine 3D-Beschleunigerkarte") || !stricmp(ptr, "No 3D acceleration"			MessageBox((HWND)os_get_window(), XSTR("Warning, Freespace 2 requires Glide or Direct3D hardware accleration. You will not be able to run Freespace 2 without it.", 1448), XSTR("Warning", 1449), MB_OK);		
 			exit(1);
 		}
 	}
@@ -5987,7 +5986,7 @@ void game_shutdown(void)
 	event_music_close();
 	psnet_close();
 
-	//lcl_close();
+	lcl_close();
 	//lcl_xstr_close();
 
 	FlushAllAllocatedBeahviours();

@@ -683,6 +683,7 @@ void gr_font_init()
 // font id number.
 int gr_init_font(char * typeface)
 {
+	Num_fonts = 0;
 	int Loaded_fontnum;
 
 	Loaded_fontnum = gr_create_font(typeface);
