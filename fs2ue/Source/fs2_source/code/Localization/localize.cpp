@@ -211,6 +211,7 @@ void lcl_close()
 	// if the filename exists, free it up
 	if(Lcl_ext_filename != NULL){
 		free(Lcl_ext_filename);
+		Lcl_ext_filename = NULL;
 	}
 };
 
@@ -636,6 +637,7 @@ void lcl_ext_associate(char *filename)
 	// if the filename already exists, free it up
 	if(Lcl_ext_filename != NULL){
 		free(Lcl_ext_filename);
+		Lcl_ext_filename = NULL;
 	}
 
 	// set the new filename

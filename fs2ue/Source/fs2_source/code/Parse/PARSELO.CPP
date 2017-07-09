@@ -223,7 +223,9 @@ void diag_printf(char *format, ...)
 	vsprintf(buffer, format, args);
 	va_end(args);
 
+#if !defined(FS2_UE)
 	nprintf(("Parse", "%s", buffer));
+#endif
 }
 
 //	Grab and return (a pointer to) a bunch of tokens, terminating at

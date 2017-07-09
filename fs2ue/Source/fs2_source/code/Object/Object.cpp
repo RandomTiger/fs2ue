@@ -85,7 +85,7 @@ int Object_next_ship_signature = OBJECT_SIG_SHIP_START;
 int Object_inited = 0;
 int Show_waypoints = 0;
 
-#ifndef NDEBUG
+#if defined(FS2_UE) || !defined(NDEBUG)
 char *Object_type_names[MAX_OBJECT_TYPES] = {
 //XSTR:OFF
 	"NONE",

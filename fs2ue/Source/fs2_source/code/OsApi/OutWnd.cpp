@@ -1253,3 +1253,40 @@ void outwnd_close()
 
 #endif //NDEBUG
 #endif
+
+#if defined(FS2_UE)
+#include "FS2GameMode.h"
+#include <string.h>  
+
+void outwnd_printf(char *id, char *format, ...)
+{
+	const int strMaxSize = MAX_PATH;
+	char tmp[strMaxSize];
+
+	va_list args;
+	va_start(args, format);
+	vsprintf(tmp, format, args);
+	va_end(args);
+
+	TCHAR formatTChar[strMaxSize];
+	_tcscpy(formatTChar, ANSI_TO_TCHAR(tmp));
+
+	UE_LOG(FS2Code, Warning, formatTChar);
+}
+
+void outwnd_printf2(char *format, ...)
+{
+	const int strMaxSize = MAX_PATH;
+	char tmp[strMaxSize];
+
+	va_list args;
+	va_start(args, format);
+	vsprintf(tmp, format, args);
+	va_end(args);
+
+	TCHAR formatTChar[strMaxSize];
+	_tcscpy(formatTChar, ANSI_TO_TCHAR(tmp));
+
+	UE_LOG(FS2Code, Warning, formatTChar);
+}
+#endif

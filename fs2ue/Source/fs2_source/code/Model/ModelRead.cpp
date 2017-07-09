@@ -40,13 +40,15 @@ static int model_initted = 0;
 
 #ifndef NDEBUG
 CFILE *ss_fp;			// file pointer used to dump subsystem information
-char  model_filename[_MAX_PATH];		// temp used to store filename
 char	debug_name[_MAX_PATH];
 int ss_warning_shown;		// have we shown the warning dialog concerning the subsystems?
-char	Global_filename[256];
 int Model_ram = 0;			// How much RAM the models use total
 #endif
 
+#if defined(FS2_UE) || !defined(NDEBUG)
+char  model_filename[_MAX_PATH];		// temp used to store filename
+char	Global_filename[256];
+#endif
 
 
 // Anything less than this is considered incompatible.
@@ -547,7 +549,7 @@ int read_model_file(polymodel * pm, char *filename, int n_subsystems, model_subs
 	int id, len, next_chunk;
 	int i,j;
 
-#ifndef NDEBUG
+#if !defined(NDEBUG) || defined(FS2_UE)
 	strcpy(Global_filename, filename);
 #endif
 

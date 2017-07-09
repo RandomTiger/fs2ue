@@ -1098,6 +1098,8 @@ void vm_strdup_free()
 			gStrdupLeakList[i] = 0;
 		}
 	}
+
+	gStrdupLeakList.clear();
 }
 
 #ifndef NDEBUG
@@ -1118,7 +1120,6 @@ void vm_free( void *ptr )
 		return;
 	}
 
-#ifdef DEBUG
 	if(gbStrdupDupFreeTestEnbaled)
 	{
 		for(unsigned int i = 0; i < gStrdupLeakList.size(); i++)
@@ -1130,7 +1131,6 @@ void vm_free( void *ptr )
 			}
 		}
 	}
-#endif
 
 	#ifndef NDEBUG
 	if ( !Heap )	{

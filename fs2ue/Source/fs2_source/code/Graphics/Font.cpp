@@ -674,6 +674,8 @@ void grx_set_font(int fontnum)
 
 void gr_font_init()
 {
+	Num_fonts = 0;
+
 	gr_init_font( NOX("font01.vf") );
 	gr_init_font( NOX("font02.vf") );
 	gr_init_font( NOX("font03.vf") );

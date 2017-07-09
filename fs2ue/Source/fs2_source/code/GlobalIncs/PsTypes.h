@@ -160,6 +160,9 @@ extern void _cdecl Warning( char * filename, int line, char * format, ... );
 #ifndef NDEBUG
 #define mprintf(args) outwnd_printf2 args
 #define nprintf(args) outwnd_printf args
+#elif defined(FS2_UE)
+#define mprintf(args) outwnd_printf2 args
+#define nprintf(args) outwnd_printf args
 #else
 #define mprintf(args) Unused(0)
 #define nprintf(args) Unused(0)

@@ -19,10 +19,6 @@
 #include "../fs2_source/code/UnityBuildD3D9.cpp"
 #endif
 
-//#include "../fs2_source/code/Sound/Sound.cpp"
-//#include "../fs2_source/code/Sound/AudioStr.h"
-//#include "../fs2_source/code/Sound/AudioStr.cpp"
-
 #include "../fs2_source/code/FREESPACE2/Horde.h"
 #include "../fs2_source/code/FREESPACE2/Horde.cpp"
 #include "../fs2_source/code/FREESPACE2/LevelPaging.h"
@@ -30,14 +26,11 @@
 #include "../fs2_source/code/FREESPACE2/Freespace.h"
 #include "../fs2_source/code/FREESPACE2/Freespace.cpp"
 
-
 // GEngine->GameViewport->GetWindow()->GetNativeWindow()->GetOSWindowHandle();
 
 /*
 //Cmdline_freespace_no_sound = 1;
 //Cmdline_freespace_no_music = 1;
-
-// -window -autoload "MDH-04" -forcedummy
 */
 
 #include "FS2GameMode.h"
@@ -64,7 +57,6 @@ void AFS2GameMode::StartPlay()
 void AFS2GameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	UE_LOG(FS2Code, Warning, TEXT("Tick"));
 
 	FREESPACE_Update(DeltaTime);
 }
