@@ -42,8 +42,6 @@ char *Osreg_title = "Freespace 2";
 #endif
 
 int Os_reg_inited = 0;
-#if !defined(FS2_UE)
-
 
 // ------------------------------------------------------------------------------------------------------------
 // REGISTRY FUNCTIONS
@@ -99,12 +97,12 @@ void os_config_remove( char *section, char *name )
 		if ( !section )	{			
 			goto Cleanup;
 		}
-		lResult = RegDeleteKey( HKEY_LOCAL_MACHINE, keyname );
+		lResult = RegDeleteKeyA( HKEY_LOCAL_MACHINE, keyname );
 		if ( lResult != ERROR_SUCCESS )	{			
 			goto Cleanup;
 		}
 	} else	{
-		lResult = RegCreateKeyEx( HKEY_LOCAL_MACHINE,						// Where to add it
+		lResult = RegCreateKeyExA( HKEY_LOCAL_MACHINE,						// Where to add it
 												 keyname,								// name of key
 												 NULL,									// DWORD reserved
 												 "",										// Object class
@@ -118,7 +116,7 @@ void os_config_remove( char *section, char *name )
 			goto Cleanup;
 		}
 
-		lResult = RegDeleteValue( hKey, name );
+		lResult = RegDeleteValueA( hKey, name );
 		if ( lResult != ERROR_SUCCESS )	{			
 			goto Cleanup;
 		}
@@ -128,7 +126,7 @@ Cleanup:
 	if ( hKey )
 		RegCloseKey(hKey);
 }
-#endif
+
 // Writes a string to the INI file.  If value is NULL,
 // removes the string. Writing a NULL value to a NULL name will delete
 // the section.
@@ -190,8 +188,6 @@ Cleanup:
 // same as previous function except we don't use the application name to build up the keyname
 void os_config_write_string2( char *section, char *name, char *value )
 {
-#if !defined(FS2_UE)
-
 	HKEY hKey = NULL;
 	DWORD dwDisposition;
 	char keyname[1024];
@@ -207,7 +203,7 @@ void os_config_write_string2( char *section, char *name, char *value )
 		sprintf( keyname, "Software\\%s", szCompanyName );
 	}
 
-	lResult = RegCreateKeyEx( HKEY_LOCAL_MACHINE,					// Where to add it
+	lResult = RegCreateKeyExA( HKEY_LOCAL_MACHINE,					// Where to add it
 											 keyname,							// name of key
 											 NULL,								// DWORD reserved
 											 "",									// Object class
@@ -225,7 +221,7 @@ void os_config_write_string2( char *section, char *name, char *value )
 		goto Cleanup;
 	}
 		
-	lResult = RegSetValueEx( hKey,									// Handle to key
+	lResult = RegSetValueExA( hKey,									// Handle to key
 									 name,									// The values name
 									 NULL,									// DWORD reserved
 									 REG_SZ,									// null terminated string
@@ -240,14 +236,11 @@ void os_config_write_string2( char *section, char *name, char *value )
 Cleanup:
 	if ( hKey )
 		RegCloseKey(hKey);
-#endif
 }
 
 // Writes an unsigned int to the INI file.  
 void os_config_write_uint( char *section, char *name, uint value )
 {
-#if !defined(FS2_UE)
-
 	HKEY hKey = NULL;
 	DWORD dwDisposition;
 	char keyname[1024];
@@ -263,7 +256,7 @@ void os_config_write_uint( char *section, char *name, uint value )
 		sprintf( keyname, "Software\\%s\\%s", szCompanyName, szAppName );
 	}
 
-	lResult = RegCreateKeyEx( HKEY_LOCAL_MACHINE,						// Where to add it
+	lResult = RegCreateKeyExA( HKEY_LOCAL_MACHINE,						// Where to add it
 											 keyname,								// name of key
 											 NULL,									// DWORD reserved
 											 "",										// Object class
@@ -281,7 +274,7 @@ void os_config_write_uint( char *section, char *name, uint value )
 		goto Cleanup;
 	}
 		
-	lResult = RegSetValueEx( hKey,									// Handle to key
+	lResult = RegSetValueExA( hKey,									// Handle to key
 									 name,											// The values name
 									 NULL,											// DWORD reserved
 									 REG_DWORD,										// null terminated string
@@ -295,7 +288,6 @@ void os_config_write_uint( char *section, char *name, uint value )
 Cleanup:
 	if ( hKey )
 		RegCloseKey(hKey);
-#endif
 }
 
 // Reads a string from the INI file.  If default is passed,
@@ -355,7 +347,6 @@ Cleanup:
 
 	return default_value;
 }
-#if !defined(FS2_UE)
 
 // same as previous function except we don't use the application name to build up the keyname
 char * os_config_read_string2( char *section, char *name, char *default_value )
@@ -375,7 +366,7 @@ char * os_config_read_string2( char *section, char *name, char *default_value )
 		sprintf( keyname, "Software\\%s", szCompanyName );
 	}
 
-	lResult = RegOpenKeyEx( HKEY_LOCAL_MACHINE,							// Where it is
+	lResult = RegOpenKeyExA( HKEY_LOCAL_MACHINE,							// Where it is
 											 keyname,								// name of key
 											 NULL,									// DWORD reserved
 											 KEY_QUERY_VALUE,						// Allows all changes
@@ -390,7 +381,7 @@ char * os_config_read_string2( char *section, char *name, char *default_value )
 	}
 
 	dwLen = 1024;
-	lResult = RegQueryValueEx( hKey,									// Handle to key
+	lResult = RegQueryValueExA( hKey,									// Handle to key
 									 name,											// The values name
 									 NULL,											// DWORD reserved
 	                         &dwType,										// What kind it is
@@ -409,7 +400,7 @@ Cleanup:
 
 	return default_value;
 }
-#endif
+
 // Reads a string from the INI file.  Default_value must 
 // be passed, and if 'name' isn't found, then returns default_value
 uint  os_config_read_uint( char *section, char *name, uint default_value )

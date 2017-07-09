@@ -105,9 +105,8 @@ BOOL win32_create_window();
 // for the app name, which is where registry keys are stored.
 void os_init(char * wclass, char * title, char *app_name, char *version_string )
 {
-#if !defined(FS2_UE)
 	os_init_registry_stuff(Osreg_company_name, title, version_string);
-#endif
+
 	strcpy( szWinTitle, title );
 	strcpy( szWinClass, wclass );	
 

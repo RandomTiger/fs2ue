@@ -51,7 +51,14 @@ void AFS2GameMode::StartPlay()
 
 	PrimaryActorTick.bCanEverTick = true;
 
-	FREESPACE_Init("-autoload \"MDH - 04\" -forcedummy");
+	char currentDir[MAX_PATH];
+	GetCurrentDirectoryA(MAX_PATH, currentDir);
+	SetCurrentDirectoryA("D:\\Games\\Freespace 2\\");
+
+	char cmdline[128] = "-autoload \"MDH-04\" -forcedummy";
+	FREESPACE_Init(cmdline);
+
+	SetCurrentDirectoryA(currentDir);
 }
 
 void AFS2GameMode::Tick(float DeltaTime)
