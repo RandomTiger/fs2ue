@@ -372,7 +372,7 @@ void player_select_init()
 	}
 #endif	
 
-	if((Player_select_num_pilots == 1) && Player_select_input_mode){
+	if((Player_select_num_pilots == 1) && (Player_select_input_mode || Cmdline_autoload)){
 		Player_select_autoaccept = 1;
 	}	
 }

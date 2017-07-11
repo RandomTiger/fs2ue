@@ -1279,6 +1279,7 @@ void game_do_end_mission_popup()
 // handle pause keypress
 void game_process_pause_key()
 {
+#if !defined(FS2_UE)
 	// special processing for multiplayer
 	if (Game_mode & GM_MULTIPLAYER) {							
 		if(Multi_pause_status){
@@ -1289,6 +1290,7 @@ void game_process_pause_key()
 	} else {
 		gameseq_post_event( GS_EVENT_PAUSE_GAME );
 	}
+#endif
 }
 
 // process cheat codes

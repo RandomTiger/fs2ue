@@ -15,6 +15,8 @@ class FS2UE_API AFS2GameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
+	AFS2GameMode();
+
 	UFUNCTION(BlueprintCallable, Category = Game)
 	virtual void StartPlay() override;
 	
@@ -23,4 +25,6 @@ class FS2UE_API AFS2GameMode : public AGameModeBase
 
 	UFUNCTION(BlueprintCallable, Category = Game)
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+public:
+	static AFS2GameMode* Instance;
 };

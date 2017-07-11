@@ -37,6 +37,13 @@
 
 DEFINE_LOG_CATEGORY(FS2Code);
 
+AFS2GameMode* AFS2GameMode::Instance = nullptr;
+
+AFS2GameMode::AFS2GameMode()
+{
+	Instance = this;
+}
+
 void AFS2GameMode::StartPlay()
 {
 	Super::StartPlay();
@@ -52,6 +59,8 @@ void AFS2GameMode::StartPlay()
 	FREESPACE_Init(cmdline);
 
 	SetCurrentDirectoryA(currentDir);
+
+	UWorld* const World = GetWorld(); // get a reference to the world
 }
 
 void AFS2GameMode::Tick(float DeltaTime)
