@@ -27,4 +27,22 @@ class FS2UE_API AFS2GameMode : public AGameModeBase
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 public:
 	static AFS2GameMode* Instance;
+
+	UPROPERTY(EditAnywhere)
+	bool EnableFS2 = true;
+
+	UPROPERTY(EditAnywhere)
+	FString DefaultGameDir = "D:\\Games\\Freespace 2\\";
+
+	UPROPERTY(EditAnywhere)
+	FString CommandLine = "-autoload \"MDH-04\" -forcedummy";
+
+private:
+	bool IsInit;
+
+public:
+	UFUNCTION(BlueprintCallable, Category = Tests)
+		UTexture2D* LoadTexture(const FString& filePath);
+	UFUNCTION(BlueprintCallable, Category = Tests)
+		USoundWave* GetSoundWaveFromFile(const FString& filePath);
 };
