@@ -307,7 +307,10 @@ int snd_load( game_snd *gs, int allow_hardware_load )
 
 	si = &snd->info;
 
-	if ( ds_parse_wave(gs->filename, &si->data, &si->size, &header) == -1 )
+	if ( ds_parse_wave(
+		"FS2_AArv_A01.wav",
+		//gs->filename, 
+		&si->data, &si->size, &header) == -1 )
 		return -1;
 
 	si->format					= header->wFormatTag;		// 16-bit flag (wFormatTag)

@@ -50,6 +50,7 @@
 #include "Parse/parselo.h"
 #include "Graphics/2d.h"
 #include "UI/UI.h"
+#include "Model/ModelCache.h"
 #include "Model/MODEL.h"
 #include "Network/multi_obj.h"
 #include "Network/multi_options.h"

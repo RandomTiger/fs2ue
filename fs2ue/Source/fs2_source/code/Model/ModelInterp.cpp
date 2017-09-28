@@ -2099,9 +2099,14 @@ void model_really_render(int model_num, matrix *orient, vector * pos, uint flags
 	if(renderFlags == OBJ_RENDER_OPAQUE || renderFlags == OBJ_RENDER_NOT_SET)
 	{
 
+#if defined(FS2_UE)
 		// draw the hull of the ship
-		model_interp_sub( (ubyte *)pm->submodel[pm->detail[detail_level]].bsp_data, pm, &pm->submodel[pm->detail[detail_level]], 0 );
-
+		if (isModelCacheInProgress())
+#endif
+		{
+			model_interp_sub((ubyte *)pm->submodel[pm->detail[detail_level]].bsp_data, pm, &pm->submodel[pm->detail[detail_level]], 0);
+		}
+		
 		if (Interp_flags & MR_SHOW_PIVOTS )	{
 			model_draw_debug_points( pm, NULL );
 			model_draw_debug_points( pm, &pm->submodel[pm->detail[detail_level]] );
@@ -2134,6 +2139,7 @@ void model_really_render(int model_num, matrix *orient, vector * pos, uint flags
 		gr_zbias(0);	
 	}
 
+	// thruster
 	if(renderFlags == OBJ_RENDER_TRANSPARENT || renderFlags == OBJ_RENDER_NOT_SET)
 	{
 		// Draw the thruster glow
@@ -2197,17 +2203,22 @@ void model_really_render(int model_num, matrix *orient, vector * pos, uint flags
 		// Draw the thruster subobjects	
 		i = pm->submodel[pm->detail[detail_level]].first_child;
 		while( i>-1 )	{
-			if (pm->submodel[i].is_thruster )	{
+			if (pm->submodel[i].is_thruster) {
 				zbuf_mode = GR_ZBUFF_READ;
 
 				// no zbuffering
-				if(Interp_flags & MR_NO_ZBUFFER){
+				if (Interp_flags & MR_NO_ZBUFFER) {
 					zbuf_mode = GR_ZBUFF_NONE;
 				}
 
 				gr_zbuffer_set(zbuf_mode);
 
-				model_interp_subcall( pm, i, detail_level, renderFlags);
+#if defined(FS2_UE)
+				if (isModelCacheInProgress())
+#endif
+				{
+					model_interp_subcall(pm, i, detail_level, renderFlags);
+				}
 			}
 			i = pm->submodel[i].next_sibling;
 		}	

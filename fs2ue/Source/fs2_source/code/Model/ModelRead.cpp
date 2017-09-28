@@ -88,34 +88,43 @@ static void model_unload(int modelnum)
 			for (j=0; j<pm->paths[i].nverts; j++ )	{
 				if ( pm->paths[i].verts[j].turret_ids )	{
 					free(pm->paths[i].verts[j].turret_ids);
+					pm->paths[i].verts[j].turret_ids = 0;
 				}
 			}
 			if (pm->paths[i].verts)	{
 				free(pm->paths[i].verts);
+				pm->paths[i].verts = 0;
 			}
 		}
 		free(pm->paths);
+		pm->paths = 0;
+		pm->n_paths = 0;
 	}
 
 	if ( pm->shield.verts )	{
 		free( pm->shield.verts );
+		pm->shield.verts = 0;
 	}
 
 	if ( pm->shield.tris )	{
 		free(pm->shield.tris);
+		pm->shield.tris = 0;
 	}
 
 	if ( pm->missile_banks )	{
 		free(pm->missile_banks);
+		pm->missile_banks = 0;
 	}
 
 	if ( pm->docking_bays )	{
 		for (i=0; i<pm->n_docks; i++ )	{
 			if ( pm->docking_bays[i].splines )	{
 				free( pm->docking_bays[i].splines );
+				pm->docking_bays[i].splines = 0;
 			}
 		}
 		free(pm->docking_bays);
+		pm->docking_bays = 0;
 	}
 
 
@@ -1561,6 +1570,22 @@ int model_load(char *filename, int n_subsystems, model_subsystem *subsystems)
 	Model_ram += pm->ram_used;
 	//mprintf(( "Model RAM = %d KB\n", Model_ram ));
 #endif
+
+
+
+	const int detail_level = 0;
+	const int detail_index = pm->detail[detail_level];
+
+	createOgreMesh(filename, pm, detail_index, false);
+
+	// Now do the submodels (force each as a submesh as we may need to rotate them
+	int lSubmodelIndex = pm->submodel[detail_index].first_child;
+
+	while( lSubmodelIndex > -1 )	
+	{
+		createOgreMesh(filename, pm, lSubmodelIndex, true);		
+		lSubmodelIndex = pm->submodel[lSubmodelIndex].next_sibling;
+	}
 
 	return pm->id;
 }

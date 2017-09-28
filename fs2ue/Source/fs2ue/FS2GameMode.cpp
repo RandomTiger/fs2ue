@@ -28,6 +28,8 @@
 
 // GEngine->GameViewport->GetWindow()->GetNativeWindow()->GetOSWindowHandle();
 
+// D:\dev\OldDepots\P4WorkspaceShuttle\Freespace\Game\Ogre for model load
+
 /*
 //Cmdline_freespace_no_sound = 1;
 //Cmdline_freespace_no_music = 1;

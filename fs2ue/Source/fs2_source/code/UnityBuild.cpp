@@ -122,6 +122,7 @@
 #include "Model/ModelCollide.cpp"
 #include "Model/ModelInterp.cpp"
 #include "Model/ModelOctant.cpp"
+#include "Model/ModelCache.cpp"
 #include "Model/ModelRead.cpp"
 #include "Nebula/Neb.cpp"
 #include "Nebula/NebLightning.cpp"

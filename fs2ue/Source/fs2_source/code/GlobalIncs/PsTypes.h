@@ -86,6 +86,14 @@ typedef long fix;
 typedef unsigned char ubyte;
 typedef unsigned short ushort;
 typedef unsigned int uint;
+
+#if !defined(FS2_UE)
+typedef signed int int32;
+typedef unsigned int uint32;
+typedef signed long long int64;
+typedef unsigned long long uint64;
+#endif
+
 /*
 typedef unsigned int U32;
 typedef signed int S32;
@@ -126,6 +134,9 @@ typedef struct vertex {
 	ubyte		codes;				// what sides of view pyramid this point is on/off.  0 = Inside view pyramid.
 	ubyte		flags;				// Projection flags.  Indicates whether it is projected or not or if projection overflowed.
 	ubyte		pad[2];				// pad structure to be 4 byte aligned.
+#if defined(FS2_UE)
+	FVector		normal;
+#endif
 } vertex;
 
 enum

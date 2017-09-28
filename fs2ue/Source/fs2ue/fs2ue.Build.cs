@@ -20,6 +20,9 @@ public class fs2ue : ModuleRules
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
+        // https://github.com/Koderz/RuntimeMeshComponent/wiki/Making-the-RMC-available-to-your-project-in-CPP
+        PublicDependencyModuleNames.AddRange(new string[] { "ShaderCore", "RenderCore", "RHI", "RuntimeMeshComponent" });
+
         PublicAdditionalLibraries.Add("atls.lib");
 
         // Uncomment if you are using Slate UI

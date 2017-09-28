@@ -426,7 +426,7 @@ int ds_load_buffer(int *sid, int *hid, int *final_size, void *header, sound_info
 		break;
 
 #if !defined(FS2_UE)
-		case WAVE_FORMAT_ADPCM:
+		case WAVE_FORMAT_ADPCM: // convert!
 		{
 			int	convert_len;					// num bytes of converted wav file
 			uint	src_bytes_used;				// number of source bytes actually converted (should always be equal to original size)

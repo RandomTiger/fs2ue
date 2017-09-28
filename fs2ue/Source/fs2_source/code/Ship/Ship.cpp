@@ -85,6 +85,9 @@
 #include "Behaviours/ScreenEffects.h"
 #include "Cmdline/Cmdline.h"
 #endif
+#if defined(FS2_UE)
+#include "fs2ue/Ship.h"
+#endif
 
 #ifdef FS2_DEMO
 	#define MAX_SHIP_SUBOBJECTS		360
@@ -3582,7 +3585,16 @@ void ship_process_post(object * obj, float frametime)
 				ai_process( obj, Ships[num].ai_index, frametime );
 			}
 		}
-	}			
+	}	
+
+#if defined(FS2_UE)
+	if (shipp->pShip)
+	{
+		FVector pos(obj->pos.Get());
+		shipp->pShip->SetActorLocation(pos);
+		shipp->pShip->DebugRadius = model_get_radius(shipp->modelnum);
+	}
+#endif
 }
 
 
@@ -3870,6 +3882,8 @@ void show_ship_subsys_count()
 //	-1 means failed.
 int ship_create(matrix *orient, vector *pos, int ship_type)
 {
+
+
 	int			i, n, objnum, j, k, t;
 	ship_info	*sip;
 	ship			*shipp;
@@ -4046,6 +4060,12 @@ int ship_create(matrix *orient, vector *pos, int ship_type)
 	// call the contrail system
 	ct_ship_create(shipp);
 
+	//shipp->pShip = ConstructObject<AShip>(AShip::StaticClass());
+
+#if defined(FS2_UE)
+	FActorSpawnParameters SpawnInfo;
+	shipp->pShip = GWorld->SpawnActor<AShip>(AShip::StaticClass(), FVector(), FRotator::ZeroRotator, SpawnInfo);
+#endif
 	return objnum;
 }
 

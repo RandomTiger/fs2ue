@@ -5,6 +5,24 @@
 #include "bmpman.h"
 #endif
 
+struct Vertex
+{
+	Vertex() : sx(0.0f)
+		, sy(0.0f)
+		, sz(0.0f)
+		, m_rhw(1.0f)
+		, color(0)
+	{
+	}
+
+	float sx, sy, sz;
+private:
+	float m_rhw;
+public:
+	DWORD color;
+	float tu, tv;
+};
+
 void gr_dummy_pixel(int x, int y)
 {
 }
@@ -96,6 +114,10 @@ void gr_dummy_scaler(vertex *va, vertex *vb )
 #include "../../../fs2ue/FS2GameMode.h"
 #endif
 
+const int VERT_ARRAY_SIZE = 64;
+Vertex d3d_verts[VERT_ARRAY_SIZE];
+VertexNorm lVertices[VERT_ARRAY_SIZE];
+
 void gr_dummy_tmapper( int nverts, vertex * verts[], uint flags )
 {
 #if defined(FS2_UE)
@@ -107,6 +129,7 @@ void gr_dummy_tmapper( int nverts, vertex * verts[], uint flags )
 		FVector start(va1->x, va1->y, va1->z);
 		FVector end(va2->x, va2->y, va2->z);
 
+		/*
 		DrawDebugLine(
 			AFS2GameMode::Instance->GetWorld(),
 			start,
@@ -115,10 +138,88 @@ void gr_dummy_tmapper( int nverts, vertex * verts[], uint flags )
 			false, -1, 0,
 			1.0f
 		);
+		*/
 	}
 #endif
-}
 
+	int i;
+	float u_scale = 1.0f, v_scale = 1.0f;
+
+	if (isModelCacheInProgress())
+	{
+		extern void model_cache_set_texture(int texture);
+		model_cache_set_texture(gr_screen.current_bitmap);
+	}
+
+	Vertex *src_v = d3d_verts;
+
+	assert(nverts < VERT_ARRAY_SIZE);
+	for (i = 0; i<nverts; i++) {
+		vertex * va = verts[i];
+
+		if (isModelCacheInProgress())
+		{
+			src_v->sx = va->x;
+			src_v->sy = va->y;
+			src_v->sz = va->z;
+		}
+		else
+		{
+			src_v->sx = va->sx + gr_screen.offset_x;
+			src_v->sy = va->sy + gr_screen.offset_y;
+			src_v->sz = 0.99f;
+		}
+
+		src_v->color = 0xffffffff;
+
+		if (!isModelCacheInProgress())
+		{
+			src_v->sx = va->sx + gr_screen.offset_x;
+			src_v->sy = va->sy + gr_screen.offset_y;
+		}
+
+		if (flags & TMAP_FLAG_TEXTURED) {
+			static float changer = 0.000288f;
+			src_v->tu = (va->u*u_scale) + changer;
+			src_v->tv = (va->v*v_scale) + changer;
+		}
+		else {
+			src_v->tu = 0.0f;
+			src_v->tv = 0.0f;
+		}
+
+		src_v++;
+	}
+
+
+	assert(nverts < VERT_ARRAY_SIZE);
+
+	if (isModelCacheInProgress())
+	{
+		for (i = 0; i<nverts; i++)
+		{
+			extern void model_cache_add_vertex(VertexNorm *src_v);
+
+#if defined(FS2_UE)
+			lVertices[i].nx = verts[i]->normal.X;
+			lVertices[i].ny = verts[i]->normal.Y;
+			lVertices[i].nz = verts[i]->normal.Z;
+#endif
+			lVertices[i].sx = d3d_verts[i].sx;
+			lVertices[i].sy = d3d_verts[i].sy;
+			lVertices[i].sz = d3d_verts[i].sz;
+			lVertices[i].tu = d3d_verts[i].tu;
+			lVertices[i].tv = d3d_verts[i].tv;
+
+			if (i >= 2)
+			{
+				model_cache_add_vertex(&lVertices[0]);
+				model_cache_add_vertex(&lVertices[i - 1]);
+				model_cache_add_vertex(&lVertices[i]);
+			}
+		}
+	}
+}
 
 void gr_dummy_gradient(int x1,int y1,int x2,int y2)
 {

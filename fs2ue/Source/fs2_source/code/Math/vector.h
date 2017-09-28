@@ -85,4 +85,11 @@ public:
 
 	static float DotProduct(vector &v1, vector v2);
 
+#if defined(FS2_UE)
+	FVector Get()
+	{
+		return FVector(x, y, z);
+	}
+#endif
+
 } vector;

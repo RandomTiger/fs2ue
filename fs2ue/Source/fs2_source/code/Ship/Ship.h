@@ -23,6 +23,10 @@
 #include "weapon.h"		// ship_subsys must be declared before we include this.
 #endif
 
+#if defined(FS2_UE)
+class AShip;
+#endif
+
 struct model_subsystem;
 struct object;
 
@@ -262,7 +266,6 @@ typedef struct ship_spark {
 #define AWACS_WARN_25		(1 << 1)
 #define AWACS_WARN_75		(1 << 2)
 
-
 typedef struct ship {
 	int	objnum;
 	int	ai_index;			// Index in Ai_info of ai_info associated with this ship.
@@ -437,6 +440,10 @@ typedef struct ship {
 
 	// Special warpout objnum (warpout at knossos)
 	int special_warp_objnum;
+
+#if defined(FS2_UE)
+	AShip *pShip;
+#endif
 } ship;
 
 // structure and array def for ships that have exited the game.  Keeps track of certain useful
