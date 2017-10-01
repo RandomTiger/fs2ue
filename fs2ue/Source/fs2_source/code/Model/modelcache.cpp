@@ -211,6 +211,47 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 		lMeshName.append(lBuffer);
 	}
 
+#if defined(FS2_UE)
+
+	if (iCurrentVertex > 100000)
+	{
+		int i = 0;
+	} 
+
+	for (int i = 0; i < iCurrentVertex; i++)
+	{
+		FVector pos(VertexArray[(i * stride) + 0], VertexArray[(i * stride) + 1], VertexArray[(i * stride) + 2]);
+		FVector norm(VertexArray[(i * stride) + 3], VertexArray[(i * stride) + 4], VertexArray[(i * stride) + 5]);
+		FVector2D tcoord(VertexArray[(i * stride) + 6], VertexArray[(i * stride) + 7]);
+
+		lSubmodel->Vertices.Add(FRuntimeMeshVertexSimple(pos, norm, FRuntimeMeshTangent(0, -1, 0), FColor::White, tcoord));
+	}
+
+	int lIndexCount = 0;
+	const unsigned int lModelSize = g_SubModels.size();
+	for (unsigned int m = 0; m < lModelSize; m++)
+	{
+		g_SubModels[m].mIndexStart = lIndexCount;
+
+		const unsigned int lIndexSize = g_SubModels[m].mIndexList.size();
+
+		if (lIndexSize > 100000)
+		{
+			int i = 0;
+		}
+
+		for (unsigned int i = 0; i < lIndexSize; i++)
+		{
+			assert(lIndexCount < iCurrentVertex);
+
+			lSubmodel->Triangles.Add(g_SubModels[m].mIndexList[i]);
+			lIndexCount++;
+		}
+
+		g_SubModels[m].mIndexCount = lIndexCount - g_SubModels[m].mIndexStart;
+	}
+
+#endif
 #if 0
 	lSubmodel->mOgreInfo = new bsp_info::cOgreInfo();
 	Ogre::MeshPtr &msh = lSubmodel->mOgreInfo->mMesh = Ogre::MeshManager::getSingleton().createManual(lMeshName, lGroupName);

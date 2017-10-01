@@ -12,6 +12,10 @@
 #ifndef _MODEL_H
 #define _MODEL_H
 
+#if defined(FS2_UE)
+#include "RuntimeMeshComponent.h"
+#endif
+
 struct object;
 
 #define MAX_PRIMARY_BANKS		3
@@ -207,6 +211,10 @@ typedef struct bsp_info {
 	int		num_arcs;												// See model_add_arc for more info	
 	vector	arc_pts[MAX_ARC_EFFECTS][2];	
 	ubyte		arc_type[MAX_ARC_EFFECTS];							// see MARC_TYPE_* defines
+#if defined(FS2_UE)
+	TArray<FRuntimeMeshVertexSimple> Vertices;
+	TArray<int32> Triangles;
+#endif
 } bsp_info;
 
 

@@ -2,7 +2,7 @@
 
 #include "fs2ue.h"
 #include "Ship.h"
-
+#include "../fs2_source/code/UnityBuild.h"
 
 // Sets default values
 AShip::AShip(const FObjectInitializer& ObjectInitializer)
@@ -17,38 +17,14 @@ AShip::AShip(const FObjectInitializer& ObjectInitializer)
 	RuntimeMesh = ObjectInitializer.CreateDefaultSubobject<URuntimeMeshComponent>(this, TEXT("RuntimeMesh"));
 	RuntimeMesh->Mobility = EComponentMobility::Type::Movable;
 	RootComponent = RuntimeMesh;
-
-	AssembleMeshData();
 }
 
-void AShip::AssembleMeshData()
+void AShip::AssembleMeshData(const polymodel * const pm)
 {
-	TArray<FRuntimeMeshVertexSimple> Vertices;
-	TArray<int32> Triangles;
-
-	// vertices
-	Vertices.Add(FRuntimeMeshVertexSimple(FVector(0, 100, 0), FVector(0, 0, 1), FRuntimeMeshTangent(0, -1, 0), FColor::White, FVector2D(0, 0)));
-	Vertices.Add(FRuntimeMeshVertexSimple(FVector(100, 100, 0), FVector(0, 0, 1), FRuntimeMeshTangent(0, -1, 0), FColor::White, FVector2D(0, 1)));
-	Vertices.Add(FRuntimeMeshVertexSimple(FVector(100, 0, 0), FVector(0, 0, 1), FRuntimeMeshTangent(0, -1, 0), FColor::White, FVector2D(1, 1)));
-	Vertices.Add(FRuntimeMeshVertexSimple(FVector(0, 0, 0), FVector(0, 0, 1), FRuntimeMeshTangent(0, -1, 0), FColor::White, FVector2D(1, 0)));
-
-
-	Triangles.Add(0);
-	Triangles.Add(1);
-	Triangles.Add(2);
-	Triangles.Add(0);
-	Triangles.Add(2);
-	Triangles.Add(3);
-
-	Triangles.Add(3);
-	Triangles.Add(2);
-	Triangles.Add(0);
-	Triangles.Add(2);
-	Triangles.Add(1);
-	Triangles.Add(0);
-
-	// Create the mesh section  (also enables collision, and sets the section update frequency to infrequent)
-	RuntimeMesh->CreateMeshSection(0, Vertices, Triangles, false, EUpdateFrequency::Infrequent);
+	for (int i = 0; i < pm->n_models; i++)
+	{
+		RuntimeMesh->CreateMeshSection(i, pm->submodel[i].Vertices, pm->submodel[i].Triangles, false, EUpdateFrequency::Infrequent);
+	}
 }
 
 // Called when the game starts or when spawned

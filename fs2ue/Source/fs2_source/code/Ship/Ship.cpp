@@ -87,6 +87,7 @@
 #endif
 #if defined(FS2_UE)
 #include "fs2ue/Ship.h"
+#include "Kismet/KismetMathLibrary.h"
 #endif
 
 #ifdef FS2_DEMO
@@ -3590,8 +3591,11 @@ void ship_process_post(object * obj, float frametime)
 #if defined(FS2_UE)
 	if (shipp->pShip)
 	{
+		FRotator Rotation = UKismetMathLibrary::MakeRotationFromAxes(obj->orient.fvec.Get(), obj->orient.rvec.Get(), obj->orient.uvec.Get());
+
 		FVector pos(obj->pos.Get());
 		shipp->pShip->SetActorLocation(pos);
+		shipp->pShip->SetActorRotation(Rotation, ETeleportType::None);
 		shipp->pShip->DebugRadius = model_get_radius(shipp->modelnum);
 	}
 #endif
@@ -4060,11 +4064,10 @@ int ship_create(matrix *orient, vector *pos, int ship_type)
 	// call the contrail system
 	ct_ship_create(shipp);
 
-	//shipp->pShip = ConstructObject<AShip>(AShip::StaticClass());
-
 #if defined(FS2_UE)
 	FActorSpawnParameters SpawnInfo;
 	shipp->pShip = GWorld->SpawnActor<AShip>(AShip::StaticClass(), FVector(), FRotator::ZeroRotator, SpawnInfo);
+	shipp->pShip->AssembleMeshData(pm);
 #endif
 	return objnum;
 }

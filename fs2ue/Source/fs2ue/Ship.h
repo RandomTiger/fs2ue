@@ -6,6 +6,8 @@
 #include "RuntimeMeshComponent.h"
 #include "Ship.generated.h"
 
+struct polymodel;
+
 UCLASS()
 class FS2UE_API AShip : public APawn
 {
@@ -15,11 +17,12 @@ public:
 	// Sets default values for this pawn's properties
 	AShip(const FObjectInitializer& ObjectInitializer);
 
+	void AssembleMeshData(const polymodel * const pm);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	void AssembleMeshData();
 
 public:	
 	// Called every frame
