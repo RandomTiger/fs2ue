@@ -1,4 +1,4 @@
-
+ 
 #if 1
 #if defined(FS2_UE)
 FMatrix gTempMat;
@@ -224,7 +224,7 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 		FVector norm(VertexArray[(i * stride) + 3], VertexArray[(i * stride) + 4], VertexArray[(i * stride) + 5]);
 		FVector2D tcoord(VertexArray[(i * stride) + 6], VertexArray[(i * stride) + 7]);
 
-		lSubmodel->Vertices.Add(FRuntimeMeshVertexSimple(pos, norm, FRuntimeMeshTangent(0, -1, 0), FColor::White, tcoord));
+		lSubmodel->ueVertices.Add(FRuntimeMeshVertexSimple(pos, norm, FRuntimeMeshTangent(0, -1, 0), FColor::White, tcoord));
 	}
 
 	int lIndexCount = 0;
@@ -235,16 +235,11 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 
 		const unsigned int lIndexSize = g_SubModels[m].mIndexList.size();
 
-		if (lIndexSize > 100000)
-		{
-			int i = 0;
-		}
-
 		for (unsigned int i = 0; i < lIndexSize; i++)
 		{
 			assert(lIndexCount < iCurrentVertex);
 
-			lSubmodel->Triangles.Add(g_SubModels[m].mIndexList[i]);
+			lSubmodel->ueTriangles.Add(g_SubModels[m].mIndexList[i]);
 			lIndexCount++;
 		}
 

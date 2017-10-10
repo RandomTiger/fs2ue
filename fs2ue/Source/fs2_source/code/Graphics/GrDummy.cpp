@@ -5,6 +5,8 @@
 #include "bmpman.h"
 #endif
 
+typedef uint32 UE4COLOR;
+
 struct Vertex
 {
 	Vertex() : sx(0.0f)
@@ -19,7 +21,7 @@ struct Vertex
 private:
 	float m_rhw;
 public:
-	DWORD color;
+	UE4COLOR color;
 	float tu, tv;
 };
 
@@ -30,7 +32,6 @@ void gr_dummy_pixel(int x, int y)
 void gr_dummy_clear()
 {
 }
-
 
 void gr_dummy_flip()
 {
@@ -109,10 +110,6 @@ void gr_dummy_line(int x1,int y1,int x2,int y2)
 void gr_dummy_scaler(vertex *va, vertex *vb )
 {
 }
-
-#if defined(FS2_UE)
-#include "../../../fs2ue/FS2GameMode.h"
-#endif
 
 const int VERT_ARRAY_SIZE = 64;
 Vertex d3d_verts[VERT_ARRAY_SIZE];
@@ -221,6 +218,106 @@ void gr_dummy_tmapper( int nverts, vertex * verts[], uint flags )
 	}
 }
 
+#undef UpdateResource
+
+const uint32 COLOR_ARGB(uint8 a, uint8 r, uint8 g, uint8 b)
+{
+	return ((((a) & 0xff) << 24) | (((r) & 0xff) << 16) | (((g) & 0xff) << 8) | ((b) & 0xff));
+}
+
+// get the final texture size (the one which will get allocated as a surface)
+void d3d9_tcache_get_adjusted_texture_size(int w_in, int h_in, int *w_out, int *h_out)
+{
+	// starting size
+	int tex_w = w_in;
+	int tex_h = h_in;
+
+	// bogus
+	if ((w_out == NULL) || (h_out == NULL)) {
+		return;
+	}
+
+	//if ( D3D_pow2_textures )	
+	{
+		int i;
+		const int kCheckPower = 16;
+		for (i = 0; i<kCheckPower; i++) {
+			const int checkSize = 1 << i;
+			const int nextSize = 1 << (i + 1);
+
+			if (tex_w > checkSize && tex_w <= nextSize) {
+				tex_w = nextSize;
+				break;
+			}
+		}
+
+		for (i = 0; i<kCheckPower; i++) {
+			const int checkSize = 1 << i;
+			const int nextSize = 1 << (i + 1);
+
+			if (tex_h > checkSize && tex_h <= nextSize) {
+				tex_h = nextSize;
+				break;
+			}
+		}
+	}
+
+	int unrealTextureLimit = 8192;
+	int D3D_min_texture_width = 16;
+	int D3D_min_texture_height = 16;
+
+	if (tex_w < D3D_min_texture_width) {
+		tex_w = D3D_min_texture_width;
+	}
+	else if (tex_w > unrealTextureLimit) {
+		tex_w = unrealTextureLimit;
+	}
+
+	if (tex_h < D3D_min_texture_height) {
+		tex_h = D3D_min_texture_height;
+	}
+	else if (tex_h > unrealTextureLimit) {
+		tex_h = unrealTextureLimit;
+	}
+
+	// store the outgoing size
+	*w_out = tex_w;
+	*h_out = tex_h;
+}
+
+int gr_dummy_tcache_set(int bitmap_id, int bitmap_type, float *u_scale, float *v_scale, int fail_on_full, const bool justCacheNoSet)
+{
+	/*
+	const int n = bm_get_cache_slot(bitmap_id, 1);
+	bitmap_entry	*be = &bm_bitmaps[n];
+	be->Texture
+
+	bool result = true;
+	if ((bitmap_id < 0) || (bitmap_id != t->m_bitmapID)) {
+		result = d3d_create_texture(bitmap_id, bitmap_type, t, fail_on_full);
+	}
+
+	// everything went ok
+	if (result && t->m_handle)
+	{
+		if (u_scale)
+			*u_scale = t->m_uScale;
+		if (v_scale)
+			*v_scale = t->m_vScale;
+
+		if (justCacheNoSet == false)
+		{
+			// set texture
+			t->m_usedThisFrameCount++;
+		}
+
+		return true;
+	}
+	*/
+	return false;
+}
+
+
 void gr_dummy_gradient(int x1,int y1,int x2,int y2)
 {
 }
@@ -261,11 +358,6 @@ void gr_dummy_set_cull(int cull)
 // cross fade
 void gr_dummy_cross_fade(int bmap1, int bmap2, int x1, int y1, int x2, int y2, float pct)
 {
-}
-
-int gr_dummy_tcache_set(int bitmap_id, int bitmap_type, float *u_ratio, float *v_ratio, int fail_on_full = 0, const bool justCacheNoSet = false)
-{
-	return 1;
 }
 
 void gr_dummy_set_clear_color(int r, int g, int b)

@@ -33,7 +33,8 @@ public:
 
 	float DebugRadius;
 private:
-	UBillboardComponent* Billboard;
+	UBillboardComponent *Billboard;
+	UMaterial *MeshMaterial;
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Test")
 	URuntimeMeshComponent *RuntimeMesh;

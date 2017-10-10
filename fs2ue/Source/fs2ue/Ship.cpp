@@ -17,13 +17,23 @@ AShip::AShip(const FObjectInitializer& ObjectInitializer)
 	RuntimeMesh = ObjectInitializer.CreateDefaultSubobject<URuntimeMeshComponent>(this, TEXT("RuntimeMesh"));
 	RuntimeMesh->Mobility = EComponentMobility::Type::Movable;
 	RootComponent = RuntimeMesh;
+
+	static ConstructorHelpers::FObjectFinder<UMaterial> Material(TEXT("Material'/Game/FSCore/Materials/UnlitMaterial'"));
+	if (Material.Object != NULL)
+	{
+		MeshMaterial = (UMaterial*)Material.Object;
+	}
 }
 
 void AShip::AssembleMeshData(const polymodel * const pm)
 {
 	for (int i = 0; i < pm->n_models; i++)
 	{
-		RuntimeMesh->CreateMeshSection(i, pm->submodel[i].Vertices, pm->submodel[i].Triangles, false, EUpdateFrequency::Infrequent);
+		RuntimeMesh->CreateMeshSection(i, pm->submodel[i].ueVertices, pm->submodel[i].ueTriangles, false, EUpdateFrequency::Infrequent);
+
+		UMaterialInstanceDynamic* DynMaterial = UMaterialInstanceDynamic::Create(MeshMaterial, this);
+		//DynMaterial->SetTextureParameterValue("main", pm->submodel[i].ueTexture); 
+		RuntimeMesh->SetMaterial(0, DynMaterial);
 	}
 }
 
