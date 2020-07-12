@@ -353,9 +353,6 @@ void stars_level_init()
 	}		
 }
 
-
-#include "object.h"
-
 #define STAR_AMOUNT_DEFAULT 0.75f
 #define STAR_DIM_DEFAULT 7800.0f
 #define STAR_CAP_DEFAULT 75.0f

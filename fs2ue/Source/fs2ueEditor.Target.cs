@@ -12,21 +12,9 @@ using System.Collections.Generic;
 
 public class fs2ueEditorTarget : TargetRules
 {
-	public fs2ueEditorTarget(TargetInfo Target)
+	public fs2ueEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
-	}
-
-	//
-	// TargetRules interface.
-	//
-
-	public override void SetupBinaries(
-		TargetInfo Target,
-		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
-		ref List<string> OutExtraModuleNames
-		)
-	{
-		OutExtraModuleNames.AddRange( new string[] { "fs2ue" } );
+        ExtraModuleNames.Add("fs2ue");
 	}
 }

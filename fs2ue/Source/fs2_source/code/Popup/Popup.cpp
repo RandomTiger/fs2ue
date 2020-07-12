@@ -828,6 +828,11 @@ int popup_do(popup_info *pi, int flags)
 	while(!done) {
 		int k;
 
+#if defined(FS2_UE)
+		choice = -1;
+		break;
+#endif
+
 		os_poll();
 
 		static int lastGameTime = 0;

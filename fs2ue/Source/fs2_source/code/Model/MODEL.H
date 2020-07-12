@@ -212,7 +212,13 @@ typedef struct bsp_info {
 	vector	arc_pts[MAX_ARC_EFFECTS][2];	
 	ubyte		arc_type[MAX_ARC_EFFECTS];							// see MARC_TYPE_* defines
 #if defined(FS2_UE)
+#if SIMPLE_MESH_OLD_DMC
 	TArray<FRuntimeMeshVertexSimple> ueVertices;
+#endif
+	TArray<FVector> ueVertices;
+	TArray<FVector> ueNormals;
+	TArray<FColor> ueColor;
+	TArray<FVector2D> ueTexCoords;
 	TArray<int32> ueTriangles;
 	int ueBitmap;
 #endif

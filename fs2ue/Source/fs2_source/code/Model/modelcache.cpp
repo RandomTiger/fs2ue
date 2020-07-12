@@ -224,7 +224,13 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 		FVector norm(VertexArray[(i * stride) + 3], VertexArray[(i * stride) + 4], VertexArray[(i * stride) + 5]);
 		FVector2D tcoord(VertexArray[(i * stride) + 6], VertexArray[(i * stride) + 7]);
 
+#if SIMPLE_MESH_OLD_DMC
 		lSubmodel->ueVertices.Add(FRuntimeMeshVertexSimple(pos, norm, FRuntimeMeshTangent(0, -1, 0), FColor::White, tcoord));
+#endif
+		lSubmodel->ueVertices.Add(pos);
+		lSubmodel->ueNormals.Add(norm);
+		lSubmodel->ueColor.Add(FColor::White);
+		lSubmodel->ueTexCoords.Add(tcoord);
 	}
 
 	int lIndexCount = 0;

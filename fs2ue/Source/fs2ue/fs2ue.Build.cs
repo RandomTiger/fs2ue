@@ -11,19 +11,28 @@ using UnrealBuildTool;
 
 public class fs2ue : ModuleRules
 {
-	public fs2ue(TargetInfo Target)
+	public fs2ue(ReadOnlyTargetRules Target) : base(Target)
 	{
-        Definitions.Add("UNITY_BUILD");
-        Definitions.Add("FS2_UE");
+        //Definitions.Add("UNITY_BUILD");
+        //Definitions.Add("FS2_UE");
 
-        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+        PublicDefinitions.Add("UNITY_BUILD");
+        PublicDefinitions.Add("FS2_UE");
+
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "PhysX", "APEX" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
         // https://github.com/Koderz/RuntimeMeshComponent/wiki/Making-the-RMC-available-to-your-project-in-CPP
-        PublicDependencyModuleNames.AddRange(new string[] { "ShaderCore", "RenderCore", "RHI", "RuntimeMeshComponent" });
+        PublicDependencyModuleNames.AddRange(new string[] { "RenderCore", "RHI", "RuntimeMeshComponent" });
 
-        PublicAdditionalLibraries.Add("atls.lib");
+        // For 2.24 update
+        PublicDependencyModuleNames.AddRange(new string[] { "PhysX", "APEX" });
+
+        bLegacyPublicIncludePaths = false;
+        bEnableUndefinedIdentifierWarnings = false;
+
+        //        PublicAdditionalLibraries.Add("atls.lib");
 
         // Uncomment if you are using Slate UI
         // PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

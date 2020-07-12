@@ -3,19 +3,21 @@
 #pragma once
 
 #include "GameFramework/Pawn.h"
-#include "RuntimeMeshComponent.h"
+#include "RuntimeMeshActor.h"
 #include "Ship.generated.h"
 
 struct polymodel;
+class URuntimeMeshComponent;
 
 UCLASS()
-class FS2UE_API AShip : public APawn
+class FS2UE_API AShip : public ARuntimeMeshActor
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this pawn's properties
 	AShip(const FObjectInitializer& ObjectInitializer);
+
+	virtual void OnConstruction(const FTransform& Transform) override;
 
 	void AssembleMeshData(const polymodel * const pm);
 
@@ -29,14 +31,16 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	//virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	float DebugRadius;
 private:
-	UBillboardComponent *Billboard;
-	UMaterial *MeshMaterial;
+	UPROPERTY()
+	UBillboardComponent *Billboard = nullptr;
+	UPROPERTY()
+	UMaterial *MeshMaterial = nullptr;
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Test")
-	URuntimeMeshComponent *RuntimeMesh;
+	URuntimeMeshComponent *RuntimeMesh = nullptr;
 	
 };

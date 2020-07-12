@@ -48,7 +48,7 @@ public:
 	};
 
 	void Start(const int motor, const int graph, const int duration, const int timeInPlay, const int peak);
-	Effect &ForceFeedback::StartEffect(const int padNum, const int motor, const int graph, const int duration, const int peak);
+	Effect &StartEffect(const int padNum, const int motor, const int graph, const int duration, const int peak);
 	void EndEffects(int padNum, float fadeTime);
 	void Update(float frameTimeMS);
 

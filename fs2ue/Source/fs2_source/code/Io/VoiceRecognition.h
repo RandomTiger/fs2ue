@@ -17,13 +17,16 @@ public:
 
 	char *GetLastErrorString();
 private:
+	bool m_initialised = false;
+
+#ifdef VOICER_ENABLED
+
 	void ExecuteCommand(ISpPhrase *pPhrase);
 	const static bool DEBUG_ON = false;
 
-	bool m_initialised;
-
 	static const int kErrorMsgBufferSize = 1024;
 	char m_errorMsgBuffer[kErrorMsgBufferSize];
+#endif
 };
 
 extern VoiceRecognition g_VoiceRecognition;

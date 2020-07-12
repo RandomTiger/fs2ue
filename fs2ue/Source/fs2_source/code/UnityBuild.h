@@ -143,7 +143,9 @@
 #include "Io/Mouse.h"
 #include "Io/MouseController.h"
 #include "Io/PadController.h"
+#ifdef VOICER_ENABLED
 #include "Io/sphelper.h"
+#endif
 #include "Io/sw_force.h"
 #include "Io/TextToSpeech.h"
 #include "Io/Timer.h"

@@ -12,21 +12,11 @@ using System.Collections.Generic;
 
 public class fs2ueTarget : TargetRules
 {
-	public fs2ueTarget(TargetInfo Target)
+	public fs2ueTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
-	}
 
-	//
-	// TargetRules interface.
-	//
-
-	public override void SetupBinaries(
-		TargetInfo Target,
-		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
-		ref List<string> OutExtraModuleNames
-		)
-	{
-		OutExtraModuleNames.AddRange( new string[] { "fs2ue" } );
-	}
+        ExtraModuleNames.Add("fs2ue");
+    }
+ 
 }

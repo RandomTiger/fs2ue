@@ -29,17 +29,19 @@
 #include "ship.h"
 #endif
 
+#ifdef VOICER_ENABLED
 VoiceRecognition g_VoiceRecognition;
 
 CComPtr<ISpRecoGrammar>         p_grammarObject; // Pointer to our grammar object
 CComPtr<ISpRecoContext>         p_recogContext;  // Pointer to our recognition context
 CComPtr<ISpRecognizer>			p_recogEngine;   // Pointer to our recognition engine instance
-
-
+#endif
 
 // Requires CoInitialize
 bool VoiceRecognition::Init(int event_id, int grammar_id, int command_resource)
 {
+#ifdef VOICER_ENABLED
+
 	HWND hWnd = (HWND) os_get_window();
 
     HRESULT hr = S_OK;
@@ -145,10 +147,15 @@ bool VoiceRecognition::Init(int event_id, int grammar_id, int command_resource)
 
 	m_initialised = SUCCEEDED(hr);
     return ( SUCCEEDED(hr) );
+#else
+return true;
+#endif
 }
 
 void VoiceRecognition::Deinit()
 {
+#ifdef VOICER_ENABLED
+
 	m_initialised = false;
 
     // Release grammar, if loaded
@@ -167,9 +174,12 @@ void VoiceRecognition::Deinit()
 	{
 		p_recogEngine.Release();
 	}
+#endif
 }
 void VoiceRecognition::ProcessEvent()
 {
+#ifdef VOICER_ENABLED
+
 //	HWND hWnd = (HWND) os_get_window();
     CSpEvent event;  // Event helper class
 
@@ -185,7 +195,9 @@ void VoiceRecognition::ProcessEvent()
 
         }
     }
+#endif
 }
+#ifdef VOICER_ENABLED
 
 char *VoiceRecognition::GetLastErrorString()
 {
@@ -456,3 +468,4 @@ void VoiceRecognition::ExecuteCommand(ISpPhrase *pPhrase)
     }
 
 }
+#endif

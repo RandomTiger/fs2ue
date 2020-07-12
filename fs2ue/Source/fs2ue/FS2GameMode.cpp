@@ -3,6 +3,10 @@
 // Must be first
 #include "fs2ue.h"
 
+#if defined(FS2_UE)
+#include "RuntimeMeshComponent.h"
+#endif
+
 #include "../fs2_source/code/TomLib/src/StateMachine/StateMachine.h"
 #include "../fs2_source/code/TomLib/src/StateMachine/StateMachine.cpp"
 
@@ -47,9 +51,9 @@ AFS2GameMode::AFS2GameMode()
 	IsInit = false;
 }
 
-void AFS2GameMode::StartPlay()
+void AFS2GameMode::BeginPlay()
 {
-	Super::StartPlay();
+	Super::BeginPlay();
 
 	PrimaryActorTick.bCanEverTick = true;
 
@@ -129,7 +133,7 @@ USoundWave* AFS2GameMode::GetSoundWaveFromFile(const FString& filePath)
 		{
 			sw->Duration = 0.0f;
 		}
-		sw->SampleRate = *WaveInfo.pSamplesPerSec;
+		sw->SetSampleRate(*WaveInfo.pSamplesPerSec);
 		sw->NumChannels = *WaveInfo.pChannels;
 		sw->RawPCMDataSize = WaveInfo.SampleDataSize;
 		sw->SoundGroup = ESoundGroup::SOUNDGROUP_Default;

@@ -18,7 +18,7 @@ class FS2UE_API AFS2GameMode : public AGameModeBase
 	AFS2GameMode();
 
 	UFUNCTION(BlueprintCallable, Category = Game)
-	virtual void StartPlay() override;
+	virtual void BeginPlay() override;
 	
 	UFUNCTION(BlueprintCallable, Category = Game)
 	virtual void Tick(float DeltaTime) override;
