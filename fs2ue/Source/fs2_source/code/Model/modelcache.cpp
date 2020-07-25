@@ -53,11 +53,11 @@ void AddVertex(VertexNorm *vert)
 
 	VertexArray[(iCurrentVertex * stride) + 0] = vert->sx;
 	VertexArray[(iCurrentVertex * stride) + 1] = vert->sy;
-	VertexArray[(iCurrentVertex * stride) + 2] = -vert->sz;
+	VertexArray[(iCurrentVertex * stride) + 2] = vert->sz;
 
 	VertexArray[(iCurrentVertex * stride) + 3] = vert->nx;
 	VertexArray[(iCurrentVertex * stride) + 4] = vert->ny;
-	VertexArray[(iCurrentVertex * stride) + 5] = -vert->nz;
+	VertexArray[(iCurrentVertex * stride) + 5] = vert->nz;
 
 	VertexArray[(iCurrentVertex * stride) + 6] = vert->tu;
 	VertexArray[(iCurrentVertex * stride) + 7] = vert->tv;
@@ -215,8 +215,8 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 
 	for (int i = 0; i < iCurrentVertex; i++)
 	{
-		FVector pos(VertexArray[(i * stride) + 0], VertexArray[(i * stride) + 2], VertexArray[(i * stride) + 1]);
-		FVector norm(VertexArray[(i * stride) + 3], VertexArray[(i * stride) + 5], VertexArray[(i * stride) + 4]);
+		FVector pos(VertexArray[(i * stride) + 2], VertexArray[(i * stride) + 0], VertexArray[(i * stride) + 1]);
+		FVector norm(VertexArray[(i * stride) + 5], VertexArray[(i * stride) + 3], VertexArray[(i * stride) + 4]);
 		FVector2D tcoord(VertexArray[(i * stride) + 6], VertexArray[(i * stride) + 7]);
 
 		lSubmodel->ueVertices.Add(pos);

@@ -88,7 +88,7 @@ public:
 #if defined(FS2_UE)
 	FVector Get()
 	{
-		return FVector(x, y, z);
+		return FVector(z, x, y);
 	}
 #endif
 

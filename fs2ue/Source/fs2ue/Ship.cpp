@@ -31,17 +31,6 @@ void AShip::AssembleMeshData(const polymodel * const pm)
 
 		StaticProvider->SetupMaterialSlot(0, TEXT("TriMat"), MeshMaterial);
 
-		// This creates 3 positions for a triangle
-		TArray<FVector> Positions{ FVector(0, -50, 0), FVector(0, 0, 100), FVector(0, 50, 0) };
-
-		// This creates 3 vertex colors
-		TArray<FColor> Colors{ FColor::Blue, FColor::Red, FColor::Green };
-
-		// This indexes our simple triangle
-		TArray<int32> Triangles = { 0, 1, 2 };
-
-		TArray<FVector> EmptyNormals;
-		TArray<FVector2D> EmptyTexCoords;
 		TArray<FRuntimeMeshTangent> EmptyTangents;
 
 		const int32 LODIndex = 0;
@@ -65,13 +54,11 @@ void AShip::AssembleMeshData(const polymodel * const pm)
 	}
 }
 
-// Called when the game starts or when spawned
 void AShip::BeginPlay()
 {
 	Super::BeginPlay();
 }
 
-// Called every frame
 void AShip::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);

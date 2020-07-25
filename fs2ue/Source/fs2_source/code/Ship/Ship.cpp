@@ -88,6 +88,7 @@
 #if defined(FS2_UE)
 #include "fs2ue/Ship.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "DrawDebugHelpers.h"
 #endif
 
 #ifdef FS2_DEMO
@@ -3591,12 +3592,19 @@ void ship_process_post(object * obj, float frametime)
 #if defined(FS2_UE)
 	if (shipp->pShip)
 	{
-		FRotator Rotation = UKismetMathLibrary::MakeRotationFromAxes(obj->orient.fvec.Get(), obj->orient.rvec.Get(), obj->orient.uvec.Get());
+		FVector Location(obj->pos.Get());
+		FVector Forward(obj->orient.fvec.Get());
+		FVector Right(obj->orient.rvec.Get());
+		FVector Up(obj->orient.uvec.Get());
+		FRotator Rotation = UKismetMathLibrary::MakeRotationFromAxes(Forward, Right, Up);
 
-		FVector pos(obj->pos.Get());
-		shipp->pShip->SetActorLocation(pos);
-		shipp->pShip->SetActorRotation(Rotation, ETeleportType::None);
+		
+		shipp->pShip->SetActorLocationAndRotation(Location, Rotation);
 		shipp->pShip->DebugRadius = model_get_radius(shipp->modelnum);
+
+		DrawDebugLine(shipp->pShip->GetWorld(), Location, Location + Forward * 100, FColor::Red, false, -1.0f, 0, 1);
+		DrawDebugLine(shipp->pShip->GetWorld(), Location, Location + Right * 100, FColor::Green, false, -1.0f, 0, 1);
+		DrawDebugLine(shipp->pShip->GetWorld(), Location, Location + Up * 100, FColor::Blue, false, -1.0f, 0, 1);
 	}
 #endif
 }
