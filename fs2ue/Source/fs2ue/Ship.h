@@ -16,22 +16,13 @@ class FS2UE_API AShip : public ARuntimeMeshActor
 
 public:
 	AShip(const FObjectInitializer& ObjectInitializer);
-
-	virtual void OnConstruction(const FTransform& Transform) override;
-
 	void AssembleMeshData(const polymodel * const pm);
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-
 public:	
-	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
-	//virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	float DebugRadius;
 private:
@@ -39,8 +30,4 @@ private:
 	UBillboardComponent *Billboard = nullptr;
 	UPROPERTY()
 	UMaterial *MeshMaterial = nullptr;
-public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Test")
-	URuntimeMeshComponent *RuntimeMesh = nullptr;
-	
 };

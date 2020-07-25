@@ -484,11 +484,11 @@ void print_family_tree( polymodel *obj, int modelnum, char * ident, int islast )
 		mprintf(( " %s", obj->submodel[modelnum].name ));
 		sprintf( temp, " " );
 	} else if ( islast ) 	{
-		mprintf(( "%sÀÄ%s", ident, obj->submodel[modelnum].name ));
+		mprintf(( "%sï¿½ï¿½%s", ident, obj->submodel[modelnum].name ));
 		sprintf( temp, "%s  ", ident );
 	} else {
-		mprintf(( "%sÃÄ%s", ident, obj->submodel[modelnum].name ));
-		sprintf( temp, "%s³ ", ident );
+		mprintf(( "%sï¿½ï¿½%s", ident, obj->submodel[modelnum].name ));
+		sprintf( temp, "%sï¿½ ", ident );
 	}
 
 	mprintf(( "\n" ));
@@ -1571,9 +1571,7 @@ int model_load(char *filename, int n_subsystems, model_subsystem *subsystems)
 	//mprintf(( "Model RAM = %d KB\n", Model_ram ));
 #endif
 
-
-
-	const int detail_level = 0;
+	const int detail_level = pm->n_detail_levels;
 	const int detail_index = pm->detail[detail_level];
 
 	createOgreMesh(filename, pm, detail_index, false);

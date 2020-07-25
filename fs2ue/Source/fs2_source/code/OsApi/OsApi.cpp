@@ -218,7 +218,9 @@ uint os_get_version()
 // Sleeps for n milliseconds or until app becomes active.
 void os_sleep(int ms)
 {
+#if !defined(FS2_UE)
 	Sleep(ms);
+#endif
 }
 
 // Used to stop message processing
