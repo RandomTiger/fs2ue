@@ -1265,7 +1265,7 @@ void game_init()
 		mprintf(("No sparky_hi_fs2.vp in directory %s\n", dir));
 	}
 
-	int lDefaultMode = GR_DIRECT3D9;
+	int lDefaultMode = GR_DIRECT3D5;
 	if(Cmdline_forceDirect3d9)
 	{
 		lDefaultMode = GR_DIRECT3D9;
