@@ -220,13 +220,14 @@ void gr_dummy_tmapper( int nverts, vertex * verts[], uint flags )
 
 #undef UpdateResource
 
+/*
 const uint32 COLOR_ARGB(uint8 a, uint8 r, uint8 g, uint8 b)
 {
 	return ((((a) & 0xff) << 24) | (((r) & 0xff) << 16) | (((g) & 0xff) << 8) | ((b) & 0xff));
-}
+}*/
 
 // get the final texture size (the one which will get allocated as a surface)
-void d3d9_tcache_get_adjusted_texture_size(int w_in, int h_in, int *w_out, int *h_out)
+void Dummy_d3d9_tcache_get_adjusted_texture_size(int w_in, int h_in, int *w_out, int *h_out)
 {
 	// starting size
 	int tex_w = w_in;

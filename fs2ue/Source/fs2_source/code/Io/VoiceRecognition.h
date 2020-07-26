@@ -14,8 +14,8 @@ public:
 	void ProcessEvent();
 
 	bool IsInit() {return m_initialised;}
-
 	char *GetLastErrorString();
+
 private:
 	bool m_initialised = false;
 
@@ -23,10 +23,10 @@ private:
 
 	void ExecuteCommand(ISpPhrase *pPhrase);
 	const static bool DEBUG_ON = false;
+#endif
 
 	static const int kErrorMsgBufferSize = 1024;
-	char m_errorMsgBuffer[kErrorMsgBufferSize];
-#endif
+	char m_errorMsgBuffer[kErrorMsgBufferSize] = "Voicer not compiled";
 };
 
 extern VoiceRecognition g_VoiceRecognition;

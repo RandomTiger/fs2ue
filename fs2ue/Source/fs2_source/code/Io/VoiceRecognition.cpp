@@ -29,9 +29,9 @@
 #include "ship.h"
 #endif
 
-#ifdef VOICER_ENABLED
 VoiceRecognition g_VoiceRecognition;
 
+#ifdef VOICER_ENABLED
 CComPtr<ISpRecoGrammar>         p_grammarObject; // Pointer to our grammar object
 CComPtr<ISpRecoContext>         p_recogContext;  // Pointer to our recognition context
 CComPtr<ISpRecognizer>			p_recogEngine;   // Pointer to our recognition engine instance
@@ -197,12 +197,12 @@ void VoiceRecognition::ProcessEvent()
     }
 #endif
 }
-#ifdef VOICER_ENABLED
 
 char *VoiceRecognition::GetLastErrorString()
 {
 	return m_errorMsgBuffer;
 }
+#ifdef VOICER_ENABLED
 
 // Its not enough to update this, phrases.xml must have this info as well
 char *wing_names[] = 

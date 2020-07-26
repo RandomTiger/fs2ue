@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="UnityDebug|Win32">
       <Configuration>UnityDebug</Configuration>
@@ -21,28 +21,28 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{DBB61498-051D-4510-8E09-D95739072297}</ProjectGuid>
     <RootNamespace>Freespace2</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -75,27 +75,31 @@
     <LinkIncremental>false</LinkIncremental>
     <TargetName>FS2tvs2015r_32</TargetName>
     <LibraryPath>$(DIRECTX11_HOME)\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(DXSDK_DIR)/include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>FS2tvs2015r_64</TargetName>
-    <LibraryPath>$(DIRECTX11_HOME)\Lib\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(DXSDK_DIR)/libs/x86;$(LibraryPath)</LibraryPath>
     <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
     <OutDir>$(PATH_FS2)\</OutDir>
+    <IncludePath>$(DXSDK_DIR)/include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">
     <OutDir>$(PATH_FS2)\</OutDir>
     <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>$(DIRECTX11_HOME)\Lib\x86;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(DXSDK_DIR)/Lib\x86;$(LibraryPath)</LibraryPath>
     <TargetName>FS2tvs2015d_32</TargetName>
+    <IncludePath>$(DXSDK_DIR)/include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>$(DIRECTX11_HOME)\Lib\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(DXSDK_DIR)/libs/x86;$(LibraryPath)</LibraryPath>
     <TargetName>FS2tvs2015d_64</TargetName>
     <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
     <OutDir>$(PATH_FS2)\</OutDir>
+    <IncludePath>$(DXSDK_DIR)/include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">
     <Midl>

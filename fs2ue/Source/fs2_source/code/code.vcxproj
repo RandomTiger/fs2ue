@@ -70,20 +70,21 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">
     <OutDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
     <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
-    <IncludePath>$(DIRECTX11_HOME)\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(DXSDK_DIR)/include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">
-    <IncludePath>$(DIRECTX11_HOME)\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(DXSDK_DIR)/include;$(IncludePath)</IncludePath>
     <OutDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
     <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">
     <OutDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
     <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
-    <IncludePath>$(DIRECTX11_HOME)\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(DXSDK_DIR)/include;$(IncludePath)</IncludePath>
+    <LibraryPath>.\;.\DirectX;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">
-    <IncludePath>$(DIRECTX11_HOME)\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(DXSDK_DIR)/include;$(IncludePath)</IncludePath>
     <OutDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</OutDir>
     <IntDir>.\$(Platform)\$(Configuration)\$(MSBuildProjectName)\</IntDir>
   </PropertyGroup>
@@ -116,6 +117,7 @@
       <AdditionalDependencies>xinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -151,6 +153,7 @@
       <AdditionalDependencies>xinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -188,6 +191,7 @@
       <AdditionalDependencies>xinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -225,6 +229,7 @@
       <AdditionalDependencies>xinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -3024,7 +3029,9 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="DirectX\vDdraw.lib" />
+    <Library Include="DirectX\vDdraw.lib">
+      <FileType>Document</FileType>
+    </Library>
     <CustomBuild Include="DirectX\vDinput.lib" />
     <CustomBuild Include="DirectX\vDsound.lib" />
     <CustomBuild Include="DirectX\vDxguid.lib" />

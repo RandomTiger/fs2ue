@@ -1,5 +1,4 @@
  
-#if 1
 #if defined(FS2_UE)
 FMatrix gTempMat;
 FVector gTempVec;
@@ -211,8 +210,6 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 		lMeshName.append(lBuffer);
 	}
 
-#if defined(FS2_UE)
-
 	for (int i = 0; i < iCurrentVertex; i++)
 	{
 		FVector pos(VertexArray[(i * stride) + 2], VertexArray[(i * stride) + 0], VertexArray[(i * stride) + 1]);
@@ -245,124 +242,4 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 	}
 
 #endif
-#if 0
-	lSubmodel->mOgreInfo = new bsp_info::cOgreInfo();
-	Ogre::MeshPtr &msh = lSubmodel->mOgreInfo->mMesh = Ogre::MeshManager::getSingleton().createManual(lMeshName, lGroupName);
-
-	msh->sharedVertexData = new Ogre::VertexData();
-	msh->sharedVertexData->vertexCount = iCurrentVertex;
-	msh->sharedVertexData->vertexStart = 0;
-
-	/// Create declaration (memory format) of vertex data
-	Ogre::VertexDeclaration* decl = msh->sharedVertexData->vertexDeclaration;
-	size_t offset = 0;
-	// 1st buffer
-	decl->addElement(0, offset, Ogre::VET_FLOAT3, Ogre::VES_POSITION);
-	offset += Ogre::VertexElement::getTypeSize(Ogre::VET_FLOAT3);
-	decl->addElement(0, offset, Ogre::VET_FLOAT3, Ogre::VES_NORMAL);
-	offset += Ogre::VertexElement::getTypeSize(Ogre::VET_FLOAT3);
-	decl->addElement(0, offset, Ogre::VET_FLOAT2, Ogre::VES_TEXTURE_COORDINATES);
-	offset += Ogre::VertexElement::getTypeSize(Ogre::VET_FLOAT2);
-
-	/// Allocate vertex buffer of the requested number of vertices (vertexCount) 
-	/// and bytes per vertex (offset)
-	Ogre::HardwareVertexBufferSharedPtr vbuf = 
-		Ogre::HardwareBufferManager::getSingleton().createVertexBuffer(
-		offset, msh->sharedVertexData->vertexCount, Ogre::HardwareBuffer::HBU_STATIC_WRITE_ONLY);
-	/// Upload the vertex data to the card
-
-	vbuf->writeData(0, vbuf->getSizeInBytes(), VertexArray, true);
-
-	/// Set vertex buffer binding so buffer 0 is bound to our vertex buffer
-	Ogre::VertexBufferBinding* bind = msh->sharedVertexData->vertexBufferBinding; 
-	bind->setBinding(0, vbuf);
-
-	/// Upload the index data to the card
-	Ogre::HardwareIndexBufferSharedPtr ibuf = Ogre::HardwareBufferManager::getSingleton().
-		createIndexBuffer(Ogre::HardwareIndexBuffer::IT_16BIT, iCurrentVertex, Ogre::HardwareBuffer::HBU_STATIC_WRITE_ONLY);
-
-	int lIndexCount = 0;
-	unsigned short *data = (unsigned short *) ibuf->lock(0, ibuf->getSizeInBytes(), Ogre::HardwareBuffer::HBL_DISCARD);
-	const unsigned int lModelSize = g_SubModels.size();
-	for(unsigned int m = 0; m < lModelSize; m++)
-	{
-		g_SubModels[m].mIndexStart = lIndexCount;
-
-		const unsigned int lIndexSize = g_SubModels[m].mIndexList.size();
-		for(unsigned int i = 0; i < lIndexSize; i++)
-		{
-			assert(lIndexCount < iCurrentVertex);
-			data[lIndexCount] = g_SubModels[m].mIndexList[i];
-			lIndexCount++;
-		}
-
-		g_SubModels[m].mIndexCount = lIndexCount - g_SubModels[m].mIndexStart;
-	}
-	ibuf->unlock();
-
-
-	for(unsigned int m = 0; m < g_SubModels.size(); m++)
-	{
-		Ogre::SubMesh* sub = msh->createSubMesh();
-
-		// Set parameters of the submesh
-		sub->useSharedVertices = true;
-		sub->vertexData = 0;
-
-		sub->operationType = Ogre::RenderOperation::OT_TRIANGLE_LIST;
-		sub->indexData->indexBuffer = ibuf;
-		sub->indexData->indexCount = g_SubModels[m].mIndexCount;
-		sub->indexData->indexStart = g_SubModels[m].mIndexStart;
-		sub->indexData->optimiseVertexCacheTriList();
-
-		extern Texture * GetTexture(int bitmap);
-		Texture *t = GetTexture(g_SubModels[m].mTexture);
-
-		Ogre::String lTextureName = t->mOgreTexture->getName();
-		mprintf(( "Loading texture: %s", lTextureName.c_str()));
-
-		const int lMaterialNameLen = 48;
-		char lMaterialName[lMaterialNameLen];
-		sprintf_s(lMaterialName,lMaterialNameLen,"Mat_%d_%s", m, lName);
-		Ogre::MaterialPtr lMaterial = Ogre::MaterialManager::getSingleton().create( lMaterialName, lGroupName );
-
-		Ogre::Pass *pass = lMaterial->getTechnique( 0 )->getPass( 0 );
-		pass->setLightingEnabled( true );
-		pass->setDepthCheckEnabled( true );
-		pass->setDepthWriteEnabled( true );
-		pass->setCullingMode(Ogre::CULL_ANTICLOCKWISE);
-		//pass->setPolygonMode(Ogre::PM_WIREFRAME);
-
-		Ogre::TextureUnitState *tex = pass->createTextureUnitState( "Custom", 0 );
-
-		tex->setTextureName( lTextureName );
-		sub->setMaterialName(lMaterialName);
-
-		if(Cmdline_savemesh)
-		{
-			std::string lExportName = "Meshes\\";
-			lExportName += lMaterialName;
-
-			Ogre::MaterialSerializer lMaterialSave;
-			lMaterialSave.exportMaterial(lMaterial, lExportName);
-		}
-
-		//g_SubModels[gSubmodelIndex].mMatrix = orient->Get();
-		//g_SubModels[gSubmodelIndex].mPos = pos->Get();
-	}
-	
-
-	Ogre::AxisAlignedBox lFullObjectBoundingBox(pm->mins.Get(), pm->maxs.Get());
-	msh->_setBounds(lFullObjectBoundingBox);
-
-	/// Set bounding information (for culling)
-//	msh->_setBounds(Ogre::AxisAlignedBox(gMins.x,gMins.y,gMins.z,gMaxs.x,gMaxs.y,gMaxs.z));
-	msh->_setBoundingSphereRadius(GetBoundSphere(gMins,gMaxs));
-	// why is it calling createvertexposekeyframe ??
-
-	/// Notify -Mesh object that it has been loaded
-	msh->load();
-#endif
-#endif
 }
-#endif
