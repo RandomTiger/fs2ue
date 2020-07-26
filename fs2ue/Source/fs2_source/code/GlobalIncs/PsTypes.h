@@ -136,6 +136,8 @@ typedef struct vertex {
 	ubyte		pad[2];				// pad structure to be 4 byte aligned.
 #if defined(FS2_UE)
 	FVector		normal;
+
+	FVector GetLocation() { return FVector(z, x, y); }
 #endif
 } vertex;
 

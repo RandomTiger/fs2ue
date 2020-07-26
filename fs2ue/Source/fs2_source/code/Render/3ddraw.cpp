@@ -22,6 +22,11 @@
 #include "key.h"
 #endif
 
+#if defined(FS2_UE)
+#include "DrawDebugHelpers.h"
+#include "Engine.h"
+#endif
+
 //deal with a clipped line
 int must_clip_line(vertex *p0,vertex *p1,ubyte codes_or, uint flags)
 {
@@ -178,8 +183,11 @@ int g3_draw_poly(int nv,vertex **pointlist,uint tmap_flags)
 		cc.or  |= p->codes;
 	}
 
+#if !defined(FS2_UE)
 	if (cc.and)
+	{
 		return 1;	//all points off screen
+	}
 
 	if (cc.or)	{
 		Assert( G3_count == 1 );
@@ -213,29 +221,38 @@ free_points:
 
 	} 
 	else 
+#endif
 	{
 		//now make list of 2d coords (& check for overflow)
 
 		for (i=0;i<nv;i++) {
 			vertex *p = bufptr[i];
 
+			/*
+			if (i > 0 && IsValid(GEngine))
+			{
+				FVector Loc1 = bufptr[i - 1]->GetLocation();
+				FVector Loc2 = bufptr[i]->GetLocation();
+				DrawDebugLine(GEngine->GetWorld(), Loc1, Loc2, FColor::Green, false);
+			}
+			*/
+
 			if (!(p->flags&PF_PROJECTED))
 				g3_project_vertex(p);
 
+#if !defined(FS2_UE)
 			if (p->flags&PF_OVERFLOW) {
 				//Int3();		//should not overflow after clip
 				//printf( "3d: Point overflowed, but flags say OK!\n" );
 				return 255;
 			}
-
+#endif
 		}
 
 		gr_tmapper( nv, bufptr, tmap_flags );
 	}
 	return 0;	//say it drew
 }
-
-
 
 // Draw a polygon.  Same as g3_draw_poly, but it bashes sw to a constant value
 // for all vertexes.  Needs to be done after clipping to get them all.
