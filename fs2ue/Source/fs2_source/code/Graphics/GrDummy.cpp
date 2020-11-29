@@ -25,6 +25,10 @@ public:
 	float tu, tv;
 };
 
+#if defined(FS2_UE)
+TMap<int, UTexture2D*> TextureStore;
+#endif
+
 void gr_dummy_pixel(int x, int y)
 {
 }
@@ -141,6 +145,11 @@ void gr_dummy_tmapper( int nverts, vertex * verts[], uint flags )
 
 	int i;
 	float u_scale = 1.0f, v_scale = 1.0f;
+
+	if (flags & TMAP_FLAG_TEXTURED) {
+		int gr_dummy_tcache_set(int bitmap_id, int bitmap_type, float *u_scale, float *v_scale, int fail_on_full, const bool justCacheNoSet);
+		gr_dummy_tcache_set(gr_screen.current_bitmap, TCACHE_TYPE_NORMAL, &u_scale, &v_scale, 0, 0);
+	}
 
 	if (isModelCacheInProgress())
 	{
@@ -285,37 +294,264 @@ void Dummy_d3d9_tcache_get_adjusted_texture_size(int w_in, int h_in, int *w_out,
 	*w_out = tex_w;
 	*h_out = tex_h;
 }
+#if defined(FS2_UE)
 
-int gr_dummy_tcache_set(int bitmap_id, int bitmap_type, float *u_scale, float *v_scale, int fail_on_full, const bool justCacheNoSet)
+typedef DWORD DUMMYCOLOR;
+// maps unsigned 8 bits/channel to D3DCOLOR
+#define DUMMY_COLOR_ARGB(a,r,g,b) ((DUMMYCOLOR)((((a)&0xff)<<24)|(((b)&0xff)<<16)|(((g)&0xff)<<8)|((r)&0xff)))
+
+// data == start of bitmap data
+// sx == x offset into bitmap
+// sy == y offset into bitmap
+// src_w == absolute width of section on source bitmap
+// src_h == absolute height of section on source bitmap
+// bmap_w == width of source bitmap
+// bmap_h == height of source bitmap
+// tex_w == width of final texture
+// tex_h == height of final texture
+UTexture2D* DummyExtractBitmapToTexture(int bitmap_type, int texture_handle, ushort *data, int bmap_w, int bmap_h, int tex_w, int tex_h, float &uScale, float &vScale)
 {
-	/*
-	const int n = bm_get_cache_slot(bitmap_id, 1);
-	bitmap_entry	*be = &bm_bitmaps[n];
-	be->Texture
+	DWORD dwHeight, dwWidth;
+	ushort *bmp_data;
+
+	const int bpp = bm_get_bpp(texture_handle);
+	bool alphaOn = true;
+	if (bpp != 32 && bitmap_type == TCACHE_TYPE_XPARENT)
+	{
+		alphaOn = false;
+	}
+
+	const bool alt = bitmap_type != TCACHE_TYPE_INTERFACE && tex_w < 256;
+
+	if (bitmap_type == TCACHE_TYPE_AABITMAP || alt == false)
+	{
+		Dummy_d3d9_tcache_get_adjusted_texture_size(tex_w, tex_h, &tex_w, &tex_h);
+	}
+	
+	if (bitmap_type == TCACHE_TYPE_AABITMAP)
+	{
+		uScale = (float)bmap_w / (float)tex_w;
+		vScale = (float)bmap_h / (float)tex_h;
+	}
+	else
+	{
+		uScale = 1.0f;
+		vScale = 1.0f;
+	}
+
+	dwWidth = tex_w;
+	dwHeight = tex_h;
+
+	int TextureuScale = ((float)bmap_w) / ((float)tex_w);
+	int TexturevScale = ((float)bmap_h) / ((float)tex_h);
+
+	bmp_data = (ushort *)data;
+	ubyte *bmp_data_byte = (ubyte*)data;
+
+//////////////
+
+	UTexture2D* texture = UTexture2D::CreateTransient(bmap_w, bmap_h, PF_B8G8R8A8);
+
+	int32 *designTexData = (int32 *)texture->PlatformData->Mips[0].BulkData.Lock(LOCK_READ_WRITE);
+	for (int h = 0; h < bmap_h; h++)
+	{
+		for (int w = 0; w < bmap_w; w++)
+		{
+			designTexData[w + h * bmap_w] = 0xFF0000FF;
+		}
+	}
+
+
+
+	int i, j;
+
+	void *RegionBits = designTexData;
+	int RegionPitch = bmap_w;
 
 	bool result = true;
-	if ((bitmap_id < 0) || (bitmap_id != t->m_bitmapID)) {
-		result = d3d_create_texture(bitmap_id, bitmap_type, t, fail_on_full);
-	}
 
-	// everything went ok
-	if (result && t->m_handle)
+	if (bm_get_bpp(texture_handle) == 32 && bitmap_type != TCACHE_TYPE_AABITMAP && alt)
 	{
-		if (u_scale)
-			*u_scale = t->m_uScale;
-		if (v_scale)
-			*v_scale = t->m_vScale;
+		// Each RGB bit count requires different pointers
+		uint *lpSP;
+		uint *bmp_dataUint = (uint *)bmp_data;
 
-		if (justCacheNoSet == false)
+		fix u, utmp, v, du, dv;
+
+		u = v = 0;
+
+		du = ((bmap_w - 1)*F1_0) / tex_w;
+		dv = ((bmap_h - 1)*F1_0) / tex_h;
+
+		for (j = 0; j < tex_h; j++)
 		{
-			// set texture
-			t->m_usedThisFrameCount++;
-		}
+			lpSP = (uint *)(((char*)RegionBits) + RegionPitch * j);
 
-		return true;
+			utmp = u;
+
+			for (i = 0; i < tex_w; i++) {
+				*lpSP++ = bmp_dataUint[f2i(v)*bmap_w + f2i(utmp)];
+				utmp += du;
+			}
+			v += dv;
+		}
 	}
-	*/
-	return false;
+	else if (bm_get_bpp(texture_handle) == 32)
+	{
+		const int pixelStride = bpp / 8;
+#ifdef _DEBUG
+		memset((void *)region.pBits, 0xff, dwWidth * dwHeight * pixelStride);
+#endif
+		for (int j = 0; j < bmap_h; j++)
+		{
+			ubyte *dstCol = ((ubyte *)RegionBits) + j * dwWidth * pixelStride;
+			ubyte *srcCol = ((ubyte *)bmp_data_byte) + j * bmap_w * pixelStride;
+			memcpy(dstCol, srcCol, bmap_w * pixelStride);
+		}
+	}
+	else
+	{
+		// Each RGB bit count requires different pointers
+		DUMMYCOLOR *lpSP;
+		DUMMYCOLOR xlat[256];
+
+		switch (bitmap_type) {
+		case TCACHE_TYPE_AABITMAP:
+			// setup convenient translation table
+			for (i = 0; i < 16; i++) {
+				const int a = (i * 255) / 15;
+				xlat[i] = DUMMY_COLOR_ARGB(255, 255, 255, a);
+			}
+
+			xlat[15] = xlat[1];
+			for (; i < 256; i++) {
+				xlat[i] = xlat[0];
+			}
+
+			for (j = 0; j < tex_h; j++, lpSP++) {
+				lpSP = (DUMMYCOLOR *)(((char*)RegionBits) + RegionPitch * j);
+
+				for (i = 0; i < tex_w; i++) {
+					if ((i < bmap_w) && (j < bmap_h)) {
+						*lpSP = xlat[(ubyte)bmp_data_byte[j*bmap_w + i]];
+					}
+					else {
+						*lpSP = 0;
+					}
+					lpSP++;
+				}
+			}
+			break;
+
+		default: {	// normal:		
+			fix u, utmp, v, du, dv;
+
+			u = v = 0;
+
+			du = ((bmap_w - 1)*F1_0) / tex_w;
+			dv = ((bmap_h - 1)*F1_0) / tex_h;
+
+			for (j = 0; j < tex_h; j++) {
+				lpSP = (DUMMYCOLOR *)(((char*)RegionBits) + RegionPitch * j);
+
+				utmp = u;
+
+				for (i = 0; i < tex_w; i++) {
+					*lpSP++ = bmp_data[f2i(v)*bmap_w + f2i(utmp)];
+					utmp += du;
+				}
+				v += dv;
+			}
+		}
+				 break;
+		}
+	}
+
+	texture->PlatformData->Mips[0].BulkData.Unlock();
+	texture->UpdateResource();
+
+	return texture;
+}
+
+
+UTexture2D *create_texture(int bitmap_handle, int bitmap_type, float &uScale, float &vScale)
+{
+	UTexture2D **FoundTexture = TextureStore.Find(bitmap_handle);
+	if (FoundTexture != nullptr && IsValid(*FoundTexture))
+	{
+		return *FoundTexture;
+	}
+
+	int bpp = kDefaultBpp;
+	if (bm_get_type(bitmap_handle) == BM_TYPE_USER
+		// protect against bpp == 0!!!
+		&& bm_get_bpp(bitmap_handle) != 0)
+	{
+		bpp = bm_get_bpp(bitmap_handle);
+	}
+
+	// setup texture/bitmap flags
+	ubyte flags = 0;
+	switch (bitmap_type) {
+	case TCACHE_TYPE_AABITMAP:
+		flags |= BMP_AABITMAP;
+		bpp = 8;
+		break;
+	case TCACHE_TYPE_NORMAL:
+		flags |= BMP_TEX_OTHER;
+	case TCACHE_TYPE_INTERFACE:
+	case TCACHE_TYPE_XPARENT:
+		flags |= BMP_TEX_XPARENT;
+		break;
+	}
+
+	// lock the bitmap into the proper format
+	bitmap *bmp = bm_lock(bitmap_handle, bpp, flags);
+	if (bmp == NULL) {
+		mprintf(("Couldn't lock bitmap %d.\n", bitmap_handle));
+		return false;
+	}
+
+	int max_w = bmp->w;
+	int max_h = bmp->h;
+
+	int final_w, final_h;
+	// get final texture size as it will be allocated as a DD surface
+	Dummy_d3d9_tcache_get_adjusted_texture_size(max_w, max_h, &final_w, &final_h);
+
+	// call the helper
+	UTexture2D *Texture =
+		DummyExtractBitmapToTexture(bitmap_type, bitmap_handle,
+		(ushort*)bmp->data,
+			bmp->w, bmp->h,
+			max_w, max_h,
+			uScale, vScale);
+
+	// unlock the bitmap
+	bm_unlock(bitmap_handle);
+
+	TextureStore.Add(bitmap_handle, Texture);
+	return Texture;
+}
+#endif
+int gr_dummy_tcache_set(int bitmap_id, int bitmap_type, float *u_scale, float *v_scale, int fail_on_full, const bool justCacheNoSet)
+{
+	if (bitmap_id < 0) {
+		return false;
+	}
+
+#if defined(FS2_UE)
+
+	// if we dont already have this texture
+	float uScale, vScale;
+	UTexture2D *Texture = create_texture(bitmap_id, bitmap_type, uScale, vScale);
+	
+
+	// Scaling doesnt work  
+	if (u_scale) *u_scale = 1.0f; //uScale;
+	if (v_scale) *v_scale = 1.0f; //vScale;
+#endif
+	return true;
 }
 
 

@@ -21,6 +21,8 @@ AShip::AShip(const FObjectInitializer& ObjectInitializer)
 	}
 }
 
+#undef UpdateResource
+#pragma optimize("", off)
 void AShip::AssembleMeshData(const polymodel * const pm)
 {
 	URuntimeMeshProviderStatic* StaticProvider = NewObject<URuntimeMeshProviderStatic>(this, TEXT("RuntimeMeshProvider"));
@@ -29,17 +31,29 @@ void AShip::AssembleMeshData(const polymodel * const pm)
 		// The static provider should initialize before we use it
 		GetRuntimeMeshComponent()->Initialize(StaticProvider);
 
-		StaticProvider->SetupMaterialSlot(0, TEXT("TriMat"), MeshMaterial);
-
 		TArray<FRuntimeMeshTangent> EmptyTangents;
 
 		const int32 LODIndex = 0;
-		const int32 MaterialSlot = 0;
 		const bool bCreateCollision = false;
 
 		for (int i = 0; i < pm->n_models; i++)
 		{
 			const int32 SectionIndex = i;
+			const int32 MaterialSlot = i;
+
+			extern TMap<int, UTexture2D*> TextureStore;
+			int BitmapHandle = pm->submodel[i].ueBitmap;
+			UTexture2D **TexturePtr = TextureStore.Find(BitmapHandle);
+			if (TexturePtr != nullptr)
+			{
+				UTexture2D *Texture = *TexturePtr;
+				if (IsValid(Texture))
+				{
+					UMaterialInstanceDynamic *MaterialInstance = UMaterialInstanceDynamic::Create(MeshMaterial, nullptr);
+					MaterialInstance->SetTextureParameterValue(FName(TEXT("Main")), Texture);
+					StaticProvider->SetupMaterialSlot(MaterialSlot, TEXT("TriMat"), MaterialInstance);
+				}
+			}
 
 			StaticProvider->CreateSectionFromComponents(
 				LODIndex, SectionIndex, MaterialSlot,
@@ -74,3 +88,4 @@ void AShip::Tick(float DeltaTime)
 		segs,
 		FColor(255, 0, 0));
 }
+#pragma optimize("", off)

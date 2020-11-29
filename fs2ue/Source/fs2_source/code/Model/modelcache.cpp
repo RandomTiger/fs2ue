@@ -91,6 +91,7 @@ void model_cache_set_texture(int texture)
 		const int lSize = g_SubModels.size();
 		for(int i = 0; i < lSize; i++)
 		{
+			// If we are the same texture then continue putting data into this submodel
 			if(texture == g_SubModels[i].mTexture)
 			{
 				if(gSubmodelIndex == Submodel::kNoIndexSet || gSubmodelIndex == g_SubModels[i].mSubIndex)
@@ -101,6 +102,7 @@ void model_cache_set_texture(int texture)
 			}
 		}
 
+		// Otherwise create a new submodel
 		gCurrentSubmodel = lSize;
 		g_SubModels.push_back(Submodel(texture,iCurrentVertex, gSubmodelIndex));
 
@@ -108,7 +110,6 @@ void model_cache_set_texture(int texture)
 		g_SubModels[gCurrentSubmodel].mMatrix = gTempMat;
 		g_SubModels[gCurrentSubmodel].mPos = gTempVec;
 #endif
-
 	}
 }
 
@@ -221,6 +222,8 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 		lSubmodel->ueColor.Add(FColor::White);
 		lSubmodel->ueTexCoords.Add(tcoord);
 	}
+
+	lSubmodel->ueBitmap = gr_screen.current_bitmap;
 
 	int lIndexCount = 0;
 	const unsigned int lModelSize = g_SubModels.size();
