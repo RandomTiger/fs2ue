@@ -366,7 +366,7 @@ UTexture2D* DummyExtractBitmapToTexture(int bitmap_type, int texture_handle, ush
 	int i, j;
 
 	void *RegionBits = designTexData;
-	int RegionPitch = bmap_w;
+	int RegionPitch = bmap_w * sizeof(int32);
 
 	bool result = true;
 
@@ -541,6 +541,11 @@ int gr_dummy_tcache_set(int bitmap_id, int bitmap_type, float *u_scale, float *v
 	}
 
 #if defined(FS2_UE)
+
+	if (isModelCacheInProgress() == false)
+	{
+		return true;
+	}
 
 	// if we dont already have this texture
 	float uScale, vScale;
