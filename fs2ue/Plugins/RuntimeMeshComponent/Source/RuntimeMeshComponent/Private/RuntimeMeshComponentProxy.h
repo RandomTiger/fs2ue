@@ -1,10 +1,11 @@
-// Copyright 2016-2020 Chris Conway (Koderz). All Rights Reserved.
+// Copyright 2016-2020 TriAxis Games L.L.C. All Rights Reserved.
 
 #pragma once
 
 #include "CoreMinimal.h"
 #include "RuntimeMesh.h"
 #include "RuntimeMeshSectionProxy.h"
+#include "Materials/Material.h"
 
 class UBodySetup;
 class URuntimeMeshComponent;
@@ -16,8 +17,8 @@ private:
 	// THis is the proxy we're rendering
 	FRuntimeMeshProxyPtr RuntimeMeshProxy;
 
-	// Extra section data, mostly material data after being combined with override materials on the component
-	TArray<TMap<int32, UMaterialInterface*>, TInlineAllocator<RUNTIMEMESH_MAXLODS>> SectionMaterials;
+	// All the in use materials
+	TMap<int32, UMaterialInterface*> Materials;
 
 	// Reference all the in-use buffers so that as long as this proxy is around these buffers will be too. 
 	// This is meant only for statically drawn sections. Dynamically drawn sections can update safely in place.
@@ -31,6 +32,8 @@ private:
 	FMaterialRelevance MaterialRelevance;
 
 	FRuntimeMeshObjectId<FRuntimeMeshComponentSceneProxy> ObjectId;
+
+	bool bAnyMaterialUsesDithering;
 public:
 
 	/*Constructor, copies the whole mesh data to feed to UE */
@@ -40,10 +43,15 @@ public:
 
 	int32 GetUniqueID() const { return ObjectId.Get(); }
 
-	UMaterialInterface* GetMaterialForSection(int32 LODIndex, int32 SectionIndex) const
+	UMaterialInterface* GetMaterialSlot(int32 MaterialSlotId) const
 	{
-		UMaterialInterface* const* SectionMat = SectionMaterials[LODIndex].Find(SectionIndex);
-		return SectionMat != nullptr ? *SectionMat : nullptr;
+		UMaterialInterface*const* Mat = Materials.Find(MaterialSlotId);
+		if (Mat && *Mat)
+		{
+			return *Mat;
+		}
+		
+		return UMaterial::GetDefaultMaterial(MD_Surface);
 	}
 
 	void CreateRenderThreadResources() override;
@@ -55,18 +63,19 @@ public:
 
 	virtual FPrimitiveViewRelevance GetViewRelevance(const FSceneView* View) const override;
 
-	void CreateMeshBatch(FMeshBatch& MeshBatch, const FRuntimeMeshSectionProxy& Section, int32 LODIndex, UMaterialInterface* Material, FMaterialRenderProxy* WireframeMaterial) const;
+	void CreateMeshBatch(FMeshBatch& MeshBatch, const FRuntimeMeshSectionProxy& Section, int32 LODIndex, int32 SectionId, UMaterialInterface* Material, FMaterialRenderProxy* WireframeMaterial, bool bForRayTracing) const;
 
 	virtual void DrawStaticElements(FStaticPrimitiveDrawInterface* PDI) override;
 
 	virtual void GetDynamicMeshElements(const TArray<const FSceneView*>& Views, const FSceneViewFamily& ViewFamily, uint32 VisibilityMap, FMeshElementCollector& Collector) const override;
 
+
 #if RHI_RAYTRACING
-	virtual bool IsRayTracingRelevant() const { return false; }
+	virtual bool IsRayTracingRelevant() const { return true; }
 	virtual bool IsRayTracingStaticRelevant() const { return false; }
 
 	/** Gathers dynamic ray tracing instances from this proxy. */
-	//virtual void GetDynamicRayTracingInstances(struct FRayTracingMaterialGatheringContext& Context, TArray<struct FRayTracingInstance>& OutRayTracingInstances);
+	virtual void GetDynamicRayTracingInstances(struct FRayTracingMaterialGatheringContext& Context, TArray<struct FRayTracingInstance>& OutRayTracingInstances);
 
 #endif // RHI_RAYTRACING
 

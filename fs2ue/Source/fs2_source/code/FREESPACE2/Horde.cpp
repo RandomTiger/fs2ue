@@ -12,6 +12,8 @@
 #endif
 #endif
 
+#if defined(HORDE_MODE)
+
 bool BuyShip(const int index);
 int SpawnShip(const char * const lNameOfShipPof, int lTeam);
 void SetupPriceList();
@@ -582,3 +584,4 @@ fighter2v-04.POF
 supercap2s-01.POF
 TerranSuper.POF
 */
+#endif

@@ -13,11 +13,11 @@ public class fs2ue : ModuleRules
 {
 	public fs2ue(ReadOnlyTargetRules Target) : base(Target)
 	{
-        //Definitions.Add("UNITY_BUILD");
-        //Definitions.Add("FS2_UE");
-
         PublicDefinitions.Add("UNITY_BUILD");
         PublicDefinitions.Add("FS2_UE");
+
+        //PublicIncludePaths.AddRange(new string[] { "fs2_source//code" });
+
 
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "PhysX", "APEX" });
 
@@ -29,7 +29,7 @@ public class fs2ue : ModuleRules
         // For 2.24 update
         PublicDependencyModuleNames.AddRange(new string[] { "PhysX", "APEX" });
 
-        bLegacyPublicIncludePaths = false;
+        bLegacyPublicIncludePaths = true;
         bEnableUndefinedIdentifierWarnings = false;
 
         //        PublicAdditionalLibraries.Add("atls.lib");

@@ -3894,8 +3894,6 @@ void show_ship_subsys_count()
 //	-1 means failed.
 int ship_create(matrix *orient, vector *pos, int ship_type)
 {
-
-
 	int			i, n, objnum, j, k, t;
 	ship_info	*sip;
 	ship			*shipp;
@@ -3929,6 +3927,10 @@ int ship_create(matrix *orient, vector *pos, int ship_type)
 	if (n == MAX_SHIPS){
 		return -1;
 	}
+
+	extern bool bCacheMeshEnabled;
+	bCacheMeshEnabled = true;
+
 
 	Assert((ship_type >= 0) && (ship_type < Num_ship_types));
 	sip = &(Ship_info[ship_type]);
@@ -4077,6 +4079,8 @@ int ship_create(matrix *orient, vector *pos, int ship_type)
 	shipp->pShip = GWorld->SpawnActor<AShip>(AShip::StaticClass(), FVector(), FRotator::ZeroRotator, SpawnInfo);
 	shipp->pShip->AssembleMeshData(pm);
 #endif
+
+	bCacheMeshEnabled = false;
 	return objnum;
 }
 

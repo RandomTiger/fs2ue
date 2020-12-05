@@ -38,6 +38,11 @@ void AShip::AssembleMeshData(const polymodel * const pm)
 
 		for (int i = 0; i < pm->n_models; i++)
 		{
+			if (pm->submodel[i].ueTriangles.Num() == 0)
+			{
+				continue;
+			}
+
 			const int32 SectionIndex = i;
 			const int32 MaterialSlot = i;
 
@@ -47,12 +52,15 @@ void AShip::AssembleMeshData(const polymodel * const pm)
 			if (TexturePtr != nullptr)
 			{
 				UTexture2D *Texture = *TexturePtr;
-				if (IsValid(Texture))
+				check(IsValid(Texture));
+
 				{
 					UMaterialInstanceDynamic *MaterialInstance = UMaterialInstanceDynamic::Create(MeshMaterial, nullptr);
 					MaterialInstance->SetTextureParameterValue(FName(TEXT("Main")), Texture);
 					StaticProvider->SetupMaterialSlot(MaterialSlot, TEXT("TriMat"), MaterialInstance);
 				}
+
+				UE_LOG(LogTemp, Warning, TEXT("AShip::AssembleMeshData %s %d %d"), *(Texture->GetName()), Texture->PlatformData->SizeX, Texture->PlatformData->SizeY);
 			}
 
 			StaticProvider->CreateSectionFromComponents(

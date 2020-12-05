@@ -1,4 +1,4 @@
-// Copyright 2016-2020 Chris Conway (Koderz). All Rights Reserved.
+// Copyright 2016-2020 TriAxis Games L.L.C. All Rights Reserved.
 
 #pragma once
 
@@ -23,7 +23,7 @@ struct FRuntimeMeshSectionNullBufferElement
 };
 
 
-struct FRuntimeMeshSectionProxyBuffers
+struct FRuntimeMeshSectionProxyBuffers : public TSharedFromThis<FRuntimeMeshSectionProxyBuffers>
 {
 	/** Vertex factory for this section */
 	FRuntimeMeshVertexFactory VertexFactory;
@@ -44,6 +44,7 @@ struct FRuntimeMeshSectionProxyBuffers
 	/** Index buffer for this section */
 	FRuntimeMeshIndexBuffer IndexBuffer;
 
+
 	/** Index buffer for this section */
 	FRuntimeMeshIndexBuffer AdjacencyIndexBuffer;
 
@@ -55,11 +56,6 @@ struct FRuntimeMeshSectionProxyBuffers
 	uint32 bIsShared : 1;
 
 
-// 
-// 	FRuntimeMeshSectionBuffers()
-// 	{
-// 
-// 	}
 
 	FRuntimeMeshSectionProxyBuffers(bool bInIsDynamicBuffer, bool bInIsShared)
 		: VertexFactory(GMaxRHIFeatureLevel)
@@ -74,8 +70,6 @@ struct FRuntimeMeshSectionProxyBuffers
 
 	}
 
-	void InitResource();
-
 	~FRuntimeMeshSectionProxyBuffers()
 	{
 		check(IsInRenderingThread());
@@ -87,17 +81,31 @@ struct FRuntimeMeshSectionProxyBuffers
 
 
 	template <uint32 MaxNumUpdates>
+	void InitFromRHIReferences(FRuntimeMeshSectionUpdateData& UpdateData, TRHIResourceUpdateBatcher<MaxNumUpdates>& Batcher)
+	{
+		PositionBuffer.InitRHIFromExisting(UpdateData.PositionsBuffer, UpdateData.Positions.GetNumElements());
+		TangentsBuffer.InitRHIFromExisting(UpdateData.TangentsBuffer, UpdateData.Tangents.GetNumElements(), UpdateData.bHighPrecisionTangents);
+		UVsBuffer.InitRHIFromExisting(UpdateData.TexCoordsBuffer, UpdateData.TexCoords.GetNumElements(), UpdateData.bHighPrecisionTexCoords, UpdateData.NumTexCoordChannels);
+		ColorBuffer.InitRHIFromExisting(UpdateData.ColorsBuffer, UpdateData.Colors.GetNumElements());
+
+		IndexBuffer.InitRHIFromExisting(UpdateData.TrianglesBuffer, UpdateData.Triangles.GetNumElements(), UpdateData.b32BitTriangles);
+		AdjacencyIndexBuffer.InitRHIFromExisting(UpdateData.AdjacencyTrianglesBuffer, UpdateData.AdjacencyTriangles.GetNumElements(), UpdateData.b32BitAdjacencyTriangles);
+	}
+
+	template <uint32 MaxNumUpdates>
 	void ApplyRHIReferences(FRuntimeMeshSectionUpdateData& UpdateData, TRHIResourceUpdateBatcher<MaxNumUpdates>& Batcher)
 	{
-		PositionBuffer.InitRHIFromExisting(UpdateData.PositionsBuffer, UpdateData.Positions.GetNumElements(), Batcher);
-		TangentsBuffer.InitRHIFromExisting(UpdateData.TangentsBuffer, UpdateData.Tangents.GetNumElements(), UpdateData.bHighPrecisionTangents, Batcher);
-		UVsBuffer.InitRHIFromExisting(UpdateData.TexCoordsBuffer, UpdateData.TexCoords.GetNumElements(), UpdateData.bHighPrecisionTexCoords, UpdateData.NumTexCoordChannels, Batcher);
-		ColorBuffer.InitRHIFromExisting(UpdateData.ColorsBuffer, UpdateData.Colors.GetNumElements(), Batcher);
+		PositionBuffer.UpdateRHIFromExisting(UpdateData.PositionsBuffer, UpdateData.Positions.GetNumElements(), Batcher);
+		TangentsBuffer.UpdateRHIFromExisting(UpdateData.TangentsBuffer, UpdateData.Tangents.GetNumElements(), UpdateData.bHighPrecisionTangents, Batcher);
+		UVsBuffer.UpdateRHIFromExisting(UpdateData.TexCoordsBuffer, UpdateData.TexCoords.GetNumElements(), UpdateData.bHighPrecisionTexCoords, UpdateData.NumTexCoordChannels, Batcher);
+		ColorBuffer.UpdateRHIFromExisting(UpdateData.ColorsBuffer, UpdateData.Colors.GetNumElements(), Batcher);
 
-		IndexBuffer.InitRHIFromExisting(UpdateData.TrianglesBuffer, UpdateData.Triangles.GetNumElements(), UpdateData.b32BitTriangles, Batcher);
-		AdjacencyIndexBuffer.InitRHIFromExisting(UpdateData.AdjacencyTrianglesBuffer, UpdateData.AdjacencyTriangles.GetNumElements(), UpdateData.b32BitAdjacencyTriangles, Batcher);
+		IndexBuffer.UpdateRHIFromExisting(UpdateData.TrianglesBuffer, UpdateData.Triangles.GetNumElements(), UpdateData.b32BitTriangles, Batcher);
+		AdjacencyIndexBuffer.UpdateRHIFromExisting(UpdateData.AdjacencyTrianglesBuffer, UpdateData.AdjacencyTriangles.GetNumElements(), UpdateData.b32BitAdjacencyTriangles, Batcher);
 
 	}
+
+	void UpdateRayTracingGeometry();
 };
 
 
@@ -156,6 +164,8 @@ struct FRuntimeMeshSectionProxy
 	FORCEINLINE bool ShouldRenderStaticPath() const { return ShouldRender() && ShouldRenderMainPass() && IsStaticSection(); }
 	FORCEINLINE bool ShouldRenderDynamicPath() const { return ShouldRender() && ShouldRenderMainPass() && !IsStaticSection(); }
 	FORCEINLINE bool ShouldRenderShadow() const { return ShouldRender() && bCastsShadow; }
+
+	FORCEINLINE bool ShouldRenderDynamicPathRayTracing() const { return ShouldRender(); }
 
 
 	void UpdateState()

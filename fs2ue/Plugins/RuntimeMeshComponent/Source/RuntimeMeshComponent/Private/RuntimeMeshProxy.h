@@ -1,4 +1,4 @@
-// Copyright 2016-2020 Chris Conway (Koderz). All Rights Reserved.
+// Copyright 2016-2020 TriAxis Games L.L.C. All Rights Reserved.
 
 #pragma once
 
@@ -14,6 +14,8 @@
 class FRuntimeMeshProxy : public TSharedFromThis<FRuntimeMeshProxy, ESPMode::ThreadSafe>
 {
 	TInlineLODArray<FRuntimeMeshLODData> LODs;
+
+
 
 	FThreadSafeBool IsQueuedForUpdate;
 	TQueue<TFunction<void()>, EQueueMode::Mpsc> PendingUpdates;
@@ -55,6 +57,7 @@ public:
 
 	float GetScreenSize(int32 LODIndex) const;
 
+
 	void QueueForUpdate();
 	void FlushPendingUpdates();
 
@@ -87,12 +90,11 @@ public:
 	void RemoveSection_RenderThread(int32 LODIndex, int32 SectionId);
 
 
-
 	void UpdateRenderState();
 
 	void ClearSection(FRuntimeMeshSectionProxy& Section);
 
-	void ApplyMeshToSection(FRuntimeMeshSectionProxy& Section, FRuntimeMeshSectionUpdateData&& MeshData);
+	void ApplyMeshToSection(int32 LODIndex, int32 SectionId, FRuntimeMeshSectionProxy& Section, FRuntimeMeshSectionUpdateData&& MeshData);
 
 };
 

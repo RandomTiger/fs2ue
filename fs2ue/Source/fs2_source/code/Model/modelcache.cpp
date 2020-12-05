@@ -184,6 +184,8 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 	// The rendering code that we hijack needs this setup
 	init_free_points();
 
+	FName MeshName(lName);
+//	UE_LOG(LogTemp, Warning, TEXT("createOgreMesh model_start_cache %s"), *MeshName);
 	model_start_cache();
 
 	Interp_flags = MR_NO_LIGHTING | MR_NO_CULL;
@@ -193,6 +195,8 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 	bsp_info *lSubmodel = &pm->submodel[lSubmodelIndex];
 	model_interp_sub( (ubyte *) lSubmodel->bsp_data, pm, lSubmodel, 0 );
 	model_stop_cache();
+//	UE_LOG(LogTemp, Warning, TEXT("createOgreMesh model_stop_cache %s"), *MeshName);
+
 		
 	if(iCurrentVertex == 0)
 	{
@@ -223,13 +227,12 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 		lSubmodel->ueTexCoords.Add(tcoord);
 	}
 
-	lSubmodel->ueBitmap = gr_screen.current_bitmap;
-
 	int lIndexCount = 0;
 	const unsigned int lModelSize = g_SubModels.size();
 	for (unsigned int m = 0; m < lModelSize; m++)
 	{
 		g_SubModels[m].mIndexStart = lIndexCount;
+		lSubmodel->ueBitmap = g_SubModels[m].mTexture;
 
 		const unsigned int lIndexSize = g_SubModels[m].mIndexList.size();
 

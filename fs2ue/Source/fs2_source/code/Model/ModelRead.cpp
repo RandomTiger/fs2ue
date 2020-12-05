@@ -1355,7 +1355,7 @@ int read_model_file(polymodel * pm, char *filename, int n_subsystems, model_subs
 	return 1;
 }
 
-
+bool bCacheMeshEnabled = false;
 
 //returns the number of this model
 int model_load(char *filename, int n_subsystems, model_subsystem *subsystems)
@@ -1571,20 +1571,22 @@ int model_load(char *filename, int n_subsystems, model_subsystem *subsystems)
 	//mprintf(( "Model RAM = %d KB\n", Model_ram ));
 #endif
 
-	const int detail_level = pm->n_detail_levels;
-	const int detail_index = pm->detail[detail_level];
-
-	createOgreMesh(filename, pm, detail_index, false);
-
-	// Now do the submodels (force each as a submesh as we may need to rotate them
-	int lSubmodelIndex = pm->submodel[detail_index].first_child;
-
-	while( lSubmodelIndex > -1 )	
+	if (bCacheMeshEnabled)
 	{
-		createOgreMesh(filename, pm, lSubmodelIndex, true);		
-		lSubmodelIndex = pm->submodel[lSubmodelIndex].next_sibling;
-	}
+		const int detail_level = 0;// max(0, pm->n_detail_levels - 1);
+		const int detail_index = pm->detail[detail_level];
 
+		createOgreMesh(filename, pm, detail_index, false);
+
+		// Now do the submodels (force each as a submesh as we may need to rotate them
+		int lSubmodelIndex = pm->submodel[detail_index].first_child;
+
+		while (lSubmodelIndex > -1)
+		{
+			createOgreMesh(filename, pm, lSubmodelIndex, true);
+			lSubmodelIndex = pm->submodel[lSubmodelIndex].next_sibling;
+		}
+	}
 	return pm->id;
 }
 

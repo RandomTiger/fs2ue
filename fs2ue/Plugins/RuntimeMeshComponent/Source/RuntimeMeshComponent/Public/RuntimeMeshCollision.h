@@ -1,4 +1,4 @@
-// Copyright 2016-2020 Chris Conway (Koderz). All Rights Reserved.
+// Copyright 2016-2020 TriAxis Games L.L.C. All Rights Reserved.
 
 #pragma once
 
@@ -18,7 +18,7 @@ struct RUNTIMEMESHCOMPONENT_API FRuntimeMeshCollisionConvexMesh
 	GENERATED_BODY()
 
 public:
-	FRuntimeMeshCollisionConvexMesh() { }
+	FRuntimeMeshCollisionConvexMesh() : BoundingBox(ForceInit) { }
 	FRuntimeMeshCollisionConvexMesh(const TArray<FVector>& InVertexBuffer)
 		: VertexBuffer(InVertexBuffer)
 		, BoundingBox(InVertexBuffer)
@@ -26,8 +26,8 @@ public:
 	}
 	FRuntimeMeshCollisionConvexMesh(TArray<FVector>&& InVertexBuffer)
 		: VertexBuffer(InVertexBuffer)
+		, BoundingBox(VertexBuffer)
 	{
-		BoundingBox = FBox(VertexBuffer);
 	}
 	FRuntimeMeshCollisionConvexMesh(const TArray<FVector>& InVertexBuffer, const FBox& InBoundingBox)
 		: VertexBuffer(InVertexBuffer)
@@ -36,8 +36,8 @@ public:
 	}
 	FRuntimeMeshCollisionConvexMesh(TArray<FVector>&& InVertexBuffer, const FBox& InBoundingBox)
 		: VertexBuffer(InVertexBuffer)
+		, BoundingBox(VertexBuffer)
 	{
-		BoundingBox = FBox(VertexBuffer);
 	}
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "RuntimeMesh|Collision|Convex")
@@ -244,6 +244,11 @@ public:
 		Data.Empty(Slack);
 	}
 
+	void Reserve(int32 Number)
+	{
+		Data.Reserve(Number);
+	}
+
 	FORCEINLINE int32 Add(const FVector& InPosition)
 	{
 		return Data.Add(InPosition);
@@ -306,11 +311,13 @@ public:
 
 	}
 
+	//Sets a new number of triangles
 	void SetNum(int32 NewNum, bool bAllowShrinking = true)
 	{
 		Data.SetNum(NewNum, bAllowShrinking);
 	}
 
+	//Returns the number of triangles
 	int32 Num() const
 	{
 		return Data.Num();
@@ -319,6 +326,12 @@ public:
 	void Empty(int32 Slack = 0)
 	{
 		Data.Empty(Slack);
+	}
+
+	//Reserves a number of triangles
+	void Reserve(int32 Number)
+	{
+		Data.Reserve(Number);
 	}
 
 	FORCEINLINE int32 Add(int32 IndexA, int32 IndexB, int32 IndexC)
@@ -424,6 +437,15 @@ public:
 		}
 	}
 
+	void Reserve(int32 NumChannels, int32 Number)
+	{
+		Data.SetNum(NumChannels, false);
+		for (int32 Index = 0; Index < Data.Num(); Index++)
+		{
+			Data[Index].Reserve(Number);
+		}
+	}
+
 	void EmptyChannel(int32 ChannelId, int32 Slack = 0)
 	{
 		Data[ChannelId].Empty(Slack);
@@ -483,6 +505,11 @@ public:
 		Data.SetNum(NewNum, bAllowShrinking);
 	}
 
+	void SetNumZeroed(int32 NewNum, bool bAllowShrinking = true)
+	{
+		Data.SetNumZeroed(NewNum, bAllowShrinking);
+	}
+
 	int32 Num() const
 	{
 		return Data.Num();
@@ -491,6 +518,11 @@ public:
 	void Empty(int32 Slack = 0)
 	{
 		Data.Empty(Slack);
+	}
+
+	void Reserve(int32 Number)
+	{
+		Data.Reserve(Number);
 	}
 
 	FORCEINLINE int32 Add(uint16 NewMaterialIndex)
@@ -703,6 +735,13 @@ public:
 	bool HasValidMeshData()
 	{
 		return Vertices.Num() >= 3 && Triangles.Num() >= 3;
+	}
+
+	void ReserveVertices(int32 Number, int32 NumTexCoordChannels = 1)
+	{
+		Vertices.Reserve(Number);
+		TexCoords.Reserve(NumTexCoordChannels, Number);
+		MaterialIndices.Reserve(Number);
 	}
 
 

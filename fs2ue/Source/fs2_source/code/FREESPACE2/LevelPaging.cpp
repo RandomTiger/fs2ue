@@ -10,11 +10,12 @@
 
 #include "UnityBuild.h"
 
+#endif
+
 #ifndef UNITY_BUILD
 #include "Freespace.h"
 #include "bmpman/BmpMan.h"
 #include "LevelPaging.h"
-#endif
 #endif
 
 // All the page in functions
@@ -43,8 +44,14 @@ void level_page_in()
 		bm_page_in_start();
 	}
 
+	extern bool bCacheMeshEnabled;
+
+
 	// Most important ones first
+	bCacheMeshEnabled = true;
 	ship_page_in();
+	bCacheMeshEnabled = false;
+
 	weapons_page_in();
 	fireballs_page_in();
 	particle_page_in();

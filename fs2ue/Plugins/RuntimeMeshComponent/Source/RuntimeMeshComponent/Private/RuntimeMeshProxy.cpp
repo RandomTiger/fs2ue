@@ -1,9 +1,10 @@
-// Copyright 2016-2020 Chris Conway (Koderz). All Rights Reserved.
+// Copyright 2016-2020 TriAxis Games L.L.C. All Rights Reserved.
 
 #include "RuntimeMeshProxy.h"
 #include "CoreMinimal.h"
 #include "RuntimeMeshComponentPlugin.h"
 #include "RuntimeMesh.h"
+
 
 DECLARE_CYCLE_STAT(TEXT("RuntimeMeshProxy - Initialize LDOs - RenderThread"), STAT_RuntimeMeshProxy_InitializeLODs_RT, STATGROUP_RuntimeMesh);
 DECLARE_CYCLE_STAT(TEXT("RuntimeMeshProxy - Clear LOD - RenderThread"), STAT_RuntimeMeshProxy_ClearLOD_RT, STATGROUP_RuntimeMesh);
@@ -15,7 +16,7 @@ DECLARE_CYCLE_STAT(TEXT("RuntimeMeshProxy - Remove All Sections - RenderThread")
 DECLARE_CYCLE_STAT(TEXT("RuntimeMeshProxy - Remove Section - RenderThread"), STAT_RuntimeMeshProxy_RemoveSection_RT, STATGROUP_RuntimeMesh);
 
 #define RMC_LOG_VERBOSE(Format, ...) \
-	UE_LOG(RuntimeMeshLog2, Verbose, TEXT("[RMSP:%d Mesh:%d Thread:%d]: " Format), GetUniqueID(), ParentMeshId, FPlatformTLS::GetCurrentThreadId(), __VA_ARGS__);
+	UE_LOG(RuntimeMeshLog, Verbose, TEXT("[RMSP:%d Mesh:%d Thread:%d]: " Format), GetUniqueID(), ParentMeshId, FPlatformTLS::GetCurrentThreadId(), ##__VA_ARGS__);
 
 FRuntimeMeshProxy::FRuntimeMeshProxy(uint32 InParentMeshId)
 	: bShouldRender(false)
@@ -81,7 +82,6 @@ void FRuntimeMeshProxy::FlushPendingUpdates()
 		Cmd();
 	}
 }
-
 
 
 
@@ -197,6 +197,7 @@ void FRuntimeMeshProxy::ResetProxy_RenderThread()
 	CurrentForcedLOD = INDEX_NONE;
 
 	LODs.Empty();
+
 }
 
 void FRuntimeMeshProxy::InitializeLODs_RenderThread(const TArray<FRuntimeMeshLODProperties>& InProperties)
@@ -224,6 +225,19 @@ void FRuntimeMeshProxy::ClearAllSectionsForLOD_RenderThread(int32 LODIndex)
 	RMC_LOG_VERBOSE("ClearAllSectionsForLOD_RenderThread: LOD:%d", LODIndex);
 	check(IsInRenderingThread());
 
+	if (LODs.IsValidIndex(LODIndex))
+	{
+		auto& LOD = LODs[LODIndex];
+		for (auto& SectionEntry : LOD.Sections)
+		{
+			ClearSection(SectionEntry.Value);			
+		}
+		UpdateRenderState();
+	}
+	else
+	{
+		// Invalid LOD
+	}
 }
 
 void FRuntimeMeshProxy::RemoveAllSectionsForLOD_RenderThread(int32 LODIndex)
@@ -259,10 +273,9 @@ void FRuntimeMeshProxy::CreateOrUpdateSection_RenderThread(int32 LODIndex, int32
 			ClearSection(Section);
 		}
 
-		Section.Buffers = MakeShared<FRuntimeMeshSectionProxyBuffers>(InProperties.UpdateFrequency == ERuntimeMeshUpdateFrequency::Frequent, false);
-		Section.Buffers->InitResource();
-
 		Section.UpdateFrequency = InProperties.UpdateFrequency;
+		Section.MaterialSlot = InProperties.MaterialSlot;
+
 		Section.bIsVisible = InProperties.bIsVisible;
 		Section.bIsMainPassRenderable = InProperties.bIsMainPassRenderable;
 		Section.bCastsShadow = InProperties.bCastsShadow;
@@ -309,8 +322,8 @@ void FRuntimeMeshProxy::SetSectionsForLOD_RenderThread(int32 LODIndex, const TMa
 				ClearSection(Section);
 			}
 
-			Section.Buffers = MakeShared<FRuntimeMeshSectionProxyBuffers>(SectionProperties.UpdateFrequency == ERuntimeMeshUpdateFrequency::Frequent, false);
-			Section.Buffers->InitResource();
+			Section.UpdateFrequency = SectionProperties.UpdateFrequency;
+			Section.MaterialSlot = SectionProperties.MaterialSlot;
 
 			Section.bIsVisible = SectionProperties.bIsVisible;
 			Section.bIsMainPassRenderable = SectionProperties.bIsMainPassRenderable;
@@ -339,7 +352,7 @@ void FRuntimeMeshProxy::UpdateSectionMesh_RenderThread(int32 LODIndex, int32 Sec
 		auto* FoundSection = LOD.Sections.Find(SectionId);
 		if (FoundSection)
 		{
-			ApplyMeshToSection(*FoundSection, MoveTemp(*MeshData));
+			ApplyMeshToSection(LODIndex, SectionId, *FoundSection, MoveTemp(*MeshData));
 
 			UpdateRenderState();
 		}
@@ -371,7 +384,7 @@ void FRuntimeMeshProxy::UpdateMultipleSectionsMesh_RenderThread(int32 LODIndex, 
 			auto* FoundSection = LOD.Sections.Find(SectionId);
 			if (FoundSection)
 			{
-				ApplyMeshToSection(*FoundSection, MoveTemp(*MeshData));
+				ApplyMeshToSection(LODIndex, SectionId, *FoundSection, MoveTemp(*MeshData));
 			}
 			else
 			{
@@ -437,6 +450,8 @@ void FRuntimeMeshProxy::RemoveSection_RenderThread(int32 LODIndex, int32 Section
 	}
 }
 
+
+
 void FRuntimeMeshProxy::UpdateRenderState()
 {
 	bShouldRender = false;
@@ -481,38 +496,40 @@ void FRuntimeMeshProxy::ClearSection(FRuntimeMeshSectionProxy& Section)
 	Section.Buffers.Reset();
 }
 
-void FRuntimeMeshProxy::ApplyMeshToSection(FRuntimeMeshSectionProxy& Section, FRuntimeMeshSectionUpdateData&& MeshData)
+void FRuntimeMeshProxy::ApplyMeshToSection(int32 LODIndex, int32 SectionId, FRuntimeMeshSectionProxy& Section, FRuntimeMeshSectionUpdateData&& MeshData)
 {
-	if (Section.UpdateFrequency == ERuntimeMeshUpdateFrequency::Infrequent)
-	{
-		Section.Buffers = MakeShared<FRuntimeMeshSectionProxyBuffers>(false, false);
-		Section.Buffers->InitResource();
-	}
-	FRuntimeMeshSectionProxyBuffers& Buffers = *Section.Buffers.Get();
-
-
 	RMC_LOG_VERBOSE("ApplyMeshToSection called");
 
+	bool bShouldRecreateBuffers = !Section.Buffers.IsValid() || Section.UpdateFrequency == ERuntimeMeshUpdateFrequency::Infrequent;
 
-	// Update all buffers data
-
-	/* Todo: Make this batch count a little more accurate to what is required*/
+	// This creates the RHI buffers if they weren't previously created by another thread
+	MeshData.CreateRHIBuffers<true>(Section.UpdateFrequency == ERuntimeMeshUpdateFrequency::Frequent);
+		
 	TRHIResourceUpdateBatcher<16> Batcher;
 
+	if (bShouldRecreateBuffers)
+	{
+		Section.Buffers = MakeShared<FRuntimeMeshSectionProxyBuffers>(false, false);
+		Section.Buffers->InitFromRHIReferences(MeshData, Batcher);
+	}
+	else
+	{
+		Section.Buffers->ApplyRHIReferences(MeshData, Batcher);
+	}
 
-	MeshData.CreateRHIBuffers<true>(Section.UpdateFrequency == ERuntimeMeshUpdateFrequency::Frequent);
-	Buffers.ApplyRHIReferences(MeshData, Batcher);
 	Batcher.Flush();
 
+	// Update the state
 	Section.FirstIndex = 0;
 	Section.NumTriangles = MeshData.Triangles.GetNumElements() / 3;
 	Section.MinVertexIndex = 0;
 	Section.MaxVertexIndex = MeshData.Positions.GetNumElements();
-
 	Section.UpdateState();
 	
 	if (Section.CanRender())
 	{
+		FRuntimeMeshSectionProxyBuffers& Buffers = *Section.Buffers.Get();
+
 		FLocalVertexFactory::FDataType DataType;
 		Buffers.PositionBuffer.Bind(DataType);
 		Buffers.TangentsBuffer.Bind(DataType);
@@ -520,13 +537,25 @@ void FRuntimeMeshProxy::ApplyMeshToSection(FRuntimeMeshSectionProxy& Section, FR
 		Buffers.ColorBuffer.Bind(DataType);
 		Buffers.VertexFactory.Init(DataType);
 		Buffers.VertexFactory.InitResource();
+
+		// TODO: Should this use any lod selection logic for ray tracing?
+		// We only use LOD 0 for ray tracing at this time
+		if (LODIndex == 0)
+		{
+			Buffers.UpdateRayTracingGeometry();
+		}
 	}
 	else
 	{
+		FRuntimeMeshSectionProxyBuffers& Buffers = *Section.Buffers.Get();
+
 		Buffers.VertexFactory.ReleaseResource();
+#if RHI_RAYTRACING
+		Buffers.RayTracingGeometry.ReleaseResource();
+#endif
 	}
 
-	check(!Section.CanRender() || Buffers.VertexFactory.IsInitialized());
+	check(!Section.CanRender() || Section.Buffers->VertexFactory.IsInitialized());
 }
 
 

@@ -349,8 +349,12 @@ UTexture2D* DummyExtractBitmapToTexture(int bitmap_type, int texture_handle, ush
 	ubyte *bmp_data_byte = (ubyte*)data;
 
 //////////////
+	int bitmapnum = texture_handle % MAX_BITMAPS;
+	FName BmpName(bm_bitmaps[bitmapnum].filename);
 
-	UTexture2D* texture = UTexture2D::CreateTransient(bmap_w, bmap_h, PF_B8G8R8A8);
+	//////
+
+	UTexture2D* texture = UTexture2D::CreateTransient(bmap_w, bmap_h, PF_B8G8R8A8, BmpName);
 
 	int32 *designTexData = (int32 *)texture->PlatformData->Mips[0].BulkData.Lock(LOCK_READ_WRITE);
 	for (int h = 0; h < bmap_h; h++)
