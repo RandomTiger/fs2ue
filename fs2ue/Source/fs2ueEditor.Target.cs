@@ -14,7 +14,8 @@ public class fs2ueEditorTarget : TargetRules
 {
 	public fs2ueEditorTarget(TargetInfo Target) : base(Target)
 	{
-		Type = TargetType.Editor;
+        DefaultBuildSettings = BuildSettingsVersion.V2;
+        Type = TargetType.Editor;
         ExtraModuleNames.Add("fs2ue");
 	}
 }

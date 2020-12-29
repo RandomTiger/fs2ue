@@ -1,34 +1,25 @@
 // Copyright (C) Thomas Liam Whittaker 2017.  All rights reserved. All modified source code herein is the property of Thomas Liam Whittaker. You may not sell or otherwise commercially exploit the source or things you created based on the source. Original source code is owned by Volition, Inc and covered by their copywrite.
 
 // Must be first
+#include "FS2GameMode.h"
+
 #include "fs2ue.h"
 
 #if defined(FS2_UE)
 #include "RuntimeMeshComponent.h"
 #endif
 
-#include "../fs2_source/code/TomLib/src/StateMachine/StateMachine.h"
-#include "../fs2_source/code/TomLib/src/StateMachine/StateMachine.cpp"
 
-#include "../fs2_source/code/TomLib/src/ComponentSystem/ComponentSystem.h"
-#include "../fs2_source/code/TomLib/src/ComponentSystem/ComponentSystem.cpp"
+#include "StateMachine/StateMachine.h"
+#include "ComponentSystem/ComponentSystem.h"
 
-#include "../fs2_source/code/UnityBuild.h"
-#include "../fs2_source/code/UnityBuild.cpp"
+#include "FREESPACE2/Horde.h"
+#include "FREESPACE2/LevelPaging.h"
+#include "FREESPACE2/Freespace.h"
 
-#include "../fs2_source/code/UnityBuildD3D.h"
-#include "../fs2_source/code/UnityBuildD3D.cpp"
-#if !defined(FS2_UE)
-#include "../fs2_source/code/UnityBuildD3D9.h"
-#include "../fs2_source/code/UnityBuildD3D9.cpp"
-#endif
+#include <windows.h>
 
-#include "../fs2_source/code/FREESPACE2/Horde.h"
-#include "../fs2_source/code/FREESPACE2/Horde.cpp"
-#include "../fs2_source/code/FREESPACE2/LevelPaging.h"
-#include "../fs2_source/code/FREESPACE2/LevelPaging.cpp"
-#include "../fs2_source/code/FREESPACE2/Freespace.h"
-#include "../fs2_source/code/FREESPACE2/Freespace.cpp"
+
 
 // GEngine->GameViewport->GetWindow()->GetNativeWindow()->GetOSWindowHandle();
 
@@ -38,8 +29,6 @@
 //Cmdline_freespace_no_sound = 1;
 //Cmdline_freespace_no_music = 1;
 */
-
-#include "FS2GameMode.h"
 
 DEFINE_LOG_CATEGORY(FS2Code);
 

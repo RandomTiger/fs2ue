@@ -676,3 +676,15 @@ fs2ue/Source/fs2_source/code/TomLib/Win32/
 fs2ue/enc_temp_folder/
 
 fs2ue 4.25/
+
+fs2ue/Source/fs2ue/code/Win32/
+
+fs2ue/Source/fs2ue/code/x64/
+
+fs2ue/Source/fs2ue/code/UnityDebug/
+
+fs2ue/Source/fs2ue/code/TomLib/Debug/
+
+fs2ue/Source/fs2ue/code/TomLib/Win32/
+
+fs2ue/Source/fs2ue/code/TomLib/x64/
