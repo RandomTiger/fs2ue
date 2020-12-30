@@ -13,9 +13,10 @@
 #define _OBSERVER_HEADER_FILE
 
 #ifndef UNITY_BUILD
-#include "FSobject.h"
 #include "vecmat.h"
 #endif
+
+struct object;
 
 #define OBS_MAX_VEL_X     (85.0f) // side to side
 #define OBS_MAX_VEL_Y     (85.0f) // side to side

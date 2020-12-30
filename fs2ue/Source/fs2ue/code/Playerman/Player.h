@@ -17,13 +17,13 @@
 #include "physics.h"
 #include "MissionLoad.h"
 #include "HUDTarget.h"				// for targeting hotkey lists
-#include "ship.h"						// for targeting subobjects
 #include "MissionCampaign.h"		// for mission/campaign stuff
 #include "Scoring.h"             // for scoring/stats
 #include "KeyControl.h"				// for button_info
 #include "multi_options.h"
 #endif
 
+struct ship_subsys;
 struct campaign_info;
 
 #define CALLSIGN_LEN					28		//	shortened from 32 to allow .plr to be attached without exceeding MAX_FILENAME_LEN

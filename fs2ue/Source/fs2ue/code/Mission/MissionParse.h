@@ -13,10 +13,12 @@
 #ifndef UNITY_BUILD
 #include "parselo.h"
 #include "ship.h"
-#include "ai.h"
-#include "MissionBriefCommon.h"
-#include "Weapon.h"
+//#include "ai.h"
+//#include "MissionBriefCommon.h"
+//#include "Weapon.h"
 #endif
+
+struct object;
 
 #define NUM_NEBULAS			3				// how many background nebulas we have altogether
 #define NUM_NEBULA_COLORS	9

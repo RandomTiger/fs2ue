@@ -18,14 +18,15 @@
 // define to compile corkscrew missiles in
 
 #ifndef UNITY_BUILD
-#include "FSobject.h"
 #include "parselo.h"
-#include "ship.h"		/* needed for ship_subsys* */
 #include "2d.h"		// needed for color
-#include "shockwave.h"
-#include "Trails.h"
+//#include "shockwave.h"
+//#include "Trails.h"
 #include "ai.h"
 #endif
+
+struct object;
+struct ship_subsys;
 
 #define	WP_UNUSED	-1
 #define	WP_LASER		0
@@ -88,8 +89,6 @@
 #define WF_DEAD_IN_WATER				(1<<4)		// a missiles engines have died
 #define WF_LOCKED_WHEN_FIRED			(1<<5)		// fired with a lock
 #define WF_DESTROYED_BY_WEAPON		(1<<6)		// destroyed by damage from other weapon
-
-struct ship_subsys;
 
 typedef struct weapon {
 	int		weapon_info_index;			// index into weapon_info array

@@ -12,10 +12,9 @@
 #ifndef _FIREBALLS_H
 #define _FIREBALLS_H
 
-#ifndef UNITY_BUILD
-#include "FSobject.h"
-#include "cfile.h"
-#endif
+struct object;
+class vector;
+class matrix;
 
 // these values correspond to the fireball.tbl entries
 #define FIREBALL_EXPLOSION_MEDIUM	0				// Used for the 4 little explosions before a ship explodes

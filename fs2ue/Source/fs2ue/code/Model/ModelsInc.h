@@ -10,9 +10,8 @@
 #ifndef _MODELSINC_H
 #define _MODELSINC_H
 
-#ifndef UNITY_BUILD
-#include "FSModel.h"
-#endif
+struct polymodel;
+class vector;
 
 #ifndef UNITY_BUILD
 #ifndef MODEL_LIB 

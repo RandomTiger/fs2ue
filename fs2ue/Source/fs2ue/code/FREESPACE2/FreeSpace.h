@@ -15,8 +15,8 @@
 
 #ifndef UNITY_BUILD
 #include "GlobalIncs/pstypes.h"
-#include "GlobalIncs/SystemVars.h"
-#include "Graphics/2d.h"
+//#include "GlobalIncs/SystemVars.h"
+//#include "Graphics/2d.h"
 #endif
 
 #if !defined(FS2_UE)

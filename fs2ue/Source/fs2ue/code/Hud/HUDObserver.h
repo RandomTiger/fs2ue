@@ -13,7 +13,7 @@
 #define _HUD_OBSERVER_FILE
 
 #ifndef UNITY_BUILD
-#include "HUD.h"
+//#include "HUD.h"
 #endif
 
 // prototypes

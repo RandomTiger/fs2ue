@@ -51,6 +51,7 @@ gr_line(x1,y1,x2,y2)
 
 struct vertex;
 class vector;
+struct shader;
 
 // This is a structure used by the shader to keep track
 // of the values you want to use in the shade primitive.

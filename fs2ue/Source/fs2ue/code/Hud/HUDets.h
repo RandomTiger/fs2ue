@@ -13,9 +13,7 @@
 #ifndef _HUD_ETS_H
 #define _HUD_ETS_H
 
-#ifndef UNITY_BUILD
-#include "FSobject.h"
-#endif
+struct object;
 
 #define	ETS_RECHARGE_RATE	4.0f			//	Recharge this percent of total shields/second
 

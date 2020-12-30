@@ -62,6 +62,7 @@
 #include "AnimPlay.h"
 #include "multi_dogfight.h"
 #include "MissionPause.h"
+#include "MissionBriefCommon.h"
 #endif
 
 // -------------------------------------------------------------------------------------------------------------

@@ -12,10 +12,6 @@
 #ifndef __JOY_FF_H__
 #define __JOY_FF_H__
 
-#ifndef UNITY_BUILD
-#include "GlobalIncs/PsTypes.h"
-#endif
-
 class vector;
 
 int joy_ff_init();

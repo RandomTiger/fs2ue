@@ -12,8 +12,10 @@
 
 #ifndef UNITY_BUILD
 #include "cfile.h"
-#include "ship.h"
+////#include "ship.h"
 #endif
+
+struct ship_subsys;
 
 #define	OPERATOR_LENGTH	24  // if this ever exceeds TOKEN_LENGTH, let JasonH know!
 #define	TOKEN_LENGTH		32

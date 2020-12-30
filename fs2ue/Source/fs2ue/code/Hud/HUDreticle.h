@@ -12,9 +12,7 @@
 #ifndef _HUDRETICLE_H
 #define _HUDRETICLE_H
 
-#ifndef UNITY_BUILD
-#include "Player.h"
-#endif
+struct player;
 
 extern int Outer_circle_radius[GR_NUM_RESOLUTIONS];
 extern int Hud_reticle_center[GR_NUM_RESOLUTIONS][2];

@@ -13,10 +13,6 @@
 #ifndef HUD_BRACKETS
 #define HUD_BRACKETS
 
-#ifndef UNITY_BUILD
-#include "2D.h"
-#endif
-
 void hud_init_brackets();
 void draw_bounding_brackets(int x1, int y1, int x2, int y2, int w_correction, int h_correction, float distance=0.0f, int target_objnum=-1);
 void draw_bounding_brackets_subobject();

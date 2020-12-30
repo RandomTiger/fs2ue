@@ -14,7 +14,8 @@
 
 #ifndef UNITY_BUILD
 #include "ui.h"
-#include "weapon.h"
+//#include "weapon.h"
+#include "ship.h"
 #endif
 
 #define BACKGROUND_FRAME_TO_START_SHIP_ANIM	87

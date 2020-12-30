@@ -75,6 +75,7 @@
 #include "multi_rate.h"
 #include "NebLightning.h"
 #include "hudescort.h"
+#include "MissionBriefCommon.h"
 #endif
 
 // #define _MULTI_SUPER_WACKY_COMPRESSION

@@ -1,4 +1,6 @@
 #ifndef UNITY_BUILD
+#include "GrDummy.h"
+
 #include "osapi.h"
 #include "2d.h"
 #include "GrInternal.h"

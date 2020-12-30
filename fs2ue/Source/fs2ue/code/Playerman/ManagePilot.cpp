@@ -29,6 +29,8 @@
 #include "MouseController.h"
 #include "Cutscenes.h"
 #include "Bmpman.h"
+#include "HUDGauges.h"
+#include "MissionBriefCommon.h"
 #endif
 
 // update this when altering data that is read/written to .PLR file

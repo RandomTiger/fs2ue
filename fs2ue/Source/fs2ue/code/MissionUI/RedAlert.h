@@ -12,9 +12,7 @@
 #ifndef __REDALERT_H__
 #define __REDALERT_H__
 
-#ifndef UNITY_BUILD
-#include "cfile.h"
-#endif
+struct CFILE;
 
 void	red_alert_start_mission();
 

@@ -28,6 +28,8 @@
 #include "SystemVars.h"
 #include "localize.h"
 #include "Multi.h"
+#include "HUD.h"
+#include "HUDGauges.h"
 #endif
 
 #ifndef FS2_DEMO

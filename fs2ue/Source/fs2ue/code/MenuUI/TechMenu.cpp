@@ -35,6 +35,7 @@
 #include "AnimPlay.h"
 #include "localize.h"
 #include "Lighting.h"
+#include "PackUnpack.h"
 #endif
 
 namespace TechMenu

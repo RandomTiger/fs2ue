@@ -167,7 +167,8 @@
 #include "Game/Game.h"
 #include "Cfile/CfileSystem.h"
 #include "Stats/FSStats.h"
-
+#include "PackUnpack.h"
+#include "MissionBriefCommon.h"
 
 #include <windows.h>
 

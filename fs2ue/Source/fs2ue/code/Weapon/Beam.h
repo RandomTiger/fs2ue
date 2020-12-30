@@ -12,10 +12,6 @@
 #ifndef __FS2_BEAM_WEAPON_HEADER_FILE
 #define __FS2_BEAM_WEAPON_HEADER_FILE
 
-#ifndef UNITY_BUILD
-#include "FSModel.h"
-#endif
-
 // ------------------------------------------------------------------------------------------------
 // BEAM WEAPON DEFINES/VARS
 //

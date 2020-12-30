@@ -61,6 +61,7 @@
 #include "fvi.h"
 #include "awacs.h"
 #include "multi_team.h"
+#include "MissionBriefCommon.h"
 #endif
 
 #define TRUE	1

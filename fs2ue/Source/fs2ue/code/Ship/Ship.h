@@ -15,11 +15,11 @@
 #ifndef UNITY_BUILD
 #include "ParseLo.h"		// for defintions of token lengths -- maybe move this elsewhere later
 #include "FSModel.h"
-#include "2d.h"			// for color def
+//#include "2d.h"			// for color def
 #include "multi_obj.h"
 #include "Trails.h"
 #include "Palman.h"
-#include "Ai.h"  // ship_subsys must be declared before we include this.
+//#include "Ai.h"  // ship_subsys must be declared before we include this.
 #include "weapon.h"		// ship_subsys must be declared before we include this.
 #endif
 

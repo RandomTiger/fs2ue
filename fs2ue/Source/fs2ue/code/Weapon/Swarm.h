@@ -13,11 +13,8 @@
 #ifndef __FREESPACE_SWARM_H__
 #define __FREESPACE_SWARM_H__
 
-#ifndef UNITY_BUILD
-#include "FSobject.h"
-#include "cfile.h"
-#include "ship.h"
-#endif
+struct object;
+struct ship_subsys;
 
 #define SWARM_DEFAULT_NUM_MISSILES_FIRED					4		// number of swarm missiles that launch when fired
 

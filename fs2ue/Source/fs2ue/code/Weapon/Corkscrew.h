@@ -13,10 +13,7 @@
 #ifndef __FREESPACE_CORKSCREW_H__
 #define __FREESPACE_CORKSCREW_H__
 
-#ifndef UNITY_BUILD
-#include "FSobject.h"
-#include "weapon.h"
-#endif
+struct object;
 
 extern int Corkscrew_num_missiles_fired;
 

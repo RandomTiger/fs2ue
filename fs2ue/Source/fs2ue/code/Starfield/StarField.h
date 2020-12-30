@@ -14,7 +14,6 @@
 
 #ifndef UNITY_BUILD
 #include "ParseLo.h"
-#include "cfile.h"
 #endif
 
 #define MAX_STARFIELD_BITMAP_LISTS	1

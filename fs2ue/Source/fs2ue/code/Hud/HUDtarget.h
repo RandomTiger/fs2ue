@@ -13,12 +13,16 @@
 #define _HUDTARGET_H
 
 #ifndef UNITY_BUILD
-#include "FSobject.h"
-#include "AiLocal.h"
-#include "ship.h"
+//#include "FSobject.h"
+//#include "AiLocal.h"
+//#include "ship.h"
 #include "2D.h"
-#include "weapon.h"
+//#include "weapon.h"
 #endif
+
+struct object;
+struct ship;
+struct ship_subsys;
 
 #define INCREASING	0
 #define DECREASING	1
