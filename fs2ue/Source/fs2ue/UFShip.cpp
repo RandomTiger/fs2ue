@@ -35,18 +35,21 @@ void AShip::AssembleMeshData(const polymodel * const pm)
 		const int32 LODIndex = 0;
 		const bool bCreateCollision = false;
 
+		int count = 0;
 		for (int i = 0; i < pm->n_models; i++)
 		{
-			if (pm->submodel[i].ueTriangles.Num() == 0)
+			bsp_info& Submodel = pm->submodel[i];
+
+			if (Submodel.ueTriangles.Num() == 0)
 			{
 				continue;
 			}
 
-			const int32 SectionIndex = i;
-			const int32 MaterialSlot = i;
+			const int32 SectionIndex = count;
+			const int32 MaterialSlot = count;
 
 			extern TMap<int, UTexture2D*> TextureStore;
-			int BitmapHandle = pm->submodel[i].ueBitmap;
+			int BitmapHandle = Submodel.ueBitmap;
 			UTexture2D **TexturePtr = TextureStore.Find(BitmapHandle);
 			if (TexturePtr != nullptr)
 			{
@@ -64,13 +67,14 @@ void AShip::AssembleMeshData(const polymodel * const pm)
 
 			StaticProvider->CreateSectionFromComponents(
 				LODIndex, SectionIndex, MaterialSlot,
-				pm->submodel[i].ueVertices, 
-				pm->submodel[i].ueTriangles, 
-				pm->submodel[i].ueNormals, 
-				pm->submodel[i].ueTexCoords,
-				pm->submodel[i].ueColor,
+				Submodel.ueVertices, 
+				Submodel.ueTriangles, 
+				Submodel.ueNormals, 
+				Submodel.ueTexCoords,
+				Submodel.ueColor,
 				EmptyTangents, 
 				ERuntimeMeshUpdateFrequency::Infrequent, bCreateCollision);
+			count++;
 		}
 	}
 }

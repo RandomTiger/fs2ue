@@ -54,7 +54,7 @@ bool g_modelCacheInProgress = false;
 
 int gCurrentSubmodel = -1;
 int gSubmodelIndex = Submodel::kNoIndexSet;
-
+#pragma optimize("", off)
 void AddVertex(VertexNorm *vert)
 {
 	assert((iCurrentVertex * stride + 8) < iFloatCount);
@@ -77,7 +77,7 @@ void AddVertex(VertexNorm *vert)
 	iCurrentVertex++;
 
 }
-
+#pragma optimize("", on)
 void SetModelCacheInProgress(const bool state) { g_modelCacheInProgress = state; }
 
 bool isModelCacheInProgress()
@@ -201,7 +201,7 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 	extern uint Interp_flags;
 
 	Interp_flags = MR_NO_LIGHTING | MR_NO_CULL;
-	Interp_tmap_flags = TMAP_FLAG_TEXTURED;
+	Interp_tmap_flags = TMAP_FLAG_TEXTURED | TMAP_FLAG_TILED;
 
 	int model_interp_sub(void *model_ptr, polymodel * pm, bsp_info *sm, int do_box_check);
 
@@ -233,9 +233,10 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 
 	for (int i = 0; i < iCurrentVertex; i++)
 	{
-		FVector pos(VertexArray[(i * stride) + 2], VertexArray[(i * stride) + 0], VertexArray[(i * stride) + 1]);
-		FVector norm(VertexArray[(i * stride) + 5], VertexArray[(i * stride) + 3], VertexArray[(i * stride) + 4]);
-		FVector2D tcoord(VertexArray[(i * stride) + 6], VertexArray[(i * stride) + 7]);
+		const int Index = i * stride;
+		FVector pos(VertexArray[Index + 2], VertexArray[Index + 0], VertexArray[Index + 1]);
+		FVector norm(VertexArray[Index + 5], VertexArray[Index + 3], VertexArray[Index + 4]);
+		FVector2D tcoord(VertexArray[Index + 6], VertexArray[Index + 7]);
 
 		lSubmodel->ueVertices.Add(pos);
 		lSubmodel->ueNormals.Add(norm);

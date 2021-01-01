@@ -128,24 +128,9 @@ VertexNorm lVertices[VERT_ARRAY_SIZE];
 void gr_dummy_tmapper( int nverts, vertex * verts[], uint flags )
 {
 #if defined(FS2_UE)
-	for (int i = 0; i < (nverts - 1); i++)
+	if (nverts == 0)
 	{
-		vertex * va1 = verts[i];
-		vertex * va2 = verts[i+1];
-
-		FVector start(va1->x, va1->y, va1->z);
-		FVector end(va2->x, va2->y, va2->z);
-
-		/*
-		DrawDebugLine(
-			AFS2GameMode::Instance->GetWorld(),
-			start,
-			end,
-			FColor(255, 0, 0),
-			false, -1, 0,
-			1.0f
-		);
-		*/
+		return;
 	}
 
 	int i;

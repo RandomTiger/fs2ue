@@ -35,7 +35,7 @@ void AFS2GameMode::BeginPlay()
 	Super::BeginPlay();
 
 	PrimaryActorTick.bCanEverTick = true;
-	UFS2UETestLib::GameStart(CommandLine);
+	UFS2UETestLib::GameStart(CommandLine, GetWorld());
 }
 
 void AFS2GameMode::Tick(float DeltaTime)

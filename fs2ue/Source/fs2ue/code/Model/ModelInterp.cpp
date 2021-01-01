@@ -570,8 +570,9 @@ void model_interp_tmappoly(ubyte * p,polymodel * pm)
 	modelstats_num_polys++;
 	#endif
 
+#ifndef FS2_UE
 	if (!g3_check_normal_facing(vp(p+20),vp(p+8)) && !(Interp_flags & MR_NO_CULL)) return;
-
+#endif
 	if ( nv < 0 ) return;
 
 	verts = (model_tmap_vert *)(p+44);
@@ -605,6 +606,13 @@ void model_interp_tmappoly(ubyte * p,polymodel * pm)
 				} else {
 					Interp_list[i]->b = 191;
 				}
+#ifdef FS2_UE
+				int norm = verts[i].normnum;
+				Interp_list[i]->normal.X = Interp_norms[norm]->x;
+				Interp_list[i]->normal.Y = Interp_norms[norm]->y;
+				Interp_list[i]->normal.Z = Interp_norms[norm]->z;
+#endif
+
 			} else {
 				int vertnum = verts[i].vertnum;
 				int norm = verts[i].normnum;
@@ -818,8 +826,9 @@ void model_interp_sortnorm(ubyte * p,polymodel * pm, bsp_info *sm, int do_box_ch
 
 	if (prelist) model_interp_sub(p+prelist,pm,sm,do_box_check);		// prelist
 
+#ifndef FS2_UE
 	if (g3_check_normal_facing(vp(p+20),vp(p+8))) {		//facing
-
+#endif
 		//draw back then front
 
 		if (backlist) model_interp_sub(p+backlist,pm,sm,do_box_check);
@@ -827,6 +836,7 @@ void model_interp_sortnorm(ubyte * p,polymodel * pm, bsp_info *sm, int do_box_ch
 		if (onlist) model_interp_sub(p+onlist,pm,sm,do_box_check);			//onlist
 
 		if (frontlist) model_interp_sub(p+frontlist,pm,sm,do_box_check);
+#ifndef FS2_UE
 
 	}	else {			//not facing.  draw front then back
 
@@ -836,7 +846,7 @@ void model_interp_sortnorm(ubyte * p,polymodel * pm, bsp_info *sm, int do_box_ch
 
 		if (backlist) model_interp_sub(p+backlist,pm,sm,do_box_check);
 	}
-
+#endif
 	if (postlist) model_interp_sub(p+postlist,pm,sm,do_box_check);		// postlist
 
 #else

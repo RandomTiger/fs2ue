@@ -7,6 +7,7 @@
 #include "FS2UETestLib.generated.h"
 
 class UTexture2D;
+class UWorld;
 
 UCLASS()
 class UFS2UETestLib: public UBlueprintFunctionLibrary
@@ -14,7 +15,7 @@ class UFS2UETestLib: public UBlueprintFunctionLibrary
 	GENERATED_UCLASS_BODY()
 
 	UFUNCTION(BlueprintCallable)
-	static void GameStart(const FString &CommandLine);
+	static void GameStart(const FString &CommandLine, const UObject *WorldRef);
 	UFUNCTION(BlueprintCallable)
 	static void GameEnd();
 	UFUNCTION(BlueprintCallable)
@@ -23,7 +24,15 @@ class UFS2UETestLib: public UBlueprintFunctionLibrary
 	UFUNCTION(BlueprintCallable)
 	static UTexture2D *LoadTextureTest(const FString &path);
 
+	UFUNCTION(BlueprintCallable)
+	static void LoadShipTest(const FString &Path);
+
+	static UWorld *GetActiveWorld() {
+		return TestLibWorld;
+	}
+
 private:
 	static bool IsGameInit;
+	static UWorld *TestLibWorld;
 };
 

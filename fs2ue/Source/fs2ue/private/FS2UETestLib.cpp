@@ -2,20 +2,26 @@
 #include "Bmpman/Bmpman.h"
 #include "Graphics/GrDummy.h"
 #include "Graphics/GrInternal.h"
+#include "Ship/Ship.h"
 
 #include "FREESPACE2/Freespace.h"
 
 #include <windows.h> // for MAX_PATH
 
 bool UFS2UETestLib::IsGameInit = false;
+UWorld *UFS2UETestLib::TestLibWorld = nullptr;
 
 UFS2UETestLib::UFS2UETestLib(class FObjectInitializer const &Init) : Super(Init)
 {
 
 }
 
-void UFS2UETestLib::GameStart(const FString &CommandLine)
+void UFS2UETestLib::GameStart(const FString &CommandLine, const UObject *WorldRef)
 {
+	check(WorldRef);
+	TestLibWorld = WorldRef->GetWorld();
+	check(TestLibWorld);
+
 	FString DefaultGameDir = "D:\\Games\\Freespace 2\\";
 
 	// Store Unreal game dir
@@ -73,4 +79,11 @@ UTexture2D *UFS2UETestLib::LoadTextureTest(const FString &Path)
 
 	float uScale, vScale;
 	return create_texture(Bitmap, TCACHE_TYPE_NORMAL, uScale, vScale);
+}
+
+void UFS2UETestLib::LoadShipTest(const FString &Path)
+{
+	matrix Identity;
+	vector Origin;
+	ship_create(&Identity, &Origin, 32);
 }

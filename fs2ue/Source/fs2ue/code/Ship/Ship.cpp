@@ -87,6 +87,7 @@
 #endif
 #if defined(FS2_UE)
 #include "UFShip.h"
+#include "FS2UETestLib.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "DrawDebugHelpers.h"
 #endif
@@ -4081,7 +4082,10 @@ int ship_create(matrix *orient, vector *pos, int ship_type)
 
 #if defined(FS2_UE)
 	FActorSpawnParameters SpawnInfo;
-	shipp->pShip = GWorld->SpawnActor<AShip>(AShip::StaticClass(), FVector(), FRotator::ZeroRotator, SpawnInfo);
+	UWorld *World = UFS2UETestLib::GetActiveWorld();
+	check(World);
+	shipp->pShip = World->SpawnActor<AShip>(AShip::StaticClass(), FVector(), FRotator::ZeroRotator, SpawnInfo);
+	check(shipp->pShip);
 	shipp->pShip->AssembleMeshData(pm);
 #endif
 
