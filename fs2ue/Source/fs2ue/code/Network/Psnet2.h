@@ -48,8 +48,10 @@ typedef struct net_addr	{
 // define these in such a manner that a call to psnet_send_reliable is exactly the same and the new code in unobtrusive
 typedef uint PSNET_SOCKET;
 typedef uint PSNET_SOCKET_RELIABLE;
+#ifndef FS2_UE
 #undef INVALID_SOCKET
 #define INVALID_SOCKET (PSNET_SOCKET)(~0)
+#endif
 
 // defines for protocol overheads
 #define UDP_HEADER_SIZE						34

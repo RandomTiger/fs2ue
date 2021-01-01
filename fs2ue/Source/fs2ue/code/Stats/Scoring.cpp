@@ -11,6 +11,10 @@
 #ifndef UNITY_BUILD
 #include "Scoring.h"
 
+#ifndef FS2_UE
+#include <time.h>
+#endif
+
 #include "Freespace.h"
 #include "FSObject.h"
 #include "Ship.h"
@@ -24,6 +28,8 @@
 #include "multi_team.h"
 #include "multi_dogfight.h"
 #include "multi_pmsg.h"
+#include "HUD/HUDGauges.h"
+#include "HUD/HUD.h"
 #endif
 
 // what percent of points of total damage to a ship a player has to have done to get an assist (or a kill) when it is killed

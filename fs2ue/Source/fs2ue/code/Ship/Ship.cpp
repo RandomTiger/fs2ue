@@ -1107,6 +1107,11 @@ void ship_init()
 	ship_level_init();	// needed for FRED
 }
 
+void ship_deinit()
+{
+	ships_inited = 0;
+}
+
 
 // This will get called at the start of each level.
 void ship_level_init()
@@ -3939,7 +3944,7 @@ int ship_create(matrix *orient, vector *pos, int ship_type)
 	//  check to be sure that this ship falls into a ship size category!!!
 	//  get Allender or Mike if you hit this Assert
 	Assert( sip->flags & (SIF_SMALL_SHIP | SIF_BIG_SHIP | SIF_CAPITAL | SIF_NO_SHIP_TYPE | SIF_NOT_FLYABLE | SIF_ESCAPEPOD | SIF_SUPERCAP | SIF_DRYDOCK | SIF_KNOSSOS_DEVICE) );
-
+		
 	sip->modelnum = model_load(sip->pof_file, sip->n_subsystems, &sip->subsystems[0]);		// use the highest detail level
 	shipp->modelnum = sip->modelnum;
 

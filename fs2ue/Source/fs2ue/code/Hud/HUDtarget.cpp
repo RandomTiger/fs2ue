@@ -1071,6 +1071,13 @@ void hud_init_targeting()
 
 }
 
+void hud_deinit_targeting()
+{
+	Energy_bar_gauges_loaded = 0;
+	Toggle_gauge_loaded = 0;
+	Cmeasure_gauge_loaded = 0;
+}
+
 //	Target the next or previous subobject on the currently selected ship, based on next_flag.
 void hud_target_subobject_common(int next_flag)
 {

@@ -24,6 +24,8 @@
 #include "ForceFeedback.h"
 #include "Timer.h"
 #include "Asteroid.h"
+#include "HUD/HUDMessage.h"
+#include "HUD/HUD.h"
 #endif
 
 #define COLLISION_FRICTION_FACTOR	0.0
@@ -874,7 +876,6 @@ void get_I_inv (matrix* I_inv, matrix* I_inv_body, matrix* orient)
 #define	PLANET_DAMAGE_RANGE	3		//	If within this factor of radius, apply damage.
 
 fix	Last_planet_damage_time = 0;
-extern void hud_start_text_flash(char *txt);
 
 //	Procss player_ship:planet damage.
 //	If within range of planet, apply damage to ship.

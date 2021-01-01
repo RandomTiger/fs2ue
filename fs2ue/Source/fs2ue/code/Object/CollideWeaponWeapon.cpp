@@ -14,6 +14,7 @@
 #include "FreeSpace.h"
 #include "FSObject.h"
 #include "Weapon.h"
+#include "Ship.h"
 #endif
 
 #ifndef NDEBUG

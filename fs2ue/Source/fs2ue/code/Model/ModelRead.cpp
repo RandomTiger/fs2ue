@@ -83,15 +83,20 @@ static void model_unload(int modelnum)
 	Model_ram -= pm->ram_used;
 #endif
 	
-	if (pm->paths)	{
-		for (i=0; i<pm->n_paths; i++ )	{
-			for (j=0; j<pm->paths[i].nverts; j++ )	{
-				if ( pm->paths[i].verts[j].turret_ids )	{
+	if (pm->paths)	
+	{
+		for (i=0; i<pm->n_paths; i++ )	
+		{
+			for (j=0; j<pm->paths[i].nverts; j++ )	
+			{
+				if ( pm->paths[i].verts[j].turret_ids )	
+				{
 					free(pm->paths[i].verts[j].turret_ids);
 					pm->paths[i].verts[j].turret_ids = 0;
 				}
 			}
-			if (pm->paths[i].verts)	{
+			if (pm->paths[i].verts)	
+			{
 				free(pm->paths[i].verts);
 				pm->paths[i].verts = 0;
 			}
@@ -182,7 +187,8 @@ void model_free_all()
 	for (i=0;i<MAX_POLYGON_MODELS;i++) {
 		model_unload(i);		
 	}
-
+	memset(Polygon_models, 0, sizeof(Polygon_models));
+	model_initted = 0;
 }
 
 void model_init()
@@ -205,7 +211,9 @@ void model_init()
 	// Init the model caching system
 	model_cache_init();
 
+#ifndef FS2_UE
 	atexit( model_free_all );
+#endif
 	model_initted = 1;
 }
 

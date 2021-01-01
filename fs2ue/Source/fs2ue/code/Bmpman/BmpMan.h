@@ -102,6 +102,8 @@ public: // make private
 
 #define BYTES_PER_PIXEL(x)	((x+7)/8)
 
+void bm_close();
+
 // how many bytes of textures are used.
 extern int bm_texture_ram;
 

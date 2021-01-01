@@ -231,6 +231,11 @@ void hud_init_reticle()
 	Reticle_inited = 1;
 }
 
+void hud_deinit_reticle()
+{
+	Reticle_inited = 0;
+}
+
 // called once per frame to update the reticle gauges.  Makes calls to
 // ship_dumbfire_threat() and ship_lock_threat() and updates Threat_flags.
 void hud_update_reticle( player *pp )

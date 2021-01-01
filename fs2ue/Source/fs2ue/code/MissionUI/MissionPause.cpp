@@ -25,6 +25,7 @@
 #include "Alphacolors.h"
 #include "beam.h"
 #include "PadController.h"
+#include "SystemVars.h"
 #endif
 
 // ----------------------------------------------------------------------------------------------------------------

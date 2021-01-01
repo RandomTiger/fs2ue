@@ -688,3 +688,9 @@ fs2ue/Source/fs2ue/code/TomLib/Debug/
 fs2ue/Source/fs2ue/code/TomLib/Win32/
 
 fs2ue/Source/fs2ue/code/TomLib/x64/
+
+fs2ue/Source/fs2ue/Win32/Debug/
+
+fs2ue/Source/fs2ue/x64/UnityDebug/
+
+fs2ue/Source/fs2ue/x64/

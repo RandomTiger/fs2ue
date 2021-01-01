@@ -2,6 +2,7 @@
 
 #ifndef UNITY_BUILD
 #include "GlobalIncs/PsTypes.h"
+#include "ComponentSystem/ComponentSystem.h"
 #endif
 
 

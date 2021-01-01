@@ -19,6 +19,7 @@
 
 struct wing;
 
+
 // macros for goals which get set via sexpressions in the mission code
 
 // IMPORTANT!  If you add a new AI_GOAL_x define, be sure to update the functions

@@ -786,6 +786,7 @@ extern ship_counts	Ship_counts[MAX_SHIP_TYPE_COUNTS];
 
 
 extern void ship_init();				// called once	at game start
+extern void ship_deinit();				// called once	at game start
 extern void ship_level_init();		// called before the start of each level
 
 //returns -1 if failed

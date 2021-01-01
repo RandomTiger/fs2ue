@@ -81,6 +81,7 @@ extern float Pl_target_integrity;
 
 void HUD_init_colors();
 void HUD_init();
+void HUD_deinit();
 void hud_update_frame();		// updates hud systems not dependant on rendering
 void HUD_render_3d(float frametime);			// renders 3d dependant gauges
 void HUD_render_2d(float frametime);			// renders the 2d gauges

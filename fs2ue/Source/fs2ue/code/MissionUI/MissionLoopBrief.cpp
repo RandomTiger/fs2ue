@@ -21,6 +21,7 @@
 #include "missioncampaign.h"
 #include "animplay.h"
 #include "freespace.h"
+#include "MissionBriefCommon.h"
 #endif
 
 // ---------------------------------------------------------------------------------------------------------------------------------------

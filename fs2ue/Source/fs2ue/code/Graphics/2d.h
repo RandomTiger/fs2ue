@@ -300,7 +300,7 @@ enum
 #define GR_640							0		// 640 x 480
 #define GR_1024						1		// 1024 x 768
 
-extern int gr_init(int res, int mode, int depth = 16, int fred_x = -1, int fred_y = -1 );
+extern int gr_init(int res, int mode, int depth = 16, int fred_x = -1, int fred_y = -1);
 
 // Call this when your app ends.
 extern void gr_close();

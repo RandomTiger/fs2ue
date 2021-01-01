@@ -1917,6 +1917,7 @@ void parse_common_object_data(p_object	*objp)
 void parse_objects(mission *pm, int flag)
 {	
 	p_object temp;
+	memset(&temp, 0, sizeof(p_object));
 
 	Assert(pm != NULL);	
 

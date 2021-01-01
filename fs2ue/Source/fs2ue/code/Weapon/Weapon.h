@@ -21,7 +21,7 @@
 #include "parselo.h"
 #include "2d.h"		// needed for color
 //#include "shockwave.h"
-//#include "Trails.h"
+#include "Trails.h" // for trail_info
 #include "ai.h"
 #endif
 
@@ -285,6 +285,7 @@ extern char	*Weapon_names[MAX_WEAPON_TYPES];
 
 int weapon_info_lookup(char *name);
 void weapon_init();					// called at game startup
+void weapon_deinit();
 void weapon_level_init();			// called before the start of each level
 void weapon_render(object * obj);
 void weapon_delete( object * obj );

@@ -5801,10 +5801,12 @@ bool FREESPACE_Init(
 		return 0;
 	}
 
+#ifndef FS2_UE
 	if (!vm_init(24 * 1024 * 1024)) {
 		MessageBoxA(NULL, XSTR("Not enough memory to run Freespace.\r\nTry closing down some other applications.\r\n", 198), XSTR("Not Enough Memory", 199), MB_OK);
 		return 0;
 	}
+#endif
 
 	char *tmp_mem = (char *)malloc(16 * 1024 * 1024);
 	if (!tmp_mem) {
@@ -6114,6 +6116,10 @@ void game_shutdown(void)
 		gr_flip();
 	}
 
+#if defined(FS2_UE)
+	gr_close();
+#endif
+
    // if the player has left the "player select" screen and quit the game without actually choosing
 	// a player, Player will be NULL, in which case we shouldn't write the player file out!
 	if (!(Game_mode & GM_STANDALONE_SERVER) && (Player!=NULL) && !Is_standalone){
@@ -6122,6 +6128,8 @@ void game_shutdown(void)
 
 	// load up common multiplayer icons
 	multi_unload_common_icons();
+
+	HUD_deinit();
 	
 	shockwave_close();			// release any memory used by shockwave system	
 	fireball_close();				// free fireball system
@@ -6129,6 +6137,7 @@ void game_shutdown(void)
 	hud_free_scrollback_list();// free space allocated to store hud messages in hud scrollback
 	unload_animating_pointer();// frees the frames used for the animating mouse pointer
 	bm_unload_all();				// free bitmaps
+	bm_close();
 	mission_campaign_close();	// close out the campaign stuff
 	multi_voice_close();			// close down multiplayer voice (including freeing buffers, etc)
 	multi_log_close();
@@ -6143,6 +6152,8 @@ void game_shutdown(void)
 	training_menu_close();
 	gr_close();
 
+	weapon_deinit();
+
 	extern void joy_close();
 	joy_close();
 
@@ -6155,6 +6166,12 @@ void game_shutdown(void)
 	//lcl_xstr_close();
 
 	FlushAllAllocatedBeahviours();
+
+#ifdef FS2_UE
+	ship_deinit();
+	multi_deinit();
+	model_free_all();
+#endif
 
 	gr_font_deinit();
 	cf_free_leaks();

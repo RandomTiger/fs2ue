@@ -28,6 +28,7 @@ void ets_init_ship(object* obj);
 void ai_manage_ets(object* obj);
 
 void hud_init_ets();
+void hud_deinit_ets();
 void hud_show_ets();
 
 void increase_recharge_rate(object* obj, SYSTEM_TYPE enum_value);

@@ -785,6 +785,7 @@ extern int Multi_current_file_length;
 
 // called at game startup
 void multi_init();
+void multi_deinit();
 
 // called whenever a netgame is started
 void multi_level_init();

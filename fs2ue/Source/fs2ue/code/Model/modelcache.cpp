@@ -207,7 +207,9 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 
 	// Main Hull
 	bsp_info *lSubmodel = &pm->submodel[lSubmodelIndex];
+	G3_count = 1;
 	model_interp_sub( (ubyte *) lSubmodel->bsp_data, pm, lSubmodel, 0 );
+	G3_count = 0;
 	model_stop_cache();
 //	UE_LOG(LogTemp, Warning, TEXT("createOgreMesh model_stop_cache %s"), *MeshName);
 

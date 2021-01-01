@@ -228,7 +228,7 @@ typedef struct bsp_info {
 typedef struct mp_vert {
 	vector		pos;				// xyz coordinates of vertex in object's frame of reference
 	int			nturrets;		// number of turrets guarding this vertex
-	int			*turret_ids;	// array of indices into ship_subsys linked list (can't index using [] though)
+	int			*turret_ids = nullptr;	// array of indices into ship_subsys linked list (can't index using [] though)
 	float			radius;			// How far the closest obstruction is from this vertex
 } mp_vert;
 
@@ -237,7 +237,7 @@ typedef struct model_path {
 	char			parent_name[MAX_NAME_LEN];			// parent name of submodel that path is linked to in POF
 	int			parent_submodel;
 	int			nverts;
-	mp_vert		*verts;
+	mp_vert		*verts = nullptr;
 	int			goal;			// Which of the verts is the one closest to the goal of this path
 	int			type;			// What this path takes you to... See MP_TYPE_??? defines above for details
 	int			value;		// This depends on the type.
@@ -432,7 +432,7 @@ typedef struct polymodel {
 	shield_info	shield;								// new shield information
 
 	int			n_paths;
-	model_path	*paths;
+	model_path	*paths = nullptr;
 
 	// physics info
 	float			mass;

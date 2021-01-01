@@ -12,6 +12,8 @@
 #ifndef __FS2_BEAM_WEAPON_HEADER_FILE
 #define __FS2_BEAM_WEAPON_HEADER_FILE
 
+#include "FSModel.h" // for mc_info
+
 // ------------------------------------------------------------------------------------------------
 // BEAM WEAPON DEFINES/VARS
 //

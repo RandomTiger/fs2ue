@@ -12,6 +12,9 @@
 #include "multi_log.h"
 
 #include <stdio.h>
+#ifndef FS2_UE
+#include <time.h>
+#endif
 #include <stdarg.h>
 #include "multi_options.h"
 #include "cmdline.h"

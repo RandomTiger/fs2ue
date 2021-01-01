@@ -38,6 +38,7 @@
 #include "ShipHit.h"
 #include "Neblightning.h"
 #include "Objectsnd.h"
+#include "Shockwave.h"
 #endif
 
 #ifndef NDEBUG

@@ -7,7 +7,7 @@
  *
 */ 
 
-
+#pragma once
 
 #ifndef _PSTYPES_H
 #define _PSTYPES_H
@@ -217,10 +217,10 @@ void gr_activate(int);
 #define Assert(x) do { if (!(x)){ gr_activate(0); WinAssert(#x,__FILE__,__LINE__); gr_activate(1); } } while (0)
 #endif
 #else
-static void Assert(bool) {}
-static void Assert(int) {}
-static void Assert(uint) {}
-static void Assert(void *) {}
+static void Assert(bool b) { check(b);  }
+static void Assert(int b) { check(b != 0); }
+static void Assert(uint b) { check(b != 0); }
+static void Assert(void *b) { check(b); }
 #endif
 
 //#define Int3() _asm { int 3 }
@@ -495,6 +495,7 @@ template <class T> void CAP( T& v, T mn, T mx )
 void vm_strdup_free(void *ptr);
 void vm_strdup_free();
 
+#ifndef FS2_UE
 #ifndef NDEBUG
 	// Debug versions
 
@@ -546,6 +547,7 @@ void vm_strdup_free();
 	#define malloc(size) vm_malloc(size)
 	#define free(ptr) vm_free(ptr)
 	#define strdup(ptr) vm_strdup(ptr)
+#endif
 #endif
 
 // NEVER REFERENCE THESE VALUES OUTSIDE OF THE GRAPHICS LIBRARY!!!

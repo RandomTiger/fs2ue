@@ -12,6 +12,9 @@
 
 #include <winsock.h> // For INVALID_SOCKET
 #include <ctype.h>
+#ifndef FS2_UE
+#include <time.h>
+#endif
 
 #include "bmpman.h"
 #include "freespace.h"

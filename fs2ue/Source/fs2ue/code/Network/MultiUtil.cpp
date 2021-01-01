@@ -12,6 +12,9 @@
 #include "MultiUtil.h"
 
 #include <winsock.h>
+#ifndef FS2_UE
+#include <time.h>
+#endif
 #include "MultiMsgs.h"
 #include "Multi.h"
 #include "LinkList.h"

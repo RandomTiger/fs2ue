@@ -1093,6 +1093,7 @@ void vm_strdup_free(void *ptr)
 
 void vm_strdup_free()
 {
+#ifndef FS2_UE
 	gbStrdupDupFreeTestEnbaled = false;
 	for(unsigned int i = 0; i < gStrdupLeakList.size(); i++)
 	{
@@ -1104,6 +1105,7 @@ void vm_strdup_free()
 	}
 
 	gStrdupLeakList.clear();
+#endif
 }
 
 #ifndef NDEBUG

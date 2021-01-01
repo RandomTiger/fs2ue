@@ -138,6 +138,11 @@ void hud_init_ets()
 	Hud_ets_inited = 1;
 }
 
+void hud_deinit_ets()
+{
+	Hud_ets_inited = 0;
+}
+
 // -------------------------------------------------------------------------------------------------
 // ets_init_ship() is called by a ship when it is created (effectively, for every ship at the start
 // of a mission).  This will set the default charge rates for the different systems and initalialize

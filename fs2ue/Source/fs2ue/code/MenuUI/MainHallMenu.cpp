@@ -38,6 +38,7 @@
 #include "AlphaColors.h"
 #include "demo.h"
 #include "fishtank.h"
+#include "PackUnpack.h"
 
 #include "Io/VoiceRecognition.h"
 #include "Io/TextToSpeech.h"

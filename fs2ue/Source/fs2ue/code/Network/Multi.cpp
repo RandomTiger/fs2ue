@@ -12,6 +12,9 @@
 #include "Multi.h"
 
 #include <winsock.h>
+#ifndef FS2_UE
+#include <time.h>
+#endif
 
 #include "MultiUtil.h"
 #include "MultiMsgs.h"
@@ -217,6 +220,11 @@ void multi_init()
 
 	// load up common multiplayer icons
 	multi_load_common_icons();	
+}
+
+void multi_deinit()
+{
+	Net_player = nullptr;
 }
 
 // this is an important function which re-initializes any variables required in multiplayer games. 

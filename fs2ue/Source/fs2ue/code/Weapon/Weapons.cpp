@@ -1125,6 +1125,10 @@ void weapon_init()
 	weapon_level_init();
 }
 
+void weapon_deinit()
+{
+	Weapons_inited = 0;
+}
 
 // This will get called at the start of each level.
 void weapon_level_init()

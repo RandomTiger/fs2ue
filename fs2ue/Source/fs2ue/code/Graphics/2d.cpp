@@ -24,6 +24,8 @@
 #include "SystemVars.h"
 #include "cmdline.h"
 
+#include "GrDummy.h"
+
 // 3dnow stuff
 // #include "amd3d.h"
 
@@ -66,7 +68,12 @@ int Gr_gamma_lookup[256];
 
 void gr_close()
 {
-	if ( !Gr_inited )	return;
+	if (!Gr_inited)
+	{
+		return;
+	}
+
+	gr_dummy_deinit();
 
 	palette_flush();
 	gr_clean();
@@ -153,8 +160,10 @@ int gr_init(int res, int mode, int depth, int fred_x, int fred_y)
 	int first_time = 0;
 	int max_w, max_h;
 
+#ifndef FS2_UE
 	if ( !Gr_inited )	
 		atexit(gr_close);
+#endif
 
 	// If already inited, shutdown the previous graphics
 	if ( Gr_inited )	{
@@ -230,7 +239,6 @@ int gr_init(int res, int mode, int depth, int fred_x, int fred_y)
 			break;
 #endif
 		case GR_DUMMY:
-			extern bool gr_dummy_init();
 			if(gr_dummy_init() == false)
 			{
 				return 1;

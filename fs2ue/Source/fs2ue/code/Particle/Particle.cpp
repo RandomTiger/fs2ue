@@ -18,6 +18,8 @@
 #include "OsApi.h"
 #include "FSobject.h"
 #include "Timer.h"
+#include "2d.h"
+#include "SystemVars.h"
 #endif
 
 typedef struct particle {

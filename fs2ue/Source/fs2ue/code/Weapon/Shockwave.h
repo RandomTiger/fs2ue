@@ -12,11 +12,6 @@
 #ifndef __SHOCKWAVE_H__
 #define __SHOCKWAVE_H__
 
-#ifndef UNITY_BUILD
-#include "cfile.h"
-#include "FSobject.h"
-#endif
-
 #define	SW_USED				(1<<0)
 #define	SW_WEAPON			(1<<1)
 #define	SW_SHIP_DEATH		(1<<2)
@@ -25,6 +20,8 @@
 #define	MAX_SHOCKWAVES			16
 #define	MAX_SHOCKWAVE_TYPES	1
 #define	SW_MAX_OBJS_HIT	64
+
+struct object;
 
 typedef struct shockwave_info
 {

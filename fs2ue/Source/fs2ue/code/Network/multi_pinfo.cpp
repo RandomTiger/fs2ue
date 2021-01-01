@@ -11,6 +11,10 @@
 #ifndef UNITY_BUILD
 #include "multi_pinfo.h"
 
+#ifndef FS2_UE
+#include <time.h>
+#endif
+
 #include "ui.h"
 #include "bmpman.h"
 #include "gamesnd.h"

@@ -135,7 +135,7 @@ class UI_GADGET
 		int mouse_captured(UI_GADGET *gadget = NULL);
 		int disabled();
 		int enabled();
-		virtual void hide(int n = 1);
+		void hide(int n = 1);
 		virtual void unhide();
 		void update_dimensions(int x, int y, int w, int h);
 		void get_dimensions(int *x, int *y, int *w, int *h);
@@ -423,6 +423,7 @@ class UI_SCROLLBAR : public UI_GADGET
 		int getpos();
 		int changed();
 		void hide();
+		//virtual void hide(int n) override { UI_GADGET::hide(n); }
 		void unhide();
 		int get_hidden();
 		void link_hotspot(int up_button_num, int down_button_num);

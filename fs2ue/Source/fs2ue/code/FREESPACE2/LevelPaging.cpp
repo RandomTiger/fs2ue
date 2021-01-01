@@ -11,6 +11,7 @@
 #include "LevelPaging.h"
 #include "Freespace.h"
 #include "bmpman/BmpMan.h"
+#include "SystemVars.h"
 #endif
 
 #if !defined(FS2_UE)

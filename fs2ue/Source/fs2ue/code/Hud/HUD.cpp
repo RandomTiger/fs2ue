@@ -659,6 +659,13 @@ void HUD_init()
 	} 
 }
 
+void HUD_deinit()
+{
+	hud_deinit_ets();
+	hud_deinit_reticle();
+	hud_deinit_targeting();
+}
+
 // return !0 if HUD is disabled (ie no gauges are shown/usable), otherwise return 0
 int hud_disabled()
 {

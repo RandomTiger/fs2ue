@@ -661,7 +661,7 @@ bool gr_dummy_init()
 	gr_screen.gf_flip = gr_dummy_flip;
 	gr_screen.gf_set_clip = gr_dummy_set_clip;
 	gr_screen.gf_reset_clip = gr_dummy_reset_clip;
-	gr_screen.gf_set_font = grx_set_font;
+	gr_screen.gf_set_font = gr_dummy_set_font;
 
 	gr_screen.gf_init_color = gr_dummy_init_color;
 	gr_screen.gf_set_color_fast = gr_dummy_set_color_fast;
@@ -743,4 +743,20 @@ bool gr_dummy_init()
 	return true;
 }
 
+void gr_dummy_deinit()
+{
+#if defined(FS2_UE)
+
+	for (const TPair<int, UTexture2D*>& pair : TextureStore)
+	{
+		if (IsValid(pair.Value))
+		{
+			pair.Value->RemoveFromRoot();
+			pair.Value->ConditionalBeginDestroy();
+		}
+	}
+
+	TextureStore.Reset();
+#endif
+}
 

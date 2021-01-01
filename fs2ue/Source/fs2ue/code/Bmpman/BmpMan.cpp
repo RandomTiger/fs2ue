@@ -213,14 +213,19 @@ void bm_init()
 	
 	if (!bm_inited)	{
 		bm_inited = 1;
+#ifndef FS2_UE
 		atexit(bm_close);
+#endif
 	}
+
+	bm_next_handle = 1;
 	
 	for (i=0; i<MAX_BITMAPS; i++ ) {
 		bm_bitmaps[i].filename[0] = '\0';
 		bm_bitmaps[i].type = BM_TYPE_NONE;
 		bm_bitmaps[i].info.user.data = NULL;
 		bm_bitmaps[i].bm.data = 0;
+		bm_bitmaps[i].handle = 0;
 		bm_bitmaps[i].bm.palette = NULL;
 		#ifdef BMPMAN_NDEBUG
 			bm_bitmaps[i].data_size = 0;
@@ -676,7 +681,7 @@ int bm_load_animation( char *real_filename, int *nframes, int *fps, int can_drop
 
 	return bm_bitmaps[n].handle;
 }
-
+#pragma optimize("", off)
 // Gets info.   w,h,or flags,nframes or fps can be NULL if you don't care.
 void bm_get_info( int handle, int *w, int * h, ubyte * flags, int *nframes, int *fps)
 {
@@ -717,7 +722,7 @@ void bm_get_info( int handle, int *w, int * h, ubyte * flags, int *nframes, int 
 		}
 	}
 }
-
+#pragma optimize("", on)
 uint bm_get_signature( int handle )
 {
 	if ( !bm_inited ) bm_init();

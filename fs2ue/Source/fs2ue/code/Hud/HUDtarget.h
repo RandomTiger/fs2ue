@@ -65,6 +65,7 @@ extern char *Strafe_submode_text[];
 extern void hud_init_targeting_colors();
 
 void	hud_init_targeting();
+void	hud_deinit_targeting();
 void	hud_target_next(int team = -1);
 void	hud_target_prev(int team = -1);
 int	hud_target_closest(int team = -1, int attacked_objnum = -1, int play_fail_sound = TRUE, int filter = 0, int turret_attacking_target = 0);

@@ -36,6 +36,7 @@
 #include "multiui.h"
 #include "AlphaColors.h"
 #include "localize.h"
+#include "PackUnpack.h"
 #endif
 
 namespace MissionWeaponChoice

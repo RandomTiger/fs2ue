@@ -18,6 +18,7 @@
 #include "3dInternal.h" 
 #include "BmpMan.h"
 #include "Timer.h"
+#include "Ship.h"
 #endif
 
 #define MAX_TRAILS MAX_WEAPONS

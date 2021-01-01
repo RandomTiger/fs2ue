@@ -112,8 +112,9 @@ int g3_draw_line(vertex *p0,vertex *p1)
 int g3_check_normal_facing(vector *v,vector *norm)
 {
 	vector tempv;
-
+#if !defined(FS2_UE)
 	Assert( G3_count == 1 );
+#endif
 
 	vm_vec_sub(&tempv,&View_position,v);
 
@@ -122,7 +123,9 @@ int g3_check_normal_facing(vector *v,vector *norm)
 
 int do_facing_check(vector *norm,vertex **vertlist,vector *p)
 {
+#if !defined(FS2_UE)
 	Assert( G3_count == 1 );
+#endif
 
 	if (norm) {		//have normal
 
@@ -150,7 +153,9 @@ int do_facing_check(vector *norm,vertex **vertlist,vector *p)
 //returns -1 if not facing, 1 if off screen, 0 if drew
 int g3_draw_poly_if_facing(int nv,vertex **pointlist,uint tmap_flags,vector *norm,vector *pnt)
 {
+#if !defined(FS2_UE)
 	Assert( G3_count == 1 );
+#endif
 
 	if (do_facing_check(norm,pointlist,pnt))
 		return g3_draw_poly(nv,pointlist,tmap_flags);
@@ -167,7 +172,9 @@ int g3_draw_poly(int nv,vertex **pointlist,uint tmap_flags)
 	vertex **bufptr;
 	ccodes cc;
 
+#if !defined(FS2_UE)
 	Assert( G3_count == 1 );
+#endif
 
 	cc.or = 0; cc.and = 0xff;
 

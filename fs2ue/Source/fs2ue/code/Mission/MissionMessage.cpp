@@ -35,6 +35,7 @@
 #include "localize.h"
 #include "Demo.h"
 #include "HUDconfig.h"
+#include "PackUnpack.h"
 #endif
 
 // here is a text list of the builtin message names.  These names are used to match against
