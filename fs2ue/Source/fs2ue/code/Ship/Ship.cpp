@@ -4084,7 +4084,7 @@ int ship_create(matrix *orient, vector *pos, int ship_type)
 	FActorSpawnParameters SpawnInfo;
 	UWorld *World = UFS2UETestLib::GetActiveWorld();
 	check(World);
-	shipp->pShip = World->SpawnActor<AShip>(AShip::StaticClass(), FVector(), FRotator::ZeroRotator, SpawnInfo);
+	shipp->pShip = World->SpawnActor<AShip>(AShip::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator, SpawnInfo);
 	check(shipp->pShip);
 	shipp->pShip->AssembleMeshData(pm);
 #endif
