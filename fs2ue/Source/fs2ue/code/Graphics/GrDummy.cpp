@@ -484,7 +484,6 @@ UTexture2D* DummyExtractBitmapToTexture(int bitmap_type, int texture_handle, ush
 	return texture;
 }
 
-
 UTexture2D *create_texture(int bitmap_handle, int bitmap_type, float &uScale, float &vScale)
 {
 	UTexture2D **FoundTexture = TextureStore.Find(bitmap_handle);

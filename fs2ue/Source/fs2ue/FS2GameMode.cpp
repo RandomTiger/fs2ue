@@ -4,22 +4,13 @@
 #include "FS2GameMode.h"
 
 #include "fs2ue.h"
+#include "FS2UETestLib.h"
 
 #if defined(FS2_UE)
 #include "RuntimeMeshComponent.h"
 #endif
 
-
-#include "StateMachine/StateMachine.h"
-#include "ComponentSystem/ComponentSystem.h"
-
-#include "FREESPACE2/Horde.h"
-#include "FREESPACE2/LevelPaging.h"
 #include "FREESPACE2/Freespace.h"
-
-#include <windows.h>
-
-
 
 // GEngine->GameViewport->GetWindow()->GetNativeWindow()->GetOSWindowHandle();
 
@@ -37,7 +28,6 @@ AFS2GameMode* AFS2GameMode::Instance = nullptr;
 AFS2GameMode::AFS2GameMode()
 {
 	Instance = this;
-	IsInit = false;
 }
 
 void AFS2GameMode::BeginPlay()
@@ -45,49 +35,18 @@ void AFS2GameMode::BeginPlay()
 	Super::BeginPlay();
 
 	PrimaryActorTick.bCanEverTick = true;
-
-	if (EnableFS2)
-	{
-		// Store Unreal game dir
-		TCHAR currentDir[MAX_PATH];
-		GetCurrentDirectory(MAX_PATH, currentDir);
-
-		// Set FS2 game dir for init
-		TCHAR fs2dir[MAX_PATH];
-		_tcscpy_s(fs2dir, MAX_PATH, DefaultGameDir.GetCharArray().GetData());
-		SetCurrentDirectory(fs2dir);
-
-		// Get the command line
-		char cmdline[128];
-		TCHAR *cmdlineTCHAR = CommandLine.GetCharArray().GetData();
-		wcstombs(cmdline, cmdlineTCHAR, wcslen(cmdlineTCHAR) + 1);
-
-		IsInit = FREESPACE_Init(cmdline);
-
-		// Restore Unreal game dir
-		SetCurrentDirectory(currentDir);
-	}
-
-	UWorld* const World = GetWorld(); // get a reference to the world
+	UFS2UETestLib::GameStart(CommandLine);
 }
 
 void AFS2GameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if (IsInit)
-	{
-		FREESPACE_Update(DeltaTime);
-	}
+	UFS2UETestLib::GameTick(DeltaTime);
 }
 
 void AFS2GameMode::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
-	if (IsInit)
-	{
-		FREESPACE_Shutdown();
-		IsInit = false;
-	}
-
+	UFS2UETestLib::GameEnd();
 	Super::EndPlay(EndPlayReason);
 }
 
