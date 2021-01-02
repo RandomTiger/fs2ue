@@ -121,11 +121,10 @@ void gr_dummy_scaler(vertex *va, vertex *vb )
 
 #if defined(FS2_UE)
 const int VERT_ARRAY_SIZE = 64;
-DVertex d3d_verts[VERT_ARRAY_SIZE];
 VertexNorm lVertices[VERT_ARRAY_SIZE];
 #endif
 
-void gr_dummy_tmapper( int nverts, vertex * verts[], uint flags )
+void gr_dummy_tmapper( int nverts, vertex * InVertices[], uint flags )
 {
 #if defined(FS2_UE)
 	if (nverts == 0)
@@ -147,75 +146,67 @@ void gr_dummy_tmapper( int nverts, vertex * verts[], uint flags )
 		model_cache_set_texture(gr_screen.current_bitmap);
 	}
 
-	DVertex *src_v = d3d_verts;
-
 	assert(nverts < VERT_ARRAY_SIZE);
-	for (i = 0; i<nverts; i++) {
-		vertex * va = verts[i];
+	for (i = 0; i < nverts; i++) {
+		const vertex * const SrcVert = InVertices[i];
+		DVertex DstVert;
 
 		if (isModelCacheInProgress())
 		{
-			src_v->sx = va->x;
-			src_v->sy = va->y;
-			src_v->sz = va->z;
+			DstVert.sx = SrcVert->x;
+			DstVert.sy = SrcVert->y;
+			DstVert.sz = SrcVert->z;
 		}
 		else
 		{
-			src_v->sx = va->sx + gr_screen.offset_x;
-			src_v->sy = va->sy + gr_screen.offset_y;
-			src_v->sz = 0.99f;
+			DstVert.sx = SrcVert->sx + gr_screen.offset_x;
+			DstVert.sy = SrcVert->sy + gr_screen.offset_y;
+			DstVert.sz = 0.99f;
 		}
 
-		src_v->color = 0xffffffff;
+		DstVert.color = 0xffffffff;
 
 		if (!isModelCacheInProgress())
 		{
-			src_v->sx = va->sx + gr_screen.offset_x;
-			src_v->sy = va->sy + gr_screen.offset_y;
+			DstVert.sx = SrcVert->sx + gr_screen.offset_x;
+			DstVert.sy = SrcVert->sy + gr_screen.offset_y;
 		}
 
 		if (flags & TMAP_FLAG_TEXTURED) {
-			static float changer = 0.000288f;
-			src_v->tu = (va->u*u_scale) + changer;
-			src_v->tv = (va->v*v_scale) + changer;
+			static float changer = 0.0f;// 0.000288f;
+			DstVert.tu = (SrcVert->u*u_scale) + changer;
+			DstVert.tv = (SrcVert->v*v_scale) + changer;
 		}
-		else {
-			src_v->tu = 0.0f;
-			src_v->tv = 0.0f;
+		else 
+		{
+			DstVert.tu = 0.0f;
+			DstVert.tv = 0.0f;
 		}
 
-		src_v++;
-	}
-
-
-	assert(nverts < VERT_ARRAY_SIZE);
-
-	if (isModelCacheInProgress())
-	{
-		for (i = 0; i<nverts; i++)
+		if (isModelCacheInProgress())
 		{
 			extern void model_cache_add_vertex(VertexNorm *src_v);
 
-#if defined(FS2_UE)
-			lVertices[i].nx = verts[i]->normal.X;
-			lVertices[i].ny = verts[i]->normal.Y;
-			lVertices[i].nz = verts[i]->normal.Z;
-#endif
-			lVertices[i].sx = d3d_verts[i].sx;
-			lVertices[i].sy = d3d_verts[i].sy;
-			lVertices[i].sz = d3d_verts[i].sz;
-			lVertices[i].tu = d3d_verts[i].tu;
-			lVertices[i].tv = d3d_verts[i].tv;
+			lVertices[i].nx = InVertices[i]->normal.X;
+			lVertices[i].ny = InVertices[i]->normal.Y;
+			lVertices[i].nz = InVertices[i]->normal.Z;
 
+			lVertices[i].sx = DstVert.sx;
+			lVertices[i].sy = DstVert.sy;
+			lVertices[i].sz = DstVert.sz;
+			lVertices[i].tu = DstVert.tu;
+			lVertices[i].tv = DstVert.tv;
+			
+			// Change poly format from FAN to TRILIST
 			if (i >= 2)
 			{
 				model_cache_add_vertex(&lVertices[0]);
 				model_cache_add_vertex(&lVertices[i - 1]);
 				model_cache_add_vertex(&lVertices[i]);
 			}
+#endif
 		}
 	}
-#endif
 }
 
 #undef UpdateResource
@@ -312,13 +303,13 @@ UTexture2D* DummyExtractBitmapToTexture(int bitmap_type, int texture_handle, ush
 		alphaOn = false;
 	}
 
-	const bool alt = bitmap_type != TCACHE_TYPE_INTERFACE && tex_w < 256;
+	const bool alt = bitmap_type != TCACHE_TYPE_INTERFACE && tex_w < 256 && (tex_w != bmap_w || tex_h != bmap_h);
 
 	if (bitmap_type == TCACHE_TYPE_AABITMAP || alt == false)
 	{
 		Dummy_d3d9_tcache_get_adjusted_texture_size(tex_w, tex_h, &tex_w, &tex_h);
 	}
-	
+
 	if (bitmap_type == TCACHE_TYPE_AABITMAP)
 	{
 		uScale = (float)bmap_w / (float)tex_w;
@@ -339,7 +330,7 @@ UTexture2D* DummyExtractBitmapToTexture(int bitmap_type, int texture_handle, ush
 	bmp_data = (ushort *)data;
 	ubyte *bmp_data_byte = (ubyte*)data;
 
-//////////////
+	//////////////
 	int bitmapnum = texture_handle % MAX_BITMAPS;
 	extern bitmap_entry bm_bitmaps[MAX_BITMAPS];
 	FName BmpName(bm_bitmaps[bitmapnum].filename);
@@ -348,98 +339,37 @@ UTexture2D* DummyExtractBitmapToTexture(int bitmap_type, int texture_handle, ush
 
 	UTexture2D* texture = UTexture2D::CreateTransient(bmap_w, bmap_h, PF_B8G8R8A8, BmpName);
 
-	int32 *designTexData = (int32 *)texture->PlatformData->Mips[0].BulkData.Lock(LOCK_READ_WRITE);
+	static int Colour = 0;
+	static TArray<uint32> Colours = { 0xFF0000FF, 0x00FF00FF, 0x0000FFFF, 0xFFFF00FF, 0xFF00FFFF };
+
+	uint32 *designTexData = (uint32 *)texture->PlatformData->Mips[0].BulkData.Lock(LOCK_READ_WRITE);
 	for (int h = 0; h < bmap_h; h++)
 	{
 		for (int w = 0; w < bmap_w; w++)
 		{
-			designTexData[w + h * bmap_w] = 0xFF0000FF;
+			designTexData[w + h * bmap_w] = Colours[Colour];
 		}
 	}
 
+	Colour = (Colour + 1) % Colours.Num();
 
-
-	int i, j;
-
-	void *RegionBits = designTexData;
-	int RegionPitch = bmap_w * sizeof(int32);
-
-	bool result = true;
-
-	if (bm_get_bpp(texture_handle) == 32 && bitmap_type != TCACHE_TYPE_AABITMAP && alt)
+	bool bUseRealTextureData = false;
+	if (bUseRealTextureData)
 	{
-		// Each RGB bit count requires different pointers
-		uint *lpSP;
-		uint *bmp_dataUint = (uint *)bmp_data;
 
-		fix u, utmp, v, du, dv;
+		int i, j;
 
-		u = v = 0;
+		void *RegionBits = designTexData;
+		int RegionPitch = bmap_w * sizeof(int32);
 
-		du = ((bmap_w - 1)*F1_0) / tex_w;
-		dv = ((bmap_h - 1)*F1_0) / tex_h;
+		bool result = true;
 
-		for (j = 0; j < tex_h; j++)
+		if (bm_get_bpp(texture_handle) == 32 && bitmap_type != TCACHE_TYPE_AABITMAP && alt)
 		{
-			lpSP = (uint *)(((char*)RegionBits) + RegionPitch * j);
+			// Each RGB bit count requires different pointers
+			uint *lpSP;
+			uint *bmp_dataUint = (uint *)bmp_data;
 
-			utmp = u;
-
-			for (i = 0; i < tex_w; i++) {
-				*lpSP++ = bmp_dataUint[f2i(v)*bmap_w + f2i(utmp)];
-				utmp += du;
-			}
-			v += dv;
-		}
-	}
-	else if (bm_get_bpp(texture_handle) == 32)
-	{
-		const int pixelStride = bpp / 8;
-#ifdef _DEBUG
-		memset((void *)region.pBits, 0xff, dwWidth * dwHeight * pixelStride);
-#endif
-		for (int j = 0; j < bmap_h; j++)
-		{
-			ubyte *dstCol = ((ubyte *)RegionBits) + j * dwWidth * pixelStride;
-			ubyte *srcCol = ((ubyte *)bmp_data_byte) + j * bmap_w * pixelStride;
-			memcpy(dstCol, srcCol, bmap_w * pixelStride);
-		}
-	}
-	else
-	{
-		// Each RGB bit count requires different pointers
-		DUMMYCOLOR *lpSP;
-		DUMMYCOLOR xlat[256];
-
-		switch (bitmap_type) {
-		case TCACHE_TYPE_AABITMAP:
-			// setup convenient translation table
-			for (i = 0; i < 16; i++) {
-				const int a = (i * 255) / 15;
-				xlat[i] = DUMMY_COLOR_ARGB(255, 255, 255, a);
-			}
-
-			xlat[15] = xlat[1];
-			for (; i < 256; i++) {
-				xlat[i] = xlat[0];
-			}
-
-			for (j = 0; j < tex_h; j++, lpSP++) {
-				lpSP = (DUMMYCOLOR *)(((char*)RegionBits) + RegionPitch * j);
-
-				for (i = 0; i < tex_w; i++) {
-					if ((i < bmap_w) && (j < bmap_h)) {
-						*lpSP = xlat[(ubyte)bmp_data_byte[j*bmap_w + i]];
-					}
-					else {
-						*lpSP = 0;
-					}
-					lpSP++;
-				}
-			}
-			break;
-
-		default: {	// normal:		
 			fix u, utmp, v, du, dv;
 
 			u = v = 0;
@@ -447,23 +377,94 @@ UTexture2D* DummyExtractBitmapToTexture(int bitmap_type, int texture_handle, ush
 			du = ((bmap_w - 1)*F1_0) / tex_w;
 			dv = ((bmap_h - 1)*F1_0) / tex_h;
 
-			for (j = 0; j < tex_h; j++) {
-				lpSP = (DUMMYCOLOR *)(((char*)RegionBits) + RegionPitch * j);
+			for (j = 0; j < tex_h; j++)
+			{
+				lpSP = (uint *)(((char*)RegionBits) + RegionPitch * j);
 
 				utmp = u;
 
 				for (i = 0; i < tex_w; i++) {
-					*lpSP++ = bmp_data[f2i(v)*bmap_w + f2i(utmp)];
+					*lpSP++ = bmp_dataUint[f2i(v)*bmap_w + f2i(utmp)];
 					utmp += du;
 				}
 				v += dv;
 			}
 		}
-				 break;
+		else if (bm_get_bpp(texture_handle) == 32)
+		{
+			const int pixelStride = bpp / 8;
+#ifdef _DEBUG
+			memset((void *)region.pBits, 0xff, dwWidth * dwHeight * pixelStride);
+#endif
+			for (int j = 0; j < bmap_h; j++)
+			{
+				ubyte *dstCol = ((ubyte *)RegionBits) + j * dwWidth * pixelStride;
+				ubyte *srcCol = ((ubyte *)bmp_data_byte) + j * bmap_w * pixelStride;
+				memcpy(dstCol, srcCol, bmap_w * pixelStride);
+			}
+		}
+		else
+		{
+			// Each RGB bit count requires different pointers
+			DUMMYCOLOR *lpSP;
+			DUMMYCOLOR xlat[256];
+
+			switch (bitmap_type) {
+			case TCACHE_TYPE_AABITMAP:
+				// setup convenient translation table
+				for (i = 0; i < 16; i++) {
+					const int a = (i * 255) / 15;
+					xlat[i] = DUMMY_COLOR_ARGB(255, 255, 255, a);
+				}
+
+				xlat[15] = xlat[1];
+				for (; i < 256; i++) {
+					xlat[i] = xlat[0];
+				}
+
+				for (j = 0; j < tex_h; j++, lpSP++) {
+					lpSP = (DUMMYCOLOR *)(((char*)RegionBits) + RegionPitch * j);
+
+					for (i = 0; i < tex_w; i++) {
+						if ((i < bmap_w) && (j < bmap_h)) {
+							*lpSP = xlat[(ubyte)bmp_data_byte[j*bmap_w + i]];
+						}
+						else {
+							*lpSP = 0;
+						}
+						lpSP++;
+					}
+				}
+				break;
+
+			default: {	// normal:		
+				fix u, utmp, v, du, dv;
+
+				u = v = 0;
+
+				du = ((bmap_w - 1)*F1_0) / tex_w;
+				dv = ((bmap_h - 1)*F1_0) / tex_h;
+
+				for (j = 0; j < tex_h; j++) {
+					lpSP = (DUMMYCOLOR *)(((char*)RegionBits) + RegionPitch * j);
+
+					utmp = u;
+
+					for (i = 0; i < tex_w; i++) {
+						*lpSP++ = bmp_data[f2i(v)*bmap_w + f2i(utmp)];
+						utmp += du;
+					}
+					v += dv;
+				}
+			}
+					 break;
+			}
 		}
 	}
 
 	texture->PlatformData->Mips[0].BulkData.Unlock();
+	texture->AddressX = TextureAddress::TA_Wrap;
+	texture->AddressY = TextureAddress::TA_Wrap;
 	texture->UpdateResource();
 
 	return texture;
