@@ -161,6 +161,18 @@ typedef struct model_special {
 
 #define MAX_LIVE_DEBRIS	7
 
+#if defined(FS2_UE)
+struct FModelChunk
+{
+	TArray<FVector> ueVertices;
+	TArray<FVector> ueNormals;
+	TArray<FColor> ueColor;
+	TArray<FVector2D> ueTexCoords;
+	TArray<int32> ueTriangles;
+	int ueBitmap;
+};
+#endif
+
 typedef struct bsp_info {
 	char		name[MAX_NAME_LEN];	// name of the subsystem.  Probably displayed on HUD
 	int		movement_type;			// -1 if no movement, otherwise rotational or positional movement -- subobjects only
@@ -208,15 +220,7 @@ typedef struct bsp_info {
 	vector	arc_pts[MAX_ARC_EFFECTS][2];	
 	ubyte		arc_type[MAX_ARC_EFFECTS];							// see MARC_TYPE_* defines
 #if defined(FS2_UE)
-#if SIMPLE_MESH_OLD_DMC
-	TArray<FRuntimeMeshVertexSimple> ueVertices;
-#endif
-	TArray<FVector> ueVertices;
-	TArray<FVector> ueNormals;
-	TArray<FColor> ueColor;
-	TArray<FVector2D> ueTexCoords;
-	TArray<int32> ueTriangles;
-	int ueBitmap;
+	TArray<FModelChunk> ModelChucks;
 #endif
 } bsp_info;
 

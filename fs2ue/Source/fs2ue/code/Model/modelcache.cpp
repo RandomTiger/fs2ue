@@ -6,6 +6,9 @@
 #include <vector>
 
 #include "Render/3dInternal.h"
+#ifdef FS2_UE
+#include "FSModel.h"
+#endif
 #endif
 
 #if defined(FS2_UE)
@@ -231,25 +234,29 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 		lMeshName.append(lBuffer);
 	}
 
-	for (int i = 0; i < iCurrentVertex; i++)
-	{
-		const int Index = i * stride;
-		FVector pos(VertexArray[Index + 2], VertexArray[Index + 0], VertexArray[Index + 1]);
-		FVector norm(VertexArray[Index + 5], VertexArray[Index + 3], VertexArray[Index + 4]);
-		FVector2D tcoord(VertexArray[Index + 6], VertexArray[Index + 7]);
-
-		lSubmodel->ueVertices.Add(pos);
-		lSubmodel->ueNormals.Add(norm);
-		lSubmodel->ueColor.Add(FColor::White);
-		lSubmodel->ueTexCoords.Add(tcoord);
-	}
+	TArray<FModelChunk> &Chunks = lSubmodel->ModelChucks;
 
 	int lIndexCount = 0;
 	const unsigned int lModelSize = g_SubModels.size();
 	for (unsigned int m = 0; m < lModelSize; m++)
 	{
+		FModelChunk NewChunk;
+
+		for (int i = 0; i < iCurrentVertex; i++)
+		{
+			const int Index = i * stride;
+			FVector pos(VertexArray[Index + 2], VertexArray[Index + 0], VertexArray[Index + 1]);
+			FVector norm(VertexArray[Index + 5], VertexArray[Index + 3], VertexArray[Index + 4]);
+			FVector2D tcoord(VertexArray[Index + 6], VertexArray[Index + 7]);
+
+			NewChunk.ueVertices.Add(pos);
+			NewChunk.ueNormals.Add(norm);
+			NewChunk.ueColor.Add(FColor::White);
+			NewChunk.ueTexCoords.Add(tcoord);
+		}
+
 		g_SubModels[m].mIndexStart = lIndexCount;
-		lSubmodel->ueBitmap = g_SubModels[m].mTexture;
+		NewChunk.ueBitmap = g_SubModels[m].mTexture;
 
 		const unsigned int lIndexSize = g_SubModels[m].mIndexList.size();
 
@@ -257,11 +264,13 @@ void createOgreMesh(const char * const lName, polymodel * pm, const int lSubmode
 		{
 			assert(lIndexCount < iCurrentVertex);
 
-			lSubmodel->ueTriangles.Add(g_SubModels[m].mIndexList[i]);
+			NewChunk.ueTriangles.Add(g_SubModels[m].mIndexList[i]);
 			lIndexCount++;
 		}
 
 		g_SubModels[m].mIndexCount = lIndexCount - g_SubModels[m].mIndexStart;
+
+		Chunks.Add(NewChunk);
 	}
 
 #endif

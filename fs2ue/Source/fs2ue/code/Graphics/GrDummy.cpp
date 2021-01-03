@@ -353,7 +353,7 @@ UTexture2D* DummyExtractBitmapToTexture(int bitmap_type, int texture_handle, ush
 
 	Colour = (Colour + 1) % Colours.Num();
 
-	bool bUseRealTextureData = false;
+	bool bUseRealTextureData = true;
 	if (bUseRealTextureData)
 	{
 

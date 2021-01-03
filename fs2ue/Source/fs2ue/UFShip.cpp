@@ -39,42 +39,49 @@ void AShip::AssembleMeshData(const polymodel * const pm)
 		for (int i = 0; i < pm->n_models; i++)
 		{
 			bsp_info& Submodel = pm->submodel[i];
+			const TArray<FModelChunk> &Chunks = Submodel.ModelChucks;
+			const int NumChunks = Chunks.Num();
 
-			if (Submodel.ueTriangles.Num() == 0)
+			for (int c = 0; c < NumChunks; c++)
 			{
-				continue;
-			}
+				const FModelChunk& Chunk = Submodel.ModelChucks[c];
 
-			const int32 SectionIndex = count;
-			const int32 MaterialSlot = count;
-
-			extern TMap<int, UTexture2D*> TextureStore;
-			int BitmapHandle = Submodel.ueBitmap;
-			UTexture2D **TexturePtr = TextureStore.Find(BitmapHandle);
-			if (TexturePtr != nullptr)
-			{
-				UTexture2D *Texture = *TexturePtr;
-				check(IsValid(Texture));
-
+				if (Chunk.ueTriangles.Num() == 0)
 				{
-					UMaterialInstanceDynamic *MaterialInstance = UMaterialInstanceDynamic::Create(MeshMaterial, nullptr);
-					MaterialInstance->SetTextureParameterValue(FName(TEXT("Main")), Texture);
-					StaticProvider->SetupMaterialSlot(MaterialSlot, TEXT("TriMat"), MaterialInstance);
+					continue;
 				}
 
-				UE_LOG(LogTemp, Warning, TEXT("AShip::AssembleMeshData %s %d %d"), *(Texture->GetName()), Texture->PlatformData->SizeX, Texture->PlatformData->SizeY);
-			}
+				const int32 SectionIndex = count;
+				const int32 MaterialSlot = count;
 
-			StaticProvider->CreateSectionFromComponents(
-				LODIndex, SectionIndex, MaterialSlot,
-				Submodel.ueVertices, 
-				Submodel.ueTriangles, 
-				Submodel.ueNormals, 
-				Submodel.ueTexCoords,
-				Submodel.ueColor,
-				EmptyTangents, 
-				ERuntimeMeshUpdateFrequency::Infrequent, bCreateCollision);
-			count++;
+				extern TMap<int, UTexture2D*> TextureStore;
+				int BitmapHandle = Chunk.ueBitmap;
+				UTexture2D **TexturePtr = TextureStore.Find(BitmapHandle);
+				if (TexturePtr != nullptr)
+				{
+					UTexture2D *Texture = *TexturePtr;
+					check(IsValid(Texture));
+
+					{
+						UMaterialInstanceDynamic *MaterialInstance = UMaterialInstanceDynamic::Create(MeshMaterial, nullptr);
+						MaterialInstance->SetTextureParameterValue(FName(TEXT("Main")), Texture);
+						StaticProvider->SetupMaterialSlot(MaterialSlot, TEXT("TriMat"), MaterialInstance);
+					}
+
+					UE_LOG(LogTemp, Warning, TEXT("AShip::AssembleMeshData %s %d %d"), *(Texture->GetName()), Texture->PlatformData->SizeX, Texture->PlatformData->SizeY);
+				}
+
+				StaticProvider->CreateSectionFromComponents(
+					LODIndex, SectionIndex, MaterialSlot,
+					Chunk.ueVertices,
+					Chunk.ueTriangles,
+					Chunk.ueNormals,
+					Chunk.ueTexCoords,
+					Chunk.ueColor,
+					EmptyTangents,
+					ERuntimeMeshUpdateFrequency::Infrequent, bCreateCollision);
+				count++;
+			}
 		}
 	}
 }
