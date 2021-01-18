@@ -2674,7 +2674,9 @@ void game_render_frame( vector * eye_pos, matrix * eye_orient )
 
 	beam_render_all();						// render all beam weapons
 	obj_render_all(obj_render, (int) OBJ_RENDER_TRANSPARENT);
+#ifndef FS2_UE
 	particle_render_all();					// render particles after everything else.
+#endif
 	trail_render_all();						// render missilie trails after everything else.	
 	mflash_render_all();						// render all muzzle flashes	
 
