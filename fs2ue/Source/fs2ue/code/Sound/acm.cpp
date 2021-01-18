@@ -14,6 +14,7 @@
 #include "acm.h"
 #include <windows.h>
 #include <mmreg.h>
+#include <msacm.h>
 #endif
 
 // variables global to file for Audio Compression Manager (ACM) conversion

@@ -31,6 +31,8 @@ class UFS2UETestLib: public UBlueprintFunctionLibrary
 		return TestLibWorld;
 	}
 
+	static void *GetWindowHandle();
+
 private:
 	static bool IsGameInit;
 	static UWorld *TestLibWorld;

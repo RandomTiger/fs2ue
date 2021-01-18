@@ -8,6 +8,8 @@
 */
 
 using UnrealBuildTool;
+using System;
+using System.IO;
 
 public class fs2ue : ModuleRules
 {
@@ -19,6 +21,18 @@ public class fs2ue : ModuleRules
 
         // PublicDefinitions.Add("UNITY_BUILD");
         PublicDefinitions.Add("FS2_UE");
+        PublicDefinitions.Add("PREPROC_ENABLED_SOUND");
+        PublicDefinitions.Add("PREPROC_ENABLED_DS");
+
+/*
+#define PREPROC_ENABLED_FF
+#define PREPROC_ENABLED_JOY
+#define PREPROC_ENABLED_DI
+*/
+
+        // Windows lib dependancies
+        PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "msacm32.lib"));
+        PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "dxguid.lib"));
 
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/TomLib/src" });
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code" });
@@ -84,8 +98,8 @@ public class fs2ue : ModuleRules
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/VCodec" });
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/Weapon" });
 
-
-        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "PhysX", "APEX" });
+        // "SlateCore" for window handle
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "PhysX", "APEX", "SlateCore" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

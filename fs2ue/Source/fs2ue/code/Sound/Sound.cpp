@@ -100,7 +100,7 @@ void snd_clear()
 //
 int snd_init(int use_a3d, int use_eax)
 {
-#if !defined(FS2_UE)
+#if defined(PREPROC_ENABLED_SOUND)
 	int rval;
 
 	if ( Cmdline_freespace_no_sound )
@@ -152,7 +152,7 @@ int snd_init(int use_a3d, int use_eax)
 #endif
 	return 1;
 
-#if !defined(FS2_UE)
+#if defined(PREPROC_ENABLED_SOUND)
 	Failure:
 //	Warning(LOCATION, "Sound system was unable to be initialized.  If you continue, sound will be disabled.\n");
 	nprintf(( "Sound", "SOUND => Direct Sound init unsuccessful, continuing without sound.\n" ));

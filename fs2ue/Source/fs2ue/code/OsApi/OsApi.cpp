@@ -42,7 +42,9 @@
 #include "VoiceRecognition.h"
 #endif
 
-#if !defined(FS2_UE)
+#if defined(FS2_UE)
+#include "FS2UETestLib.h"
+#else
 #include "FreespaceResource.h"
 #endif
 
@@ -167,7 +169,11 @@ int os_foreground()
 // Returns the handle to the main window
 void *os_get_window()
 {
+#ifdef FS2_UE
+	return UFS2UETestLib::GetWindowHandle();
+#else
 	return hwndApp;
+#endif
 }
 
 uint os_get_version()

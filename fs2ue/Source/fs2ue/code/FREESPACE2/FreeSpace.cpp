@@ -1362,7 +1362,8 @@ void game_init()
 	}
 */
 	if (!Is_standalone) {
-		snd_init(use_a3d, use_eax);
+		const int SoundInitResult = snd_init(use_a3d, use_eax);
+		Assert(SoundInitResult);
 	}
 
 #if !defined(FS2_UE)

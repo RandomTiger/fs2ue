@@ -426,7 +426,7 @@ int ds_load_buffer(int *sid, int *hid, int *final_size, void *header, sound_info
 	case WAVE_FORMAT_PCM:
 		break;
 
-#if !defined(FS2_UE)
+#if defined(PREPROC_ENABLED_SOUND)
 		case WAVE_FORMAT_ADPCM: // convert!
 		{
 			int	convert_len;					// num bytes of converted wav file

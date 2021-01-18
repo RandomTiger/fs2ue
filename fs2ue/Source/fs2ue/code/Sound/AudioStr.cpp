@@ -940,9 +940,11 @@ BOOL Timer::Create (UINT nPeriod, UINT nRes, DWORD dwUser, TIMERCALLBACK pfnCall
 	m_dwUser = dwUser;
 	m_pfnCallback = pfnCallback;
 
+#ifndef FS2_UE
 	if ((m_nIDTimer = timeSetEvent (m_nPeriod, m_nRes, TimeProc, (DWORD) this, TIME_PERIODIC)) == NULL) {
 	  bRtn = AUDIO_FAILURE;
 	}
+#endif
 
 	return (bRtn);
 }
@@ -1007,6 +1009,14 @@ void WaveFile::Close(void)
 	}
 }
 
+void Converter(TCHAR*tmp, char* cha)
+{
+	int aa = strlen(cha);
+	for (int i = 0; i < aa + 1; i++)
+	{
+		tmp[i] = cha[i];
+	}
+}
 
 // Open
 BOOL WaveFile::Open (LPSTR pszFilename)
@@ -1026,7 +1036,14 @@ BOOL WaveFile::Open (LPSTR pszFilename)
 		goto OPEN_ERROR;
 	}
 
+#ifdef FS2_UE
+	TCHAR FullpathTCHAR[MAX_PATH];
+	Converter(FullpathTCHAR, fullpath);
+	cfp = mmioOpen(FullpathTCHAR, NULL, MMIO_ALLOCBUF | MMIO_READ);
+#else
 	cfp = mmioOpen(fullpath, NULL, MMIO_ALLOCBUF | MMIO_READ);
+#endif
+
 	if ( cfp == NULL ) {
 		goto OPEN_ERROR;
 	}

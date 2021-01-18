@@ -87,3 +87,12 @@ void UFS2UETestLib::LoadShipTest(const FString &Path)
 	vector Origin;
 	ship_create(&Identity, &Origin, 32);
 }
+
+void *UFS2UETestLib::GetWindowHandle()
+{
+	check(GEngine);
+	check(GEngine->GameViewport);
+	check(GEngine->GameViewport->GetWindow());
+	check(GEngine->GameViewport->GetWindow()->GetNativeWindow());
+	return GEngine->GameViewport->GetWindow()->GetNativeWindow()->GetOSWindowHandle();
+}
