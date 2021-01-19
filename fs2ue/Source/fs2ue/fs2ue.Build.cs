@@ -21,18 +21,21 @@ public class fs2ue : ModuleRules
 
         // PublicDefinitions.Add("UNITY_BUILD");
         PublicDefinitions.Add("FS2_UE");
-        PublicDefinitions.Add("PREPROC_ENABLED_SOUND");
-        PublicDefinitions.Add("PREPROC_ENABLED_DS");
-
-/*
-#define PREPROC_ENABLED_FF
-#define PREPROC_ENABLED_JOY
-#define PREPROC_ENABLED_DI
-*/
 
         // Windows lib dependancies
+        PublicDefinitions.Add("PREPROC_ENABLED_SOUND");
+        PublicDefinitions.Add("PREPROC_ENABLED_DS");
         PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "msacm32.lib"));
         PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "dxguid.lib"));
+
+        // Nope
+        //PublicDefinitions.Add("PREPROC_ENABLED_DI");
+        //PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "Dinput8.lib"));
+        //PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "vDinput.lib"));
+        //PublicDefinitions.Add("PREPROC_ENABLED_JOY");
+        PublicDefinitions.Add("PREPROC_ENABLED_FF");
+
+        PublicDefinitions.Add("PREPROC_ENABLED_NET");
 
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/TomLib/src" });
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code" });

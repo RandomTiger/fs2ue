@@ -694,3 +694,5 @@ fs2ue/Source/fs2ue/Win32/Debug/
 fs2ue/Source/fs2ue/x64/UnityDebug/
 
 fs2ue/Source/fs2ue/x64/
+
+fs2ue/Source/fs2ue/Debug/TomLib.lib

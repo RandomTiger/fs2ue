@@ -71,19 +71,22 @@ int joy_ff_init()
 
 	if (ff_enabled) {
 		HRESULT hr;
-		TCHAR g_szOutput[256];
-		TCHAR szCodeString[256];
 
 		Joy_ff_directional_hit_effect_enabled = os_config_read_uint(NULL, "EnableHitEffect", 1);
 
 		hr = SWFF_OpenDefaultFFJoystick((HWND) os_get_window(), &pDi, &pDiDevice);
 		if (FAILED(hr)) {
+#ifndef FS2_UE
+			TCHAR g_szOutput[256];
+			TCHAR szCodeString[256];
+
 			nprintf(("Sandeep", "No FF On Joystick, not using FF\n"));
 			SWFF_ErrorCodeToString(hr, &szCodeString[0]);
 			wsprintf(g_szOutput, "Make sure JOYSTICKID1 has Force Feedback\n"
 				"Code = %lx: %s\n", hr, szCodeString);
 
 			nprintf(("Sandeep", g_szOutput));
+#endif
 			return -1;
 			
 		}

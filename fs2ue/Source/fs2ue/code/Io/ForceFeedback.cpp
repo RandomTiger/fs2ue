@@ -23,9 +23,9 @@ CONTROLER_STATE g_Controllers[ForceFeedback::MAX_CONTROLLERS];
 
 
 ForceFeedback::Effect::Effect() : 
-	m_motor(0), 
-	m_duration(0), 
-	m_timeInPlay(0), 
+	m_timeInPlay(0),
+	m_duration(0),
+	m_motor(0),
 	m_graph(LINEAR_DECREASE), 
 	m_rumble(0), 
 	m_peak(0)

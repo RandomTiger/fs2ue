@@ -2435,7 +2435,7 @@ void SWFF_ErrorCodeToString(HRESULT hResult, TCHAR * pszCodeString)
 		return;
 
 //XSTR:OFF
-
+#ifndef FS2_UE
 	switch(hResult)
 	{
 		case S_FALSE: strcpy(pszCodeString, "S_FALSE"); break;
@@ -2501,6 +2501,7 @@ void SWFF_ErrorCodeToString(HRESULT hResult, TCHAR * pszCodeString)
 		case SWDEV_ERR_PROCESSLIST_FULL : strcpy(pszCodeString, "SWDEV_ERR_PROCESSLIST_FULL" ); break;
 		default: sprintf(pszCodeString, "%x", hResult); break;
 	}
+#endif
 
 //XSTR:ON
 #endif
