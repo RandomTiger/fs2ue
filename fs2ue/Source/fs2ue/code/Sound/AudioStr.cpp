@@ -617,7 +617,7 @@ BOOL AudioStream::ServiceBuffer (void)
 			if ( m_lCutoffVolume == -10000 ) {
 				vol = Get_Volume();
 //				nprintf(("Alan","Volume is: %d\n",vol));
-				m_lCutoffVolume = max(vol - VOLUME_ATTENUATION_BEFORE_CUTOFF, -10000);
+				m_lCutoffVolume = max<LONG>(vol - VOLUME_ATTENUATION_BEFORE_CUTOFF, -10000);
 			}
 
 			vol = Get_Volume();
