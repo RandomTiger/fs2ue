@@ -21,6 +21,7 @@ public class fs2ue : ModuleRules
 
         // PublicDefinitions.Add("UNITY_BUILD");
         PublicDefinitions.Add("FS2_UE");
+        PublicDefinitions.Add("NOMINMAX"); // https://stackoverflow.com/questions/61567242/compilation-errors-in-msvc
 
         // Windows lib dependancies
         PublicDefinitions.Add("PREPROC_ENABLED_SOUND");
