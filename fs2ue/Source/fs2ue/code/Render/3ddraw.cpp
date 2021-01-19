@@ -7,6 +7,11 @@
  *
 */
 
+#undef UpdateResource
+#if defined(FS2_UE)
+#include "DrawDebugHelpers.h"
+#include "Engine.h"
+#endif
 
 #ifndef UNITY_BUILD
 #include "3dinternal.h"
@@ -19,11 +24,6 @@
 #include "Alphacolors.h"
 #include "2d.h"
 #include "key.h"
-#endif
-
-#if defined(FS2_UE)
-#include "DrawDebugHelpers.h"
-#include "Engine.h"
 #endif
 
 //deal with a clipped line
