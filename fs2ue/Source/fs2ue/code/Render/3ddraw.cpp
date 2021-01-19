@@ -8,6 +8,7 @@
 */
 
 #undef UpdateResource
+#undef GetObject
 #if defined(FS2_UE)
 #include "DrawDebugHelpers.h"
 #include "Engine.h"

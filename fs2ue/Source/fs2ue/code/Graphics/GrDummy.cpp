@@ -2,6 +2,7 @@
 #include "GrDummy.h"
 
 #undef UpdateResource
+#undef GetObject
 #include "Engine.h"
 
 #include "osapi.h"
@@ -211,8 +212,6 @@ void gr_dummy_tmapper( int nverts, vertex * InVertices[], uint flags )
 	}
 #endif
 }
-
-#undef UpdateResource
 
 /*
 const uint32 COLOR_ARGB(uint8 a, uint8 r, uint8 g, uint8 b)

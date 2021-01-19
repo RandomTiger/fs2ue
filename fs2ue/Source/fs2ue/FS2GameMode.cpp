@@ -93,8 +93,6 @@ USoundWave* AFS2GameMode::GetSoundWaveFromFile(const FString& filePath)
 	return sw;
 }
 
-#undef UpdateResource
-
 // https://forums.unrealengine.com/showthread.php?92360-Runtime-texture-and-normal-map
 UTexture2D* AFS2GameMode::LoadTexture(const FString& filePath)
 {
