@@ -1,6 +1,7 @@
 #ifndef UNITY_BUILD
 #include "GrDummy.h"
 
+#undef UpdateResource
 #include "Engine.h"
 
 #include "osapi.h"
