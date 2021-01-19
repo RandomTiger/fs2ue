@@ -204,9 +204,9 @@ void gr_dummy_tmapper( int nverts, vertex * InVertices[], uint flags )
 				model_cache_add_vertex(&lVertices[i - 1]);
 				model_cache_add_vertex(&lVertices[i]);
 			}
-#endif
 		}
 	}
+#endif
 }
 
 #undef UpdateResource

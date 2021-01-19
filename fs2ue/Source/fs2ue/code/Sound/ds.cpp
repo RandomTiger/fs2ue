@@ -20,6 +20,9 @@
 
 #include <objbase.h>
 #include <initguid.h>
+#ifndef FS2_UE
+#include <mmreg.h>
+#endif
 #endif
 
 // Pointers to functions contained in DSOUND.dll
