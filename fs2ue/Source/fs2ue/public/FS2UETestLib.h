@@ -4,6 +4,8 @@
 
 //#include "GameFramework/Pawn.h"
 //#include "RuntimeMeshActor.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
+
 #include "FS2UETestLib.generated.h"
 
 class UTexture2D;

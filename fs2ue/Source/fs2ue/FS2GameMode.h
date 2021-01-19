@@ -5,6 +5,9 @@
 #include "GameFramework/GameModeBase.h"
 #include "FS2GameMode.generated.h"
 
+class UTexture2D;
+class USoundWave;
+
 FS2UE_API DECLARE_LOG_CATEGORY_EXTERN(FS2Code, Log, All);
 
 /**
@@ -33,7 +36,7 @@ public:
 
 public:
 	UFUNCTION(BlueprintCallable, Category = Tests)
-		UTexture2D* LoadTexture(const FString& filePath);
+	UTexture2D* LoadTexture(const FString& filePath);
 	UFUNCTION(BlueprintCallable, Category = Tests)
-		USoundWave* GetSoundWaveFromFile(const FString& filePath);
+	USoundWave* GetSoundWaveFromFile(const FString& filePath);
 };

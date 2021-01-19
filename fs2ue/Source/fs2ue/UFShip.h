@@ -8,6 +8,7 @@
 
 struct polymodel;
 class URuntimeMeshComponent;
+class UBillboardComponent;
 
 UCLASS()
 class FS2UE_API AShip : public ARuntimeMeshActor
