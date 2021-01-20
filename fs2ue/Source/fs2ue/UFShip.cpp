@@ -2,6 +2,8 @@
 
 #undef GetObject
 #include "UFShip.h"
+#include "AllowWindowsPlatformTypes.h"
+#include "HideWindowsPlatformTypes.h"
 #include "fs2ue.h"
 // Wants to be before windows headers
 #include "RuntimeMeshComponent.h"

@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include "AllowWindowsPlatformTypes.h"
+#include "HideWindowsPlatformTypes.h"
 #include "GameFramework/Pawn.h"
 #include "RuntimeMeshActor.h"
 #include "UFShip.generated.h"

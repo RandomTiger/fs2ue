@@ -11,6 +11,13 @@
 #ifndef UNITY_BUILD
 #include "Ship.h"
 
+#if defined(FS2_UE)
+#include "UFShip.h"
+#include "FS2UETestLib.h"
+#include "Kismet/KismetMathLibrary.h"
+#include "DrawDebugHelpers.h"
+#endif
+
 #include <string.h>
 #include "FSObject.h"
 #include "Physics.h"
@@ -86,10 +93,14 @@
 #include "Cmdline/Cmdline.h"
 #endif
 #if defined(FS2_UE)
-#include "UFShip.h"
-#include "FS2UETestLib.h"
-#include "Kismet/KismetMathLibrary.h"
-#include "DrawDebugHelpers.h"
+#ifndef FALSE
+#define FALSE 0
+#endif
+
+#ifndef TRUE
+#define TRUE 1
+#endif
+
 #endif
 
 #ifdef FS2_DEMO

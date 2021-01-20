@@ -7,6 +7,7 @@
  *
 */
 
+#undef GetClassName
 #undef UpdateResource
 #undef GetObject
 #if defined(FS2_UE)

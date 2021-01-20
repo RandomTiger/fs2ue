@@ -1,6 +1,7 @@
 #ifndef UNITY_BUILD
 #include "GrDummy.h"
 
+#undef GetClassName
 #undef UpdateResource
 #undef GetObject
 #include "Engine.h"

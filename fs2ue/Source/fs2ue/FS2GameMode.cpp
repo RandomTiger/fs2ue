@@ -6,10 +6,6 @@
 #include "fs2ue.h"
 #include "FS2UETestLib.h"
 
-#if defined(FS2_UE)
-#include "RuntimeMeshComponent.h"
-#endif
-
 #include "FREESPACE2/Freespace.h"
 
 // GEngine->GameViewport->GetWindow()->GetNativeWindow()->GetOSWindowHandle();
