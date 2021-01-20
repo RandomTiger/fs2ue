@@ -9,6 +9,7 @@
 
 #ifndef __D3DRMDEFS_H__
 #define __D3DRMDEFS_H__
+#pragma message("__D3DRMDEFS_H__")
 
 #include <stddef.h>
 #include "vd3dtypes.h"

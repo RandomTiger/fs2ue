@@ -9,8 +9,7 @@
 
 #ifndef __DPLAY_INCLUDED__
 #define __DPLAY_INCLUDED__
-
-#include <ole2.h>       // for DECLARE_INTERFACE and HRESULT
+#pragma message("__DPLAY_INCLUDED__")
 
 #define _FACDP  0x877
 #define MAKE_DPHRESULT( code )    MAKE_HRESULT( 1, _FACDP, code )

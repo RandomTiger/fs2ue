@@ -28,6 +28,7 @@
 
 #ifndef _D3DI_H
 #define _D3DI_H
+#pragma message("_D3DI_H")
 
 //@@BEGIN_MSINTERNAL
 #include "vddrawp.h"

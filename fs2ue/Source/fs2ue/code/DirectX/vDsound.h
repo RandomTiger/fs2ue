@@ -9,6 +9,7 @@
 
 #ifndef __DSOUND_INCLUDED__
 #define __DSOUND_INCLUDED__
+#pragma message("__DSOUND_INCLUDED__")
 
 #ifndef UNITY_BUILD
 #include "vd3dtypes.h"

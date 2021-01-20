@@ -7,6 +7,7 @@
  ***************************************************************************/
 #ifndef __DPLOBBY_INCLUDED__
 #define __DPLOBBY_INCLUDED__
+#pragma message("__DPLOBBY_INCLUDED__")
 
 #include "vdplay.h"
 

@@ -9,6 +9,7 @@
 
 #ifndef __DDRAW_INCLUDED__
 #define __DDRAW_INCLUDED__
+#pragma message("__DDRAW_INCLUDED__")
 
 /*
  * If you wish an application built against the newest version of DirectDraw

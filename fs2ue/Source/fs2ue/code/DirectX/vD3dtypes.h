@@ -9,6 +9,7 @@
 
 #ifndef _D3DTYPES_H_
 #define _D3DTYPES_H_
+#pragma message("_D3DTYPES_H_")
 
 #if (! defined WIN32) && (! defined WIN95)
 #include "subwtype.h"

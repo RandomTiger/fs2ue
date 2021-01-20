@@ -9,6 +9,7 @@
 
 #ifndef _D3D_H_
 #define _D3D_H_
+#pragma message("_D3D_H_")
 
 #include <stdlib.h>
 

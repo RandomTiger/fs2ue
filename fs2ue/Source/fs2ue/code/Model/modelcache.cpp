@@ -57,7 +57,7 @@ bool g_modelCacheInProgress = false;
 
 int gCurrentSubmodel = -1;
 int gSubmodelIndex = Submodel::kNoIndexSet;
-#pragma optimize("", off)
+
 void AddVertex(VertexNorm *vert)
 {
 	assert((iCurrentVertex * stride + 8) < iFloatCount);
@@ -80,7 +80,7 @@ void AddVertex(VertexNorm *vert)
 	iCurrentVertex++;
 
 }
-#pragma optimize("", on)
+
 void SetModelCacheInProgress(const bool state) { g_modelCacheInProgress = state; }
 
 bool isModelCacheInProgress()

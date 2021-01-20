@@ -9,6 +9,7 @@
 
 #ifndef __D3DRMWIN_H__
 #define __D3DRMWIN_H__
+#pragma message("__D3DRMWIN_H__")
 
 #ifndef WIN32
 #define WIN32

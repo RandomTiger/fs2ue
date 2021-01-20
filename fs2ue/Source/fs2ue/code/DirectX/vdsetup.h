@@ -8,6 +8,7 @@
 
 #ifndef __DSETUP_H__
 #define __DSETUP_H__
+#pragma message("__DSETUP_H__")
 
 #include <windows.h>      // windows stuff
 

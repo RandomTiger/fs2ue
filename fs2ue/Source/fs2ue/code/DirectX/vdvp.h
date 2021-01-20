@@ -9,6 +9,8 @@
 
 #ifndef __DVP_INCLUDED__
 #define __DVP_INCLUDED__
+#pragma message("__DVP_INCLUDED__")
+
 #if defined( _WIN32 )  && !defined( _NO_COM )
 #define COM_NO_WINDOWS_H
 #include <objbase.h>

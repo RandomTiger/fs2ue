@@ -9,6 +9,7 @@
 
 #ifndef _D3DRMOBJ_H_
 #define _D3DRMOBJ_H_
+#pragma message("_D3DRMOBJ_H_")
 
 #include <objbase.h> /* Use Windows header files */
 #define VIRTUAL

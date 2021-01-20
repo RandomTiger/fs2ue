@@ -9,6 +9,7 @@
 
 #ifndef _D3DCAPS_H
 #define _D3DCAPS_H
+#pragma message("_D3DCAPS_H")
 
 /* 
  *  Pull in DirectDraw include file automatically:

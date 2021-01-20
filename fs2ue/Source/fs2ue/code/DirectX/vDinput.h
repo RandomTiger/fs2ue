@@ -9,6 +9,7 @@
 
 #ifndef __DINPUT_INCLUDED__
 #define __DINPUT_INCLUDED__
+#pragma message("__DINPUT_INCLUDED__")
 
 #ifndef DIJ_RINGZERO
 

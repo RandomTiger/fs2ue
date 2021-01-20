@@ -8,6 +8,7 @@
 #ifndef __ASYNC_INCLUDED__
 #define __ASYNC_INCLUDED__
 
+#pragma message("__ASYNC_INCLUDED__")
 
 #include <ole2.h>       // for DECLARE_INTERFACE and HRESULT
 

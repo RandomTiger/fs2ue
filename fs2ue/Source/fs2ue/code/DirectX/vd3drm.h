@@ -9,6 +9,7 @@
 
 #ifndef __D3DRM_H__
 #define __D3DRM_H__
+#pragma message("__D3DRM_H__")
 
 #include "vddraw.h"
 #include "vd3drmobj.h"
