@@ -17,7 +17,6 @@
 #include "bmpman.h"
 #include "2d.h"
 #include "FSobject.h"
-#include "glide.h"
 #include "Timer.h"
 #include "Multi.h"
 #include "Freespace.h"

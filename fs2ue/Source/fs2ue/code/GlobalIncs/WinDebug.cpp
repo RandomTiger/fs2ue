@@ -12,7 +12,6 @@
 
 //#define DUMPRAM	// This dumps all symbol sizes. See John for more info
 
-#ifndef FS2_UE
 #ifndef UNITY_BUILD
 #include <windows.h>
 #include <windowsx.h>
@@ -21,7 +20,6 @@
 #include <vector>
 
 #include "GlobalIncs/PsTypes.h"
-#endif
 #endif
 
 std::vector<char *> gStrdupLeakList;

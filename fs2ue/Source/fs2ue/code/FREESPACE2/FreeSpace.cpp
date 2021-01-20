@@ -151,7 +151,6 @@
 #include "version.h"
 #include "MainHalltemp.h"
 #include "ExceptionHandler.h"
-#include "glide.h"
 #include "supernova.h"
 #include "HUDshield.h"
 #include <io.h>
