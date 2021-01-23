@@ -14,7 +14,7 @@
 #include <assert.h>
 //#include <d3d9types.h>
 #include "Graphics/Font.h"
-#include <windows.h>
+#include <windows.h> //ifndef FS2_UE
 
 #include "Cmdline/cmdline.h"
 #include "Graphics/GrD3D9Render.h"

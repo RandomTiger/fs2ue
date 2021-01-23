@@ -12,9 +12,13 @@
 
 #ifndef UNITY_BUILD
 #include "acm.h"
+#ifndef FS2_UE
 #include <windows.h>
+#endif
 #include <mmreg.h>
+#include <mmiscapi.h>
 #include <msacm.h>
+#include <mmsyscom.h>
 #endif
 
 // variables global to file for Audio Compression Manager (ACM) conversion

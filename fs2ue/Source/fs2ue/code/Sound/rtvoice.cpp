@@ -15,6 +15,8 @@
 #include "ds.h"
 #include "dscap.h"
 #include "codec1.h"
+#include <mmiscapi2.h>
+#include <timeapi.h>
 #endif
 
 typedef struct rtv_format

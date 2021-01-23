@@ -23,7 +23,7 @@ on how to hook it in.
 */
 
 
-#include <windows.h>
+#include <windows.h> // not FS2_UE
 
 // --------------------
 //

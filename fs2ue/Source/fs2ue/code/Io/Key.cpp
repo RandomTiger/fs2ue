@@ -15,7 +15,7 @@
 #include "key.h"
 
 #include <windows.h>
-#include <windowsx.h>
+//#include <windowsx.h>
 
 #include "fix.h"
 #include "timer.h"

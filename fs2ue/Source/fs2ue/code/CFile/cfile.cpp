@@ -17,15 +17,11 @@
 #include <direct.h>
 
 #ifndef UNITY_BUILD
-#include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 #include <io.h>
-#include <errno.h>
 
 // https://answers.unrealengine.com/questions/581105/error-c2039-interlockedexchange-is-not-a-member-of.html
 #include <windows.h>
-#include <winbase.h>		/* needed for memory mapping of file functions */
 
 #include "Encrypt.h"
 #include "CfileSystem.h"

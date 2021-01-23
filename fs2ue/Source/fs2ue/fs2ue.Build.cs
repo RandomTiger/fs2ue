@@ -16,8 +16,8 @@ public class fs2ue : ModuleRules
 	public fs2ue(ReadOnlyTargetRules Target) : base(Target)
 	{
         bLegacyPublicIncludePaths = false;
-        //PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-        //PrivatePCHHeaderFile = "code/GlobalIncs/PSTypes.h";
+        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+        PrivatePCHHeaderFile = "fs2ue.h";
 
         // PublicDefinitions.Add("UNITY_BUILD");
         PublicDefinitions.Add("FS2_UE");
@@ -28,13 +28,13 @@ public class fs2ue : ModuleRules
         PublicDefinitions.Add("PREPROC_ENABLED_DS");
         PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "msacm32.lib"));
         PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "dxguid.lib"));
-
+        
         // Nope
         //PublicDefinitions.Add("PREPROC_ENABLED_DI");
         //PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "Dinput8.lib"));
         //PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "vDinput.lib"));
         //PublicDefinitions.Add("PREPROC_ENABLED_JOY");
-        PublicDefinitions.Add("PREPROC_ENABLED_FF");
+        //PublicDefinitions.Add("PREPROC_ENABLED_FF");
 
         PublicDefinitions.Add("PREPROC_ENABLED_NET");
 

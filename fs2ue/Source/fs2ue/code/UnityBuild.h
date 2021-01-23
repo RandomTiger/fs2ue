@@ -16,7 +16,7 @@
 #define PREPROC_ENABLED_SOUND
 #endif
 
-#include <windows.h>
+#include <windows.h> //ifndef FS2_UE
 #if defined(_DEBUG) && defined(LEAK_DETECTOR_ENABLED)
 #include "vld.h"
 #endif
@@ -32,7 +32,7 @@
 
 #include <winsock.h>
 #include <wsipx.h>
-#include <windowsx.h>
+//#include <windowsx.h>
 #include <commctrl.h>
 #include <mmreg.h>
 #include <msacm.h>

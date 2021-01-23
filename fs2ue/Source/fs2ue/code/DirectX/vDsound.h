@@ -17,6 +17,8 @@
 
 #define COM_NO_WINDOWS_H
 #include <objbase.h>
+#include <acm.h>
+#include <mmreg.h>
 
 #define _FACDS  0x878
 #define MAKE_DSHRESULT(code)  MAKE_HRESULT(1, _FACDS, code)

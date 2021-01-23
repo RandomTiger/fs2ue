@@ -71,7 +71,6 @@
 #include "HUDets.h"
 #include "HUDtarget.h"
 #include "GameSnd.h"
-#include "RBAudio.h"
 #include "WinMIDI.h"
 #include "EventMusic.h"
 #include "AnimPlay.h"
@@ -170,6 +169,7 @@
 #include "MissionBriefCommon.h"
 
 #include <windows.h>
+#include <timeapi.h>
 
 
 #else

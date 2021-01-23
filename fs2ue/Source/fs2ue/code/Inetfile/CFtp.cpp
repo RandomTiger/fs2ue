@@ -10,26 +10,38 @@
 #ifndef UNITY_BUILD
 #include "CFtp.h"
 
-#include <windows.h>
+#ifndef FS2_UE
+#include <windows.h> // ifndef FS2_UE
 #include <process.h>
 #include <stdio.h>
 #include <winsock.h>
 #endif
+#endif
 
 void FTPObjThread( void * obj )
 {
+#ifndef FS2_UE
+
 	((CFtpGet *)obj)->WorkerThread();
+#endif
+
 }
 
 void CFtpGet::AbortGet()
 {
+#ifndef FS2_UE
+
 	m_Aborting = true;
 	while(!m_Aborted) ; //Wait for the thread to end
 	fclose(LOCALFILE);
+#endif
+
 }
 
 CFtpGet::CFtpGet(char *URL,char *localfile,char *Username,char *Password)
 {
+#ifndef FS2_UE
+
 	SOCKADDR_IN listensockaddr;
 	m_State = FTP_STATE_STARTUP;
 
@@ -160,12 +172,16 @@ CFtpGet::CFtpGet(char *URL,char *localfile,char *Username,char *Password)
 		return;
 	}
 	m_State = FTP_STATE_CONNECTING;
+#endif
+
 }
 
 
 
 CFtpGet::~CFtpGet()
 {
+#ifndef FS2_UE
+
 	if(m_ListenSock != INVALID_SOCKET)
 	{
 		shutdown(m_ListenSock,2);
@@ -181,6 +197,7 @@ CFtpGet::~CFtpGet()
 		shutdown(m_ControlSock,2);
 		closesocket(m_ControlSock);
 	}
+#endif
 
 
 }
@@ -207,6 +224,8 @@ unsigned int CFtpGet::GetTotalBytes()
 //and then the cwd command, the port command then get and finally the quit
 void CFtpGet::WorkerThread()
 {
+#ifndef FS2_UE
+
 	ConnectControlSocket();
 	if(m_State != FTP_STATE_LOGGING_IN)
 	{
@@ -221,12 +240,15 @@ void CFtpGet::WorkerThread()
 
 	//We are all done now, and state has the current state.
 	m_Aborted = true;
-	
+#endif
+
 
 }
 
 unsigned int CFtpGet::GetFile()
 {
+#ifndef FS2_UE
+
 	//Start off by changing into the proper dir.
 	char szCommandString[200];
 	int rcode;
@@ -295,11 +317,14 @@ unsigned int CFtpGet::GetFile()
 	ReadDataChannel();
 	
 	m_State = FTP_STATE_FILE_RECEIVED;
+#endif
+
 	return 1;
 }
 
 unsigned int CFtpGet::IssuePort()
 {
+#ifndef FS2_UE
 
 	char szCommandString[200];
 	SOCKADDR_IN listenaddr;					// Socket address structure
@@ -346,11 +371,15 @@ unsigned int CFtpGet::IssuePort()
 		m_State = FTP_STATE_SOCKET_ERROR;
 		return 0;
 	}
+#endif
+
 	return 1;
 }
 
 int CFtpGet::ConnectControlSocket()
 {
+#ifndef FS2_UE
+
 	HOSTENT *he;
 	SERVENT *se;
 	SOCKADDR_IN hostaddr;
@@ -385,12 +414,16 @@ int CFtpGet::ConnectControlSocket()
 		return 0;
 	}
 	m_State = FTP_STATE_LOGGING_IN;
+#endif
+
 	return 1;
 }
 
 
 int CFtpGet::LoginHost()
 {
+#ifndef FS2_UE
+
 	char szLoginString[200];
 	int rcode;
 	
@@ -410,12 +443,15 @@ int CFtpGet::LoginHost()
 	}
 
 	m_State = FTP_STATE_LOGGED_IN;
+#endif
+
 	return 1;
 }
 
 
 unsigned int CFtpGet::SendFTPCommand(char *command)
 {
+#ifndef FS2_UE
 
 	FlushControlChannel();
 	// Send the FTP command
@@ -427,13 +463,18 @@ unsigned int CFtpGet::SendFTPCommand(char *command)
 		} 
 		
 	// Read the server's reply and return the reply code as an integer
-	return(ReadFTPServerReply());	            
+	return(ReadFTPServerReply());	   
+#else
+	return 0;
+#endif
 }	
 
 
 
 unsigned int CFtpGet::ReadFTPServerReply()
 {
+#ifndef FS2_UE
+
 	unsigned int rcode;
 	unsigned int iBytesRead;
 	char chunk[2];
@@ -481,12 +522,17 @@ unsigned int CFtpGet::ReadFTPServerReply()
 	szcode[3] = NULL;
 	rcode = atoi(szcode);
     // Extract the reply code from the server reply and return as an integer
-	return(rcode);	            
+	return(rcode);	    
+#else
+	return 0;
+#endif
 }	
 
 
 unsigned int CFtpGet::ReadDataChannel()
 {
+#ifndef FS2_UE
+
 	char sDataBuffer[4096];		// Data-storage buffer for the data channel
 	int nBytesRecv;						// Bytes received from the data channel
 	m_State = FTP_STATE_RECEIVING;			
@@ -521,11 +567,16 @@ unsigned int CFtpGet::ReadDataChannel()
 		m_State = FTP_STATE_FILE_RECEIVED;
 		return 1;
 	}
+#else
+	return 0;
+#endif
 }	
 
 
 void CFtpGet::FlushControlChannel()
 {
+#ifndef FS2_UE
+
 	fd_set read_fds;	           
 	TIMEVAL timeout;   	
 	char flushbuff[3];
@@ -542,4 +593,5 @@ void CFtpGet::FlushControlChannel()
 
 		Sleep(1);
 	}
+#endif
 }

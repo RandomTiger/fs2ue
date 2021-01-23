@@ -1,6 +1,7 @@
 #ifndef UNITY_BUILD
 #include "PadController.h"
 
+#ifndef FS2_UE
 #include <windows.h>
 #include <xinput.h>
 #include "MouseController.h"
@@ -9,20 +10,27 @@
 
 #include "keycontrol.h"
 #endif
+#endif
 
 class Pad
 {
 public:
 	const static int MAX_CONTROLLERS = 4;
 
+#ifndef FS2_UE
 	XINPUT_STATE m_state;
 	XINPUT_STATE m_previousState;
+#endif
 
-	bool m_bConnected;
+	bool m_bConnected = false;
 
 	inline bool GetButtonState(const int button) 
 	{
+#ifndef FS2_UE
 		return (m_state.Gamepad.wButtons & button) == button;
+#else
+		return false;
+#endif
 	}
 };
 
@@ -48,16 +56,25 @@ bool GameController::IsAttached(const int pad)
 
 bool GameController::IsButtonDown(const int pad, const int button)
 {
+#ifndef FS2_UE
 	return (g_PadControllers[pad].m_state.Gamepad.wButtons & button) == button;
+#else
+	return false;
+#endif
 }
 
 bool GameController::IsButtonDownSinceLast(const int pad, const int button)
 {
+#ifndef FS2_UE
 	return (g_PadControllers[pad].m_state.Gamepad.wButtons & button) == button && (g_PadControllers[pad].m_previousState.Gamepad.wButtons & button) == 0;
+#else
+	return false;
+#endif
 }
 
 void GameController::GetPadAnalogStickPos(const int pad, int &x, int &y, const bool left, const int power)
 {
+#ifndef FS2_UE
 	SHORT thumpstickX = g_PadControllers[pad].m_state.Gamepad.sThumbLX;
 	SHORT thumpstickY = g_PadControllers[pad].m_state.Gamepad.sThumbLY;
 	if(left == false)
@@ -73,6 +90,7 @@ void GameController::GetPadAnalogStickPos(const int pad, int &x, int &y, const b
 	const float axisY = ((float) thumpstickY) / (float) ANALOG_MAX_MOVE;
 	const float resultY = pow(axisY, power);
 	y = (int) (resultY * ANALOG_MAX_MOVE);
+#endif
 }
 
 bool GameController::GetInputControl(int type)
@@ -87,6 +105,7 @@ void GameController::ClearInputControl()
 
 void GameController::UpdateGameControls(const float frameTimeSecs)
 {
+#ifndef FS2_UE
 	const float SHOULDER_DEADZONE = ( 0.24f * 255.0f ) ;
 
 	// Targetting
@@ -175,11 +194,16 @@ void GameController::UpdateGameControls(const float frameTimeSecs)
 	
 	//int roll, engine;
 	//GetPadAnalogStickPos(m_driverPad, roll, engine, false);
+#endif
 }
 
 bool GameController::HasUnpauseBeenPressed()
 {
+#ifndef FS2_UE
 	return (IsButtonDownSinceLast(m_driverPad, XINPUT_GAMEPAD_START) || IsButtonDownSinceLast(m_gunnerPad, XINPUT_GAMEPAD_START));
+#else
+	return false;
+#endif
 }
 
 void GameController::Update()

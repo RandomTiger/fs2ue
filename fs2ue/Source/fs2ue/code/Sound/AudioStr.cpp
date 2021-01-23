@@ -17,10 +17,14 @@
 
 #ifndef UNITY_BUILD
 #include "AudioStr.h"
+#ifndef FS2_UE
 #include <windows.h>
+#endif
 #include <mmsystem.h>
 #include <mmreg.h>
 #include <msacm.h>
+#include <winbase.h>
+
 #include "vdsound.h"
 #include "cfile.h"		// needed for cf_get_path
 #include "timer.h"
@@ -612,7 +616,7 @@ BOOL AudioStream::ServiceBuffer (void)
 	}
 
 	// Check for reentrance
-	if (InterlockedExchange (&m_lInService, TRUE) == FALSE) {
+	if (_InterlockedExchange (&m_lInService, TRUE) == FALSE) {
 		if ( m_bFade == TRUE ) {
 			if ( m_lCutoffVolume == -10000 ) {
 				vol = Get_Volume();
@@ -634,14 +638,14 @@ BOOL AudioStream::ServiceBuffer (void)
 					LeaveCriticalSection(&write_lock);
 					Destroy();	
 					// Reset reentrancy semaphore
-					InterlockedExchange (&m_lInService, FALSE);
+					_InterlockedExchange (&m_lInService, FALSE);
 					return FALSE;
 				}
 				else {
 					Stop_and_Rewind();
 					// Reset reentrancy semaphore
 					LeaveCriticalSection(&write_lock);
-					InterlockedExchange (&m_lInService, FALSE);
+					_InterlockedExchange (&m_lInService, FALSE);
 					return TRUE;
 				}
 			}
@@ -695,7 +699,7 @@ BOOL AudioStream::ServiceBuffer (void)
 								LeaveCriticalSection(&write_lock);
 								Destroy();
 								// Reset reentrancy semaphore
-								InterlockedExchange (&m_lInService, FALSE);
+								_InterlockedExchange (&m_lInService, FALSE);
 								return FALSE;
 							}
 
@@ -718,7 +722,7 @@ BOOL AudioStream::ServiceBuffer (void)
 		}
 
         // Reset reentrancy semaphore
-        InterlockedExchange (&m_lInService, FALSE);
+        _InterlockedExchange (&m_lInService, FALSE);
     } else {
 		// Service routine reentered. Do nothing, just return
 		fRtn = FALSE;

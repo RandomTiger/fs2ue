@@ -1,7 +1,7 @@
 #pragma once
 
 #ifndef FS2_UE
-#include <windows.h>
+#include <windows.h> // ifndef FS2_UE
 
 struct IDirect3DTexture9;
 struct vertex;

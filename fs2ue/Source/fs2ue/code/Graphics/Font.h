@@ -71,7 +71,6 @@ enum eFont
 
 // extern definitions for basic font functions
 void grx_set_font(int fontnum);
-void gr8_string(int x,int y,char * text);
 
 void gr_print_timestamp(int x, int y, int timestamp);
 char *gr_force_fit_string(char *str, int max_str, int max_width);

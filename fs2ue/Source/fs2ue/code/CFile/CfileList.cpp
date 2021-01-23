@@ -9,13 +9,13 @@
 
 
 #ifndef UNITY_BUILD
-#include <stdlib.h>
+//#include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
+//#include <stdio.h>
 #include <io.h>
-#include <direct.h>
-#include <windows.h>
-#include <winbase.h>		/* needed for memory mapping of file functions */
+//#include <direct.h>
+//#include <windows.h>
+//#include <winbase.h>		/* needed for memory mapping of file functions */
 
 #include "cfile.h"
 #endif
@@ -275,7 +275,7 @@ int cfread_compressed(void *buf, int elsize, int nelem, CFILE *cfile)
 	
 	while(1)	{
 
-		byte count;
+		ubyte count;
 
 		if ( cfread( &count, 1, 1, cfile ) != 1 )	{
 			break;
@@ -288,7 +288,7 @@ int cfread_compressed(void *buf, int elsize, int nelem, CFILE *cfile)
 		if ( count > 0 )	{
 			if ( run_span )	{
 				// RLE'd data
-				byte c;
+				ubyte c;
 				if ( cfread( &c, 1, 1, cfile ) != 1 )	{
 					break;
 				}

@@ -11,9 +11,13 @@
 #ifndef UNITY_BUILD
 #include "ds3d.h"
 
+#ifndef FS2_UE
 #include <windows.h>
+#endif
 #include <mmreg.h>
+#if defined(PREPROC_ENABLED_DS)
 #include "vdsound.h"
+#endif
 
 #include "ds.h"
 #include "channel.h"

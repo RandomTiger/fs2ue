@@ -14,7 +14,7 @@
 
 #ifndef UNITY_BUILD
 #include <windows.h>
-#include <windowsx.h>
+//#include <windowsx.h>
 #include <stdio.h>
 #include <crtdbg.h>
 #include <vector>

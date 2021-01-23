@@ -3,7 +3,7 @@
 #ifndef FS2_UE
 #ifndef UNITY_BUILD
 #include <string>
-#include <windows.h>
+#include <windows.h> // ifndef FS2_UE
 #include <d3d9types.h>
 #endif
 

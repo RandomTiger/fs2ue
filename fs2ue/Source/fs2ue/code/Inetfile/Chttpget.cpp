@@ -16,6 +16,7 @@
 // #ifdef WIN32
 #include <windows.h>
 #include <process.h>
+#include <winsock.h>
 // #endif
 
 #include <string.h>

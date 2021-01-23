@@ -3,7 +3,7 @@
 #if !defined(FS2_UE)
 #ifndef UNITY_BUILD
 
-#include <windows.h>
+#include <windows.h> - // disabled in FS2_UE
 #include <atlbase.h>
 #include <sapi.h>
 

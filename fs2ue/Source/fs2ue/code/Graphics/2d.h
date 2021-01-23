@@ -332,11 +332,6 @@ extern int gr_get_font_height();
 
 extern void gr_set_palette(char *name, ubyte *palette, int restrict_to_128 = 0);
 
-// These two functions use a Windows mono font.  Only for use
-// in the editor, please.
-void gr_get_string_size_win(int *w, int *h, char *text);
-void gr_string_win(int x, int y, char *s );
-
 // set the mouse pointer to a specific bitmap, used for animating cursors
 #define GR_CURSOR_LOCK		1
 #define GR_CURSOR_UNLOCK	2

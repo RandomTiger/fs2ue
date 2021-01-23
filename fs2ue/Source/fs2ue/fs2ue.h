@@ -10,3 +10,8 @@
 #pragma once
 
 #include "Engine.h"
+#include "FS2GameMode.h"
+#include "UFShip.h"
+#include "FS2UETestLib.h"
+#include "RuntimeMeshComponent.h"
+#include "Providers/RuntimeMeshProviderStatic.h"

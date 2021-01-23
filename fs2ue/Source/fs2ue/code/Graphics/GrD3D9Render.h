@@ -6,7 +6,7 @@ struct color;
 #ifndef FS2_UE
 #ifndef UNITY_BUILD
 #include "GlobalIncs/PsTypes.h"
-#include <windows.h>
+#include <windows.h> // ifndef FS2_UE
 #include <d3d9types.h>
 #include "Graphics/GrD3D9Render.h"
 #endif

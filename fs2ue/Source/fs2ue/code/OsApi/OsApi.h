@@ -10,6 +10,10 @@
 #ifndef _OSAPI_H
 #define _OSAPI_H
 
+#ifndef FS2_UE
+#include "TChar.h"
+#endif
+
 #ifndef UNITY_BUILD
 #include "GlobalIncs/PsTypes.h"
 #endif
@@ -92,5 +96,8 @@ void os_suspend();
 void os_resume();
 
 int os_get_voice_recognition_event_id();
+
+void osapi_GetCurrentDirectory(TCHAR *CurrentDir);
+void osapi_SetCurrentDirectory(TCHAR *NewDir);
 
 #endif

@@ -56,7 +56,7 @@ protected:
 /*
 
 #include <stdio.h>
-#include <windows.h>
+#include <windows.h> // disabled
 #include <conio.h>
 #include <time.h>
 

@@ -10,9 +10,6 @@
 #ifndef UNITY_BUILD
 #include "Sound.h"
 
-#include <windows.h>
-#include <mmreg.h>
-
 #include "3dInternal.h"
 #include "AudioStr.h"
 #include "FSobject.h"
@@ -305,6 +302,8 @@ int snd_load( game_snd *gs, int allow_hardware_load )
 		return -1;
 
 	si = &snd->info;
+
+	extern int ds_parse_wave(char *filename, ubyte **dest, uint *dest_size, WAVEFORMATEX **header);
 
 	if ( ds_parse_wave(
 		gs->filename, 

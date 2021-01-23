@@ -12,6 +12,8 @@
 #include "OsApi.h"
 
 #include <windows.h>
+#include <winuser.h>
+#include <timeapi.h>
 //#include <windowsx.h>
 //#include <commctrl.h>
 #include <stdio.h>
@@ -150,7 +152,7 @@ void os_set_title( char * title )
 void os_cleanup()
 {
 	// Tell the app to quit
-	PostMessage( hwndApp, WM_DESTROY, 0, 0 );
+	PostMessageA( hwndApp, WM_DESTROY, 0, 0 );
 	
 	#ifndef NDEBUG
 		outwnd_close();
@@ -706,4 +708,14 @@ void debug_int3()
 int os_get_voice_recognition_event_id() 
 {
 	return WM_RECOEVENT;
+}
+
+void osapi_GetCurrentDirectory(TCHAR *CurrentDir)
+{
+	GetCurrentDirectory(MAX_PATH, CurrentDir);
+}
+
+void osapi_SetCurrentDirectory(TCHAR *NewDir)
+{
+	SetCurrentDirectory(NewDir);
 }

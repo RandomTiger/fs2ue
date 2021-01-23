@@ -12,23 +12,11 @@
 #define _CFILE_INTERNAL 
 
 #ifndef UNITY_BUILD
-#ifdef FS2_UE
 #include "CfileArchive.h"
-#endif
-#endif
-
-#ifndef UNITY_BUILD
-#include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 #include <io.h>
-#include <direct.h>
-#include <windows.h>
-#include <winbase.h>		/* needed for memory mapping of file functions */
-
 
 #include "cfile.h"
-#include "CfileArchive.h"
 #endif
 
 #define CHECK_POSITION

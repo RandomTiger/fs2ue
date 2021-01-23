@@ -9,14 +9,10 @@
 
 #include "Line.h"
 
-#include <windows.h>
-#include <windowsx.h>
-
 #include "2d.h"
 #include "GrInternal.h"
 #include "Floating.h"
 #include "key.h"
-
 
 void gr8_uline(int x1,int y1,int x2,int y2)
 {

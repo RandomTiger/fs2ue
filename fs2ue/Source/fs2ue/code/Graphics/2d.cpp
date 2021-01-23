@@ -12,8 +12,10 @@
 #ifndef UNITY_BUILD
 #include "2d.h"
 
+#ifndef FS2_UE
 #include <windows.h>
-#include <windowsx.h>
+#endif
+//#include <windowsx.h>
 
 #include "osapi.h"
 #include "3d.h"
@@ -277,8 +279,10 @@ void gr_force_windowed()
 {
 	if ( !Gr_inited )	return;
 
+#ifndef FS2_UE
 	if ( Os_debugger_running )
 		Sleep(1000);		
+#endif
 }
 
 void gr_activate(int active)

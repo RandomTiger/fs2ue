@@ -10,7 +10,7 @@
 
 #ifndef UNITY_BUILD
 #include "ds.h"
-#include <windows.h>
+#include "vdsound.h"
 #include "cfile.h"
 #include "channel.h"
 #include "ds3d.h"
@@ -23,7 +23,10 @@
 #ifndef FS2_UE
 #include <mmreg.h>
 #endif
+#include <mmeapi.h>
 #endif
+
+void	ds_get_primary_format(WAVEFORMATEX *wfx);
 
 // Pointers to functions contained in DSOUND.dll
 HRESULT (__stdcall *pfn_DirectSoundCreate)(LPGUID lpGuid, LPDIRECTSOUND *ppDS, IUnknown FAR *pUnkOuter) = NULL;
@@ -140,6 +143,21 @@ EAX_REVERBPROPERTIES Ds_eax_presets[] =
 	{EAX_PRESET_DIZZY},
 	{EAX_PRESET_PSYCHOTIC},
 };
+
+
+// EAX buffer reverb property set {4a4e6fc0-c341-11d1-b73a-444553540000}
+DEFINE_GUID(DSPROPSETID_EAXBUFFER_ReverbProperties,
+	0x4a4e6fc0,
+	0xc341,
+	0x11d1,
+	0xb7, 0x3a, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00);
+
+// EAX (listener) reverb property set {4a4e6fc1-c341-11d1-b73a-444553540000}
+DEFINE_GUID(DSPROPSETID_EAX_ReverbProperties,
+	0x4a4e6fc1,
+	0xc341,
+	0x11d1,
+	0xb7, 0x3a, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00);
 
 GUID DSPROPSETID_EAX_ReverbProperties_Def = {0x4a4e6fc1, 0xc341, 0x11d1, {0xb7, 0x3a, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00}};
 GUID DSPROPSETID_EAXBUFFER_ReverbProperties_Def = {0x4a4e6fc0, 0xc341, 0x11d1, {0xb7, 0x3a, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00}};
@@ -675,6 +693,8 @@ void ds_get_primary_format(WAVEFORMATEX *wfx)
 // obtain the function pointers from the dsound.dll
 void ds_dll_get_functions()
 {
+	extern HRESULT(__stdcall *pfn_DirectSoundCaptureCreate)(LPGUID lpGUID, LPDIRECTSOUNDCAPTURE *lplpDSC, LPUNKNOWN pUnkOuter);
+
 	pfn_DirectSoundCreate = (HRESULT(__stdcall *)(LPGUID lpGuid, LPDIRECTSOUND *ppDS, IUnknown FAR *pUnkOuter))GetProcAddress(Ds_dll_handle,"DirectSoundCreate");
 	pfn_DirectSoundCaptureCreate = (HRESULT(__stdcall *)(LPGUID lpGuid, LPDIRECTSOUNDCAPTURE *lplpDSC, IUnknown FAR *pUnkOuter))GetProcAddress(Ds_dll_handle,"DirectSoundCaptureCreate");
 }

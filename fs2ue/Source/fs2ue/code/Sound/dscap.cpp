@@ -34,6 +34,7 @@ int dscap_init()
 		return 0;
 	}
 
+	extern HRESULT(__stdcall *pfn_DirectSoundCaptureCreate)(LPGUID lpGUID, LPDIRECTSOUNDCAPTURE *lplpDSC, LPUNKNOWN pUnkOuter);
 	if ( !pfn_DirectSoundCaptureCreate ) {
 		nprintf(( "Sound", "SOUND ==> Could not get DirectSoundCaptureCreate function pointer\n" ));
 		return -1;

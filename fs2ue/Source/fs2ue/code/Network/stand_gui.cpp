@@ -13,7 +13,6 @@
 #include "stand_gui.h"
 
 #include <windows.h>
-#include <windowsx.h>
 #include <commctrl.h>
 #include <stdio.h>
 #include <io.h>

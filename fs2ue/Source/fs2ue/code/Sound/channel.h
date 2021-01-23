@@ -10,17 +10,15 @@
 #ifndef __CHANNEL_H__
 #define __CHANNEL_H__
 
-#ifndef UNITY_BUILD
-//#include <windows.h>
-#include "vdsound.h"
-#endif
+struct IDirectSoundBuffer;
+struct IDirectSound3DBuffer;
 
 typedef struct channel
 {
 	int							sig;			// uniquely identifies the sound playing on the channel
 	int							snd_id;		// identifies which kind of sound is playing
-	LPDIRECTSOUNDBUFFER		pdsb;			// pointer to the secondary buffer that was duplicated 
-	LPDIRECTSOUND3DBUFFER	pds3db;		// 3D interface, only used if sound buffer created with CTRL3D flag
+	IDirectSoundBuffer		*pdsb;			// pointer to the secondary buffer that was duplicated 
+	IDirectSound3DBuffer	*pds3db;		// 3D interface, only used if sound buffer created with CTRL3D flag
 	int							looping;		// flag to indicate that the sound is looping
 	int							vol;			// in DirectSound units
 	int							priority;	// implementation dependant priority

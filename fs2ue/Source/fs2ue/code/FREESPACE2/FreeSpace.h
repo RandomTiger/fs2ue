@@ -20,7 +20,7 @@
 #endif
 
 #if !defined(FS2_UE)
-#include <Windows.h>
+#include <Windows.h> // not FS2_UE
 #endif
 
 

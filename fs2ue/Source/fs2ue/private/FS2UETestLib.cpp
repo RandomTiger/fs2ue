@@ -3,10 +3,9 @@
 #include "Graphics/GrDummy.h"
 #include "Graphics/GrInternal.h"
 #include "Ship/Ship.h"
+#include "osapi/osapi.h"
 
 #include "FREESPACE2/Freespace.h"
-
-#include <windows.h> // for MAX_PATH
 
 bool UFS2UETestLib::IsGameInit = false;
 UWorld *UFS2UETestLib::TestLibWorld = nullptr;
@@ -18,6 +17,7 @@ UFS2UETestLib::UFS2UETestLib(class FObjectInitializer const &Init) : Super(Init)
 
 void UFS2UETestLib::GameStart(const FString &CommandLine, const UObject *WorldRef)
 {
+	const int MaxPath = 512;
 	check(WorldRef);
 	TestLibWorld = WorldRef->GetWorld();
 	check(TestLibWorld);
@@ -25,13 +25,13 @@ void UFS2UETestLib::GameStart(const FString &CommandLine, const UObject *WorldRe
 	FString DefaultGameDir = "D:\\Games\\Freespace 2\\";
 
 	// Store Unreal game dir
-	TCHAR CurrentDir[MAX_PATH];
-	GetCurrentDirectory(MAX_PATH, CurrentDir);
+	TCHAR CurrentDir[MaxPath];
+	osapi_GetCurrentDirectory(CurrentDir);
 
 	// Set FS2 game dir for init
-	TCHAR FreespaceDir[MAX_PATH];
-	_tcscpy_s(FreespaceDir, MAX_PATH, DefaultGameDir.GetCharArray().GetData());
-	SetCurrentDirectory(FreespaceDir);
+	TCHAR FreespaceDir[MaxPath];
+	_tcscpy_s(FreespaceDir, MaxPath, DefaultGameDir.GetCharArray().GetData());
+	osapi_SetCurrentDirectory(FreespaceDir);
 
 	// Get the command line
 	char Cmdline[256] = "";
@@ -44,7 +44,7 @@ void UFS2UETestLib::GameStart(const FString &CommandLine, const UObject *WorldRe
 	IsGameInit = FREESPACE_Init(Cmdline);
 
 	// Restore Unreal game dir
-	SetCurrentDirectory(CurrentDir);
+	osapi_SetCurrentDirectory(CurrentDir);
 }
 
 void UFS2UETestLib::GameTick(const float DeltaTime)

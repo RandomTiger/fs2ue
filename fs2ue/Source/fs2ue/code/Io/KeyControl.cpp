@@ -35,7 +35,6 @@
 #include "Sound.h"
 #include "GameSnd.h"
 #include "BmpMan.h"
-#include "RBAudio.h"
 #include "HUDsquadmsg.h"
 #include "EventMusic.h"
 #include "AnimPlay.h"

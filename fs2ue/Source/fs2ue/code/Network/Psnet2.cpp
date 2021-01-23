@@ -11,7 +11,7 @@
 
 #if defined(PREPROC_ENABLED_NET)
 #include <windows.h>
-#include <windowsx.h>
+//#include <windowsx.h>
 #include <stdio.h>
 #include <winsock.h>
 #include <wsipx.h>

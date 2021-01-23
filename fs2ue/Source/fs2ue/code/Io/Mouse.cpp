@@ -12,7 +12,7 @@
 #include "Mouse.h"
 
 #include <windows.h>
-#include <windowsx.h>
+//#include <windowsx.h>
 
 #include "MouseController.h"
 #include "2d.h"

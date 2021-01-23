@@ -2,7 +2,7 @@
 #ifndef UNITY_BUILD
 #include "Graphics/GrD3D9Texture.h"
 
-#include <windows.h>
+#include <windows.h> // ifndef FS2_UE
 #include <D3d9.h>
 #include <d3d9types.h>
 

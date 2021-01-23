@@ -14,7 +14,9 @@
 #ifndef UNITY_BUILD
 #include "OutWnd.h"
 
+#ifndef FS2_UE
 #include <windows.h>
+#endif
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>

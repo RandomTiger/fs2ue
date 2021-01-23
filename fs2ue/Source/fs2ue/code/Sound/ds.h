@@ -13,9 +13,9 @@
 #define __DS_H__
 
 #ifndef UNITY_BUILD
-//#include <windows.h>
-//#include <mmreg.h>
+#ifndef FS2_UE
 #include "vdsound.h"
+#endif
 #endif
 
 #define DS_HARDWARE	(1<<0)
@@ -48,18 +48,17 @@ typedef struct sound_info {
 	ubyte	*data;
 } sound_info;
 
+struct IDirectSoundBuffer;
+struct IDirectSound;
+
 #ifndef UNITY_BUILD
 extern int							ds_initialized;
-extern LPDIRECTSOUNDBUFFER		pPrimaryBuffer;
-extern LPDIRECTSOUND				pDirectSound;
-
-extern HRESULT (__stdcall *pfn_DirectSoundCaptureCreate)(LPGUID lpGUID, LPDIRECTSOUNDCAPTURE *lplpDSC, LPUNKNOWN pUnkOuter);
+extern IDirectSoundBuffer		*pPrimaryBuffer;
+extern IDirectSound				*pDirectSound;
 #endif
 
 int	ds_init(int use_a3d, int use_eax);
 void	ds_close();
-void	ds_get_primary_format(WAVEFORMATEX *wfx);
-int	ds_parse_wave(char *filename, ubyte **dest, uint *dest_size, WAVEFORMATEX **header);
 int	ds_load_buffer(int *sid, int *hid, int *final_size, void *header, sound_info *si, int flags);
 void	ds_unload_buffer(int sid, int hid);
 int	ds_play(int sid, int hid, int snd_id, int priority, int volume, int pan, int looping, bool is_voice_msg = false);
@@ -108,13 +107,6 @@ void ds_do_frame();
 // Creative eax.h
 //
 // --------------------
-
-// EAX (listener) reverb property set {4a4e6fc1-c341-11d1-b73a-444553540000}
-DEFINE_GUID(DSPROPSETID_EAX_ReverbProperties, 
-    0x4a4e6fc1,
-    0xc341,
-    0x11d1,
-    0xb7, 0x3a, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00);
 
 typedef enum 
 {
@@ -170,13 +162,6 @@ enum
 };
 
 #define EAX_MAX_ENVIRONMENT (EAX_ENVIRONMENT_COUNT - 1)
-
-// EAX buffer reverb property set {4a4e6fc0-c341-11d1-b73a-444553540000}
-DEFINE_GUID(DSPROPSETID_EAXBUFFER_ReverbProperties, 
-    0x4a4e6fc0,
-    0xc341,
-    0x11d1,
-    0xb7, 0x3a, 0x44, 0x45, 0x53, 0x54, 0x00, 0x00);
 
 typedef enum 
 {
