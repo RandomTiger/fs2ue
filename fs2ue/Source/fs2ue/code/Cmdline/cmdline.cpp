@@ -76,7 +76,6 @@ cmdline_parm param_forceDirect3D5("-forced3d5", NULL);
 cmdline_parm param_forceDirect3D9("-forced3d9", NULL);
 cmdline_parm param_forceDummy("-forcedummy", NULL);
 cmdline_parm param_splitscreen("-splitscreen", NULL);
-cmdline_parm param_horde("-horde", NULL);
 
 int Cmdline_multi_stream_chat_to_file = 0;
 int Cmdline_freespace_no_sound = 0;
@@ -106,7 +105,6 @@ bool Cmdline_forceDirect3d9 = false;
 bool Cmdline_forceDirect3d5 = false;
 bool Cmdline_forceDummy = false;
 bool Cmdline_splitscreen = false;
-bool Cmdline_horde = false;
 
 int Cmdline_window = 0;
 int Cmdline_360pad = 1;
@@ -474,11 +472,6 @@ int parse_cmdline(char *cmdline)
 	if(param_splitscreen.found())
 	{
 		Cmdline_splitscreen = true;
-	}
-
-	if(param_horde.found())
-	{
-		Cmdline_horde = true;
 	}
 
 	// d3d windowed

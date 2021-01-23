@@ -461,13 +461,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="code\FREESPACE2\FreeSpace.cpp" />
-    <ClCompile Include="code\FREESPACE2\Horde.cpp" />
     <ClCompile Include="code\FREESPACE2\LevelPaging.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\FREESPACE2\FreeSpace.h" />
     <ClInclude Include="code\FREESPACE2\FreespaceResource.h" />
-    <ClInclude Include="code\FREESPACE2\Horde.h" />
     <ClInclude Include="code\FREESPACE2\LevelPaging.h" />
   </ItemGroup>
   <ItemGroup>

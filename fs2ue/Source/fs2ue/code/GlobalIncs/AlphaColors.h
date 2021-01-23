@@ -10,6 +10,10 @@
 #ifndef _GLOBAL_ALPHACOLORS_HEADER_FILE
 #define _GLOBAL_ALPHACOLORS_HEADER_FILE
 
+#ifndef UNITY_BUILD
+#include "GlobalIncs/PsTypes.h"
+#endif
+
 // -----------------------------------------------------------------------------------
 // ALPHA DEFINES/VARS
 //

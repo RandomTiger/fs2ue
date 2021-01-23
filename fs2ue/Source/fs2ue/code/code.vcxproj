@@ -461,13 +461,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="DebugSys\DebugSys.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="Demo\Demo.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
@@ -2017,8 +2010,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="3rdParty\VisualLeakDetector\include\vld.h" />
-    <ClInclude Include="3rdParty\VisualLeakDetector\include\vld_def.h" />
     <ClInclude Include="Math\FSMatrix.h" />
     <ClInclude Include="Math\FSVector.h" />
     <ClInclude Include="Stats\FSStats.h" />
@@ -2105,13 +2096,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="Debris\Debris.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityRelease|x64'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="DebugSys\DebugSys.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='UnityDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>

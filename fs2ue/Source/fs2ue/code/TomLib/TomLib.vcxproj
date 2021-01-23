@@ -173,13 +173,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\ComponentSystem\ComponentSystem.cpp" />
-    <ClCompile Include="src\Debug\Profiler.cpp" />
-    <ClCompile Include="src\StateMachine\StateMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ComponentSystem\ComponentSystem.h" />
-    <ClInclude Include="src\Debug\Profiler.h" />
-    <ClInclude Include="src\StateMachine\StateMachine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

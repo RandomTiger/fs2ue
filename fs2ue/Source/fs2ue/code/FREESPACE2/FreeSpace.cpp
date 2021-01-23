@@ -186,7 +186,6 @@
 #endif
 #endif
 
-#include "Horde.h"
 #include "LevelPaging.h"
 #include "FreespaceResource.h"
 #include "../Threading/Thread.h"
@@ -1120,13 +1119,6 @@ int game_start_mission()
 	load_mission_stuff = time(NULL);
 	freespace_mission_load_stuff();
 	load_mission_stuff = time(NULL) - load_mission_stuff;
-
-
-	if(Cmdline_horde)
-	{
-		HordeInit();
-		HordeStart();
-	}
 
 	return 1;
 }
@@ -3038,10 +3030,6 @@ void game_simulation_frame()
 #endif
 	}		
 
-	if(Cmdline_horde)
-	{
-		HordeUpdate(flFrametime);
-	}
 }
 
 // Maybe render and process the dead-popup
@@ -3388,11 +3376,6 @@ void game_frame()
 			if(Cmdline_fps)
 			{
 				game_show_framerate();	
-			}
-
-			if(Cmdline_horde)
-			{
-				HordeRender();
 			}
 
 			// maybe render and process the dead popup
@@ -3931,11 +3914,6 @@ int game_poll()
 
 			break;
 		}
-	}
-
-	if(Cmdline_horde)
-	{
-		HordeUpdateInput(k);
 	}
 
 	return k;

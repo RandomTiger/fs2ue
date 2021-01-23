@@ -51,7 +51,6 @@ public class fs2ue : ModuleRules
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/Cutscene" });
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/Debris" });
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/DebugConsole" });
-        PublicIncludePaths.AddRange(new string[] { "fs2ue/code/DebugSys" });
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/Demo" });
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/DirectX" });
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/ExceptionHandler" });
@@ -61,7 +60,6 @@ public class fs2ue : ModuleRules
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/GameHelp" });
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/GameSequence" });
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/Gamesnd" });
-        PublicIncludePaths.AddRange(new string[] { "fs2ue/code/Glide" });
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/GlobalIncs" });
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/Graphics" });
         PublicIncludePaths.AddRange(new string[] { "fs2ue/code/Hud" });

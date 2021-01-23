@@ -4,34 +4,16 @@
     <Filter Include="src">
       <UniqueIdentifier>{bd2e473e-0b21-43a8-9279-70a191f9a952}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Debug">
-      <UniqueIdentifier>{0f0040f5-f75e-4e58-85c9-8c7e26e2fc08}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\StateMachine">
-      <UniqueIdentifier>{98221c33-4c0d-4164-a2fc-b3b6c265740d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\ComponentSystem">
       <UniqueIdentifier>{4f868823-9211-4172-99e6-4bb2ca99e8bb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Debug\Profiler.cpp">
-      <Filter>src\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="src\StateMachine\StateMachine.cpp">
-      <Filter>src\StateMachine</Filter>
-    </ClCompile>
     <ClCompile Include="src\ComponentSystem\ComponentSystem.cpp">
       <Filter>src\ComponentSystem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Debug\Profiler.h">
-      <Filter>src\Debug</Filter>
-    </ClInclude>
-    <ClInclude Include="src\StateMachine\StateMachine.h">
-      <Filter>src\StateMachine</Filter>
-    </ClInclude>
     <ClInclude Include="src\ComponentSystem\ComponentSystem.h">
       <Filter>src\ComponentSystem</Filter>
     </ClInclude>

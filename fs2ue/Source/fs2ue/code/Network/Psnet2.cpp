@@ -9,6 +9,7 @@
 
 #include "PsNet2.h"
 
+#if defined(PREPROC_ENABLED_NET)
 #include <windows.h>
 #include <windowsx.h>
 #include <stdio.h>
@@ -2505,3 +2506,4 @@ void psnet_mark_received(PSNET_SOCKET_RELIABLE socket)
 }
 
 #endif	// #ifdef PSNET2
+#endif

@@ -38,7 +38,6 @@
 #include <msacm.h>
 
 #include "GlobalIncs/Pragma.h"
-#include "TomLib/src/StateMachine/StateMachine.h"
 #include "TomLib/src/ComponentSystem/ComponentSystem.h"
 
 #include "Math/FSVector.h"

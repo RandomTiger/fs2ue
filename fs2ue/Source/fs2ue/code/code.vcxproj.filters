@@ -160,15 +160,6 @@
     <Filter Include="JumpNode">
       <UniqueIdentifier>{3ea1d729-9eec-4f7e-83a8-0d4e331d0eb1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DebugSys">
-      <UniqueIdentifier>{370478c1-0d40-41b4-b7dc-0609f3379ce6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="3rdParty">
-      <UniqueIdentifier>{db78ee25-2474-48fd-b536-50c0fd537121}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="3rdParty\VisualLeakDetector">
-      <UniqueIdentifier>{e5ba1ceb-a6e9-4344-93f7-95faa002b018}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game">
       <UniqueIdentifier>{af2513be-0635-46d8-8b97-190a7c0d519a}</UniqueIdentifier>
     </Filter>
@@ -858,9 +849,6 @@
     <ClCompile Include="JumpNode\JumpNode.cpp">
       <Filter>JumpNode</Filter>
     </ClCompile>
-    <ClCompile Include="DebugSys\DebugSys.cpp">
-      <Filter>DebugSys</Filter>
-    </ClCompile>
     <ClCompile Include="Game\Game.cpp">
       <Filter>Game</Filter>
     </ClCompile>
@@ -881,12 +869,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="3rdParty\VisualLeakDetector\include\vld.h">
-      <Filter>3rdParty\VisualLeakDetector</Filter>
-    </ClInclude>
-    <ClInclude Include="3rdParty\VisualLeakDetector\include\vld_def.h">
-      <Filter>3rdParty\VisualLeakDetector</Filter>
-    </ClInclude>
     <ClInclude Include="Math\FSMatrix.h">
       <Filter>Math</Filter>
     </ClInclude>
@@ -1578,9 +1560,6 @@
     </CustomBuild>
     <CustomBuild Include="JumpNode\JumpNode.h">
       <Filter>JumpNode</Filter>
-    </CustomBuild>
-    <CustomBuild Include="DebugSys\DebugSys.h">
-      <Filter>DebugSys</Filter>
     </CustomBuild>
     <CustomBuild Include="Game\Game.h">
       <Filter>Game</Filter>
