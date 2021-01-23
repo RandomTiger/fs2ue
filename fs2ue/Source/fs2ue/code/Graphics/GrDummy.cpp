@@ -1,10 +1,12 @@
 #ifndef UNITY_BUILD
 #include "GrDummy.h"
 
+#ifdef FS2_UE
 #undef GetClassName
 #undef UpdateResource
 #undef GetObject
 #include "Engine.h"
+#endif
 
 #include "osapi.h"
 #include "2d.h"
