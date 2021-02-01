@@ -2855,9 +2855,6 @@ void parse_bitmaps(mission *pm)
 	required_string("$Ambient light level:");
 	stuff_int(&Ambient_light_level);
 
-	// This should call light_set_ambient() to
-	// set the ambient light
-
 	Nebula_index = -1;
 	Mission_palette = 1;
 

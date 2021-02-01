@@ -23,7 +23,6 @@
 // call light_apply to fill in lighting for a point.
 
 void light_reset();
-void light_set_ambient(float ambient_light);
 
 // Intensity - how strong the light is.  1.0 will cast light around 5meters or so.
 // r,g,b - only used for colored lighting. Ignored currently.

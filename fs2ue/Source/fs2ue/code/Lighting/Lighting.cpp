@@ -198,12 +198,6 @@ void light_rotate(light * l)
 	}
 }
 
-// Sets the ambient lighting level.
-// Ignored for now.
-void light_set_ambient(float ambient_light)
-{
-}
-
 void light_add_directional( vector *dir, float intensity, float r, float g, float b )
 {
 	light * l;
@@ -317,8 +311,6 @@ void light_add_tube(vector *p0, vector *p1, float r1, float r2, float intensity,
 	if ( Lighting_off ) return;
 
 	if (!Lighting_flag) return;
-
-//	if ( keyd_pressed[KEY_LSHIFT] ) return;
 
 	if ( Num_lights >= MAX_LIGHTS ) {
 		mprintf(( "Out of lights!\n" ));
@@ -521,9 +513,6 @@ void light_filter_pop()
 	Assert( Num_light_levels > 0 );
 }
 
-int l_num_points=0, l_num_lights=0;
-
-
 void light_rotate_all()
 {
 	int i;
@@ -542,11 +531,6 @@ void light_rotate_all()
 	for(i=0; i<Static_light_count; i++){	
 		light_rotate(Static_light[i]);
 	}
-
-//	l = Lights;
-//	for (i=0; i<Num_lights; i++, l++ )	{
-//		light_rotate(l);
-//	}
 }
 
 // return the # of global light sources
@@ -575,12 +559,10 @@ int light_get_global_dir(vector *pos, int n)
 	return 1;
 }
 
-
 void light_set_shadow( int state )
 {
 	Light_in_shadow = state;
 }
-
 
 ubyte light_apply( vector *pos, vector * norm, float static_light_level )
 {
@@ -640,8 +622,7 @@ ubyte light_apply( vector *pos, vector * norm, float static_light_level )
 
 	int n = Num_light_levels-1;
 
-	l_num_lights += Num_relevent_lights[n];
-	l_num_points++;
+	Num_relevent_lights[n];
 
 	for (i=0; i<Num_relevent_lights[n]; i++ )	{
 		l = Relevent_lights[i][n];
@@ -669,7 +650,6 @@ ubyte light_apply( vector *pos, vector * norm, float static_light_level )
 
 	return ubyte(fl2i(lval*255.0f));
 }
-
 
 void light_apply_rgb( ubyte *param_r, ubyte *param_g, ubyte *param_b, vector *pos, vector * norm, float static_light_level )
 {
@@ -754,8 +734,7 @@ void light_apply_rgb( ubyte *param_r, ubyte *param_g, ubyte *param_b, vector *po
 
 	int n = Num_light_levels-1;
 
-	l_num_lights += Num_relevent_lights[n];
-	l_num_points++;
+	Num_relevent_lights[n];
 
 	vector to_light;
 	float dot, dist;
@@ -844,21 +823,5 @@ void light_apply_rgb( ubyte *param_r, ubyte *param_g, ubyte *param_b, vector *po
 	*param_g = ubyte(fl2i(gval*255.0f));
 	*param_b = ubyte(fl2i(bval*255.0f));
 }
-
-
-/*
-float light_apply( vector *pos, vector * norm )
-{
-#if 1
-	float r,g,b;
-	light_apply_rgb( &r, &g, &b, pos, norm );
-	return (r+g+b) / 3.0f;
-#else
-	return light_apply_ramp( pos, norm );
-#endif
-
-}
-*/
-
 
 
