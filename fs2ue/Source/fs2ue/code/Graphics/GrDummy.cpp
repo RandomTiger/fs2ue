@@ -730,6 +730,10 @@ bool gr_dummy_init()
 
 
 	gr_screen.gf_tcache_flush = gr_dummy_tcache_flush;
+
+	extern int D3D_enabled;
+	D3D_enabled = 1;
+
 	return true;
 }
 
