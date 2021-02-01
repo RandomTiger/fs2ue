@@ -417,6 +417,7 @@ void snd_close(void)
 	ds3d_close();	// Close DirectSound3D
 	dscap_close();	// Close DirectSoundCapture
 	ds_close();		// Close DirectSound off
+	ds_initialized = false;
 #endif
 }
 

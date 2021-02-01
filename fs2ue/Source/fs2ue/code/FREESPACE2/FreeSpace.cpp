@@ -6098,6 +6098,7 @@ void game_shutdown(void)
 
 #if defined(FS2_UE)
 	gr_close();
+	freespace_stop_mission();
 #endif
 
    // if the player has left the "player select" screen and quit the game without actually choosing

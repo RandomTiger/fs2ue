@@ -46,7 +46,11 @@ int	Countermeasures_enabled = 1;			//	Debug, set to 0 means no one can fire coun
 // This will get called at the start of each level.
 void cmeasure_init()
 {
-	int i;
+	Num_cmeasure_types = 0;
+	Num_cmeasures = 0;
+	Cmeasure_inited = 0;
+	Cmeasures_homing_check = 0;
+	Countermeasures_enabled = 1;	
 
 	if ( !Cmeasure_inited ) {
 		Cmeasure_inited = 1;
@@ -60,7 +64,7 @@ void cmeasure_init()
 			}
 		}
 
-		for (i=0; i<MAX_SPECIES_NAMES; i++ )	{
+		for (int i=0; i<MAX_SPECIES_NAMES; i++ )	{
 			Debris_textures[i] = bm_load( Debris_texture_files[i] );
 			if ( Debris_textures[i] < 0 ) { 
 				Warning( LOCATION, "Couldn't load species %d debris\ntexture, '%s'\n", i, Debris_texture_files[i] );
@@ -72,7 +76,7 @@ void cmeasure_init()
 	// Reset everything between levels
 	Num_cmeasures = 0;
 
-	for (i=0; i<MAX_CMEASURES; i++ )	{
+	for (int i=0; i<MAX_CMEASURES; i++ )	{
 		Cmeasures[i].subtype = CMEASURE_UNUSED;
 	}
 		
