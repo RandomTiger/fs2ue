@@ -82,6 +82,7 @@ void AShip::AssembleMeshData(const polymodel * const pm)
 					Chunk.ueColor,
 					EmptyTangents,
 					ERuntimeMeshUpdateFrequency::Infrequent, bCreateCollision);
+				StaticProvider->SetSectionCastsShadow(LODIndex, SectionIndex, false);
 				count++;
 			}
 		}
